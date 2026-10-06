@@ -1,0 +1,33 @@
+{
+    "name": "oddlylogical/address-autocomplete-for-gravity-forms",
+    "type": "wordpress-plugin",
+    "description": "Google Places address autocomplete for custom and native Gravity Forms Address fields.",
+    "keywords": ["gravity forms", "address autocomplete", "google places"],
+    "homepage": "https://gravitygeolocation.com/",
+    "license": "GPL-3.0-or-later",
+    "support": {
+        "issues": "https://gravitygeolocation.com/support"
+    },
+    "config": {
+        "github-protocols": ["https"],
+        "prepend-autoloader": false,
+        "platform": {
+            "php": "7.4.0"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "GravityGeolocation\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": [
+            "@php tests/helpers/standalone-identity.php",
+            "@php tests/helpers/standalone-wiring.php",
+            "@php tests/helpers/standalone-package.php"
+        ]
+    }
+}

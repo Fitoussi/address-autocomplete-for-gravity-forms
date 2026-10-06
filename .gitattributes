@@ -1,0 +1,2 @@
+# Preserve the bundled third-party source bytes, including upstream line endings.
+assets/js/editor/vendor/choices.js -text

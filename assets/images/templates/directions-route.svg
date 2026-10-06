@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="title desc">
+  <title id="title">Directions and route form template</title>
+  <desc id="desc">A mapped route with origin, destination, and turn-by-turn directions.</desc>
+  <rect width="480" height="300" rx="24" fill="#eaf3ff"/>
+  <rect x="40" y="37" width="400" height="226" rx="16" fill="#fff" stroke="#bdd5ef" stroke-width="3"/>
+  <rect x="69" y="66" width="221" height="168" rx="10" fill="#dcecff"/>
+  <path d="M69 151l46-28 42 20 43-38 45 24 45-26v131H69z" fill="#c3ddf8"/>
+  <path d="M105 193c34-9 24-62 67-61 39 1 31 55 73 44" fill="none" stroke="#3478b9" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="104" cy="193" r="11" fill="#2f9a59" stroke="#fff" stroke-width="4"/>
+  <path d="M245 159c-11 0-20 9-20 20 0 15 20 33 20 33s20-18 20-33c0-11-9-20-20-20z" fill="#d85149"/>
+  <circle cx="245" cy="179" r="7" fill="#fff"/>
+  <rect x="313" y="68" width="98" height="18" rx="9" fill="#9fc5ea"/>
+  <rect x="313" y="101" width="72" height="9" rx="4.5" fill="#d4e6f7"/>
+  <rect x="313" y="123" width="88" height="9" rx="4.5" fill="#d4e6f7"/>
+  <rect x="313" y="145" width="62" height="9" rx="4.5" fill="#d4e6f7"/>
+  <rect x="313" y="177" width="98" height="18" rx="9" fill="#9fc5ea"/>
+  <rect x="313" y="210" width="78" height="9" rx="4.5" fill="#d4e6f7"/>
+</svg>

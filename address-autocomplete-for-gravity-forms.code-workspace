@@ -1,0 +1,76 @@
+{
+	"folders": [
+		{
+			"name": "address-autocomplete-for-gravity-forms",
+			"path": "."
+		},
+		{
+			"name": "gravityforms",
+			"path": "../gravityforms"
+		},
+		{
+			"name": "gravityformsadvancedpostcreation",
+			"path": "../gravityformsadvancedpostcreation"
+		},
+		{
+			"name": "wpgeo-framework",
+			"path": "../wpgeo-framework"
+		},
+		{
+			"name": "wp-includes",
+			"path": "../../../wp-includes"
+		},
+		{
+			"name": "wpgeo-build-tools",
+			"path": "../wpgeo-build-tools"
+		}
+	],
+	"settings": {
+		"intelephense.environment.includePaths": [
+			".",
+			"../gravityforms",
+			"../gravityformsadvancedpostcreation",
+			"../wpgeo-framework/src",
+			"../../../wp-includes"
+		],
+		"intelephense.files.exclude": [
+			"**/.git/**",
+			"**/.svn/**",
+			"**/.hg/**",
+			"**/CVS/**",
+			"**/.DS_Store/**",
+			"**/node_modules/**",
+			"**/bower_components/**",
+			"**/vendor/**/{Tests,tests}/**",
+			"**/tools/vendor/**"
+		],
+		"files.exclude": {
+			"**/tools/vendor": true
+		},
+		"search.exclude": {
+			"**/tools/vendor": true
+		},
+		"files.watcherExclude": {
+			"**/tools/vendor/**": true
+		},
+		"emeraldwalk.runonsave": {
+			"message": "Building address autocomplete assets...",
+			"messageAfter": "Address autocomplete asset build finished.",
+			"showElapsed": true,
+			"commands": [
+				{
+					"match": ".*/address-autocomplete-for-gravity-forms/assets/(js/.*\\.js|scss/.*\\.scss)$",
+					"cmd": "npm run build",
+					"isAsync": false,
+					"autoShowOutputPanel": "error"
+				}
+			]
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"emeraldwalk.runonsave",
+			"valeryanm.vscode-phpsab"
+		]
+	}
+}

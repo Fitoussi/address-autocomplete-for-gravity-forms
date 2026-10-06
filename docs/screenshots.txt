@@ -1,0 +1,25 @@
+Address Autocomplete for Gravity Forms — selected screenshots
+2026-10-06
+
+Real interfaces captured from the standalone plugin on local test sites.
+Owner-selected images are copied unchanged; their original PNG bytes are retained.
+No remote image loads, screenshot compositing, credentials, or personal data.
+
+Stable filename -> source in standalone-screenshots-20261006.Rx9dYW
+1. screenshot-1.png -> Screenshot 2026-10-06 at 22.32.17.png
+   Dedicated single-line Address suggestions; Google attribution retained.
+2. screenshot-2.png -> Screenshot 2026-10-06 at 22.27.22.png
+   Native Address components filled with the selected Brooklyn address.
+3. screenshot-3.png -> gfgeoac-field-options-20261006.png
+   Autocomplete field settings with optional selection requirement.
+4. screenshot-4.png -> Screenshot 2026-10-06 at 22.26.38.png
+   Global settings; browser API key replaced with YOUR_GOOGLE_API_KEY.
+5. screenshot-5.png -> Screenshot 2026-10-06 at 22.40.37.png
+   Entry detail: custom Open Map link and native Gravity Forms Map It link.
+6. screenshot-6.png -> gfgeoac-overview-20261006.png
+   Overview hero for the installed Address Autocomplete package.
+
+Captions are maintained in readme.txt, in the same numbered order.
+Package location: assets/screenshots/ (not yet rendered by Overview cards).
+Future directory listing location: separate SVN assets/screenshot-N.png.
+These local files do not constitute a WordPress.org submission or publication.

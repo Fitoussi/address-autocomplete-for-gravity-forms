@@ -1,0 +1,28 @@
+{
+	"name": "address-autocomplete-for-gravity-forms",
+	"version": "1.0.0",
+	"description": "Google Places address autocomplete for Gravity Forms",
+	"scripts": {
+		"test": "npm run test:php && npm run test:autocomplete && npm run test:editor",
+		"package": "npm run build && php tools/package/build.php",
+		"build": "npm run css && npm run css:min && node build.js",
+		"build:autocomplete": "node build.js autocomplete",
+		"build:editor": "node build.js editor",
+		"test:autocomplete": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tests/js/standalone-autocomplete.test.mjs",
+		"test:editor": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tests/js/standalone-editor.test.mjs tests/js/geolocation-panel-state.test.mjs",
+		"test:php": "php tests/helpers/standalone-identity.php && php tests/helpers/standalone-wiring.php && php tests/helpers/standalone-package.php",
+		"css": "sass assets/scss/admin/gfgeo-admin.scss:build/css/admin/gfgeo-admin.css assets/scss/admin/gfgeo-product-dashboard.scss:build/css/admin/gfgeo-product-dashboard.css assets/scss/search-unavailable.scss:build/css/search-unavailable.css --style=expanded --no-source-map",
+		"css:min": "sass assets/scss/admin/gfgeo-admin.scss:build/css/admin/gfgeo-admin.min.css assets/scss/admin/gfgeo-product-dashboard.scss:build/css/admin/gfgeo-product-dashboard.min.css assets/scss/search-unavailable.scss:build/css/search-unavailable.min.css --style=compressed --no-source-map",
+		"watch": "chokidar 'assets/js/**/*.js' -c 'node build.js'",
+		"watch:css": "sass --watch assets/scss/admin/gfgeo-admin.scss:build/css/admin/gfgeo-admin.css assets/scss/admin/gfgeo-product-dashboard.scss:build/css/admin/gfgeo-product-dashboard.css assets/scss/search-unavailable.scss:build/css/search-unavailable.css --style=expanded",
+		"watch:all": "run-p watch watch:css"
+	},
+	"devDependencies": {
+		"chokidar-cli": "^3.0.0",
+		"esbuild": "^0.19.0",
+		"jsdom": "20.0.3",
+		"npm-run-all": "^4.1.5",
+		"sass": "^1.69.5",
+		"jquery": "3.7.1"
+	}
+}

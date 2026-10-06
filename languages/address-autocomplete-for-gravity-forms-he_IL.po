@@ -1,0 +1,5321 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Gravity Forms Geolocation Add-On\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/gravityforms-"
+"geolocation\n"
+"POT-Creation-Date: 2026-10-03T07:54:00+00:00\n"
+"PO-Revision-Date: 2026-08-06 22:49-1000\n"
+"Last-Translator: Eyal Fitoussi <fitoussi_eyal@hotmail.com>\n"
+"Language-Team: none\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: address-autocomplete-for-gravity-forms.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#. Plugin Name of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid "Gravity Geolocation"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid "https://gravitygeolocation.com"
+msgstr ""
+
+#. Description of the plugin
+#: address-autocomplete-for-gravity-forms.php src/Loader.php:121
+msgid ""
+"Extend Gravity Forms with geolocation fields, directions, distance "
+"calculations, address validation, and front-end entry search and display "
+"powered by Gravity Search."
+msgstr ""
+
+#. Author of the plugin
+#: address-autocomplete-for-gravity-forms.php
+#, fuzzy
+msgid "Eyal Fitoussi"
+msgstr "אייל פיטוסי"
+
+#. Author URI of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid "https://www.wpgeo.com"
+msgstr ""
+
+#: src/Admin/ApiRequirementsNotice.php:67
+msgid "Action required: Enable the new Google Maps APIs"
+msgstr ""
+
+#: src/Admin/ApiRequirementsNotice.php:71
+msgid ""
+"Gravity Geolocation 3.5 uses Google Places API (New) and Routes API. Version "
+"3.5.1 includes temporary legacy fallbacks for existing Address Autocomplete "
+"and Directions fields, but those fallbacks do not cover every feature. "
+"Enable the new APIs to ensure full functionality."
+msgstr ""
+
+#: src/Admin/ApiRequirementsNotice.php:79
+msgid "Review API setup"
+msgstr ""
+
+#: src/Admin/ApiRequirementsNotice.php:84
+msgid "Dismiss this notice"
+msgstr ""
+
+#: src/Admin/ApiRequirementsNotice.php:98
+msgid "You are not allowed to dismiss this notice."
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:60
+#: src/Features/Search/Admin/SearchForms/Listing.php:557
+msgid "Create Search"
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:113 src/Admin/SearchUnavailable.php:194
+msgid "Gravity Search is not available."
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:114
+msgid "View upgrade options"
+msgstr ""
+
+#. translators: %s: Pricing page URL.
+#: src/Admin/SearchUnavailable.php:198
+#, php-format
+msgid ""
+"Gravity Search is not available with your current Gravity Geolocation plan. "
+"<a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Upgrade now</a> "
+"to unlock advanced mapping features."
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:210
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:134
+msgid "Cancel"
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:211
+msgid "View pricing"
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:212
+msgid ""
+"Gravity Search is not available with your current Gravity Geolocation plan. "
+"Open pricing page now?"
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:217
+#: src/Features/Search/Admin/SearchForms/Listing.php:128
+msgid "Add New Search"
+msgstr ""
+
+#: src/Admin/Settings.php:56
+msgid "Gravity Geolocation License Status"
+msgstr ""
+
+#: src/Admin/Settings.php:124 src/Features/Form/Admin/FormEditor.php:189
+#: src/Features/Form/Fields/Dynamic/Settings.php:66
+#: src/Features/Form/Fields/Dynamic/Settings.php:109
+#: src/Features/Form/Fields/Dynamic/Settings.php:149
+#: src/Features/Form/Fields/Dynamic/Settings.php:190
+#: src/Features/Form/Fields/Dynamic/Settings.php:230
+#: src/Features/Form/Fields/Dynamic/Settings.php:268
+#: src/Features/Form/Fields/Dynamic/Settings.php:305
+#: src/Features/Form/Fields/Dynamic/Settings.php:336
+#: src/Features/Form/Helpers/FormHelper.php:98
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:148
+msgid "Disable"
+msgstr "כיבוי"
+
+#: src/Admin/Settings.php:128
+#, fuzzy
+msgid "Ipapi.co"
+msgstr "Ipapi.co"
+
+#: src/Admin/Settings.php:132
+#, fuzzy
+msgid "ipinfo.io"
+msgstr "ipinfo.io"
+
+#: src/Admin/Settings.php:136
+#, fuzzy
+msgid "Ipregistry"
+msgstr "אי-רישום"
+
+#: src/Admin/Settings.php:140
+#, fuzzy
+msgid "MaxMind"
+msgstr "מקס מיינד"
+
+#: src/Admin/Settings.php:176
+#, fuzzy
+msgid "Enable High Accuracy Mode"
+msgstr "הפעל מצב דיוק גבוה"
+
+#: src/Admin/Settings.php:189
+msgid "Disable Google Maps API"
+msgstr "לנטרל את ה-API של מפות גוגל"
+
+#: src/Admin/Settings.php:202
+#, fuzzy
+msgid "Disable Advanced Markers"
+msgstr "השבת סמנים מתקדמים"
+
+#. translators: %s: geolocation field title.
+#: src/Core/AddOn.php:580
+#, php-format
+msgid "The %s field is not available."
+msgstr ""
+
+#. translators: %s: geolocation field title.
+#: src/Core/AddOn.php:582
+#, php-format
+msgid ""
+"The %s field is not available with your current Gravity Geolocation plan."
+msgstr ""
+
+#: src/Core/AddOn.php:583
+msgid "Upgrade now"
+msgstr ""
+
+#: src/Core/AddOn.php:584
+msgid "to unlock advanced mapping features."
+msgstr ""
+
+#: src/Core/AddOn.php:593
+msgid "Quick Setup fields removed."
+msgstr ""
+
+#: src/Core/AddOn.php:600
+msgid "Verifying fixed location…"
+msgstr ""
+
+#. translators: %s: verified fixed-location address.
+#: src/Core/AddOn.php:602
+#, php-format
+msgid "Using: %s"
+msgstr ""
+
+#: src/Core/AddOn.php:603
+msgid ""
+"The fixed location could not be verified. Check the address and try again."
+msgstr ""
+
+#: src/Core/AddOn.php:606
+msgid ""
+"Choose one above or let Gravity Geolocation create and connect one for you."
+msgstr ""
+
+#: src/Core/AddOn.php:607
+msgid ""
+"Choose one or more above or let Gravity Geolocation create and connect one "
+"for you."
+msgstr ""
+
+#: src/Core/AddOn.php:608
+msgid "Let Gravity Geolocation create and connect one for you."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor.php:83
+msgid "Geolocation"
+msgstr "מיקום גיאוגרפי"
+
+#: src/Features/Form/Admin/FormEditor.php:229
+#: src/Features/Form/Fields/LocatorButton/Field.php:107
+#, fuzzy
+msgid "Locator Button"
+msgstr "כפתור איתור"
+
+#: src/Features/Form/Admin/FormEditor.php:251
+#, fuzzy
+msgid "Reset location to default when clicked"
+msgstr "איפוס מיקום לברירת מחדל בעת לחיצה"
+
+#: src/Features/Form/Admin/FormEditor.php:287
+#, fuzzy
+msgid "Post Meta ( custom field )"
+msgstr "מטא פוסט (שדה מותאם אישית)"
+
+#: src/Features/Form/Admin/FormEditor.php:301
+msgid "User Meta"
+msgstr "מטה משתמשת"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/AutoLocator.php:57
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:257
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:353
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:383
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:413
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:459
+#: src/Features/Form/Admin/FormSettings.php:106
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:175
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:190
+#: src/Features/Form/Fields/DrawingShape/Settings.php:61
+#: src/Features/Form/Fields/NearestLocations/Settings.php:235
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:178
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:223
+msgid "Disabled"
+msgstr "מושבת"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/AutoLocator.php:58
+#: src/Features/Form/Admin/FormSettings.php:110
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:477
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:546
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:379
+msgid "Default"
+msgstr "ברירת מחדל"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/AutoLocator.php:59
+#: src/Features/Form/Admin/FormSettings.php:114
+msgid "Fallback"
+msgstr "איחזור"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/AutoLocator.php:66
+msgid ""
+"The IP Address Locator option is currently disabled. To enable it, go to the "
+"Gravity Forms Settings page and select an IP Address provider under the "
+"Gravity Geolocation tab."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:50
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:66
+msgid "Button Text"
+msgstr "טקסט כפתור"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:109
+#, fuzzy
+msgid "User Meta Field Name"
+msgstr "שם שדה מטא של משתמש"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:128
+#, fuzzy
+msgid "View Additional Meta Field Options"
+msgstr "הצג אפשרויות שדה מטא נוספות"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:145
+#, fuzzy
+msgid ""
+"This feature requires <a href=\"https://wordpress.org/plugins/geo-my-wp/\" "
+"target=\"_blank\">GEO my WP</a> plugin"
+msgstr ""
+"תכונה זו דורשת את התוסף <a href=\"https://wordpress.org/plugins/geo-my-wp/\" "
+"target=\"_blank\">GEO my WP</a>"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:151
+#: src/Features/Form/Feeds/FeedSettings.php:173
+#: src/Features/Form/Feeds/FeedSettings.php:233
+#, fuzzy
+msgid "GEO my WP Integration"
+msgstr "אינטגרציה של GEO my WP"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:165
+msgid "Notice:"
+msgstr ""
+
+#. translators: 1: GEO my WP plugin name
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:170
+#, php-format
+msgid ""
+"Integration with %1$s Post and User Locations is now handled directly "
+"through the Post Creation and User Registration feeds.<br>The settings below "
+"are deprecated and will be removed in a future release."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:187
+#, fuzzy
+msgid "Integrate Posts Locator"
+msgstr "שילוב מאתר פוסטים"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:196
+msgid "Phone Field"
+msgstr "השדה “טלפון”"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:207
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:224
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:244
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:262
+msgid "Select an option"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:213
+#, fuzzy
+msgid "Fax Field"
+msgstr "שדה פקס"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:233
+msgid "Email Field"
+msgstr "השדה “אימייל”"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:251
+#, fuzzy
+msgid "Website Field"
+msgstr "שדה אתר אינטרנט"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Standard.php:276
+#, fuzzy
+msgid "Integrate GMW Users Locator"
+msgstr "שילוב מאתר משתמשי GMW"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:49
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:65
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:236
+msgid "Google Routes API"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:50
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:66
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:237
+msgid "Straight-Line (Haversine)"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:73
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:60
+#, fuzzy
+msgid "Trigger Method"
+msgstr "שיטת טריגר"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:89
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:75
+#: src/Features/Form/Fields/NearestLocations/Settings.php:58
+#, fuzzy
+msgid "Manually (Using a Button)"
+msgstr "ידנית (באמצעות כפתור)"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:90
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:76
+#: src/Features/Form/Fields/NearestLocations/Settings.php:60
+#, fuzzy
+msgid "Automatically (When Fields Change)"
+msgstr "באופן אוטומטי (כאשר שדות משתנים)"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:131
+#, fuzzy
+msgid "Directions Source & Destination"
+msgstr "הוראות הגעה מקור ויעד"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:139
+#: src/Features/Form/Admin/FormTemplates.php:257
+#: src/Features/Form/Admin/FormTemplates.php:303
+msgid "Origin Location"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:148
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:170
+#: src/Features/Search/Admin/SearchForms/Support/ChoicesProvider.php:246
+msgid "Select a field"
+msgstr "בחרי שדה"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:161
+#: src/Features/Form/Admin/FormTemplates.php:259
+#: src/Features/Form/Admin/FormTemplates.php:305
+msgid "Destination Location"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:204
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:117
+#, fuzzy
+msgid "Travel Preferences"
+msgstr "העדפות נסיעות"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:220
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:249
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:330
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:416
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:133
+#: src/Features/Form/Fields/NearestLocations/Settings.php:216
+#, fuzzy
+msgid "Imperial (Miles)"
+msgstr "אימפריאל (מיילים)"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:221
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:250
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:331
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:417
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:134
+#: src/Features/Form/Fields/NearestLocations/Settings.php:217
+#, fuzzy
+msgid "Metric (Kilometers)"
+msgstr "מטרי (קילומטרים)"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:237
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:262
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:342
+#: src/Features/Form/Fields/NearestLocations/Settings.php:412
+msgid "Driving"
+msgstr "נהיגה"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:238
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:263
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:343
+#: src/Features/Form/Fields/NearestLocations/Settings.php:413
+msgid "Walking"
+msgstr "הליכה"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:239
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:264
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:344
+#: src/Features/Form/Fields/NearestLocations/Settings.php:414
+msgid "Bicycling"
+msgstr "אופניים"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:240
+#: src/Features/Form/Fields/NearestLocations/Settings.php:415
+msgid "Two Wheeler"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:241
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:265
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:345
+#, fuzzy
+msgid "Public Transit"
+msgstr "תחבורה ציבורית"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:269
+msgid "Traffic Unaware (Shortest Distance)"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:270
+msgid "Traffic Aware"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:271
+msgid "Traffic Aware Optimal"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:318
+#, fuzzy
+msgid "Travel Date & Time Settings"
+msgstr "הגדרות תאריך ושעת נסיעה"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:335
+#, fuzzy
+msgid "Leave Now (default)"
+msgstr "עזוב עכשיו (ברירת מחדל)"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:336
+#, fuzzy
+msgid "Leave At Specific Time"
+msgstr "עזוב בזמן ספציפי"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:337
+#, fuzzy
+msgid "Arrive By Specific Time"
+msgstr "הגעה בזמן ספציפי"
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:420
+msgid "Error Handling"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/FieldSettings/Travel.php:435
+msgid "Optional: Message shown when distance cannot be calculated"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupLocationResolver.php:62
+msgid "You are not allowed to edit this form."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupLocationResolver.php:73
+msgid "Enter an address to use as the fixed location."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupLocationResolver.php:91
+msgid "That address could not be located. Try a more complete address."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:56
+msgid "Quick Setups"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:81
+msgid "Adding fields…"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:82
+msgid ""
+"The fields could not be added. No setup fields were kept. Please try again."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:83
+msgid ""
+"These fields can no longer be removed together because the form changed "
+"after they were added."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:87
+msgid "What would you like to add?"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:88
+msgid ""
+"Choose a starting setup. Gravity Geolocation will add and connect ordinary "
+"form fields."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:94
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:171
+#: src/Features/Form/Admin/FormTemplates.php:231
+msgid "Location & Map"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:95
+msgid "Collect an address and optionally show its location on a map."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:104
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:113
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:209
+#: src/Features/Form/Admin/FormTemplates.php:251
+msgid "Distance & Travel Time"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:105
+msgid "Connect two locations and calculate distance and estimated travel time."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:110
+#: src/Features/Form/Admin/FormTemplates.php:247
+#: src/Features/Form/Admin/FormTemplates.php:458
+#: src/Features/Form/Fields/Distance/Field.php:98
+#: src/Features/Form/Fields/Placeholders/Distance/Field.php:93
+msgid "Distance & Duration"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:114
+msgid "Available when the Distance & Duration field is included in your plan."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:123
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:132
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:381
+msgid "Nearby Locations"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:124
+msgid ""
+"Add a visitor location, inline nearby results, and an optional results map."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:129
+#: src/Features/Form/Fields/NearestLocations/Field.php:97
+#: src/Features/Form/Fields/Placeholders/NearestLocations/Field.php:96
+msgid "Nearest Locations"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:133
+msgid "Available when the Nearest Locations field is included in your plan."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:142
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:151
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:290
+#: src/Features/Form/Admin/FormTemplates.php:297
+#: src/Features/Form/Admin/FormTemplates.php:523
+msgid "Directions & Route"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:143
+msgid ""
+"Add two connected locations, inline route details, and an optional route map."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:148
+#: src/Features/Form/Fields/Directions/Field.php:95
+#: src/Features/Form/Fields/Placeholders/Directions/Field.php:93
+#, fuzzy
+msgid "Directions & Travel Routes"
+msgstr "הוראות הגעה ומסלולי נסיעה"
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:152
+msgid ""
+"Available when the Directions & Travel Routes field is included in your plan."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:158
+msgid "Prefer to build manually?"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:160
+msgid "View individual Geolocation fields"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:167
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:205
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:286
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:377
+msgid "All Quick Setups"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:170
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:208
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:289
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:380
+msgid "Step 1 of 2"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:172
+msgid ""
+"Choose a useful starting point. You can edit every field and setting "
+"afterward."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:176
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:683
+msgid "Address field label"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:182
+#: src/Features/Form/Admin/FormTemplates.php:238
+msgid "Customer Address"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:187
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:270
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:349
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:491
+msgid "Include"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:190
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:494
+msgid "Current-location button"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:194
+#: src/Features/Form/Fields/Map/Field.php:112
+#: src/Features/Search/Admin/SearchForms/Settings/NativeSubviewController.php:1587
+#: src/Features/Search/Admin/SearchForms/Settings/Tabs.php:168
+msgid "Map"
+msgstr "מפה"
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:199
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:280
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:371
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:503
+msgid "Review fields"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:210
+msgid "Add two connected locations and calculate the distance between them."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:217
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:298
+msgid "Origin location"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:218
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:299
+#: src/Features/Form/Admin/FormTemplates.php:258
+#: src/Features/Form/Admin/FormTemplates.php:304
+msgid "Origin Address"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:223
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:304
+msgid "Destination location"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:224
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:305
+#: src/Features/Form/Admin/FormTemplates.php:260
+#: src/Features/Form/Admin/FormTemplates.php:306
+msgid "Destination Address"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:229
+msgid "Calculation method"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:241
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:322
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:409
+msgid "Measurement system"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:255
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:335
+msgid "Travel mode"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:273
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:352
+msgid "Current-location buttons on visitor-entered addresses"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:291
+msgid "Add two connected locations and a ready-to-use route workflow."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:310
+msgid "Calculate directions"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:317
+msgid "Automatically when locations change"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:318
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:404
+msgid "Manually, using buttons"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:356
+msgid "Route map"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:382
+msgid ""
+"Create the connected search workflow and provide the destinations visitors "
+"can search."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:386
+msgid "Search address label"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:392
+msgid "Your Location"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:397
+msgid "Find locations"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:405
+msgid "Automatically when the location changes"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:429
+#: src/Features/Form/Fields/NearestLocations/Settings.php:128
+msgid "Manual Locations"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:430
+#: src/Features/Form/Fields/NearestLocations/Settings.php:129
+msgid "Database Table"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:458
+#: src/Features/Form/Fields/NearestLocations/Settings.php:156
+msgid "e.g. wpgeo_locations"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:498
+msgid "Results map"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:509
+msgid "Change options"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:512
+msgid "Step 2 of 2"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:513
+msgid "Review the fields"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:514
+msgid ""
+"These become normal Gravity Forms fields. Nothing remains grouped after they "
+"are added."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:518
+msgid "Visible on the form"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:522
+msgid "Supporting fields"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:528
+msgid "Add these fields"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:535
+msgid "Fields added"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:536
+msgid ""
+"The fields are connected and ready to customize. From here, they work like "
+"any other Gravity Forms fields."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:539
+msgid "How it works"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:544
+#: src/Features/Form/Fields/DrawingTools/Field.php:233
+#: src/Features/Form/Fields/DrawingTools/Settings.php:392
+msgid "Undo"
+msgstr "ביטול"
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:547
+msgid "Add another Quick Setup"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:573
+msgid "Optional"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:576
+msgid "Estimated price field"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:582
+msgid "Price field label"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:588
+msgid "Estimated Price"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:593
+msgid "Base price"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:609
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:612
+msgid "Rate per mile"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:610
+msgid "Rate per kilometer"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:627
+msgid "Rate per travel minute"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:641
+msgid ""
+"Rates use the site currency. You can edit the generated Gravity Forms "
+"calculation afterward."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:670
+msgid "Location source"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:677
+msgid "Entered by the visitor"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:678
+msgid "Use a fixed location"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:696
+msgid "Fixed address"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/QuickSetupsPanel.php:710
+msgid ""
+"The fixed location is stored in the hidden Geocoder; no Address field is "
+"added for visitors."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:61
+#, fuzzy
+msgid ""
+"Optionally set default coordinates for the geocoder. These coordinates will "
+"be geocoded and used to populate attached location fields when the form "
+"initially loads."
+msgstr ""
+"ניתן להגדיר קואורדינטות ברירת מחדל עבור המקודד הגיאוגרפי. קואורדינטות אלו "
+"יקודדו גיאוגרפית וישמשו למילוי שדות מיקום מצורפים כאשר הטופס ייטען לראשונה."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:73
+#, fuzzy
+msgid ""
+"Enable syncing with the GEO my WP Posts Locator. The location from this "
+"geocoder will be saved in GEO my WP’s database and linked to the post "
+"created by this form submission."
+msgstr ""
+"הפעל סנכרון עם מאתר הפוסטים של GEO my WP. המיקום מגיאוגרפיקדיטור זה יישמר "
+"במסד הנתונים של GEO my WP ויקושר לפוסט שנוצר על ידי שליחת טופס זה."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:74
+#, fuzzy
+msgid "Select a field to be saved as the Phone value in GEO my WP."
+msgstr "בחר שדה שיישמר כערך הטלפון ב-GEO my WP."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:75
+#, fuzzy
+msgid "Select a field to be saved as the Fax value in GEO my WP."
+msgstr "בחר שדה שיישמר כערך הפקס ב-GEO my WP."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:76
+#, fuzzy
+msgid "Select a field to be saved as the Email value in GEO my WP."
+msgstr "בחר שדה שיישמר כערך הדוא\"ל ב-GEO my WP."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:77
+#, fuzzy
+msgid "Select a field to be saved as the Website value in GEO my WP."
+msgstr "בחר שדה שיישמר כערך אתר אינטרנט ב-GEO my WP."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:78
+#, fuzzy
+msgid ""
+"Enable syncing with GEO my WP’s Users Locator. The location from this "
+"geocoder will be saved to the user’s profile and searchable via GEO my WP "
+"forms."
+msgstr ""
+"הפעל סנכרון עם מאתר המשתמשים של GEO my WP. המיקום מגיאוגרפיקדיטור זה יישמר "
+"בפרופיל המשתמש וניתן לחפש אותו באמצעות טפסי GEO my WP."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:81
+#, fuzzy
+msgid ""
+"Enter a user meta key to store the geocoded location data as a serialized "
+"array. Leave blank to disable."
+msgstr ""
+"הזן מפתח מטא של משתמש כדי לאחסן את נתוני המיקום המקודדים גיאוגרפית כמערך "
+"סידורי. השאר ריק כדי להשבית."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:82
+#, fuzzy
+msgid ""
+"Click “Show Fields” to display available geolocation data fields. These "
+"fields can be saved as post meta, user meta, or BuddyPress xProfile fields "
+"(BuddyPress plugin required)."
+msgstr ""
+"לחצו על \"הצג שדות\" כדי להציג את שדות נתוני המיקום הגיאוגרפי הזמינים. ניתן "
+"לשמור שדות אלה כמטא של פוסט, מטא של משתמש או שדות xProfile של BuddyPress "
+"(נדרש תוסף BuddyPress)."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:88
+#, fuzzy
+msgid ""
+"Set the default center point of the map using latitude and longitude. This "
+"location will be used when the form loads if no user location is available."
+msgstr ""
+"הגדר את נקודת המרכז המוגדרת כברירת מחדל של המפה באמצעות קווי רוחב ואורך. "
+"מיקום זה ישמש בעת טעינת הטופס אם אין מיקום משתמש זמין."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:96
+#, fuzzy
+msgid ""
+"Restrict the map view to a specific rectangular area by setting southwest "
+"and northeast coordinates. This prevents users from panning outside the "
+"defined region."
+msgstr ""
+"הגבל את תצוגת המפה לאזור מלבני ספציפי על ידי הגדרת קואורדינטות דרום-מערביות "
+"וצפון-מזרחיות. פעולה זו מונעת ממשתמשים לנוע מחוץ לאזור המוגדר."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:135
+msgid ""
+"Configure database source details when using the \"Database Table\" source "
+"type."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:167
+#, fuzzy
+msgid ""
+"Select the Geocoder fields to be used as the origin and destination points. "
+"You may also choose additional Geocoder fields to act as waypoints."
+msgstr ""
+"בחר את שדות הגיאוקודר שישמשו כנקודות מוצא ויעד. ניתן גם לבחור שדות גיאוקודר "
+"נוספים שישמשו כנקודות ציון."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:249
+#, fuzzy
+msgid "Customize the label for the reset button that clears the location data."
+msgstr "התאם אישית את התווית עבור כפתור האיפוס שמנקה את נתוני המיקום."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:250
+#, fuzzy
+msgid ""
+"When checked, the reset button will restore the default location (as defined "
+"in the field’s settings) instead of simply clearing the geolocation values."
+msgstr ""
+"כאשר מסומן, כפתור האיפוס ישחזר את מיקום ברירת המחדל (כפי שמוגדר בהגדרות "
+"השדה) במקום פשוט לנקות את ערכי המיקום הגיאוגרפי."
+
+#: src/Features/Form/Admin/FormEditor/Tooltips.php:261
+#, fuzzy
+msgid ""
+"Customize the label for the locator button that retrieves the user's current "
+"location."
+msgstr ""
+"התאם אישית את התווית עבור כפתור האיתור שמאחזר את המיקום הנוכחי של המשתמש."
+
+#: src/Features/Form/Admin/FormSettings.php:73
+#: src/Features/Form/Fields/Geocoder/Field.php:79
+msgid "Geocoder"
+msgstr "גאוקודר"
+
+#: src/Features/Form/Admin/FormSettings.php:86
+#, fuzzy
+msgid "Gravity Geolocation Auto Locator"
+msgstr "איתור גיאוגרפי אוטומטי של כוח משיכה"
+
+#: src/Features/Form/Admin/FormSettings.php:91
+#, fuzzy
+msgid "Select Geocoder Fields"
+msgstr "בחר שדות גיאוקודר"
+
+#: src/Features/Form/Admin/FormSettings.php:93
+msgid ""
+"Select one or more Geocoder fields for the Auto Locator feature. When the "
+"form loads, the plugin will attempt to detect the user's current position "
+"and, if found, automatically populate the selected Geocoder fields."
+msgstr ""
+
+#: src/Features/Form/Admin/FormSettings.php:103
+#, fuzzy
+msgid "IP Address Locator"
+msgstr "מאתר כתובות IP"
+
+#: src/Features/Form/Admin/FormSettings.php:119
+msgid ""
+"Retrieve the user's location using their IP address. Select \"Default\" to "
+"prioritize IP over browser geolocation, or \"Fallback\" to use IP only if "
+"the browser method fails. Note: IP geolocation doesn't require user consent, "
+"but is less accurate than HTML5 geolocation."
+msgstr ""
+
+#: src/Features/Form/Admin/FormSettings.php:127
+#, fuzzy
+msgid "Location Found Message"
+msgstr "הודעה על מיקום שנמצא"
+
+#: src/Features/Form/Admin/FormSettings.php:129
+msgid ""
+"Message shown when the user's location is successfully detected. Leave empty "
+"to disable."
+msgstr ""
+
+#: src/Features/Form/Admin/FormSettings.php:137
+#, fuzzy
+msgid "Hide Location Failed Message"
+msgstr "הסתר מיקום הודעה נכשלה"
+
+#: src/Features/Form/Admin/FormSettings.php:140
+msgid ""
+"Hide the alert shown when location detection fails. The error will still "
+"appear in the browser console."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:135
+msgid "Please enter a valid form title."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:232
+msgid ""
+"Collect an address, detect the visitor’s location, and keep a map "
+"synchronized automatically."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:237
+msgid "Customer Location"
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:239
+msgid "Location Map"
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:252
+msgid ""
+"Collect an origin and destination, then calculate driving distance and "
+"estimated travel time."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:264
+msgid "Distance (miles)"
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:273
+msgid "Travel Time (minutes)"
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:298
+msgid ""
+"Collect an origin and destination, draw the route on a map, and show "
+"distance, duration, and turn-by-turn directions."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:307
+msgid "Route Map"
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:346
+msgid "Submit"
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:367
+msgid "Stores shared location data and is hidden from visitors."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:371
+#: src/Features/Form/Admin/FormTemplates.php:404
+msgid "Location found"
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:399
+msgid "Collects the visitor’s address."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:409
+msgid "Please select an address from the suggested results."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:430
+msgid "Displays the selected location."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:459
+msgid "Calculates route distance and estimated travel time."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:470
+msgid "No route could be found between the selected locations."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:500
+msgid "Calculated automatically from the Distance & Duration field."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:524
+msgid "Calculates and displays the route between the two locations."
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:542
+msgid "Get directions"
+msgstr ""
+
+#: src/Features/Form/Admin/FormTemplates.php:543
+msgid "Clear directions"
+msgstr ""
+
+#: src/Features/Form/Feeds/FeedSettings.php:124
+msgid "Select an Option"
+msgstr "בחר אפשרות..."
+
+#: src/Features/Form/Feeds/FeedSettings.php:137
+#: src/Features/Form/Feeds/FeedSettings.php:148
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:122
+msgid "Field"
+msgstr "שדה"
+
+#: src/Features/Form/Feeds/FeedSettings.php:164
+#, fuzzy
+msgid ""
+"Sync the selected Geocoder field with GEO my WP when this feed is processed."
+msgstr ""
+"בחר שדה Geocoder שמיקומו צריך להיות מסונכרן עם GEO my WP כאשר עיבוד הזנה זה "
+"מתבצע."
+
+#: src/Features/Form/Feeds/FeedSettings.php:167
+#, fuzzy
+msgid ""
+"Syncing with GEO my WP allows the generated post to be geotagged and managed "
+"through GEO my WP features such as proximity search and maps."
+msgstr ""
+"סנכרון עם GEO my WP מאפשר תיוג גיאוגרפי של הפוסט וניהולו באמצעות תכונות "
+"המיקום של GEO my WP, כגון חיפוש ומפות."
+
+#: src/Features/Form/Feeds/FeedSettings.php:169
+#, fuzzy
+msgid ""
+"Syncing with GEO my WP allows the registered user to be geotagged and "
+"searchable through GEO my WP features such as proximity search and maps."
+msgstr ""
+"סנכרון עם GEO my WP מאפשר תיוג גיאוגרפי של הפוסט וניהולו באמצעות תכונות "
+"המיקום של GEO my WP, כגון חיפוש ומפות."
+
+#: src/Features/Form/Feeds/FeedSettings.php:180
+#, fuzzy
+msgid "Geocoder Field to Sync"
+msgstr "שדה גיאוקודר לסנכרון"
+
+#: src/Features/Form/Feeds/FeedSettings.php:184
+#, fuzzy
+msgid "GEO my WP Location Sync"
+msgstr "סנכרון מיקום GEO שלי ב-WP"
+
+#: src/Features/Form/Feeds/FeedSettings.php:185
+#, fuzzy
+msgid ""
+"Choose a Geocoder field whose location should be synced to GEO my WP when "
+"this feed is processed."
+msgstr ""
+"בחר שדה Geocoder שמיקומו צריך להיות מסונכרן עם GEO my WP כאשר עיבוד הזנה זה "
+"מתבצע."
+
+#: src/Features/Form/Feeds/FeedSettings.php:199
+msgid "Phone"
+msgstr "טלפון"
+
+#: src/Features/Form/Feeds/FeedSettings.php:201
+#, fuzzy
+msgid ""
+"Select a field that contains the phone number to associate with this "
+"location."
+msgstr "בחר שדה המכיל את מספר הטלפון שיש לשייך למיקום זה."
+
+#: src/Features/Form/Feeds/FeedSettings.php:207
+msgid "Fax"
+msgstr "פקס"
+
+#: src/Features/Form/Feeds/FeedSettings.php:209
+#, fuzzy
+msgid ""
+"Select a field that contains the fax number for this location, if applicable."
+msgstr "בחר שדה המכיל את מספר הפקס עבור מיקום זה, אם רלוונטי."
+
+#: src/Features/Form/Feeds/FeedSettings.php:215
+msgid "Email"
+msgstr "אימייל"
+
+#: src/Features/Form/Feeds/FeedSettings.php:217
+#, fuzzy
+msgid ""
+"Select a field that contains the email address to associate with this "
+"location."
+msgstr "בחר שדה המכיל את כתובת הדוא\"ל שיש לשייך למיקום זה."
+
+#: src/Features/Form/Feeds/FeedSettings.php:223
+msgid "Website"
+msgstr "אתר"
+
+#: src/Features/Form/Feeds/FeedSettings.php:225
+#, fuzzy
+msgid ""
+"Select a field that contains the website URL to associate with this location."
+msgstr "בחר שדה המכיל את כתובת האתר שיש לשייך למיקום זה."
+
+#: src/Features/Form/Feeds/FeedSettings.php:280
+#, fuzzy
+msgid "Default Location"
+msgstr "איפוס מיקום"
+
+#. translators: %d: Saved GEO my WP location-type ID.
+#: src/Features/Form/Feeds/FeedSettings.php:323
+#, php-format
+msgid "Unavailable Location Type (ID %d)"
+msgstr ""
+
+#: src/Features/Form/Feeds/FeedSettings.php:336
+#, fuzzy
+msgid "Location Type"
+msgstr "אתר אותי"
+
+#: src/Features/Form/Feeds/FeedSettings.php:341
+#, fuzzy
+msgid "GEO my WP Location Type"
+msgstr "סנכרון מיקום GEO שלי ב-WP"
+
+#: src/Features/Form/Feeds/FeedSettings.php:342
+msgid ""
+"Choose whether this feed updates the object's default location or a specific "
+"GEO my WP location type."
+msgstr ""
+
+#: src/Features/Form/Fields/Address/Field.php:140
+#: src/Features/Search/Admin/SearchForms/Factory.php:613
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:140
+msgid "Address"
+msgstr "כתובת"
+
+#: src/Features/Form/Fields/Address/Field.php:151
+#, fuzzy
+msgid "A full address field with geolocation and locator capabilities."
+msgstr "שדה כתובת מלא עם יכולות מיקום גיאוגרפי ואיתור."
+
+#: src/Features/Form/Fields/Address/Settings.php:43
+#, fuzzy
+msgid "Google Places Autocomplete"
+msgstr "השלמה אוטומטית של גוגל מקומות"
+
+#: src/Features/Form/Fields/Address/Settings.php:138
+#, fuzzy
+msgid "Default (Browser Language)"
+msgstr "ברירת מחדל (שפת דפדפן)"
+
+#: src/Features/Form/Fields/Address/Settings.php:158
+#: src/Features/Form/Fields/DrawingTools/Settings.php:65
+msgid "None"
+msgstr "ללא"
+
+#: src/Features/Form/Fields/Address/Settings.php:159
+msgid "Proximity"
+msgstr "מרחק"
+
+#: src/Features/Form/Fields/Address/Settings.php:160
+#, fuzzy
+msgid "Area Bounds"
+msgstr "גבולות האזור"
+
+#: src/Features/Form/Fields/Address/Settings.php:161
+#, fuzzy
+msgid "User's Location (IP)"
+msgstr "מיקום המשתמש (IP)"
+
+#: src/Features/Form/Fields/AddressValidation/Field.php:67
+#: src/Features/Form/Fields/AddressValidation/Settings.php:37
+#: src/Features/Form/Fields/Placeholders/AddressValidation/Field.php:86
+msgid "Address Validation"
+msgstr ""
+
+#: src/Features/Form/Fields/AddressValidation/Field.php:76
+msgid ""
+"Stores address validation status/metadata for conditional logic and delivery "
+"workflows."
+msgstr ""
+
+#: src/Features/Form/Fields/AddressValidation/Field.php:151
+msgid ""
+"This field stores validation metadata and renders the validation panel on "
+"the front end when needed."
+msgstr ""
+
+#: src/Features/Form/Fields/AddressValidation/Field.php:242
+#: src/Features/Form/Fields/AddressValidation/Field.php:267
+msgid "No address validation data found."
+msgstr ""
+
+#: src/Features/Form/Fields/AddressValidation/Settings.php:52
+msgid "None (keep selection in validator only)"
+msgstr ""
+
+#: src/Features/Form/Fields/AddressValidation/Settings.php:66
+msgid "Off"
+msgstr ""
+
+#: src/Features/Form/Fields/AddressValidation/Settings.php:67
+msgid "Notes Only"
+msgstr ""
+
+#: src/Features/Form/Fields/AddressValidation/Settings.php:68
+msgid "Strict"
+msgstr ""
+
+#: src/Features/Form/Fields/AddressValidation/Settings.php:69
+msgid "Strict + Fail Unknown"
+msgstr ""
+
+#: src/Features/Form/Fields/Coordinates/Field.php:143
+msgid "Coordinates"
+msgstr "קואורדינטות"
+
+#: src/Features/Form/Fields/Coordinates/Field.php:154
+#, fuzzy
+msgid ""
+"Lets users enter or populate latitude and longitude values manually or "
+"automatically."
+msgstr "מאפשר למשתמשים להזין או למלא ערכי קו רוחב ואורך באופן ידני או אוטומטי."
+
+#: src/Features/Form/Fields/Coordinates/Field.php:281
+#: src/Features/Form/Fields/Coordinates/Field.php:795
+msgid "Latitude"
+msgstr "קו רוחב"
+
+#: src/Features/Form/Fields/Coordinates/Field.php:282
+#: src/Features/Form/Fields/Coordinates/Field.php:796
+msgid "Longitude"
+msgstr "קו אורך"
+
+#: src/Features/Form/Fields/Coordinates/Field.php:518
+#, fuzzy
+msgid "Pipe Separated"
+msgstr "צינור מופרד"
+
+#: src/Features/Form/Fields/Coordinates/Field.php:521
+#, fuzzy
+msgid "Serialized"
+msgstr "סידור"
+
+#: src/Features/Form/Fields/Coordinates/Field.php:524
+#, fuzzy
+msgid "Comma Separated"
+msgstr "מופרדים בפסיקים"
+
+#: src/Features/Form/Fields/Directions/Field.php:106
+#: src/Features/Form/Fields/Placeholders/Directions/Field.php:104
+msgid ""
+"Displays calculated travel routes, distance, duration, and step-by-step "
+"directions between geolocation points."
+msgstr ""
+
+#: src/Features/Form/Fields/Directions/Field.php:207
+#: src/Features/Form/Fields/DirectorySearch/Field.php:203
+#, fuzzy
+msgid ""
+"This field is hidden in the form when the \"Directions Trigger Method\" is "
+"set to \"Automatically\"."
+msgstr "שדה זה מוסתר בטופס כאשר \"שיטת הפעלת הכוונה\" מוגדרת כ\"אוטומטית\"."
+
+#: src/Features/Form/Fields/Directions/Field.php:328
+#: src/Features/Form/Fields/Directions/Field.php:345
+#: src/Features/Form/Fields/DirectorySearch/Field.php:348
+#: src/Features/Form/Fields/DirectorySearch/Field.php:373
+msgid "No directions data found."
+msgstr ""
+
+#: src/Features/Form/Fields/Directions/Field.php:366
+#: src/Features/Form/Fields/DirectorySearch/Field.php:394
+#: src/Features/Form/Fields/Distance/Field.php:340
+#: src/Features/Form/Fields/DrawingShape/Field.php:212
+#: src/Features/Form/Fields/Geocoder/Field.php:525
+#: src/Features/Form/Fields/NearestLocations/Field.php:387
+#, fuzzy
+msgid "View data in entry page"
+msgstr "הצגת נתונים בדף הכניסה"
+
+#: src/Features/Form/Fields/DirectionsPanel/Field.php:97
+#: src/Features/Form/Fields/Placeholders/DirectionsPanel/Field.php:92
+#, fuzzy
+msgid "Directions Panel"
+msgstr "לוח הוראות הגעה"
+
+#: src/Features/Form/Fields/DirectionsPanel/Field.php:108
+#: src/Features/Form/Fields/Placeholders/DirectionsPanel/Field.php:104
+msgid ""
+"Displays the rendered route summary, turn-by-turn directions, and travel "
+"details generated by the associated Directions Field."
+msgstr ""
+
+#: src/Features/Form/Fields/DirectionsPanel/Field.php:183
+#, fuzzy
+msgid ""
+"This field is hidden on the front end and will be dynamically filled with "
+"directions when available."
+msgstr "שדה זה מוסתר בקצה הקדמי וימולא באופן דינמי בהוראות כאשר יהיו זמינים."
+
+#: src/Features/Form/Fields/DirectoryResultsPanel/Field.php:93
+msgid "Directory Results Panel"
+msgstr ""
+
+#: src/Features/Form/Fields/DirectoryResultsPanel/Field.php:104
+msgid "description"
+msgstr ""
+
+#: src/Features/Form/Fields/DirectoryResultsPanel/Field.php:172
+msgid ""
+"This field is hidden on the front end and will be dynamically filled with "
+"directory results panel when available."
+msgstr ""
+
+#: src/Features/Form/Fields/DirectorySearch/Field.php:89
+msgid "Directory Search"
+msgstr ""
+
+#: src/Features/Form/Fields/DirectorySearch/Field.php:100
+msgid ""
+"Searches and displays nearby entries or locations based on a defined origin "
+"and radius."
+msgstr ""
+
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:42
+msgid "Search Type"
+msgstr ""
+
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:51
+msgid "Posts"
+msgstr ""
+
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:52
+msgid "Users"
+msgstr ""
+
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:53
+msgid "Entries"
+msgstr ""
+
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:141
+msgid "Search Radius"
+msgstr ""
+
+#: src/Features/Form/Fields/DirectorySearch/Settings.php:160
+msgid "Display Settings"
+msgstr "הגדרות תצוגה"
+
+#: src/Features/Form/Fields/Distance/Field.php:109
+#: src/Features/Form/Fields/Placeholders/Distance/Field.php:104
+#, fuzzy
+msgid ""
+"Displays calculated travel distance and duration between geolocation points."
+msgstr "מציג מרחק נסיעה מחושב ומשך זמן בין נקודות מיקום גיאוגרפי."
+
+#: src/Features/Form/Fields/Distance/Field.php:208
+msgid ""
+"This field is hidden on the front end and automatically populated with the "
+"calculated distance and duration."
+msgstr ""
+
+#: src/Features/Form/Fields/Distance/Field.php:302
+#: src/Features/Form/Fields/Distance/Field.php:319
+msgid "No distance data found."
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingShape/Field.php:85
+#: src/Features/Form/Fields/Placeholders/DrawingShape/Field.php:93
+#, fuzzy
+msgid "Drawing Shape"
+msgstr "ציור צורה"
+
+#: src/Features/Form/Fields/DrawingShape/Field.php:97
+#, fuzzy
+msgid "A Drawing Shape field integrated with map drawing tools."
+msgstr "שדה צורת ציור המשולב עם כלי ציור מפות."
+
+#: src/Features/Form/Fields/DrawingShape/Field.php:146
+#, fuzzy
+msgid "This field displays a Drawing Shape in a Drawing Shape field."
+msgstr "שדה זה מציג צורת ציור בשדה צורת ציור."
+
+#: src/Features/Form/Fields/DrawingShape/Field.php:240
+#: src/Features/Form/Fields/DrawingShape/Field.php:281
+#: src/Features/Form/Fields/DrawingShape/Field.php:309
+msgid "No shape data found."
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:44
+#, fuzzy
+msgid "Shape Settings"
+msgstr "הגדרות צורה"
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:78
+msgid "Field Options"
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:79
+msgid "Raw JSON"
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:85
+msgid "Geometry"
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:100
+msgid "Point"
+msgstr "נקודה"
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:101
+#: src/Features/Form/Fields/DrawingTools/Settings.php:113
+#: src/Features/Form/Fields/DrawingTools/Settings.php:179
+#, fuzzy
+msgid "Polyline"
+msgstr "פוליליין"
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:102
+#: src/Features/Form/Fields/DrawingTools/Settings.php:114
+#: src/Features/Form/Fields/DrawingTools/Settings.php:219
+#, fuzzy
+msgid "Polygon"
+msgstr "מְצוּלָע"
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:103
+#: src/Features/Form/Fields/DrawingTools/Settings.php:115
+#: src/Features/Form/Fields/DrawingTools/Settings.php:259
+msgid "Rectangle"
+msgstr "מלבני"
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:104
+#: src/Features/Form/Fields/DrawingTools/Settings.php:116
+#: src/Features/Form/Fields/DrawingTools/Settings.php:299
+msgid "Circle"
+msgstr "עיגול"
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:165
+#, fuzzy
+msgid ""
+"Optional: Paste a GeoJSON Feature to override the center/size settings for "
+"full control of the shape."
+msgstr ""
+"אופציונלי: הדבק תכונה GeoJSON כדי לעקוף את הגדרות המרכז/גודל לשליטה מלאה על "
+"הצורה."
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:171
+msgid "Appearance"
+msgstr "מראה"
+
+#: src/Features/Form/Fields/DrawingShape/Settings.php:205
+msgid "Permissions"
+msgstr "הרשאות"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:103
+#: src/Features/Form/Fields/DrawingTools/Settings.php:52
+#: src/Features/Form/Fields/Placeholders/DrawingTools/Field.php:93
+#, fuzzy
+msgid "Drawing Tools"
+msgstr "כלי ציור"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:116
+#: src/Features/Form/Fields/Placeholders/DrawingTools/Field.php:104
+msgid ""
+"Allows users to draw shapes on a linked map field, including polygons, "
+"circles, markers, and more."
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:226
+#, fuzzy
+msgid "Add Marker"
+msgstr "הוסף סימון"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:227
+#, fuzzy
+msgid "Draw Polyline"
+msgstr "צייר פוליליין"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:228
+#, fuzzy
+msgid "Draw Polygon"
+msgstr "צייר מצולע"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:229
+#, fuzzy
+msgid "Draw Rectangle"
+msgstr "צייר מלבן"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:230
+#, fuzzy
+msgid "Draw Circle"
+msgstr "צייר מעגל"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:231
+#, fuzzy
+msgid "Draw Freehand"
+msgstr "צייר ביד חופשית"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:232
+#: src/Features/Form/Fields/DrawingTools/Settings.php:391
+#, fuzzy
+msgid "Clear Shapes"
+msgstr "צורות ברורות"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:234
+#: src/Features/Form/Fields/DrawingTools/Settings.php:393
+msgid "Redo"
+msgstr "ביצוע מחדש"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:235
+#: src/Features/Form/Fields/DrawingTools/Settings.php:394
+msgid "Copy JSON"
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:236
+#: src/Features/Form/Fields/DrawingTools/Settings.php:395
+msgid "Export"
+msgstr "ייצוא"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:237
+#: src/Features/Form/Fields/DrawingTools/Settings.php:396
+msgid "Import"
+msgstr "ייבוא"
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:362
+msgid "View drawing data in entry page"
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingTools/Field.php:391
+#: src/Features/Form/Fields/DrawingTools/Field.php:419
+msgid "No drawing data found."
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:81
+msgid "Buttons"
+msgstr "כפתורים"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:82
+#, fuzzy
+msgid "Icons Bar"
+msgstr "סרגל סמלים"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:96
+#, fuzzy
+msgid "Inside Form"
+msgstr "טופס פנימי"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:97
+#, fuzzy
+msgid "Inside Map"
+msgstr "מפה פנימית"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:112
+#: src/Features/Form/Fields/DrawingTools/Settings.php:139
+msgid "Marker"
+msgstr "סמן"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:117
+#: src/Features/Form/Fields/DrawingTools/Settings.php:339
+#, fuzzy
+msgid "Freehand"
+msgstr "בלי עזרה"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:130
+msgid "Paste or write your JSON shapes here…"
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:155
+#, fuzzy
+msgid "e.g. Add Marker"
+msgstr "לדוגמה הוסף סמן"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:195
+#, fuzzy
+msgid "e.g. Draw Polyline"
+msgstr "לדוגמה, צייר פוליליין"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:235
+#, fuzzy
+msgid "e.g. Draw Polygon"
+msgstr "לדוגמה, צייר מצולע"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:275
+#, fuzzy
+msgid "e.g. Draw Rectangle"
+msgstr "לדוגמה, צייר מלבן"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:315
+#, fuzzy
+msgid "e.g. Draw Circle"
+msgstr "לדוגמה, צייר עיגול"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:355
+#, fuzzy
+msgid "e.g. Draw Freehand"
+msgstr "למשל, צייר ביד חופשית"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:377
+msgid "Action Buttons"
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:414
+#, fuzzy
+msgid "e.g. Clear Shapes"
+msgstr "לדוגמה, צורות שקופות"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:434
+#, fuzzy
+msgid "e.g. Undo"
+msgstr "למשל, ביטול"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:454
+#, fuzzy
+msgid "e.g. Redo"
+msgstr "למשל, Redo"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:474
+msgid "e.g. Copy JSON"
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:494
+#, fuzzy
+msgid "e.g. Export"
+msgstr "למשל, ייצוא"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:514
+#, fuzzy
+msgid "e.g. Import"
+msgstr "למשל, ייבוא"
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:522
+msgid "Shape Panel"
+msgstr ""
+
+#: src/Features/Form/Fields/DrawingTools/Settings.php:560
+#, fuzzy
+msgid "e.g. Delete Shape"
+msgstr "לדוגמה, מחיקת צורה"
+
+#: src/Features/Form/Fields/Dynamic/Settings.php:67
+msgid "Location ( Geocoder ) Field"
+msgstr ""
+
+#: src/Features/Form/Fields/Dynamic/Settings.php:70
+msgid "Directions Field"
+msgstr ""
+
+#: src/Features/Form/Fields/Dynamic/Settings.php:74
+msgid "Distance Field"
+msgstr ""
+
+#: src/Features/Form/Fields/Dynamic/Settings.php:78
+msgid "Drawing Tools Field"
+msgstr ""
+
+#: src/Features/Form/Fields/Dynamic/Settings.php:82
+msgid "Drawing Shape Field"
+msgstr ""
+
+#: src/Features/Form/Fields/Dynamic/Settings.php:86
+msgid "Nearest Locations Field"
+msgstr ""
+
+#: src/Features/Form/Fields/Dynamic/Settings.php:90
+msgid "Address Validation Field"
+msgstr ""
+
+#: src/Features/Form/Fields/Geocoder/Field.php:90
+#, fuzzy
+msgid ""
+"Stores structured geolocation data like address and coordinates for syncing "
+"with other fields."
+msgstr ""
+"מאחסן נתוני מיקום גיאוגרפיים מובנים כמו כתובת וקואורדינטות לצורך סנכרון עם "
+"שדות אחרים."
+
+#: src/Features/Form/Fields/Geocoder/Field.php:205
+#, fuzzy
+msgid "This field is hidden when viewing the form."
+msgstr "שדה זה מוסתר בעת צפייה בטופס."
+
+#: src/Features/Form/Fields/Geocoder/Settings.php:45
+#: src/Features/Form/Fields/Map/Settings.php:51
+#, fuzzy
+msgid "Default Coordinates"
+msgstr "קואורדינטות ברירת מחדל"
+
+#: src/Features/Form/Fields/Geocoder/Settings.php:94
+msgid "Map Marker"
+msgstr "מפה סימון"
+
+#: src/Features/Form/Fields/LocatorButton/Field.php:117
+#, fuzzy
+msgid ""
+"A clickable button that detects and uses the visitor's current location."
+msgstr "כפתור לחיץ המזהה ומשתמש במיקום הנוכחי של המבקר."
+
+#: src/Features/Form/Fields/LocatorButton/Field.php:198
+#, fuzzy
+msgid "Locate Me"
+msgstr "אתר אותי"
+
+#: src/Features/Form/Fields/Map/Field.php:122
+#, fuzzy
+msgid "Displays an interactive map linked to address or coordinate fields."
+msgstr "מציג מפה אינטראקטיבית המקושרת לשדות כתובת או קואורדינטות."
+
+#: src/Features/Form/Fields/Map/Field.php:307
+#, fuzzy
+msgid "View map in entry details"
+msgstr "הצג מפה בפרטי הכניסה"
+
+#: src/Features/Form/Fields/Map/Settings.php:39
+msgid "Note: If a Map ID is provided below, map styles will be ignored."
+msgstr ""
+
+#: src/Features/Form/Fields/Map/Settings.php:42
+msgid ""
+"Note: map styles are disabled because the Advanced Markers feature is "
+"enabled in the Settings page."
+msgstr ""
+
+#: src/Features/Form/Fields/Map/Settings.php:89
+#, fuzzy
+msgid "Map Options"
+msgstr "אפשרויות מפה"
+
+#: src/Features/Form/Fields/Map/Settings.php:105
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:180
+msgid "Roadmap"
+msgstr "מפת הדרכים"
+
+#: src/Features/Form/Fields/Map/Settings.php:106
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:184
+msgid "Satellite"
+msgstr "לוויין"
+
+#: src/Features/Form/Fields/Map/Settings.php:107
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:188
+msgid "Hybrid"
+msgstr "היברידי"
+
+#: src/Features/Form/Fields/Map/Settings.php:108
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:192
+msgid "Terrain"
+msgstr "תוואי שטח"
+
+#: src/Features/Form/Fields/Map/Settings.php:122
+#, fuzzy
+msgid "Select Zoom Level"
+msgstr "בחר רמת זום"
+
+#: src/Features/Form/Fields/Map/Settings.php:205
+#, fuzzy
+msgid "Map Bounds Restriction"
+msgstr "הגבלת גבולות המפה"
+
+#: src/Features/Form/Fields/NearestLocations/Field.php:108
+msgid ""
+"Finds and displays the nearest location(s) relative to the user’s address or "
+"coordinates using the Google Routes Matrix API or Haversine formula."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/Field.php:212
+msgid ""
+"This field is hidden in the form when the \"Nearest Locations Trigger "
+"Method\" is set to \"Automatically\"."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/Field.php:341
+#: src/Features/Form/Fields/NearestLocations/Field.php:366
+msgid "No nearest locations data found."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/Settings.php:46
+msgid "Behavior &amp; Trigger"
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/Settings.php:92
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:184
+msgid "Source"
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/Settings.php:105
+msgid "Select a Geocoder Field"
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/Settings.php:117
+msgid "Destinations"
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/Settings.php:170
+msgid "e.g. latitude column"
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/Settings.php:182
+msgid "e.g. longitude column"
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/Settings.php:187
+msgid "Results &amp; Calculations"
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/Settings.php:351
+msgid "Output Geocoders"
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/Settings.php:375
+msgid "Advanced (Matrix API)"
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/SourceResolver.php:68
+msgid "The nearest-locations source registry is unavailable."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/SourceResolver.php:79
+#: src/Features/Form/Fields/NearestLocations/SourceResolver.php:110
+msgid "The nearest-locations source reference is invalid."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/SourceResolver.php:118
+#, fuzzy
+msgid "Gravity Forms is unavailable."
+msgstr "הנתונים אינם זמינים"
+
+#: src/Features/Form/Fields/NearestLocations/SourceResolver.php:128
+msgid "The nearest-locations source form could not be found."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/SourceResolver.php:138
+msgid "The nearest-locations source field could not be found."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/SourceResolver.php:146
+msgid "The nearest-locations field is not configured to use a database source."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/SourceResolver.php:158
+msgid "The nearest-locations database source is invalid."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/SourceResolver.php:188
+msgid "The nearest-locations source has no valid output columns."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocations/SourceResolver.php:248
+msgid "The resolved nearest-locations source is invalid."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocationsPanel/Field.php:96
+#: src/Features/Form/Fields/Placeholders/NearestLocationsPanel/Field.php:92
+msgid "Nearest Locations Panel"
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocationsPanel/Field.php:107
+msgid "Displays the nearest location output."
+msgstr ""
+
+#: src/Features/Form/Fields/NearestLocationsPanel/Field.php:187
+msgid ""
+"This field is hidden on the front end and will be dynamically filled with "
+"nearest location output when available."
+msgstr ""
+
+#: src/Features/Form/Fields/Placeholders/AddressValidation/Field.php:95
+msgid ""
+"Verifies and standardizes addresses for delivery workflows. Available in "
+"Gravity Geolocation Toolkit and All Access."
+msgstr ""
+
+#: src/Features/Form/Fields/Placeholders/DrawingShape/Field.php:104
+#, fuzzy
+msgid "A shape field integrated with map drawing tools."
+msgstr "שדה צורה המשולב עם כלי ציור מפות."
+
+#: src/Features/Form/Fields/Placeholders/NearestLocations/Field.php:107
+msgid ""
+"Displays a disabled “Find Nearest Locations” button as a visual placeholder. "
+"Activate the full module to enable distance calculations and nearest "
+"location search."
+msgstr ""
+
+#: src/Features/Form/Fields/Placeholders/NearestLocationsPanel/Field.php:104
+msgid "Displays the output of the Nearest Locations field."
+msgstr ""
+
+#: src/Features/Form/Fields/ResetLocation/Field.php:98
+#: src/Features/Form/Fields/ResetLocation/Field.php:190
+#, fuzzy
+msgid "Reset Location"
+msgstr "איפוס מיקום"
+
+#: src/Features/Form/Fields/ResetLocation/Field.php:109
+#, fuzzy
+msgid ""
+"A button that resets geolocation fields to their initial state or clears "
+"them."
+msgstr "כפתור שמאפס שדות מיקום גיאוגרפי למצבם ההתחלתי או מנקה אותם."
+
+#: src/Features/Form/Helpers/FormHelper.php:90
+#, fuzzy
+msgid "BuddyPress Profile Field"
+msgstr "שדה פרופיל של באדיפרס"
+
+#: src/Features/Form/Provider.php:196
+#, fuzzy
+msgid "Geolocation Fields"
+msgstr "שדות מיקום גיאוגרפי"
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:53
+msgid "Location Index Status"
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:105
+msgid "No geocoding status available."
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:112
+msgid "No geocoding fields are configured for this entry."
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:155
+msgid "Location indexed"
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:158
+msgid "No location provided"
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:160
+msgid "No address provided"
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:163
+msgid "Location not indexed"
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:203
+msgid "Stored geocoder payload did not contain valid coordinates."
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:205
+msgid "Address lookup returned no coordinates."
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:207
+msgid "Location record could not be saved."
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:209
+msgid "A location record exists but does not include valid coordinates."
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:211
+msgid "No indexed location record found for this field yet."
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:213
+msgid ""
+"Status snapshot is missing for this entry. Location records were used as "
+"fallback."
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:215
+msgid "Field is missing or invalid."
+msgstr ""
+
+#: src/Features/Search/Admin/Entry/StatusMetaBox.php:217
+msgid "An unknown geocoding error occurred."
+msgstr ""
+
+#: src/Features/Search/Admin/Import/EntryLocationsImporter.php:97
+msgid "Invalid form or Gravity Forms API unavailable."
+msgstr ""
+
+#: src/Features/Search/Admin/Import/EntryLocationsImporter.php:133
+msgid "Importer cannot continue: missing form or API."
+msgstr ""
+
+#: src/Features/Search/Admin/Import/EntryLocationsImporter.php:141
+msgid "Importer cannot continue: target form was not found."
+msgstr ""
+
+#: src/Features/Search/Admin/Import/EntryLocationsImporter.php:149
+msgid ""
+"No selected fields to import. Select fields under \"Fields to Geocode\" "
+"first."
+msgstr ""
+
+#: src/Features/Search/Admin/Import/EntryLocationsImporter.php:168
+msgid ""
+"No valid selected fields to import. Update \"Fields to Geocode\" and try "
+"again."
+msgstr ""
+
+#. translators: %s: error message
+#: src/Features/Search/Admin/Import/EntryLocationsImporter.php:193
+#, php-format
+msgid "Importer stopped: %s"
+msgstr ""
+
+#: src/Features/Search/Admin/Import/EntryLocationsImporter.php:299
+msgid "Import completed."
+msgstr ""
+
+#: src/Features/Search/Admin/Import/EntryLocationsImporter.php:300
+msgid "Importing entry locations…"
+msgstr ""
+
+#. translators: %s: Invalid field IDs list.
+#: src/Features/Search/Admin/Import/EntryLocationsImporter.php:319
+#, php-format
+msgid "Ignored invalid selected field IDs: %s."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:99
+msgid "Invalid target form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:105
+#: src/Features/Search/Admin/SearchForms/Factory.php:361
+msgid "You are not allowed to create forms."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:109
+msgid "A Search cannot be used as a target form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:114
+msgid "Target form not found."
+msgstr ""
+
+#. translators: %s: Target form title.
+#: src/Features/Search/Admin/SearchForms/Factory.php:120
+#, php-format
+msgid "%s Search"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:121
+#: src/Features/Search/Admin/SearchForms/Factory.php:367
+#: src/Features/Search/Admin/SearchForms/Factory.php:412
+#: src/Features/Search/Admin/SearchForms/Factory.php:509
+#: src/Features/Search/Admin/SearchForms/Factory.php:583
+#: src/Features/Search/Admin/SearchForms/Factory.php:593
+#: src/Features/Search/Admin/SearchForms/Listing.php:364
+msgid "Search"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:131
+#: src/Features/Search/Admin/SearchForms/Factory.php:374
+msgid "Unable to create Search."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:170
+msgid "New Search"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:298
+#: src/Features/Search/Admin/SearchForms/Listing.php:210
+#: src/Features/Search/Admin/SearchForms/Settings/Toolbar.php:117
+msgid "Searches"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:413
+msgid ""
+"Starter interactive Search with address, radius, units, and search controls."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:462
+msgid "Unauthorized"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:471
+msgid "Missing required parameter"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:481
+msgid "Unable to create form from template"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:505
+msgid "GFAPI unavailable"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:622
+msgid "Radius"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:631
+msgid "Units"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:636
+msgid "Miles"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Factory.php:641
+msgid "Kilometers"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Listing.php:273
+msgid "Type"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Listing.php:280
+msgid "Readiness"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Listing.php:286
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:264
+msgid "Target Form"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Listing.php:312
+msgid "(Search Settings)"
+msgstr ""
+
+#. translators: %d: Missing Gravity Forms form ID.
+#: src/Features/Search/Admin/SearchForms/Listing.php:389
+#, php-format
+msgid "Missing form (ID %d)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Listing.php:397
+#: src/Features/Search/Admin/SearchForms/Support/ChoicesProvider.php:199
+msgid "Untitled Form"
+msgstr ""
+
+#. translators: %d: Target Gravity Forms form ID.
+#: src/Features/Search/Admin/SearchForms/Listing.php:400
+#, php-format
+msgid "ID %d"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Listing.php:462
+msgid "Searches do not collect entries"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Listing.php:496
+msgid "Searches do not have a conversion rate"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Listing.php:527
+#: src/Features/Search/Admin/SearchForms/Listing.php:529
+#: src/Features/Search/Admin/SearchForms/Listing.php:612
+#: src/Features/Search/Admin/SearchForms/Settings/Toolbar.php:170
+#: src/Features/Search/Admin/SearchForms/Settings/Toolbar.php:172
+msgid "Search Form Builder"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Listing.php:528
+#: src/Features/Search/Admin/SearchForms/Settings/Toolbar.php:171
+msgid "Builder"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:52
+msgid "Search Readiness"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:58
+#: src/Features/Search/Admin/SearchForms/Settings/Tabs.php:52
+msgid "Search Setup"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:64
+msgid "Details Routing"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:70
+msgid "Search Defaults"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:76
+#: src/Features/Search/Admin/SearchForms/Settings/NativeSubviewController.php:1569
+#: src/Features/Search/Admin/SearchForms/Settings/Tabs.php:153
+msgid "Initial Load"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:82
+msgid "Predefined Filters"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:88
+msgid "Predefined Entry Meta Filters"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:94
+msgid "Predefined Creator Filters"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:100
+msgid "Search Form Status"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:107
+msgid "Filter Mappings"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:114
+msgid "Creator Filter Mappings"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:121
+msgid "Entry Meta Filters"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:128
+msgid "Proximity Search"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:139
+msgid "Location Data Scope"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:146
+msgid "Search Behavior"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:152
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:358
+msgid "Custom CSS Overrides"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:158
+msgid "Results Display"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:164
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:237
+msgid "Structured Output"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:170
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:243
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:359
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:296
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:301
+msgid "Custom HTML"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:177
+msgid "Results Behavior"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:187
+msgid "Map Enablement"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:194
+msgid "Map Settings"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:201
+msgid "Map Markers"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:211
+msgid "Info Window Output"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:218
+msgid "Info Window Structured Output"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:225
+msgid "Info Window Custom HTML"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:231
+#: src/Features/Search/Admin/SearchForms/Settings/NativeSubviewController.php:1596
+#: src/Features/Search/Admin/SearchForms/Settings/Tabs.php:173
+msgid "Details Display"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:267
+msgid "Select a target form before configuring additional search settings."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:268
+msgid "Target form is locked for this Search."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:273
+msgid "Select the target form queried by this Search."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:289
+msgid "Unlock Target Form"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:291
+msgid ""
+"Changing the target form can reset dependent search settings such as mapped "
+"fields, filter mappings, and predefined filters. Unlock is temporary. After "
+"you select a new target form, the form saves and reloads automatically."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:293
+msgid ""
+"Enable this toggle to temporarily unlock the Target Form selector. A warning "
+"appears before changes are allowed."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:321
+msgid "Auto-submit on filter change"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:324
+msgid ""
+"When enabled, search runs automatically whenever a mapped search input value "
+"changes."
+msgstr ""
+
+#. translators: 1: Gravity Forms form selector, 2: Search results selector, 3: Search map selector.
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:348
+#, php-format
+msgid ""
+"Advanced: add CSS that applies to this Search and its frontend output. "
+"Useful selectors: %1$s for the search form, %2$s for results, and %3$s for "
+"the map."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:364
+msgid ""
+"Custom CSS is printed on the frontend after Search template styles. It can "
+"override the search form, results, map info windows, and details output for "
+"this Search."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:395
+msgid ""
+"Use the Search Form Builder to add or arrange the fields visitors use to "
+"filter entries. Search fields are optional when using predefined filters and "
+"initial-load results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:396
+msgid ""
+"No search fields have been added yet. Use the Search Form Builder to add and "
+"arrange the fields visitors use to filter entries. Search fields are "
+"optional when using predefined filters and initial-load results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:398
+msgid "Open Search Form Builder"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:410
+msgid "Disable Search Form"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:412
+msgid ""
+"Disable the frontend search form and run this Search using initial load, "
+"default values, and predefined filters only."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Builder.php:414
+msgid ""
+"When enabled, form fields are not rendered on the frontend. Enable Load "
+"results on initial page load if you want results to load automatically."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:171
+msgid ""
+"Details Routing controls how each search result links to entry details and "
+"which page is used. Set a Details Page first, then configure URL output and "
+"(in Details Display) choose how the entry is rendered."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:176
+msgid "Details Page"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:180
+msgid ""
+"Select the page used for entry detail links from results, map info windows, "
+"and direct detail URLs."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:185
+msgid "URL Mode"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:196
+msgid "Pretty URL (recommended)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:200
+msgid "Simple query-string URL"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:205
+msgid ""
+"Pretty URLs use readable path segments. Simple URLs use the selected Details "
+"Page with ?sid and ?eid query parameters and also serve as the automatic "
+"fallback when WordPress pretty permalinks are disabled."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:221
+msgid ""
+"WordPress pretty permalinks are disabled, so Details links currently use the "
+"simple query-string format."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:223
+msgid "Review Permalink Settings."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:231
+msgid "URL Structure"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:234
+msgid "Under Details Page (recommended)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:238
+msgid "From site root (advanced)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:255
+msgid ""
+"The recommended structure places the Search route under the selected Details "
+"Page. The advanced root structure creates a shorter site-wide route and must "
+"use a path that does not conflict with another Search or WordPress route."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:260
+msgid "Search URL Slug"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:263
+msgid ""
+"Used in pretty entry URLs to identify this Search. Choose a unique value "
+"(for example, members or store-locations). Leave empty to use the Search ID."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:277
+msgid ""
+"This segment identifies the Search in pretty URLs. When empty, the numeric "
+"Search ID is used."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:282
+msgid "Entry Slug Template"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:285
+msgid ""
+"Enter merge tags and optional text for the readable entry portion. The entry "
+"ID is always appended automatically."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:298
+msgid ""
+"For example, {Name:1} can produce john-doe-123 where 123 is always the entry "
+"ID appended by Gravity Geolocation."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:303
+msgid "Example URL"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:333
+msgid ""
+"Entry Details are optional. When a Details Page is selected, Structured "
+"Fields and Custom HTML render through the [gfgeo_search_entry] shortcode, "
+"while Page Content resolves entry merge tags in the selected page content."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:341
+msgid ""
+"Details Display is optional and remains unavailable until a Details Page is "
+"selected."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:343
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:387
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:394
+msgid "Choose one in Search Setup → Details Routing."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:352
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:289
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:294
+msgid "Output Mode"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:355
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:292
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:297
+msgid "Structured Fields"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:363
+msgid "Page Content"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:368
+msgid ""
+"Choose between Structured Fields, Custom HTML, or Page Content when "
+"rendering details entries."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:398
+msgid "Details Page:"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:398
+msgid "Untitled Page"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:400
+msgid "Edit Page"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:400
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:403
+msgid ""
+"Place this shortcode on the selected Details Page where the entry output "
+"should appear. The Details URL supplies the Search and entry automatically."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:405
+msgid "Shortcode copied."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:405
+msgid "Select and copy the shortcode manually."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:405
+msgid "Copy shortcode"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:407
+msgid ""
+"Edit the selected page to build its content and add entry merge tags. Page "
+"Content mode does not require a Details shortcode."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:429
+msgid ""
+"Structured Fields output appears where the [gfgeo_search_entry] shortcode is "
+"placed on the selected Details Page."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:434
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:337
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:342
+msgid "Title Field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:438
+msgid ""
+"Optional target field value used as the details title. Leave empty to render "
+"no title."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:443
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:364
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:370
+msgid "Main Image Field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:447
+msgid "Optional target image field used as the details main image."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:465
+msgid ""
+"Custom HTML output appears where the [gfgeo_search_entry] shortcode is "
+"placed on the selected Details Page."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:470
+msgid "Details HTML"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:476
+msgid ""
+"Custom details HTML. Supports tags such as {field:4}, {Name:4}, {entry_id}, "
+"and {date_created}."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:490
+msgid "Select a page"
+msgstr ""
+
+#. translators: %d: WordPress page ID.
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:518
+#, php-format
+msgid "Page %d"
+msgstr ""
+
+#. translators: 1: Page or Search title, 2: corresponding ID.
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Builder.php:525
+#: src/Features/Search/Admin/SearchForms/Settings/Toolbar.php:72
+#, php-format
+msgid "%1$s (ID %2$d)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Repeaters/DisplayRowsSectionBuilder.php:42
+msgid "Details Fields"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Details/Repeaters/DisplayRowsSectionBuilder.php:49
+msgid ""
+"Build details rows by choosing a source for each row, optional custom label, "
+"and output format."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:117
+msgid "Configure where the search map is rendered for this form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:120
+msgid ""
+"Map controls are unavailable because no Location Source Field is selected."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:122
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:177
+msgid "Select a field in Search Setup → Location Data Scope."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:137
+msgid "Map Display Mode"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:140
+msgid "Display in Results"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:144
+msgid "Display via Shortcode"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:154
+msgid ""
+"Choose where the map is rendered for this Search. If set to Display via "
+"Shortcode, place the map shortcode on the page where you want the map to "
+"appear."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:170
+msgid "Map Height"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:172
+msgid "Map height CSS value (for example: 320px, 50vh)."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:177
+msgid "Map Type"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:197
+msgid "Default Google map type for the search map panel."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:202
+msgid "Default Zoom"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:204
+msgid "Default zoom level used when fitting results is not available."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:209
+msgid "Enable Marker Clustering"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:211
+msgid "Group nearby markers when many results are returned."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:227
+msgid "Results Marker URL"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:229
+msgid ""
+"Custom marker icon URL for result markers. Leave blank to use the default "
+"red marker."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:245
+msgid "Search Origin Marker URL"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:247
+msgid ""
+"Custom marker icon URL for the searched origin marker. Leave blank to use "
+"the default blue marker."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:252
+msgid "Search Origin Info Window Text"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:254
+msgid ""
+"Optional info window text for the searched origin marker. Supports "
+"{address}. Leave blank to disable info window content."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:274
+msgid ""
+"Configure how marker info-window content is rendered. Choose a visual "
+"template and select the output mode."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:280
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:260
+msgid "Visual Template"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:284
+msgid "Choose the visual template used for marker info-window output."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:301
+msgid ""
+"Choose whether info window output uses structured fields or custom HTML."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:321
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:326
+msgid "Entry ID (System)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:331
+msgid ""
+"Structured Fields mode builds each info window from selected target-form "
+"fields and display rows. Use this mode for configuration-based output "
+"without writing custom HTML templates."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:345
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:350
+msgid "Link Title to Details"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:356
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:362
+msgid "When enabled, title output links to the details URL."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:359
+msgid ""
+"Optional target field value used as the info-window title. Leave empty to "
+"render no title."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:368
+msgid "Optional target image field used as the primary info-window image."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:373
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:379
+msgid "Show Distance"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:375
+msgid "Show calculated distance in each info window when available."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:385
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:392
+msgid "Details-link controls are disabled until a Details Page is selected."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:396
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:403
+msgid "Show Details Link"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:403
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:411
+msgid "Details Link Label"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:414
+msgid "Label used for the details link in info windows."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:417
+msgid "Show a details link in each info window."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:439
+msgid ""
+"Custom HTML mode lets you fully control info-window markup using merge tags "
+"from the target entry. Use this when Structured Fields output is not "
+"flexible enough for your design."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:445
+msgid "Info Window HTML"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Builder.php:451
+msgid ""
+"Custom marker info-window HTML. Supports tags such as {details_link}, "
+"{field:4}, and {Name:4}."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Repeaters/InfoWindowDisplayRowsSectionBuilder.php:42
+msgid "Info Window Details"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Map/Repeaters/InfoWindowDisplayRowsSectionBuilder.php:49
+msgid ""
+"Build info-window details rows by choosing a source for each row, optional "
+"custom label, and output format."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:60
+msgid ""
+"Search Defaults define fallback query values used when the frontend search "
+"form does not provide them. These defaults apply to all requests for this "
+"Search (for example: per-page, sort field/order, and default proximity "
+"radius/units)."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:169
+msgid ""
+"Predefined Creator Filters apply fixed constraints based on entry creator "
+"(user IDs, roles, or current logged-in user). These rules are global for "
+"this Search and combine with other predefined filters using AND logic."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:175
+msgid "Creator User IDs Mode"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:182
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:227
+msgid "Include Only"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:186
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:231
+msgid "Exclude"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:191
+msgid ""
+"Choose how Creator User IDs are applied. This filter combines with other "
+"creator filters using AND logic."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:196
+msgid "Creator User IDs"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:213
+msgid ""
+"Select one or more WordPress users. Applied only when Creator User IDs Mode "
+"is Include Only or Exclude."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:220
+msgid "Creator Roles Mode"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:236
+msgid ""
+"Choose how selected roles are applied to entry creators. This filter "
+"combines with other creator filters using AND logic."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:241
+msgid "Creator Roles"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:258
+msgid ""
+"Select one or more WordPress roles. Applied only when Creator Roles Mode is "
+"Include Only or Exclude."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:265
+msgid "Logged-in Creator Entries Only"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/QueryDefaults/Builder.php:267
+msgid ""
+"When enabled, only the current user's entries are returned. Guests receive "
+"no results. Combines with the other creator filters using AND logic."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:163
+msgid "Load results on initial page load"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:165
+msgid "When enabled, search results load automatically on first page load."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:185
+msgid "Default Per Page"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:187
+msgid "Default per-page value used when no per-page selection is provided."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:192
+msgid "Default Sort By"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:195
+msgid ""
+"Default sort field applied when a sort input is not provided by search "
+"fields. Includes built-in options and sortable target form fields."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:200
+msgid "Default Sort Order"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:203
+msgid "Ascending (ASC)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:207
+msgid "Descending (DESC)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:212
+msgid "Default sort order applied with the selected default sort field."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:217
+msgid "Default Radius"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:219
+msgid ""
+"Default proximity radius used when no radius is provided by search inputs. "
+"Leave blank for no distance limit."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:224
+msgid "Default Units"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:227
+msgid "Imperial (mi)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:231
+msgid "Metric (km)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:236
+msgid ""
+"Default distance units for proximity search when user input does not provide "
+"units."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:254
+msgid ""
+"Configure how result items are rendered on the frontend. Choose a visual "
+"template, select the output mode, and control the default list/grid layout "
+"behavior."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:263
+msgid "Choose the visual template used for search results on the frontend."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:268
+msgid "Results Layout"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:272
+msgid "Grid"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:276
+msgid "List"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:281
+msgid "Choose whether results render in a list or grid layout."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:286
+msgid "Enable Layout Toggle"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:289
+msgid ""
+"Allow users to switch between list and grid layouts in the results toolbar."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:306
+msgid "Choose whether result items render from selected fields or custom HTML."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:336
+msgid ""
+"Structured Fields mode builds each result item from selected target-form "
+"fields and display rows. Use this mode for configuration-based output "
+"without writing custom HTML templates."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:365
+msgid ""
+"Optional target field value used as the result item title. Leave empty to "
+"render no title."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:374
+msgid "Optional target image field used as the primary result image."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:382
+msgid "Show calculated distance in each result item when available."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:423
+msgid "Label used for the details link in results items."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:426
+msgid "Show a details link for each result item."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:446
+msgid ""
+"Custom HTML mode lets you fully control result markup using merge tags from "
+"the target entry. Use this when Structured Fields output is not flexible "
+"enough for your layout."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:452
+msgid "Table Header HTML"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:458
+msgid "Optional custom table header HTML for the table results template."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:463
+msgid "Result Item HTML"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:469
+msgid "Custom result item HTML. Supports merge tags from the target form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:485
+msgid "No results message"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:487
+msgid "Optional text shown when no results are found."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:503
+msgid "Pagination Mode"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:506
+msgid "Pagination"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:510
+#: src/Features/Search/Runtime/Templates/ResultsParts.php:243
+msgid "Load More"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:515
+msgid "Choose between standard pagination and a load more button."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:520
+msgid "Load More Button Text"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Builder.php:531
+msgid "Button label used in load more mode."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/DisplayRowsSectionBuilder.php:42
+msgid "Result Details"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/DisplayRowsSectionBuilder.php:49
+msgid ""
+"Build result details rows by choosing a source for each row, optional custom "
+"label, and output format."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/PerPageOptionsSectionBuilder.php:40
+msgid "Per Page Options"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/PerPageOptionsSectionBuilder.php:44
+msgid ""
+"Add the result counts visitors can select in the results toolbar. Values are "
+"saved in numeric order and duplicates are removed."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/PerPageOptionsSectionBuilder.php:70
+msgid "No per-page options yet."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/PerPageOptionsSectionBuilder.php:74
+msgid "Add option"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/PerPageOptionsSectionBuilder.php:121
+msgid "Items per page option"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/PerPageOptionsSectionBuilder.php:122
+msgid "Remove per-page option"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:49
+msgid "Sort Options"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:53
+msgid ""
+"Add the sorting choices visitors can select in the results toolbar, then "
+"drag rows to control their order."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:68
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:325
+#: src/Features/Search/Runtime/Templates/ItemBuilder.php:586
+msgid "Date Created"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:72
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:330
+#: src/Features/Search/Runtime/Templates/ItemBuilder.php:589
+msgid "Date Updated"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:76
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:320
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:138
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1458
+#: src/Features/Search/Runtime/Templates/ItemBuilder.php:583
+msgid "Entry ID"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:80
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:376
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:378
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1461
+#: src/Features/Search/Runtime/Templates/ItemBuilder.php:522
+msgid "Distance"
+msgstr ""
+
+#. translators: %s: Target form field label
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:106
+#, php-format
+msgid "Field: %s"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:134
+msgid "Configured results sort options"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:137
+msgid "Label"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:138
+msgid "Sort By"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:139
+msgid "Order"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:143
+msgid "No sort options yet."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:157
+msgid "Add Sort Option"
+msgstr ""
+
+#. translators: %s: Saved sort field key
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:222
+#, php-format
+msgid "Saved value: %s"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:227
+msgid "Drag to reorder sort option"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:227
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:242
+msgid "Drag to reorder"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:228
+msgid "Option label"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:231
+msgid "Ascending"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:232
+msgid "Descending"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Results/Repeaters/SortOptionsSectionBuilder.php:234
+msgid "Remove sort option"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:59
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:50
+msgid "Edit target form"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:172
+msgid ""
+"Proximity search finds entries near an address within a selected radius and "
+"units, and can display the distance for each result."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:175
+msgid ""
+"Proximity search is unavailable because no Location Source Field is selected."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:192
+msgid "Enable Proximity Search"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:212
+msgid ""
+"Select one or more eligible target-form fields whose stored location records "
+"this Search may use."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:217
+msgid ""
+"No eligible location source fields are currently available on the target "
+"form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:226
+msgid ""
+"Select which eligible target-form fields may provide stored location records "
+"for this Search. Entry Geocoding on the target form controls which fields "
+"are automatically synchronized. These settings apply globally to map and "
+"proximity behavior."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:232
+msgid "Location Source Fields"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:239
+msgid ""
+"Choose eligible target-form fields whose stored location records should be "
+"available to this Search. Configure Entry Geocoding on the target form to "
+"create or update location records automatically. At least one selection is "
+"required to enable location features."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:250
+msgid "Hide Entries Without Location"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:261
+msgid ""
+"When enabled, entries without location are excluded by default. Useful for "
+"strict location-based directories/searches where only entries with indexed "
+"locations should appear. When disabled, entries without location may still "
+"be excluded during active proximity searches (address/radius), which require "
+"location data."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:291
+msgid "Address Field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:292
+msgid "Select an address field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:304
+msgid "Select the text field used as the address input for proximity search."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:312
+msgid "Address Locator Button"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:323
+msgid "Show a locator button near the selected address field."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:331
+msgid "Address Autocomplete"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:342
+msgid "Enable Google Places autocomplete for the selected address field."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:350
+msgid "Autocomplete Countries"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:367
+msgid "Optional countries to restrict autocomplete results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:375
+msgid "Autocomplete Language"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:399
+msgid "Optional language for autocomplete results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:424
+msgid "Radius Field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:425
+msgid "Select a radius field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:437
+msgid "Optional field used to provide a search radius in requests."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:458
+msgid "Units Field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:459
+msgid "Select a units field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:471
+msgid "Optional field used to provide distance units (imperial or metric)."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:491
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:497
+msgid "Select field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:506
+msgid ""
+"Map search-form fields to creator constraints. User ID and role mappings "
+"feed creator-based filtering, and text mapping can be used for creator name/"
+"username matching."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:512
+msgid "Creator User ID Field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:516
+msgid ""
+"Map a search field whose value(s) represent WordPress user IDs for creator "
+"filtering."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:521
+msgid "Creator Role Field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:525
+msgid ""
+"Map a search field whose value(s) represent WordPress role keys for creator "
+"filtering."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:530
+msgid "Creator Text Search Field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:534
+msgid ""
+"Map a text input field for searching creators by username, display name, or "
+"email address. Email addresses are searchable but are not displayed in "
+"suggestions."
+msgstr ""
+
+#. translators: %s: Gravity Forms field ID.
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:573
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:259
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/MetaFiltersSectionBuilder.php:287
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:121
+#: src/Features/Search/Admin/SearchForms/Support/ChoicesProvider.php:57
+#: src/Features/Search/Admin/SearchForms/Support/ChoicesProvider.php:291
+#: src/Features/Search/Runtime/Details/Controller.php:221
+#, php-format
+msgid "Field %s"
+msgstr ""
+
+#. translators: 1: Field label, 2: Gravity Forms field ID.
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Builder.php:580
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/MetaFiltersSectionBuilder.php:294
+#, php-format
+msgid "%1$s (ID %2$s)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:143
+msgid "No eligible source or target fields available for mapping."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:145
+msgid "No eligible Search fields found."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:147
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:239
+msgid "No eligible target fields found on the selected target form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:152
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/MetaFiltersSectionBuilder.php:99
+msgid "Source Field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:153
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:243
+msgid "Target Field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:154
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/MetaFiltersSectionBuilder.php:100
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:244
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedMetaFiltersSectionBuilder.php:91
+msgid "Operator"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:158
+msgid "No filters added yet. Select a source field and click Add Rule."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:163
+msgid "Source field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:169
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:260
+msgid "Add Rule"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:177
+msgid ""
+"Add one or more mapping rules. You can map the same source field to multiple "
+"target fields."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:187
+msgid ""
+"Map search-form source fields to target-form fields to build dynamic query "
+"rules from user input. Add one or more rules and choose whether all rules "
+"must match (AND) or any rule can match (OR). For date comparisons, use a "
+"Date field as the source whenever possible. If using Select/Radio presets, "
+"set option values to Y-m-d (for example, 2026-01-05)."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:195
+msgid "Filter Match Mode"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:198
+msgid "Match All Rules (AND)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:202
+msgid "Match Any Rule (OR)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:207
+msgid ""
+"Choose whether all mapping rules must match, or any single rule can match."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:214
+msgid "Field Mapping Rules"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:216
+msgid ""
+"Configure field-level source to target mappings and operators. Date "
+"comparisons work best with Date source fields; Select/Radio date presets "
+"should use Y-m-d option values."
+msgstr ""
+
+#. translators: 1: Field label, 2: sub-input label.
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:279
+#, php-format
+msgid "%1$s (%2$s)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:333
+msgid "Source field was removed from form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:344
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:345
+msgid "Unknown field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:347
+msgid "No source selected"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:360
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:364
+msgid "Remove rule"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:379
+msgid "Select a source field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/FilterMappingsSectionBuilder.php:448
+msgid "Managed by reserved mappings"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/MetaFiltersSectionBuilder.php:98
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedMetaFiltersSectionBuilder.php:90
+msgid "Entry Meta"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/MetaFiltersSectionBuilder.php:109
+msgid "Not Mapped"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/MetaFiltersSectionBuilder.php:146
+msgid ""
+"Map search-form fields to Gravity Forms entry-meta filters (status, dates, "
+"payment fields, etc.). Leave a row as Not Mapped to ignore that meta filter. "
+"Mapped rows are applied only when the mapped source field has a value in the "
+"search request."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:72
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedMetaFiltersSectionBuilder.php:248
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:290
+msgid "In"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:76
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:294
+msgid "Not In"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:245
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedMetaFiltersSectionBuilder.php:92
+msgid "Value"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:249
+msgid "No predefined filters yet."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:254
+msgid "Target field"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:271
+msgid ""
+"Define fixed target-form field rules that are always applied to this Search "
+"before user-provided filters. Each rule maps a target field + operator + "
+"value, and all predefined rules are combined as global constraints. You can "
+"use the same target field in multiple rules (for example, value ranges)."
+msgstr ""
+
+#. translators: 1: field id, 2: field type
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:331
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:351
+#, php-format
+msgid "ID %1$s • %2$s"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:353
+msgid "unknown"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedFiltersSectionBuilder.php:357
+msgid "Target field was removed from form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedMetaFiltersSectionBuilder.php:135
+msgid ""
+"Define fixed entry-meta constraints that are always applied to this search. "
+"Date picker display follows your browser locale. Dates are normalized "
+"automatically before query execution."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedMetaFiltersSectionBuilder.php:247
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:300
+msgid "Is"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/PredefinedMetaFiltersSectionBuilder.php:249
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:306
+msgid "Contains"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:91
+msgid "Select a target field"
+msgstr ""
+
+#. translators: 1: Field label, 2: sub-input label, 3: Gravity Forms input ID.
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:140
+#, php-format
+msgid "%1$s (%2$s, ID %3$s)"
+msgstr ""
+
+#. translators: 1: Field label, 2: Gravity Forms field ID, 3: field type.
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:154
+#: src/Features/Search/Admin/SearchForms/Support/ChoicesProvider.php:298
+#, php-format
+msgid "%1$s (ID %2$s, %3$s)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:268
+msgid "Equals (=)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:272
+msgid "Greater Than (>)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:276
+msgid "Greater Than or Equal (>=)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:280
+msgid "Less Than (<)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:284
+msgid "Less Than or Equal (<=)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/SearchForm/Repeaters/RepeaterSectionBuilder.php:310
+msgid "Equals"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:185
+msgid "Label Override"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:186
+msgid "Format"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:190
+msgid "No display rows yet."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:195
+msgid "Add Row"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:242
+msgid "Drag to reorder row"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:244
+msgid "Optional custom label"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:246
+msgid "Remove row"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:261
+msgid "Select source"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:318
+msgid "Entry Meta: Entry ID"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:323
+msgid "Entry Meta: Date Created"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:328
+msgid "Entry Meta: Date Updated"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:333
+msgid "Entry Meta: Created By"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:335
+msgid "Created By"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:338
+msgid "Entry Meta: Status"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:340
+msgid "Status"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:343
+msgid "Entry Meta: Source URL"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:345
+msgid "Source URL"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:348
+msgid "Entry Meta: Form ID"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:350
+msgid "Form ID"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:353
+msgid "Entry Meta: Post ID"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:355
+msgid "Post ID"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:358
+msgid "Entry Meta: Payment Status"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:360
+msgid "Payment Status"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:363
+msgid "Entry Meta: Payment Amount"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:365
+msgid "Payment Amount"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:368
+msgid "Entry Meta: Transaction ID"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:370
+msgid "Transaction ID"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:381
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:383
+msgid "Details Link"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:480
+msgid "Text"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:481
+msgid "Link"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:482
+msgid "Link (New Tab)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Sections/Shared/Repeaters/DisplayRowsSectionBuilderBase.php:483
+#: src/Features/Search/Runtime/Shared/Rendering/TemplateHelper.php:534
+msgid "Image"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1088
+msgid "Search Fields"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1111
+msgid "Adds a single-line search input for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1112
+msgid "Adds a multi-line search input for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1113
+msgid "Adds a numeric search input for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1114
+msgid "Adds multi-select search options for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1115
+msgid "Adds single-select search options for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1116
+msgid "Adds a dropdown search input for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1117
+msgid "Adds a multi-select dropdown input for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1118
+msgid "Adds an email search input for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1119
+msgid "Adds a phone search input for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1120
+msgid "Adds a website search input for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1121
+msgid "Adds a hidden search value to apply fixed query criteria."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1122
+msgid "Adds a date search input for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1123
+msgid "Adds a time search input for filtering results."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1124
+msgid "Adds a section break to organize search inputs."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings.php:1125
+msgid "Adds custom HTML content to the search form."
+msgstr ""
+
+#. translators: %s: Search Form field IDs and their conflicting roles.
+#: src/Features/Search/Admin/SearchForms/Settings/NativeSubviewController.php:754
+#, php-format
+msgid ""
+"Each Search Form field can have only one Search role. Resolve these "
+"assignments: %s."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/NativeSubviewController.php:1578
+#: src/Features/Search/Admin/SearchForms/Settings/Tabs.php:163
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:813
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:887
+msgid "Results"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/NativeSubviewController.php:1605
+#: src/Features/Search/Admin/SearchForms/Settings/Tabs.php:158
+msgid "Search Form"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/NativeSubviewController.php:1614
+#: src/Features/Search/Admin/SearchForms/Settings/Tabs.php:148
+msgid "Defaults & Filters"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:39
+msgid "Entry Geocoding"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:49
+msgid "Enable Entry Geocoding"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:52
+msgid ""
+"Enable geocoding during entry submission/update for the selected fields."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:60
+msgid "Fields to Geocode"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:72
+msgid "Select fields that should be geocoded on entry submission or edit."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:80
+msgid "Import Existing Entry Locations"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:82
+msgid ""
+"Imports existing entries into the Search locations index using the current "
+"\"Fields to Geocode\" selection. Geocoder fields can import stored location "
+"payload directly; text/address fields may require geocoding requests."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:109
+msgid ""
+"Entry geocoding indexes selected target-form fields as locations for "
+"Searches. This is required for proximity search (distance/radius) so entries "
+"can be matched by nearby addresses or coordinates."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:132
+msgid "Click to start the import"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:133
+msgid "Start Import"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:135
+msgid "Ready to import existing entries."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:136
+msgid "Processed Locations"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:139
+msgid "Field ID"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:141
+msgid "Action"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:142
+msgid "Reason"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:147
+msgid "Geocode locations missing coordinates"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:148
+msgid ""
+"Uses the configured geocoding provider when an entry has an address but no "
+"coordinates. Each request may count against your API quota and may incur "
+"charges. Uncheck this option to import only existing coordinates."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:153
+#: src/Features/Search/Admin/SearchForms/Ui/AdminUiController.php:116
+msgid "Save settings before importing. Fields to Geocode has unsaved changes."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Sections.php:154
+msgid ""
+"Uses the currently selected \"Fields to Geocode\". Geocoder fields may "
+"import existing stored coordinates directly. Address-only fields are "
+"geocoded when the option below is enabled."
+msgstr ""
+
+#. translators: %d: Search ID.
+#: src/Features/Search/Admin/SearchForms/Settings/Toolbar.php:78
+#, php-format
+msgid "Search (ID %d)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Toolbar.php:101
+msgid "No Searches Yet"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Toolbar.php:109
+msgid "Create a Search"
+msgstr ""
+
+#. translators: %d: Target form ID.
+#: src/Features/Search/Admin/SearchForms/Settings/Toolbar.php:165
+#, php-format
+msgid "Target Form (ID %d)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Settings/Toolbar.php:176
+msgid "Search Settings"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/ChoicesProvider.php:171
+msgid "Select a form"
+msgstr ""
+
+#. translators: %s: Gravity Forms form ID.
+#: src/Features/Search/Admin/SearchForms/Support/ChoicesProvider.php:222
+#, php-format
+msgid "Missing form (ID %s)"
+msgstr ""
+
+#. translators: 1: Parent field label, 2: sub-input label, 3: sub-input ID, 4: field type.
+#: src/Features/Search/Admin/SearchForms/Support/ChoicesProvider.php:325
+#, php-format
+msgid "%1$s - %2$s (ID %3$s, %4$s)"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:289
+msgid "Configuration summary only; entry and location records are not scanned."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:319
+msgid "Show details"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:320
+msgid "Hide details"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:348
+msgid "Status:"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:382
+msgid "Search status"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:383
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1587
+msgid "In Trash"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:383
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1590
+msgid "Inactive"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:386
+msgid "Restore and activate this Search before using it publicly."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:387
+msgid "Activate this Search before using it publicly."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:393
+msgid "The Search is in Trash."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:393
+msgid "The Search is inactive."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:413
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:425
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:444
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:456
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:468
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:479
+msgid "Target form"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:414
+msgid "Not selected"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:416
+msgid "Select the form whose entries this Search should query."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:418
+msgid "No Target Form is selected."
+msgstr ""
+
+#. translators: %d: Gravity Forms form ID.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:427
+#, php-format
+msgid "Form #%d is unavailable"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:429
+msgid "Choose an existing Target Form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:431
+msgid "The selected Target Form is unavailable."
+msgstr ""
+
+#. translators: %d: Gravity Forms form ID.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:438
+#, php-format
+msgid "Form #%d"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:447
+msgid "A Search cannot use itself or another Search as its Target Form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:449
+msgid "The selected Target Form is a Search."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:459
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:461
+msgid "The Target Form is in Trash."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:471
+msgid ""
+"Inactive; existing entries remain searchable, but new submissions are "
+"disabled."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:473
+msgid "The Target Form is inactive."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:482
+msgid "Active"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:500
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:516
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:527
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:552
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:563
+msgid "Location sources"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:501
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:584
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:814
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:911
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:996
+msgid "Waiting for a valid Target Form"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:511
+msgid "Proximity search is enabled but has no location source."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:512
+msgid "Hide Entries Without Location is enabled but has no location source."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:517
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:528
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:955
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1021
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1031
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1647
+msgid "Not in use"
+msgstr ""
+
+#. translators: %d: Number of selected location source fields.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:538
+#, php-format
+msgid "%d source in use"
+msgid_plural "%d sources in use"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: Current source count, 2: historical source count.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:545
+#, php-format
+msgid ""
+"%1$d current; %2$d no longer exists on the Target Form and may rely on "
+"historical indexed locations."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:566
+msgid "All selected fields exist on the current Target Form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:583
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:780
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:792
+msgid "Search form"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:731
+msgid "Not displayed"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:732
+msgid "Enabled for visitors"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:739
+msgid ""
+"The visitor Search Form and Initial Load are both disabled, so no search "
+"request can run."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:746
+msgid "Some saved filter data is malformed or incomplete."
+msgstr ""
+
+#. translators: %d: Number of saved field references requiring review.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:752
+#, php-format
+msgid "%d saved field reference needs review."
+msgid_plural "%d saved field references need review."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: Number of predefined creator filter groups requiring review.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:762
+#, php-format
+msgid "%d predefined creator filter has a mode but no usable selection."
+msgid_plural ""
+"%d predefined creator filters have a mode but no usable selection."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: Number of predefined creator filter groups requiring review.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:771
+#, php-format
+msgid "%d predefined creator filter has an invalid mode."
+msgid_plural "%d predefined creator filters have an invalid mode."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:795
+msgid "Results load automatically through Initial Load."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:831
+msgid ""
+"The selected results template is unavailable; runtime falls back to the "
+"default template files."
+msgstr ""
+
+#. translators: %d: Effective number of results per page.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:843
+#, php-format
+msgid "Default Per Page is invalid; runtime uses %d."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:853
+msgid "Default Sort Order is invalid; runtime uses ascending order."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:861
+msgid "The saved Default Sort By field is unavailable."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:865
+msgid "Distance sorting has no selected location source."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:870
+msgid ""
+"Custom HTML output is selected without item HTML; runtime falls back to "
+"structured output."
+msgstr ""
+
+#. translators: 1: Results template, 2: results per page, 3: sort summary.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:876
+#, php-format
+msgid "%1$s; %2$d per page; %3$s"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:910
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:954
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:973
+msgid "Map & proximity"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:926
+msgid "The saved Map Display Mode is invalid; runtime uses the results map."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:930
+msgid "Proximity search is enabled but has no selected location source."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:938
+msgid "Proximity search needs a valid Search Form address field."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:945
+msgid "A saved optional proximity field no longer exists on the Search Form."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:963
+msgid "Map via shortcode"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:963
+msgid "Map in results"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:964
+msgid "Map not in use"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:965
+msgid "proximity in use"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:965
+msgid "proximity not in use"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:995
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1020
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1030
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1042
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1076
+msgid "Entry details"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1033
+msgid ""
+"Custom output contains a Details link token but no Entry View page is "
+"selected."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1035
+msgid "Custom output contains a Details link token without an Entry View page."
+msgstr ""
+
+#. translators: %d: WordPress page ID.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1044
+#, php-format
+msgid "Page #%d is unavailable"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1046
+msgid "Choose an existing published WordPress page."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1048
+msgid "The selected Entry View page is unavailable to public visitors."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1057
+msgid ""
+"WordPress pretty permalinks are disabled; Details links fall back to simple "
+"URLs."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1059
+msgid "The configured pretty Details route cannot be built."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1061
+msgid ""
+"Another active Search uses the same pretty Details route, so WordPress "
+"cannot route either Search safely."
+msgstr ""
+
+#. translators: 1: Details page title, 2: URL mode.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1068
+#, php-format
+msgid "%1$s; %2$s URLs"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1070
+msgid "pretty"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1070
+msgid "simple"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1105
+msgid "Review"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1109
+msgid "Review Searches"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1113
+msgid "Review Search Setup"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1117
+msgid "Review Location Sources"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1121
+msgid "Review Search Form"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1125
+msgid "Review Defaults"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1129
+msgid "Review Initial Load"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1133
+msgid "Review Results"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1137
+msgid "Review Map"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1141
+msgid "Review Details Routing"
+msgstr ""
+
+#. translators: %d: WordPress page ID.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1441
+#, php-format
+msgid "Page #%d"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1454
+msgid "Gravity Forms default order"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1459
+msgid "Date created"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1460
+msgid "Date updated"
+msgstr ""
+
+#. translators: %d: Number of Search components currently in use.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1544
+#, php-format
+msgid "%d component in use"
+msgid_plural "%d components in use"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: Number of optional Search components not in use.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1551
+#, php-format
+msgid "%d not in use"
+msgid_plural "%d not in use"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: Number of Search components needing attention.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1558
+#, php-format
+msgid "%d needs attention"
+msgid_plural "%d need attention"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: Number of Search components requiring setup.
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1565
+#, php-format
+msgid "%d needs setup"
+msgid_plural "%d need setup"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1584
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1641
+msgid "Needs setup"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1584
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1641
+msgid "Search needs setup"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1587
+msgid "Search is in Trash"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1590
+msgid "Search is configured but inactive"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1593
+msgid "Review needed"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1593
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1644
+msgid "Search is ready with items to review"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1596
+msgid "Ready"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1596
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1650
+msgid "Search is ready"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1644
+msgid "Needs attention"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SearchReadiness.php:1650
+msgid "In use"
+msgstr ""
+
+#. translators: %s: Comma-separated IDs of Searches using the same Details URL.
+#: src/Features/Search/Admin/SearchForms/Support/SettingsValidator.php:79
+#, php-format
+msgid ""
+"This Details URL is already used by another Search (ID: %s). Choose a "
+"different Search URL Slug, Details Page, or URL Structure."
+msgstr ""
+
+#. translators: 1: Search Form field ID, 2: comma-separated field roles.
+#: src/Features/Search/Admin/SearchForms/Support/SettingsValidator.php:200
+#, php-format
+msgid "Field ID %1$s: %2$s"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SettingsValidator.php:217
+msgid "Filter Mapping"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SettingsValidator.php:218
+msgid "Entry Meta Mapping"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SettingsValidator.php:219
+msgid "Creator User"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SettingsValidator.php:220
+msgid "Creator Role"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SettingsValidator.php:221
+msgid "Creator Text"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SettingsValidator.php:222
+msgid "Proximity Address"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SettingsValidator.php:223
+msgid "Proximity Radius"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Support/SettingsValidator.php:224
+msgid "Proximity Units"
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Ui/AdminUiController.php:306
+#, fuzzy
+msgid "Gravity Search Settings"
+msgstr "הגדרות סמן"
+
+#: src/Features/Search/Admin/SearchForms/Ui/AdminUiController.php:308
+msgid ""
+"Configure which entries this Search displays and how visitors can filter "
+"them, including predefined filters, proximity, results, maps, and entry "
+"details."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Ui/AdminUiController.php:310
+msgid "Configure core search behavior and form setup."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Ui/AdminUiController.php:311
+msgid ""
+"Configure filter mappings, proximity inputs, location scope, and search "
+"behavior."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Ui/AdminUiController.php:312
+msgid "Configure global fallback query defaults and predefined filters."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Ui/AdminUiController.php:313
+msgid "Configure first-load behavior."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Ui/AdminUiController.php:314
+msgid "Configure map display and marker behavior."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Ui/AdminUiController.php:315
+msgid "Configure results layout, controls, and pagination."
+msgstr ""
+
+#: src/Features/Search/Admin/SearchForms/Ui/AdminUiController.php:316
+msgid "Configure details display behavior and rendering."
+msgstr ""
+
+#: src/Features/Search/Entries/Query.php:102
+#: src/Features/Search/Runtime/InfoWindow/Service.php:42
+msgid "Gravity Forms API is unavailable."
+msgstr ""
+
+#: src/Features/Search/Entries/Query.php:111
+msgid "Missing source Search form ID."
+msgstr ""
+
+#: src/Features/Search/Entries/Query.php:121
+msgid "Source Search form not found."
+msgstr ""
+
+#: src/Features/Search/Entries/Query.php:131
+msgid "The source form is not configured as a Search form."
+msgstr ""
+
+#: src/Features/Search/Entries/Query.php:140
+msgid "The source Search is not currently available."
+msgstr ""
+
+#: src/Features/Search/Entries/Query.php:149
+msgid "The source Search form does not have a configured target form."
+msgstr ""
+
+#: src/Features/Search/Entries/Query.php:159
+msgid "The target form configured by the source Search form was not found."
+msgstr ""
+
+#: src/Features/Search/Runtime/FormSearchProcessor.php:388
+msgid ""
+"Address was not found. Try a more specific address or a nearby location."
+msgstr ""
+
+#: src/Features/Search/Runtime/FormSearchProcessor.php:389
+msgid "Search failed. Please try again."
+msgstr ""
+
+#: src/Features/Search/Runtime/FormSearchProcessor.php:390
+msgid "Invalid search response."
+msgstr ""
+
+#: src/Features/Search/Runtime/InfoWindow/Service.php:47
+#: src/Features/Search/Runtime/InfoWindow/Service.php:57
+msgid "Invalid marker context."
+msgstr ""
+
+#: src/Features/Search/Runtime/InfoWindow/Service.php:70
+msgid "Search result not found."
+msgstr ""
+
+#: src/Features/Search/Runtime/InfoWindow/Service.php:79
+msgid "Search result location not found."
+msgstr ""
+
+#: src/Features/Search/Runtime/Shared/Rendering/TemplateHelper.php:274
+#: src/Features/Search/Runtime/Shared/Rendering/TemplateHelper.php:282
+#: src/Features/Search/Runtime/Templates/ItemBuilder.php:620
+msgid "View Details"
+msgstr ""
+
+#. translators: %d: number of search results.
+#: src/Features/Search/Runtime/Templates/ResultsParts.php:47
+#, php-format
+msgid "Found %d result"
+msgid_plural "Found %d results"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: localized results text, 2: current page, 3: total pages.
+#: src/Features/Search/Runtime/Templates/ResultsParts.php:53
+#, php-format
+msgid "%1$s. Page %2$d of %3$d."
+msgstr ""
+
+#: src/Features/Search/Runtime/Templates/ResultsParts.php:131
+msgid "Sort by"
+msgstr ""
+
+#: src/Features/Search/Runtime/Templates/ResultsParts.php:161
+msgid "Per page"
+msgstr ""
+
+#: src/Features/Search/Runtime/Templates/ResultsParts.php:189
+msgid "Toggle results layout"
+msgstr ""
+
+#: src/Features/Search/Runtime/Templates/ResultsParts.php:262
+msgid "Prev"
+msgstr ""
+
+#: src/Features/Search/Runtime/Templates/ResultsParts.php:263
+msgid "Next"
+msgstr ""
+
+#: src/Features/Search/Runtime/Templates/ResultsParts.php:354
+msgid "No results found."
+msgstr ""
+
+#: src/Loader.php:162
+msgid ""
+"Gravity Forms Geolocation could not finish updating its saved data. The "
+"plugin will continue to run, but some settings or forms may not be fully "
+"updated. Reload this page to try again. If this message continues, please "
+"contact support."
+msgstr ""
+
+#, fuzzy
+#~ msgid "Extend Gravity Forms with advanced geolocation tools."
+#~ msgstr "הרחב את Gravity Forms עם כלים מתקדמים למיקום גיאוגרפי."
+
+#~ msgid "Placement"
+#~ msgstr "השמה"
+
+#~ msgid "Advanced"
+#~ msgstr "מתקדם"
+
+#~ msgctxt "link to Google Maps API documentation"
+#~ msgid "Click here"
+#~ msgstr "לחץ כאן"
+
+#, fuzzy
+#~ msgid "this tutorial"
+#~ msgstr "המדריך הזה"
+
+#, fuzzy
+#~ msgid "Gravity Geolocation License Key (* Required)"
+#~ msgstr "מפתח רישיון של Gravity Geolocation (* חובה)"
+
+#, fuzzy
+#~ msgid "Google Maps API Keys (Browser & Server)"
+#~ msgstr "מפתחות API של מפות גוגל (דפדפן ושרת)"
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "Enter your Google Maps API keys below. The Browser API key is used for "
+#~ "client-side features such as the address autocomplete and maps rendering, "
+#~ "while the Server API key is used for server-side tasks such as geocoding "
+#~ "and fetching directions before the form loads. <a href=\"%1$s\" "
+#~ "target=\"_blank\">%2$s</a> to create your API keys. You can also follow "
+#~ "<a href=\"%3$s\" target=\"_blank\">%4$s</a> to learn how to generate your "
+#~ "Google Maps API keys."
+#~ msgstr ""
+#~ "הזן את מפתחות ה-API של מפות גוגל שלך למטה. מפתח ה-API של הדפדפן משמש "
+#~ "לתכונות בצד הלקוח כגון השלמה אוטומטית של כתובות ועיבוד מפות, בעוד שמפתח "
+#~ "ה-API של השרת משמש למשימות בצד השרת כגון קידוד גיאוגרפי ואחזור הוראות "
+#~ "לפני טעינת הטופס. <a href=\"%1$s\" target=\"_blank\">%2$s</a> כדי ליצור "
+#~ "את מפתחות ה-API שלך. תוכל גם לעקוב אחר <a href=\"%3$s\" "
+#~ "target=\"_blank\">%4$s</a> כדי ללמוד כיצד ליצור את מפתחות ה-API של מפות "
+#~ "גוגל שלך."
+
+#, fuzzy
+#~ msgid "Browser API Key (* Required)"
+#~ msgstr "מפתח API של דפדפן (* נדרש)"
+
+#, fuzzy
+#~ msgid "Server API Key (* Required)"
+#~ msgstr "מפתח API של שרת (* נדרש)"
+
+#, fuzzy
+#~ msgid "Google Maps Country Code"
+#~ msgstr "קוד מדינה של גוגל מפות"
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "Enter the country code of the default country that will be used with "
+#~ "Google Maps Geocoding services. See <a href=\"%1$s\" "
+#~ "target=\"_blank\">%2$s</a> for the list of country codes."
+#~ msgstr ""
+#~ "הזן את קידומת המדינה של המדינה המוגדרת כברירת מחדל שתשמש עם שירותי קידוד "
+#~ "גיאוגרפי של מפות גוגל. ראה <a href=\"%1$s\" target=\"_blank\">%2$s</a> "
+#~ "לרשימת קודי המדינה."
+
+#~ msgid "this page"
+#~ msgstr "עמוד זה"
+
+#, fuzzy
+#~ msgid "Google Maps Language"
+#~ msgstr "שפת מפות גוגל"
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "Enter the language code of the default language that will be used with "
+#~ "Google Maps API. This will affect the language of the map and the address "
+#~ "autocomplete suggested results. See <a href=\"%1$s\" "
+#~ "target=\"_blank\">%2$s</a> for the list of language codes."
+#~ msgstr ""
+#~ "הזן את קוד השפה של שפת ברירת המחדל שתשמש עם ממשק ה-API של מפות גוגל. "
+#~ "פעולה זו תשפיע על שפת המפה ועל תוצאות השלמה האוטומטית של כתובת המוצעת. "
+#~ "ראה <a href=\"%1$s\" target=\"_blank\">%2$s</a> לרשימת קודי השפה."
+
+#, fuzzy
+#~ msgid "High Accuracy Location Mode"
+#~ msgstr "מצב מיקום דיוק גבוה"
+
+#, fuzzy
+#~ msgid ""
+#~ "By enabling this, the auto-locator (when using the locator button and the "
+#~ "page locator) might retrieve a more accurate user current location. "
+#~ "However, it might also result in slower performance of the auto-locator. "
+#~ "Note that this feature only affects the browser's HTML5 geolocation "
+#~ "feature, not the IP address locator."
+#~ msgstr ""
+#~ "על ידי הפעלת אפשרות זו, האיתור האוטומטי (בעת שימוש בכפתור האיתור ובמאתר "
+#~ "הדפים) עשוי לאחזר מיקום נוכחי מדויק יותר של המשתמש. עם זאת, הדבר עלול גם "
+#~ "לגרום לביצועים איטיים יותר של האיתור האוטומטי. שים לב שתכונה זו משפיעה רק "
+#~ "על תכונת המיקום הגיאוגרפי HTML5 של הדפדפן, ולא על מאתר כתובות ה-IP."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use this option to enable the IP address locator services. You can do so "
+#~ "by selecting the IP address service provider that you would like to use. "
+#~ "Once this feature is enabled, you will be able to use it with the Locator "
+#~ "Button field and the auto-locator form option in the form builder. You "
+#~ "can use it instead of the HTML5 geolocation feature or as a fallback "
+#~ "option for when the HTML5 geolocation fails. Please note that the "
+#~ "accuracy level of the location returned by the IP address might vary and "
+#~ "it depends solely on the IP address service provider. Also note that some "
+#~ "IP address service providers might require registration and/or a token/"
+#~ "API key."
+#~ msgstr ""
+#~ "השתמש באפשרות זו כדי להפעיל את שירותי איתור כתובות ה-IP. ניתן לעשות זאת "
+#~ "על ידי בחירת ספק שירות כתובות ה-IP שברצונך להשתמש בו. לאחר הפעלת תכונה "
+#~ "זו, תוכל להשתמש בה באמצעות השדה כפתור איתור ואפשרות טופס איתור אוטומטי "
+#~ "בבונה הטפסים. ניתן להשתמש בה במקום תכונת המיקום הגיאוגרפי ב-HTML5 או "
+#~ "כאפשרות גיבוי למקרים בהם מיקום הגיאוגרפי ב-HTML5 נכשל. שימו לב שרמת הדיוק "
+#~ "של המיקום המוחזר על ידי כתובת ה-IP עשויה להשתנות והיא תלויה אך ורק בספק "
+#~ "שירות כתובת ה-IP. כמו כן, שימו לב שחלק מספקי שירותי כתובות ה-IP עשויים "
+#~ "לדרוש רישום ו/או מפתח אסימון/API."
+
+#, fuzzy
+#~ msgid "IP Address Provider"
+#~ msgstr "ספק כתובת IP"
+
+#, fuzzy
+#~ msgid "ipinfo.io Token"
+#~ msgstr "אסימון ipinfo.io"
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "<a href=\"%1$s\" target=\"_blank\">%2$s</a> to register and get your "
+#~ "token."
+#~ msgstr ""
+#~ "<a href=\"%1$s\" target=\"_blank\">%2$s</a> כדי להירשם ולקבל את האסימון "
+#~ "שלך."
+
+#, fuzzy
+#~ msgid "Ipregistry API Key"
+#~ msgstr "מפתח API של Iregistry"
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "<a href=\"%1$s\" target=\"_blank\">%2$s</a> to register and get your API "
+#~ "key."
+#~ msgstr ""
+#~ "<a href=\"%1$s\" target=\"_blank\">%2$s</a> כדי להירשם ולקבל את מפתח "
+#~ "ה-API שלך."
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "Ipapi.co does not require an API key nor registration for its free plan. "
+#~ "<a href=\"%1$s\" target=\"_blank\">%2$s</a> for more info on plans and "
+#~ "usage."
+#~ msgstr ""
+#~ "Ipapi.co אינו דורש מפתח API או רישום עבור התוכנית החינמית שלו. <a "
+#~ "href=\"%1$s\" target=\"_blank\">%2$s</a> למידע נוסף על תוכניות ושימוש."
+
+#, fuzzy
+#~ msgid ""
+#~ "Check this checkbox if you'd like to prevent the Gravity Geolocation "
+#~ "plugin from loading the Google Maps API. This feature can be useful when "
+#~ "there is another plugin or theme that is also loading the Google Maps API "
+#~ "on your site. This way, you can prevent conflicts that usually caused "
+#~ "when loading the Google Maps API multiple times."
+#~ msgstr ""
+#~ "סמן תיבת סימון זו אם ברצונך למנוע מתוסף Gravity Geolocation לטעון את ממשק "
+#~ "ה-API של מפות גוגל. תכונה זו יכולה להיות שימושית כאשר יש תוסף או ערכת "
+#~ "נושא אחרת שטוענת גם את ממשק ה-API של מפות גוגל באתר שלך. בדרך זו תוכל "
+#~ "למנוע התנגשויות שנגרמות בדרך כלל בעת טעינה מספר פעמים של ממשק ה-API של "
+#~ "מפות גוגל."
+
+#, fuzzy
+#~ msgid ""
+#~ "Check this box if you would like to disable Google Maps Advanced Markers. "
+#~ "Advanced Markers are enabled by default and provide enhanced marker "
+#~ "rendering in Google Maps. Disabling this option will fallback to standard "
+#~ "markers."
+#~ msgstr ""
+#~ "סמן תיבה זו אם ברצונך להשבית את הסמנים המתקדמים של Google Maps. הסמנים "
+#~ "המתקדמים מופעלים כברירת מחדל ומספקים עיבוד משופר של הסמנים ב-Google Maps. "
+#~ "השבתת אפשרות זו תביא לחזרה לסמנים הסטנדרטיים."
+
+#, fuzzy
+#~ msgid ""
+#~ "Note: when this checkbox is checked, the locator button and address "
+#~ "autocomplete features below will be ignored."
+#~ msgstr ""
+#~ "הערה: כאשר תיבת סימון זו מסומנת, כפתור האיתור ותכונות ההשלמה האוטומטית של "
+#~ "הכתובת שלהלן יתעלמו."
+
+#, fuzzy
+#~ msgid "Auto Locator"
+#~ msgstr "איתור אוטומטי"
+
+#, fuzzy
+#~ msgid "Geolocation options are not available for this field."
+#~ msgstr "אפשרויות מיקום גיאוגרפי אינן זמינות עבור שדה זה."
+
+#, fuzzy
+#~ msgid ""
+#~ "To enable this feature, navigate to the Gravity Forms Settings page and "
+#~ "select an IP Address provider under the Geolocation tab."
+#~ msgstr ""
+#~ "כדי להפעיל תכונה זו, נווטו לדף ההגדרות של Gravity Forms ובחרו ספק כתובת "
+#~ "IP תחת הכרטיסייה מיקום גיאוגרפי."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use this field to display location or directions values—such as "
+#~ "coordinates, address, distance, or travel duration—based on a selected "
+#~ "geocoder or directions field."
+#~ msgstr ""
+#~ "השתמש בשדה זה כדי להציג ערכי מיקום או הוראות הגעה - כגון קואורדינטות, "
+#~ "כתובת, מרחק או משך נסיעה - בהתבסס על קודר גיאוגרפי או שדה הוראות הגעה "
+#~ "שנבחרו."
+
+#, fuzzy
+#~ msgid "Directions & Travel Distance"
+#~ msgstr "הוראות הגעה ומרחק נסיעה"
+
+#, fuzzy
+#~ msgid ""
+#~ "Displays the step-by-step directions output between two or more locations."
+#~ msgstr "מציג הוראות מפורטות בין שני מיקומים או יותר."
+
+#, fuzzy
+#~ msgid ""
+#~ "Allows users to draw shapes on a linked map field, including polygons, "
+#~ "circles, markers, and more. This field provides the drawing interface but "
+#~ "does not display its own map."
+#~ msgstr ""
+#~ "מאפשר למשתמשים לצייר צורות על שדה מפה מקושר, כולל מצולעים, עיגולים, סמנים "
+#~ "ועוד. שדה זה מספק את ממשק הציור אך אינו מציג מפה משלו."
+
+#, fuzzy
+#~ msgid "Dynamic Field Options"
+#~ msgstr "אפשרויות שדה דינמיות"
+
+#, fuzzy
+#~ msgid "Dynamic Location Field"
+#~ msgstr "שדה מיקום דינמי"
+
+#, fuzzy
+#~ msgid "Dynamic Directions Field"
+#~ msgstr "שדה כיוונים דינמיים"
+
+#, fuzzy
+#~ msgid "Dynamic Drawing Shape Field"
+#~ msgstr "שדה צורה של ציור דינמי"
+
+#, fuzzy
+#~ msgid "Dynamic Drawing Tools Field"
+#~ msgstr "שדה כלי ציור דינמיים"
+
+#, fuzzy
+#~ msgid "No data is available"
+#~ msgstr "אין נתונים זמינים"
+
+#, fuzzy
+#~ msgid "View Directions"
+#~ msgstr "הצג הוראות הגעה"
+
+#, fuzzy
+#~ msgid "Directions are not available"
+#~ msgstr "הוראות הגעה אינן זמינות"
+
+#, fuzzy
+#~ msgid "Driving Directions, Distance & Routes"
+#~ msgstr "הוראות נסיעה, מרחק ומסלולים"
+
+#, fuzzy
+#~ msgid "Straight-Line Distance Only"
+#~ msgstr "מרחק בקו ישר בלבד"
+
+#, fuzzy
+#~ msgid "Displays the directions output between two or more locations."
+#~ msgstr "מציג את פלט ההוראות בין שני מיקומים או יותר."
+
+#, fuzzy
+#~ msgid "Size (meters/km)"
+#~ msgstr "גודל (מטרים/ק\"מ)"
+
+#, fuzzy
+#~ msgid "Drawing Tools Settings"
+#~ msgstr "הגדרות כלי ציור"
+
+#, fuzzy
+#~ msgid "Target Map Field"
+#~ msgstr "שדה מפת יעד"
+
+#, fuzzy
+#~ msgid "Drawing Tools UI Type"
+#~ msgstr "סוג ממשק משתמש של כלי ציור"
+
+#, fuzzy
+#~ msgid "Drawing Tools UI Position"
+#~ msgstr "מיקום ממשק המשתמש של כלי הציור"
+
+#, fuzzy
+#~ msgid "Enable Drawing Tools For"
+#~ msgstr "הפעל כלי ציור עבור"
+
+#, fuzzy
+#~ msgid "Marker Button Text"
+#~ msgstr "טקסט כפתור הסמן"
+
+#, fuzzy
+#~ msgid "Marker Default Color"
+#~ msgstr "צבע ברירת מחדל של הסמן"
+
+#, fuzzy
+#~ msgid "Polyline Settings"
+#~ msgstr "הגדרות קו רב-קווי"
+
+#, fuzzy
+#~ msgid "Polyline Button Text"
+#~ msgstr "טקסט כפתור פוליליין"
+
+#, fuzzy
+#~ msgid "Polyline Default Color"
+#~ msgstr "צבע ברירת מחדל של קו שבור"
+
+#, fuzzy
+#~ msgid "Polygon Settings"
+#~ msgstr "הגדרות מצולעים"
+
+#, fuzzy
+#~ msgid "Polygon Button Text"
+#~ msgstr "טקסט כפתור מצולע"
+
+#, fuzzy
+#~ msgid "Polygon Default Color"
+#~ msgstr "צבע ברירת מחדל של מצולע"
+
+#, fuzzy
+#~ msgid "Rectangle Settings"
+#~ msgstr "הגדרות מלבן"
+
+#, fuzzy
+#~ msgid "Rectangle Button Text"
+#~ msgstr "טקסט כפתור מלבני"
+
+#, fuzzy
+#~ msgid "Rectangle Default Color"
+#~ msgstr "צבע ברירת מחדל של מלבן"
+
+#, fuzzy
+#~ msgid "Circle Settings"
+#~ msgstr "הגדרות מעגל"
+
+#, fuzzy
+#~ msgid "Circle Button Text"
+#~ msgstr "טקסט כפתור מעגלי"
+
+#, fuzzy
+#~ msgid "Circle Default Color"
+#~ msgstr "צבע ברירת מחדל של מעגל"
+
+#, fuzzy
+#~ msgid "Freehand Settings"
+#~ msgstr "הגדרות יד חופשית"
+
+#, fuzzy
+#~ msgid "Freehand Button Text"
+#~ msgstr "טקסט כפתור ידני"
+
+#, fuzzy
+#~ msgid "Freehand Default Color"
+#~ msgstr "צבע ברירת מחדל ביד חופשית"
+
+#, fuzzy
+#~ msgid "Action Buttons Settings"
+#~ msgstr "הגדרות כפתורי פעולה"
+
+#, fuzzy
+#~ msgid "Enable Action Buttons For"
+#~ msgstr "הפעל כפתורי פעולה עבור"
+
+#, fuzzy
+#~ msgid "Clear Shapes Button Text"
+#~ msgstr "נקה טקסט כפתור צורות"
+
+#, fuzzy
+#~ msgid "Undo Button Text"
+#~ msgstr "טקסט כפתור ביטול"
+
+#, fuzzy
+#~ msgid "Redo Button Text"
+#~ msgstr "טקסט כפתור \"בצע שוב\""
+
+#, fuzzy
+#~ msgid "Export Button Text"
+#~ msgstr "טקסט כפתור ייצוא"
+
+#, fuzzy
+#~ msgid "Import Button Text"
+#~ msgstr "טקסט כפתור ייבוא"
+
+#, fuzzy
+#~ msgid "Shape Panel Settings"
+#~ msgstr "הגדרות לוח הצורות"
+
+#, fuzzy
+#~ msgid "Enable Labels for Shapes"
+#~ msgstr "הפעל תוויות עבור צורות"
+
+#, fuzzy
+#~ msgid "Enable Shape Color Picker"
+#~ msgstr "הפעל את בורר צבעי הצורה"
+
+#, fuzzy
+#~ msgid "Delete Shape Button Text"
+#~ msgstr "מחיקת טקסט של כפתור הצורה"
+
+#, fuzzy
+#~ msgid "Gravity Forms Geolocation Add-On"
+#~ msgstr "תוסף מיקום גיאוגרפי של Gravity Forms"
+
+#, fuzzy
+#~ msgid "https://www.geomywp.com"
+#~ msgstr "https://www.geomywp.com"

@@ -1,0 +1,38 @@
+.gfgeo-create-search-form a {
+	opacity: 0.6;
+}
+
+.gfgeo-add-new-search-form {
+	margin-left: 10px !important;
+}
+
+.gform-form-toolbar__menu > li.gfgeo-create-search-form > a.gf_toolbar_active::after,
+.gform-form-toolbar__menu > li.gfgeo-create-search-form > a.submenu-open::after,
+.gform-form-toolbar__menu > li.gfgeo-create-search-form > a:focus::after,
+.gform-form-toolbar__menu > li.gfgeo-create-search-form > a:hover::after {
+	background: transparent !important;
+	opacity: 0.6 !important;
+}
+
+.gform-form-toolbar__menu > li.gfgeo-create-search-form > a.gf_toolbar_active,
+.gform-form-toolbar__menu > li.gfgeo-create-search-form > a.submenu-open,
+.gform-form-toolbar__menu > li.gfgeo-create-search-form > a:focus,
+.gform-form-toolbar__menu > li.gfgeo-create-search-form > a:hover {
+	color: #5b5e80 !important;
+}
+
+.gfgeo-search-unavailable-dialog {
+	border-radius: 5px;
+}
+
+.gfgeo-search-unavailable-dialog .ui-dialog-titlebar {
+	height: initial;
+	line-height: 1.5;
+	padding: 12px 12px;
+	font-size: 16px;
+}
+
+.gfgeo-search-unavailable-dialog .ui-dialog-buttonpane {
+	width: 100%;
+	box-sizing: border-box;
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="title desc">
+  <title id="title">Location and map form template</title>
+  <desc id="desc">An address field connected to a location marker on a map.</desc>
+  <rect width="480" height="300" rx="24" fill="#eaf8ef"/>
+  <rect x="42" y="40" width="396" height="220" rx="16" fill="#fff" stroke="#c7e7d2" stroke-width="3"/>
+  <rect x="72" y="73" width="336" height="44" rx="8" fill="#f7faf8" stroke="#81bd96" stroke-width="3"/>
+  <circle cx="96" cy="95" r="10" fill="#279354"/>
+  <path d="M96 80c-9 0-16 7-16 16 0 12 16 26 16 26s16-14 16-26c0-9-7-16-16-16zm0 22a6 6 0 1 1 0-12 6 6 0 0 1 0 12z" fill="#fff"/>
+  <rect x="72" y="139" width="336" height="90" rx="10" fill="#dcefe4"/>
+  <path d="M72 180l65-22 62 32 72-33 66 25 71-28v75H72z" fill="#b7dcc4"/>
+  <path d="M238 150c-14 0-25 11-25 25 0 19 25 42 25 42s25-23 25-42c0-14-11-25-25-25z" fill="#2c9b5a"/>
+  <circle cx="238" cy="175" r="9" fill="#fff"/>
+</svg>
