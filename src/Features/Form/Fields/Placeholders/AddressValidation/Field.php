@@ -4,13 +4,13 @@
  *
  * Defines a non-persistent placeholder field when the full implementation is unavailable.
  *
- * @package GravityGeolocation\Features\Form\Fields\AddressValidation
+ * @package GravityGeolocationAutocomplete\Features\Form\Fields\AddressValidation
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Features\Form\Fields\Placeholders\AddressValidation;
+namespace GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\AddressValidation;
 
-use GravityGeolocation\Common\Form\Fields\BaseField;
+use GravityGeolocationAutocomplete\Common\Form\Fields\BaseField;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -33,7 +33,7 @@ class Field extends BaseField {
 	 *
 	 * @var string
 	 */
-	protected $prefix = GFGEO_PREFIX;
+	protected $prefix = GFGEOAC_PREFIX;
 
 	/**
 	 * Field type slug registered with Gravity Forms.

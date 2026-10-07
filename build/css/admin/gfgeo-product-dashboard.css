@@ -2,6 +2,18 @@
  * Shared Gravity overview and its own discovery panel in native settings.
  * The admin font is inherited; screenshot frames will accept local images later.
  */
+#gform-settings-section-section_gfgeo_google_maps_api_keys #gform_setting_gfgeo_google_maps_api_key > .gform-settings-field__header {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 #gform-settings-section-section_gfgeo_product_overview.gfgeo-product-settings--free {
   border-inline-start: 4px solid #15598e;
   background: #f4f8fc;
@@ -82,6 +94,13 @@
 .gfgeo-product-dashboard p {
   color: var(--gfgeo-page-muted);
 }
+.gfgeo-product-dashboard--overview p,
+.gfgeo-product-dashboard--overview li {
+  font-size: 15px;
+}
+.gfgeo-product-dashboard--overview .gfgeo-product-dashboard__note {
+  font-size: 15px !important;
+}
 .gfgeo-product-dashboard__header {
   display: flex;
   flex-wrap: wrap;
@@ -101,7 +120,7 @@
 }
 .gfgeo-product-dashboard__eyebrow {
   margin: 0 0 4px;
-  font-size: 12px !important;
+  font-size: 13px !important;
 }
 .gfgeo-product-dashboard__actions {
   display: flex;
@@ -244,7 +263,25 @@
   padding-top: 16px;
 }
 .gfgeo-product-dashboard__feature-footer p {
-  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+.gfgeo-product-dashboard__feature-footer p .dashicons {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  font-size: 16px;
+}
+.gfgeo-product-dashboard__feature-footer a {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.gfgeo-product-dashboard__feature-footer .gfgeo-product-dashboard__demo-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
 }
 .gfgeo-product-dashboard__badge {
   display: inline-block;
@@ -252,7 +289,7 @@
   border-radius: 5px;
   background: #eaf5ef;
   color: #216640;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.5;
 }
 .gfgeo-product-dashboard__badge--available {
@@ -260,7 +297,7 @@
   color: var(--gfgeo-page-accent);
 }
 .gfgeo-product-dashboard__note {
-  font-size: 12px !important;
+  font-size: 14px !important;
 }
 .gfgeo-product-dashboard__placeholder {
   display: none;

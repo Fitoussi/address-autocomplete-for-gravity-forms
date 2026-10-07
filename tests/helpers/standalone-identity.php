@@ -3,10 +3,10 @@
  * Verify standalone identity without booting WordPress or installing dependencies.
  *
  * Run with: php tests/helpers/standalone-identity.php
- * The conflict fixture executes the real early guard in separate PHP processes.
+ * The conflict fixture executes the real deferred guard in separate PHP processes.
  * This checks metadata and boot isolation, not frontend or installed acceptance.
  *
- * @package GravityGeolocation\Tests\Fixtures
+ * @package GravityGeolocationAutocomplete\Tests\Fixtures
  */
 
 $root   = dirname( __DIR__, 2 );
@@ -25,28 +25,29 @@ foreach ( [
 }
 
 foreach ( [
-	'GFGEO_VERSION'      => '1.0.0',
-	'GFGEO_PLUGIN_NAME'  => 'Address Autocomplete for Gravity Forms',
-	'GFGEO_PACKAGE_TYPE' => 'free',
-	'GFGEO_PREFIX'       => 'gfgeo',
-	'GFGEO_SLUG'         => 'gravity_geolocation',
-	'GFGEO_ITEM_ID'      => '0',
+	'GFGEOAC_VERSION'      => '1.0.0',
+	'GFGEOAC_PLUGIN_NAME'  => 'Address Autocomplete for Gravity Forms',
+	'GFGEOAC_PACKAGE_TYPE' => 'free',
+	'GFGEOAC_PREFIX'       => 'gfgeo',
+	'GFGEOAC_MIN_HOST_VERSION' => '2.10.3',
 ] as $constant => $expected ) {
 	$checks[ $constant ] = false !== strpos( $main, "define( '{$constant}', '{$expected}' );" );
 }
 
 $checks['native settings slug retained'] = 1 === preg_match( '/protected\s+\$_slug\s*=\s*\x27gravityforms_geolocation\x27;/', $addon );
-$checks['native full title']             = 1 === preg_match( '/protected\s+\$_title\s*=\s*GFGEO_PLUGIN_NAME;/', $addon );
+$checks['native full title']             = 1 === preg_match( '/protected\s+\$_title\s*=\s*GFGEOAC_PLUGIN_NAME;/', $addon );
 $checks['native short title']            = 1 === preg_match( '/protected\s+\$_short_title\s*=\s*\x27Address Autocomplete\x27;/', $addon );
 $checks['custom Address type retained']  = false !== strpos( file_get_contents( $root . '/src/Features/Form/Fields/Address/Field.php' ), "public const TYPE = 'gfgeo_address';" );
 $checks['single renamed entry']          = ! file_exists( $root . '/gravityforms_geolocation.php' );
 $checks['renamed workspace']             = is_file( $root . '/address-autocomplete-for-gravity-forms.code-workspace' ) && ! file_exists( $root . '/gravity-geolocation.code-workspace' );
-$checks['guard before constants']        = strpos( $main, "if ( \\defined( 'GFGEO_PACKAGE_TYPE' ) )" ) < strpos( $main, "define( 'GFGEO_VERSION'" );
+$checks['isolated bootstrap and deferred guard'] = false === strpos( $main, "define( 'GFGEO_VERSION'" )
+	&& false !== strpos( $main, "add_action( 'plugins_loaded', [ \\GravityGeolocationAutocomplete\\Loader::class, 'load' ], 5 );" )
+	&& false !== strpos( file_get_contents( $root . '/src/Loader.php' ), "defined( 'GFGEO_VERSION' )" );
 $checks['WordPress update identity']      = false === strpos( $main, 'Update URI:' );
 
-$checks['prefixed dependency variable'] = false !== strpos( $main, '$gfgeo_dependencies = [' )
+$checks['single native host requirement'] = false !== strpos( $main, "define( 'GFGEOAC_MIN_HOST_VERSION', '2.10.3' );" )
 	&& false === strpos( $main, '$dependencies = [' );
-$checks['bundled translation path retained'] = false !== strpos( $addon, "load_plugin_textdomain( 'address-autocomplete-for-gravity-forms', false, dirname( GFGEO_BASENAME ) . '/languages/' );" );
+$checks['bundled translation path retained'] = false !== strpos( $addon, "load_plugin_textdomain( 'address-autocomplete-for-gravity-forms', false, dirname( GFGEOAC_BASENAME ) . '/languages/' );" );
 
 // Keep direct-access guards recognizable to Plugin Check as well as PHP.
 $source_files = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $root . '/src', FilesystemIterator::SKIP_DOTS ) );

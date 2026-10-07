@@ -2,11 +2,11 @@
 /**
  * Local Address labels/tooltips only; no shared engine text catalog.
  *
- * @package GravityGeolocation\Features\Form\Admin\FormEditor\Helpers
+ * @package GravityGeolocationAutocomplete\Features\Form\Admin\FormEditor\Helpers
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Features\Form\Admin\FormEditor\Helpers;
+namespace GravityGeolocationAutocomplete\Features\Form\Admin\FormEditor\Helpers;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -30,71 +30,71 @@ final class FieldText {
 	 * @return array Grouped text, or an empty array for an unknown identity.
 	 */
 	public static function get_parts( $field_type, $group = null, $type = 'label' ) {
-		$definitions = array(
-			'address' => array(
-				'autocomplete' => array(
-					'enable'                  => array(
+		$definitions = [
+			'address' => [
+				'autocomplete' => [
+					'enable'                  => [
 						'label'   => __( 'Enable autocomplete', 'address-autocomplete-for-gravity-forms' ),
-						'tooltip' => __( 'Turn on real-time address suggestions powered by the Google Maps Places API.', 'address-autocomplete-for-gravity-forms' ),
-					),
-					'force_selection'         => array(
-						'label'   => __( 'Require Address Selection from Suggestions', 'address-autocomplete-for-gravity-forms' ),
+						'tooltip' => __( 'Show address suggestions powered by Google Places.', 'address-autocomplete-for-gravity-forms' ),
+					],
+					'force_selection'         => [
+						'label'   => __( 'Require address selection from suggestions', 'address-autocomplete-for-gravity-forms' ),
 						'tooltip' => __( 'If the visitor leaves a newly typed address without selecting a suggestion, clear the input and show your configured alert.', 'address-autocomplete-for-gravity-forms' ),
-					),
-					'force_selection_message' => array(
-						'label'   => __( 'Message for Manual Entry Attempt', 'address-autocomplete-for-gravity-forms' ),
+					],
+					'force_selection_message' => [
+						'label'   => __( 'Selection alert message', 'address-autocomplete-for-gravity-forms' ),
 						'tooltip' => __( 'Show this alert when the visitor leaves a newly typed address without selecting an autocomplete suggestion.', 'address-autocomplete-for-gravity-forms' ),
-					),
-					'types'                   => array(
-						'label'   => __( 'Autocomplete Results Types', 'address-autocomplete-for-gravity-forms' ),
+					],
+					'types'                   => [
+						'label'   => __( 'Autocomplete result types', 'address-autocomplete-for-gravity-forms' ),
 						'tooltip' => __( 'Choose the types of places to include in autocomplete suggestions. <a href="https://developers.google.com/maps/documentation/places/web-service/place-types" target="_blank">Learn more about result types.</a>', 'address-autocomplete-for-gravity-forms' ),
-					),
-					'countries'               => array(
-						'label'   => __( 'Restrict by Countries', 'address-autocomplete-for-gravity-forms' ),
+					],
+					'countries'               => [
+						'label'   => __( 'Restrict to countries', 'address-autocomplete-for-gravity-forms' ),
 						'tooltip' => __( 'Select one or more countries (up to 5) to limit address suggestions within those regions.', 'address-autocomplete-for-gravity-forms' ),
-					),
-					'language'                => array(
+					],
+					'language'                => [
 						'label'   => __( 'Language', 'address-autocomplete-for-gravity-forms' ),
-						'tooltip' => __( 'Select the language to be used for address autocomplete suggestions and returned place details. Leave as default to use the browser’s language.', 'address-autocomplete-for-gravity-forms' ),
-					),
-					'bias_type'               => array(
-						'label'   => __( 'Location Bias Type', 'address-autocomplete-for-gravity-forms' ),
-						'tooltip' => __( 'Bias suggestions toward a center point or rectangular area. Existing strict-bounds preferences remain supported; no visitor location is detected.', 'address-autocomplete-for-gravity-forms' ),
-					),
-				),
-				'proximity'    => array(
-					'lat'    => array(
+						'tooltip' => __( 'Choose a language for suggestions and place details. Leave the default selected to use the global language setting.', 'address-autocomplete-for-gravity-forms' ),
+					],
+					'bias_type'               => [
+						'label'   => __( 'Location bias', 'address-autocomplete-for-gravity-forms' ),
+						'tooltip' => __( 'Favor suggestions near a configured point or within a rectangular area. This does not detect the visitor’s location.', 'address-autocomplete-for-gravity-forms' ),
+					],
+				],
+				'proximity'    => [
+					'lat'    => [
 						'label'   => __( 'Latitude', 'address-autocomplete-for-gravity-forms' ),
-						'tooltip' => __( 'Latitude of the center point for proximity-based restrictions.', 'address-autocomplete-for-gravity-forms' ),
-					),
-					'lng'    => array(
+						'tooltip' => __( 'Latitude of the center point used to favor nearby suggestions.', 'address-autocomplete-for-gravity-forms' ),
+					],
+					'lng'    => [
 						'label'   => __( 'Longitude', 'address-autocomplete-for-gravity-forms' ),
-						'tooltip' => __( 'Longitude of the center point for proximity-based restrictions.', 'address-autocomplete-for-gravity-forms' ),
-					),
-					'radius' => array(
+						'tooltip' => __( 'Longitude of the center point used to favor nearby suggestions.', 'address-autocomplete-for-gravity-forms' ),
+					],
+					'radius' => [
 						'label'   => __( 'Radius (in meters)', 'address-autocomplete-for-gravity-forms' ),
-						'tooltip' => __( 'Search radius around the center point, in meters.', 'address-autocomplete-for-gravity-forms' ),
-					),
-				),
-				'area_bounds'  => array(
-					'sw_point' => array(
+						'tooltip' => __( 'Radius around the center point, in meters (up to 50,000).', 'address-autocomplete-for-gravity-forms' ),
+					],
+				],
+				'area_bounds'  => [
+					'sw_point' => [
 						'label'   => __( 'Southwest Point', 'address-autocomplete-for-gravity-forms' ),
-						'tooltip' => __( 'Enter a set of coordinates, comma-separated ( ex. 26.423277,-82.1371324 ), that represents the southwest point of the area that you would like to restrict.', 'address-autocomplete-for-gravity-forms' ),
-					),
-					'ne_point' => array(
+						'tooltip' => __( 'Enter the southwest corner as latitude, longitude, for example: 26.423277, -82.1371324.', 'address-autocomplete-for-gravity-forms' ),
+					],
+					'ne_point' => [
 						'label'   => __( 'Northeast Point', 'address-autocomplete-for-gravity-forms' ),
-						'tooltip' => __( 'Enter a set of coordinates, comma-separated ( ex. 26.4724595,-82.0217760 ), that represents the northeast point of the area that you would like to restrict.', 'address-autocomplete-for-gravity-forms' ),
-					),
-				),
-			),
-		);
-		$result      = array();
-		foreach ( $definitions[ $field_type ] ?? array() as $name => $items ) {
+						'tooltip' => __( 'Enter the northeast corner as latitude, longitude, for example: 26.4724595, -82.0217760.', 'address-autocomplete-for-gravity-forms' ),
+					],
+				],
+			],
+		];
+		$result      = [];
+		foreach ( $definitions[ $field_type ] ?? [] as $name => $items ) {
 			foreach ( $items as $key => $item ) {
 				$result[ $name ][ $key ] = $item[ $type ] ?? '';
 			}
 		}
-		return null === $group ? $result : ( $result[ $group ] ?? array() );
+		return null === $group ? $result : ( $result[ $group ] ?? [] );
 	}
 
 	/**

@@ -5,11 +5,11 @@
  * This describes packaged capabilities, not license validity or frontend gates.
  * Every availability probe names concrete source files, never upsell placeholders.
  *
- * @package GravityGeolocation\Admin
+ * @package GravityGeolocationAutocomplete\Admin
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Admin;
+namespace GravityGeolocationAutocomplete\Admin;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -21,6 +21,100 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 final class DashboardFeatures {
+
+	/**
+	 * Prioritize major capabilities without changing comparison-table order.
+	 *
+	 * @since 1.0.0
+	 * @param array<string,array> $features Existing feature definitions.
+	 * @return array<string,array> Overview cards in feature-first order.
+	 */
+	public static function order_for_overview( $features ) {
+		$order = [
+			'autocomplete',
+			'location-map',
+			'geocoder',
+			'dynamic-fields',
+			'distance',
+			'pricing',
+			'directions',
+			'drawing',
+			'nearby',
+			'validation',
+			'entry-maps',
+			'search',
+			'entry-details',
+			'current-location',
+			'coordinates',
+			'location-controls',
+			'quick-setups',
+			'templates',
+			'gmw-integration',
+		];
+		$ordered = [];
+		foreach ( $order as $id ) {
+			if ( isset( $features[ $id ] ) ) {
+				$ordered[ $id ] = $features[ $id ];
+			}
+		}
+		return $ordered + $features;
+	}
+
+	/**
+	 * Return locally curated demos that actually illustrate the feature.
+	 *
+	 * Empty results deliberately omit links for setup helpers or features without
+	 * a relevant demo. These are ordinary outbound links, never remote embeds.
+	 *
+	 * @since 1.0.0
+	 * @param string $feature_id Public feature identifier.
+	 * @return array<array{label:string,url:string}> Feature-specific demo links.
+	 */
+	public static function get_demo_links( $feature_id ) {
+		$demos = [
+			'location-map' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/single-address-field-form/' ],
+			],
+			'geocoder' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/single-address-field-form/' ],
+			],
+			'dynamic-fields' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/single-address-field-form/' ],
+			],
+			'distance' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/distance-duration-price-calculations/' ],
+			],
+			'pricing' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/distance-duration-price-calculations/' ],
+			],
+			'directions' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/routes-directions/' ],
+			],
+			'drawing' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/drawing-tools/' ],
+			],
+			'nearby' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/nearest-locations/' ],
+			],
+			'entry-maps' => [
+				[ 'label' => __( 'View single-entry demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/single-entry-map/' ],
+				[ 'label' => __( 'View mashup demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/mashup-map/' ],
+			],
+			'current-location' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/single-address-field-form/' ],
+			],
+			'coordinates' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/single-address-field-form/' ],
+			],
+			'validation' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/address-validation/' ],
+			],
+			'search' => [
+				[ 'label' => __( 'View demo', 'address-autocomplete-for-gravity-forms' ), 'url' => 'https://demo.gravitygeolocation.com/full-search/' ],
+			],
+		];
+		return $demos[ $feature_id ] ?? [];
+	}
 
 	/**
 	 * Return the public comparison headings in the normal package order.

@@ -5,11 +5,11 @@
  * This presentation-only page never reads licenses, creates forms or writes
  * settings. Actual configuration remains on the native Gravity Forms screen.
  *
- * @package GravityGeolocation\Admin
+ * @package GravityGeolocationAutocomplete\Admin
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Admin;
+namespace GravityGeolocationAutocomplete\Admin;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -48,10 +48,11 @@ final class Dashboard {
 	 * @return void
 	 */
 	public static function register() {
-		add_action( 'admin_menu', array( self::class, 'register_page' ), 30 );
-		add_filter( 'gfgeo_plugin_settings_sections', array( self::class, 'add_settings_link' ), 110 );
-		add_action( 'admin_enqueue_scripts', array( self::class, 'enqueue' ) );
-		add_filter( 'plugin_action_links_' . GFGEO_BASENAME, array( self::class, 'add_action_link' ), 120 );
+		SetupNotice::register();
+		add_action( 'admin_menu', [ self::class, 'register_page' ], 30 );
+		add_filter( 'gfgeo_plugin_settings_sections', [ self::class, 'add_settings_link' ], 110 );
+		add_action( 'admin_enqueue_scripts', [ self::class, 'enqueue' ] );
+		add_filter( 'plugin_action_links_' . GFGEOAC_BASENAME, [ self::class, 'add_action_link' ], 120 );
 	}
 
 	/**
@@ -66,9 +67,9 @@ final class Dashboard {
 	public static function register_page() {
 		$title = __( 'Address Autocomplete', 'address-autocomplete-for-gravity-forms' );
 		if ( class_exists( '\GFForms' ) ) {
-			self::$page_hook = add_submenu_page( 'gf_edit_forms', GFGEO_PLUGIN_NAME, $title, 'manage_options', self::PAGE_SLUG, array( self::class, 'render' ) );
+			self::$page_hook = add_submenu_page( 'gf_edit_forms', GFGEOAC_PLUGIN_NAME, $title, 'manage_options', self::PAGE_SLUG, [ self::class, 'render' ] );
 		} else {
-			self::$page_hook = add_options_page( GFGEO_PLUGIN_NAME, $title, 'manage_options', self::PAGE_SLUG, array( self::class, 'render' ) );
+			self::$page_hook = add_options_page( GFGEOAC_PLUGIN_NAME, $title, 'manage_options', self::PAGE_SLUG, [ self::class, 'render' ] );
 		}
 	}
 
@@ -81,11 +82,11 @@ final class Dashboard {
 	 * @return array
 	 */
 	public static function add_action_link( $links ) {
-		return array(
+		return [
 			'overview' => '<a href="' . esc_url( self::get_url() ) . '">' . esc_html__( 'Overview', 'address-autocomplete-for-gravity-forms' ) . '</a>',
 			'settings' => '<a href="' . esc_url( admin_url( 'admin.php?page=gf_settings&subview=gravityforms_geolocation' ) ) . '">' . esc_html__( 'Settings', 'address-autocomplete-for-gravity-forms' ) . '</a>',
-			'docs'     => '<a href="' . esc_url( GFGEO_SITE_URL . '/docs/' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Docs', 'address-autocomplete-for-gravity-forms' ) . '</a>',
-		) + $links;
+			'docs'     => '<a href="' . esc_url( GFGEOAC_SITE_URL . '/docs/' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Docs', 'address-autocomplete-for-gravity-forms' ) . '</a>',
+		] + $links;
 	}
 
 	/**
@@ -97,7 +98,7 @@ final class Dashboard {
 	 * @return string
 	 */
 	public static function get_url( $section = 'overview' ) {
-		$section = \in_array( $section, array( 'overview', 'comparison', 'help', 'products' ), true ) ? $section : 'overview';
+		$section = \in_array( $section, [ 'overview', 'comparison', 'help', 'products' ], true ) ? $section : 'overview';
 		return add_query_arg( 'section', $section, admin_url( 'admin.php?page=' . self::PAGE_SLUG ) );
 	}
 
@@ -126,9 +127,9 @@ final class Dashboard {
 
 		wp_enqueue_style(
 			'gfgeo-product-dashboard',
-			GFGEO_URL . 'build/css/admin/gfgeo-product-dashboard.min.css',
-			array(),
-			GFGEO_VERSION
+			GFGEOAC_URL . 'build/css/admin/gfgeo-product-dashboard.min.css',
+			[],
+			GFGEOAC_VERSION
 		);
 	}
 
@@ -148,20 +149,20 @@ final class Dashboard {
 			$sections,
 			0,
 			0,
-			array(
-				array(
+			[
+				[
 					'id'     => 'section_gfgeo_product_overview',
 					'title'  => __( 'Need more than address autocomplete?', 'address-autocomplete-for-gravity-forms' ),
 					'class'  => 'gform-settings-panel--full gfgeo-product-settings gfgeo-product-settings--free',
-					'fields' => array(
-						array(
+					'fields' => [
+						[
 							'name' => 'gfgeo_product_overview',
 							'type' => 'html',
-							'html' => array( self::class, 'render_settings_link' ),
-						),
-					),
-				),
-			)
+							'html' => [ self::class, 'render_settings_link' ],
+						],
+					],
+				],
+			]
 		);
 		return $sections;
 	}
@@ -185,7 +186,7 @@ final class Dashboard {
 				<a class="button button-primary" href="<?php echo esc_url( self::get_url() ); ?>">
 					<?php esc_html_e( 'Explore features', 'address-autocomplete-for-gravity-forms' ); ?>
 				</a>
-				<a class="button button-secondary" href="<?php echo esc_url( GFGEO_SITE_URL . '/pricing/' ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'View packages', 'address-autocomplete-for-gravity-forms' ); ?></a>
+				<a class="button button-secondary" href="<?php echo esc_url( GFGEOAC_SITE_URL . '/pricing/' ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'View packages', 'address-autocomplete-for-gravity-forms' ); ?></a>
 			</div>
 		</div>
 		<?php
@@ -209,30 +210,31 @@ final class Dashboard {
 		// This GET value selects presentation only: there is no save/delete action.
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$requested = isset( $_GET['section'] ) && \is_string( $_GET['section'] ) ? sanitize_key( wp_unslash( $_GET['section'] ) ) : '';
-		$tabs      = array(
+		$tabs      = [
 			'overview'   => __( 'Overview', 'address-autocomplete-for-gravity-forms' ),
 			'comparison' => __( 'Compare Packages', 'address-autocomplete-for-gravity-forms' ),
 			'help'       => __( 'Help', 'address-autocomplete-for-gravity-forms' ),
 			'products'   => __( 'More Plugins', 'address-autocomplete-for-gravity-forms' ),
-		);
+		];
 
-		$version      = GFGEO_VERSION;
+		$version      = GFGEOAC_VERSION;
 		$section      = isset( $tabs[ $requested ] ) ? $requested : 'overview';
 		$settings_url = admin_url( 'admin.php?page=gf_settings&subview=gravityforms_geolocation' );
-		$pricing_url  = GFGEO_SITE_URL . '/pricing/';
-		$docs_url     = GFGEO_SITE_URL . '/docs/';
+		$pricing_url  = GFGEOAC_SITE_URL . '/pricing/';
+		$docs_url     = GFGEOAC_SITE_URL . '/docs/';
 		$demo_url     = 'https://demo.gravitygeolocation.com/';
-		$product_name = GFGEO_PLUGIN_NAME;
-		$package_name = GFGEO_PACKAGE_LABEL;
+		$product_name = GFGEOAC_PLUGIN_NAME;
+		$package_name = GFGEOAC_PACKAGE_LABEL;
 		$features     = DashboardFeatures::get_features();
+		$overview_features = DashboardFeatures::order_for_overview( $features );
 		$included     = array_filter(
-			$features,
+			$overview_features,
 			static function ( $feature ) {
 				return $feature['included'];
 			}
 		);
 		$available    = array_filter(
-			$features,
+			$overview_features,
 			static function ( $feature ) {
 				return ! $feature['included'];
 			}
@@ -241,10 +243,10 @@ final class Dashboard {
 
 		$hero_title     = __( 'Less typing. Better addresses.', 'address-autocomplete-for-gravity-forms' );
 		$help_step      = __( 'Add a custom Address field or enable autocomplete on a native Address field.', 'address-autocomplete-for-gravity-forms' );
-		$feature_groups = array(
+		$feature_groups = [
 			'included'  => $included,
 			'available' => $available,
-		);
+		];
 
 		require __DIR__ . '/views/dashboard.php';
 	}
@@ -257,37 +259,42 @@ final class Dashboard {
 	 * @return array[] Public product names, descriptions and website URLs.
 	 */
 	public static function get_products() {
-		return array(
-			array(
+		return [
+			[
 				'name'        => 'Gravity Geolocation',
 				'url'         => 'https://gravitygeolocation.com/',
 				'description' => __( 'Maps, geocoding, dynamic fields, directions, nearby locations and more for Gravity Forms.', 'address-autocomplete-for-gravity-forms' ),
-			),
-			array(
+			],
+			[
+				'name'        => 'Gravity Search',
+				'url'         => 'https://gravitygeolocation.com/solutions/gravity-search/',
+				'description' => __( 'Turn Gravity Forms entries into searchable directories, listings and customer portals—with field filters, proximity search, maps and flexible result layouts.', 'address-autocomplete-for-gravity-forms' ),
+			],
+			[
 				'name'        => 'GEO my WP',
 				'url'         => 'https://geomywp.com/',
 				'description' => __( 'Build location-based searches and directories for your WordPress site.', 'address-autocomplete-for-gravity-forms' ),
-			),
-			array(
+			],
+			[
 				'name'        => 'Formidable Geolocation',
 				'url'         => 'https://formidablegeolocation.com/',
 				'description' => __( 'Add geolocation tools and connected location fields to Formidable Forms.', 'address-autocomplete-for-gravity-forms' ),
-			),
-			array(
+			],
+			[
 				'name'        => 'Geolocation for Ninja Forms',
 				'url'         => 'https://ninjageolocation.com/',
 				'description' => __( 'Bring address, map and location workflows to Ninja Forms.', 'address-autocomplete-for-gravity-forms' ),
-			),
-			array(
+			],
+			[
 				'name'        => 'WPForms Geolocation',
 				'url'         => 'https://wpgeoforms.com/',
 				'description' => __( 'Add address autocomplete, maps, coordinates and directions to WPForms.', 'address-autocomplete-for-gravity-forms' ),
-			),
-			array(
+			],
+			[
 				'name'        => 'WP Job Manager Geolocation',
 				'url'         => 'https://jobmanagergeolocation.com/',
 				'description' => __( 'Add proximity searches and interactive maps to your WP Job Manager job board.', 'address-autocomplete-for-gravity-forms' ),
-			),
-		);
+			],
+		];
 	}
 }

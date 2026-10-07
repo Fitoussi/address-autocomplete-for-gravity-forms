@@ -6,11 +6,11 @@
  * Only autocomplete controls are rendered; hidden paid values are preserved
  * separately at the native Add-On save boundary.
  *
- * @package GravityGeolocation\Admin
+ * @package GravityGeolocationAutocomplete\Admin
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Admin;
+namespace GravityGeolocationAutocomplete\Admin;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -35,7 +35,7 @@ class Settings {
 			[
 				'id'          => 'section_gfgeo_google_maps_api_keys',
 				'title'       => __( 'Google API Key', 'address-autocomplete-for-gravity-forms' ),
-				'description' => __( 'Enter your browser API key to enable Google Places address autocomplete.', 'address-autocomplete-for-gravity-forms' ),
+				'description' => esc_html__( 'Enable Maps JavaScript API and Places API (New) for your browser key. No server key is required.', 'address-autocomplete-for-gravity-forms' ) . '<br>' . esc_html__( 'Need help?', 'address-autocomplete-for-gravity-forms' ) . ' <a href="' . esc_url( GFGEOAC_SITE_URL . '/docs/google-maps-api-keys-gravity-geolocation/' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'View the Google API setup guide', 'address-autocomplete-for-gravity-forms' ) . '</a>',
 				'class'       => 'gform-settings-panel--full',
 				'fields'      => [
 					[

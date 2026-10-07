@@ -2,11 +2,11 @@
 /**
  * Dependency-independent admin page and native Gravity Forms bootstrap.
  *
- * @package GravityGeolocation
+ * @package GravityGeolocationAutocomplete
  * @since 1.0.0
  */
 
-namespace GravityGeolocation;
+namespace GravityGeolocationAutocomplete;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -20,21 +20,52 @@ if ( ! defined( 'ABSPATH' ) ) {
 final class Loader {
 
 	/**
-	 * Register the native Add-On when a supported Gravity Forms host is loaded.
+	 * Yield to premium after all plugin files load, before host initialization.
 	 *
 	 * @since 1.0.0
 	 *
 	 * @return void
 	 */
 	public static function load() {
+		if ( defined( 'GFGEO_VERSION' ) ) {
+			add_action( 'admin_notices', [ self::class, 'conflict_notice' ] );
+			add_action( 'network_admin_notices', [ self::class, 'conflict_notice' ] );
+			return;
+		}
+		self::register_admin();
+		add_action( 'gform_loaded', [ self::class, 'register_addon' ], 8 );
+	}
+
+	/**
+	 * Register only the free Add-On during Gravity Forms' native loading event.
+	 *
+	 * @since 1.0.0
+	 * @return void
+	 */
+	public static function register_addon() {
+		if ( defined( 'GFGEO_VERSION' ) ) {
+			return;
+		}
 		if ( ! class_exists( '\GFForms' ) || ! method_exists( '\GFForms', 'include_addon_framework' ) ) {
 			return;
 		}
-		if ( version_compare( \GFForms::$version, GFGEO_DEPENDENCIES['gravityforms'], '<' ) ) {
+		if ( version_compare( \GFForms::$version, GFGEOAC_MIN_HOST_VERSION, '<' ) ) {
 			return;
 		}
 		\GFForms::include_addon_framework();
-		\GFAddOn::register( \GravityGeolocation\Core\AddOn::class );
+		\GFAddOn::register( \GravityGeolocationAutocomplete\Core\AddOn::class );
+	}
+
+	/**
+	 * Explain free inactivity without deleting data or changing activation.
+	 *
+	 * @since 1.0.0
+	 * @return void
+	 */
+	public static function conflict_notice() {
+		if ( current_user_can( 'activate_plugins' ) ) {
+			echo '<div class="notice notice-warning"><p>' . esc_html__( 'Address Autocomplete for Gravity Forms is not running because Gravity Geolocation or Gravity Search is active. Deactivate the free plugin; your existing Address fields and settings remain available in premium.', 'address-autocomplete-for-gravity-forms' ) . '</p></div>';
+		}
 	}
 
 	/**
@@ -45,8 +76,8 @@ final class Loader {
 	 * @return void
 	 */
 	public static function register_admin() {
-		\GravityGeolocation\Admin\Dashboard::register();
-		add_action( 'admin_notices', array( self::class, 'dependency_notice' ) );
+		\GravityGeolocationAutocomplete\Admin\Dashboard::register();
+		add_action( 'admin_notices', [ self::class, 'dependency_notice' ] );
 	}
 
 	/**
@@ -60,14 +91,14 @@ final class Loader {
 		if ( ! current_user_can( 'activate_plugins' ) ) {
 			return;
 		}
-		if ( class_exists( '\GFForms' ) && version_compare( \GFForms::$version, GFGEO_DEPENDENCIES['gravityforms'], '>=' ) ) {
+		if ( class_exists( '\GFForms' ) && version_compare( \GFForms::$version, GFGEOAC_MIN_HOST_VERSION, '>=' ) ) {
 			return;
 		}
 		echo '<div class="notice notice-warning"><p>' . esc_html(
 			sprintf(
 			/* translators: %s: Minimum Gravity Forms version. */
 				__( 'Address Autocomplete requires an active Gravity Forms installation, version %s or newer.', 'address-autocomplete-for-gravity-forms' ),
-				GFGEO_DEPENDENCIES['gravityforms']
+				GFGEOAC_MIN_HOST_VERSION
 			)
 		) . '</p></div>';
 	}

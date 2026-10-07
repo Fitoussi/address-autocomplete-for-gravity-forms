@@ -5,7 +5,7 @@
  * Usage: php tools/package/build.php [output-directory]
  * Run npm run build first. No dependency install, remote action or site mutation.
  *
- * @package GravityGeolocation\Tools
+ * @package GravityGeolocationAutocomplete\Tools
  */
 
 if ( 'cli' !== PHP_SAPI ) {
@@ -24,7 +24,7 @@ try {
 		throw new RuntimeException( 'Cannot read the plugin header version.' );
 	}
 	$version = $match[1];
-	if ( false === strpos( $main, "define( 'GFGEO_VERSION', '{$version}' );" ) || false === strpos( $main, "define( 'GFGEO_PACKAGE_TYPE', 'free' );" ) ) {
+	if ( false === strpos( $main, "define( 'GFGEOAC_VERSION', '{$version}' );" ) || false === strpos( $main, "define( 'GFGEOAC_PACKAGE_TYPE', 'free' );" ) ) {
 		throw new RuntimeException( 'Plugin constants do not match the standalone header.' );
 	}
 	$readme = file_get_contents( $root . '/readme.txt' );

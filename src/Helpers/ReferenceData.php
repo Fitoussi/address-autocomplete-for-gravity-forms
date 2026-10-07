@@ -2,11 +2,11 @@
 /**
  * Local country/language lists copied from our framework; no runtime dependency.
  *
- * @package GravityGeolocation\Helpers
+ * @package GravityGeolocationAutocomplete\Helpers
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Helpers;
+namespace GravityGeolocationAutocomplete\Helpers;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -27,9 +27,9 @@ final class ReferenceData {
 	 * @return array<string,string> Country codes mapped to readable labels.
 	 */
 	public static function get_countries() {
-		$prefix = GFGEO_PREFIX;
+		$prefix = GFGEOAC_PREFIX;
 		// ISO-3166 alpha-2 country codes mapped to localized names.
-		$countries = array(
+		$countries = [
 			'AF' => 'Afghanistan (‫افغانستان‬‎)',
 			'AX' => 'Åland Islands (Åland)',
 			'AL' => 'Albania (Shqipëri)',
@@ -286,8 +286,9 @@ final class ReferenceData {
 			'YE' => 'Yemen (‫اليمن‬‎)',
 			'ZM' => 'Zambia',
 			'ZW' => 'Zimbabwe',
-		);
+		];
 		// Allow external filtering of the country list.
+		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound -- Retain the established hook constructed from the plugin prefix.
 		return apply_filters( "{$prefix}_country_list", $countries );
 	}
 
@@ -299,9 +300,9 @@ final class ReferenceData {
 	 * @return array<string,string> Language codes mapped to readable labels.
 	 */
 	public static function get_languages() {
-		$prefix = GFGEO_PREFIX;
+		$prefix = GFGEOAC_PREFIX;
 		// Google Maps supported language codes mapped to human-readable labels.
-		$languages = array(
+		$languages = [
 			'af'     => 'Afrikaans',
 			'ak'     => 'Akan',
 			'sq'     => 'Albanian',
@@ -439,8 +440,9 @@ final class ReferenceData {
 			'yi'     => 'Yiddish',
 			'yo'     => 'Yoruba',
 			'zu'     => 'Zulu',
-		);
+		];
 		// Allow external filtering of the supported languages list.
+		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound -- Retain the established hook constructed from the plugin prefix.
 		return apply_filters( "{$prefix}_supported_languages", $languages );
 	}
 }

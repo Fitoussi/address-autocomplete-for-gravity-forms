@@ -5,11 +5,11 @@
  * Provides Search entry-point promotions when the Search feature is not
  * available in the current package.
  *
- * @package GravityGeolocation\Admin
+ * @package GravityGeolocationAutocomplete\Admin
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Admin;
+namespace GravityGeolocationAutocomplete\Admin;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -124,7 +124,7 @@ final class SearchUnavailable {
 	 * @return string
 	 */
 	private function get_pricing_url() {
-		return defined( 'GFGEO_SITE_URL' ) ? trailingslashit( GFGEO_SITE_URL ) . 'pricing/' : 'https://gravitygeolocation.com/pricing/';
+		return defined( 'GFGEOAC_SITE_URL' ) ? trailingslashit( GFGEOAC_SITE_URL ) . 'pricing/' : 'https://gravitygeolocation.com/pricing/';
 	}
 
 	/**
@@ -172,16 +172,16 @@ final class SearchUnavailable {
 
 		wp_enqueue_style(
 			'gfgeo-search-unavailable',
-			GFGEO_URL . 'build/css/search-unavailable.min.css',
+			GFGEOAC_URL . 'build/css/search-unavailable.min.css',
 			[ 'wp-jquery-ui-dialog' ],
-			GFGEO_VERSION
+			GFGEOAC_VERSION
 		);
 
 		wp_enqueue_script(
 			'gfgeo-search-unavailable',
-			GFGEO_URL . 'build/js/admin/gfgeo-search-unavailable.min.js',
+			GFGEOAC_URL . 'build/js/admin/gfgeo-search-unavailable.min.js',
 			[ 'jquery', 'jquery-ui-dialog' ],
-			GFGEO_VERSION,
+			GFGEOAC_VERSION,
 			true
 		);
 

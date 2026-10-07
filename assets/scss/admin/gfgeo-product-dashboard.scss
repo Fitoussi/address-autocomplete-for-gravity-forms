@@ -3,7 +3,21 @@
  * The admin font is inherited; screenshot frames will accept local images later.
  */
 // Native settings retain their existing typography, controls and license UI.
-// Scope every adjustment to our panel; no global Gravity Forms rules are added.
+// Scope every adjustment to our panels; no global Gravity Forms rules are added.
+// The API card title supplies the visible heading; retain its native input label
+// for assistive technology without a second visible heading or extra spacing.
+#gform-settings-section-section_gfgeo_google_maps_api_keys #gform_setting_gfgeo_google_maps_api_key > .gform-settings-field__header {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
 #gform-settings-section-section_gfgeo_product_overview {
 	&.gfgeo-product-settings--free {
 		border-inline-start: 4px solid #15598e;
@@ -104,6 +118,19 @@
 		color: var(--gfgeo-page-muted);
 	}
 
+	// Overview descriptions and supporting details share one readable size.
+	// Comparison cells keep their own 14px sizing.
+	&--overview {
+		p,
+		li {
+			font-size: 15px;
+		}
+
+		.gfgeo-product-dashboard__note {
+			font-size: 15px !important;
+		}
+	}
+
 	&__header {
 		display: flex;
 		flex-wrap: wrap;
@@ -125,7 +152,7 @@
 
 	&__eyebrow {
 		margin: 0 0 4px;
-		font-size: 12px !important;
+		font-size: 13px !important;
 	}
 
 	&__actions {
@@ -300,7 +327,28 @@
 		padding-top: 16px;
 
 		p {
-			font-size: 12px;
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			font-size: 14px;
+		}
+
+		p .dashicons {
+			flex: 0 0 16px;
+			width: 16px;
+			height: 16px;
+			font-size: 16px;
+		}
+
+		a {
+			font-size: 15px;
+			line-height: 1.7;
+		}
+
+		.gfgeo-product-dashboard__demo-links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px 16px;
 		}
 	}
 
@@ -310,7 +358,7 @@
 		border-radius: 5px;
 		background: #eaf5ef;
 		color: #216640;
-		font-size: 12px;
+		font-size: 13px;
 		line-height: 1.5;
 
 		&--available {
@@ -320,7 +368,7 @@
 	}
 
 	&__note {
-		font-size: 12px !important;
+		font-size: 14px !important;
 	}
 
 	&__placeholder {

@@ -5,13 +5,13 @@
  * Defines a Gravity Forms address field with geolocation enhancements such as
  * autocomplete and optional map-link output formatting.
  *
- * @package GravityGeolocation\Features\Form\Fields\Address
+ * @package GravityGeolocationAutocomplete\Features\Form\Fields\Address
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Features\Form\Fields\Address;
+namespace GravityGeolocationAutocomplete\Features\Form\Fields\Address;
 
-use GravityGeolocation\Common\Form\Fields\BaseField;
+use GravityGeolocationAutocomplete\Common\Form\Fields\BaseField;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -44,7 +44,7 @@ class Field extends BaseField {
 	 *
 	 * @var string
 	 */
-	protected $prefix = GFGEO_PREFIX;
+	protected $prefix = GFGEOAC_PREFIX;
 
 	/**
 	 * Field type slug registered with Gravity Forms.
@@ -362,6 +362,7 @@ class Field extends BaseField {
 			return $address;
 		}
 
+		// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.DynamicHooknameFound -- The field prefix is gfgeo; retain the premium-compatible public hook.
 		$settings = apply_filters( "{$this->prefix}_full_address_field_output_map_link", $this->google_map_link, $this );
 
 		if ( ! empty( $settings[ $context ] ) ) {

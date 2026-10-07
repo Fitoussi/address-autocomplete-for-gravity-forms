@@ -6,12 +6,12 @@
  * behavior in form rendering flows. This field does not save entry values.
  *
  * @since 1.0.0
- * @package GravityGeolocation\Features\Form\Fields\Directions
+ * @package GravityGeolocationAutocomplete\Features\Form\Fields\Directions
  */
 
-namespace GravityGeolocation\Features\Form\Fields\Placeholders\Directions;
+namespace GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\Directions;
 
-use GravityGeolocation\Common\Form\Fields\BaseField;
+use GravityGeolocationAutocomplete\Common\Form\Fields\BaseField;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -34,7 +34,7 @@ class Field extends BaseField {
 	 *
 	 * @var string
 	 */
-	protected $prefix = GFGEO_PREFIX;
+	protected $prefix = GFGEOAC_PREFIX;
 
 	/**
 	 * Field type slug registered with Gravity Forms.

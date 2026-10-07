@@ -2,6 +2,7 @@ Address Autocomplete for Gravity Forms
 
 1.0.0
 -----
+* One-time administrator setup notice with permanent dismissal and no activation redirect.
 * Initial standalone release.
 * Google Places API (New) autocomplete with a temporary legacy compatibility fallback.
 * Dedicated single-line Address field with an entry-detail Google Maps link.

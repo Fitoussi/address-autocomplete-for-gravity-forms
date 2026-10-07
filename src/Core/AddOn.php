@@ -2,17 +2,17 @@
 /**
  * Native Gravity Forms integration for the standalone autocomplete plugin.
  *
- * @package GravityGeolocation\Core
+ * @package GravityGeolocationAutocomplete\Core
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Core;
+namespace GravityGeolocationAutocomplete\Core;
 
-use GravityGeolocation\Admin\Settings;
-use GravityGeolocation\Admin\SearchUnavailable;
-use GravityGeolocation\Common\Form\Fields\Registrar;
-use GravityGeolocation\Features\Form\Admin\FormEditor;
-use GravityGeolocation\Features\Form\Runtime\FormGeoProcessor;
+use GravityGeolocationAutocomplete\Admin\Settings;
+use GravityGeolocationAutocomplete\Admin\SearchUnavailable;
+use GravityGeolocationAutocomplete\Common\Form\Fields\Registrar;
+use GravityGeolocationAutocomplete\Features\Form\Admin\FormEditor;
+use GravityGeolocationAutocomplete\Features\Form\Runtime\FormGeoProcessor;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -36,7 +36,7 @@ class AddOn extends \GFAddOn {
 	 *
 	 * @var string
 	 */
-	protected $_version = GFGEO_VERSION; // phpcs:ignore PSR2.Classes.PropertyDeclaration.Underscore -- Retained native Add-On naming contract.
+	protected $_version = GFGEOAC_VERSION; // phpcs:ignore PSR2.Classes.PropertyDeclaration.Underscore -- Retained native Add-On naming contract.
 
 	/**
 	 * Minimum supported Gravity Forms version.
@@ -45,7 +45,7 @@ class AddOn extends \GFAddOn {
 	 *
 	 * @var string
 	 */
-	protected $_min_gravityforms_version = GFGEO_DEPENDENCIES['gravityforms']; // phpcs:ignore PSR2.Classes.PropertyDeclaration.Underscore -- Retained native Add-On naming contract.
+	protected $_min_gravityforms_version = GFGEOAC_MIN_HOST_VERSION; // phpcs:ignore PSR2.Classes.PropertyDeclaration.Underscore -- Retained native Add-On naming contract.
 
 	/**
 	 * Full product title shown by the host.
@@ -54,7 +54,7 @@ class AddOn extends \GFAddOn {
 	 *
 	 * @var string
 	 */
-	protected $_title = GFGEO_PLUGIN_NAME; // phpcs:ignore PSR2.Classes.PropertyDeclaration.Underscore -- Retained native Add-On naming contract.
+	protected $_title = GFGEOAC_PLUGIN_NAME; // phpcs:ignore PSR2.Classes.PropertyDeclaration.Underscore -- Retained native Add-On naming contract.
 
 	/**
 	 * Shared Add-On settings identity retained for premium upgrades.
@@ -72,7 +72,7 @@ class AddOn extends \GFAddOn {
 	 *
 	 * @var string
 	 */
-	protected $_full_path = GFGEO_PLUGIN_FILE; // phpcs:ignore PSR2.Classes.PropertyDeclaration.Underscore -- Retained native Add-On naming contract.
+	protected $_full_path = GFGEOAC_PLUGIN_FILE; // phpcs:ignore PSR2.Classes.PropertyDeclaration.Underscore -- Retained native Add-On naming contract.
 
 	/**
 	 * Compact title displayed in the Gravity Forms settings navigation.
@@ -121,13 +121,13 @@ class AddOn extends \GFAddOn {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-		$this->_capabilities               = array( 'gravityforms_gfgeo_settings', 'gravityforms_gfgeo_form_settings', 'gravityforms_gfgeo_uninstall' );
+		$this->_capabilities               = [ 'gravityforms_gfgeo_settings', 'gravityforms_gfgeo_form_settings', 'gravityforms_gfgeo_uninstall' ];
 		$this->_capabilities_settings_page = $this->_capabilities[0];
 		$this->_capabilities_form_settings = $this->_capabilities[1];
 		$this->_capabilities_uninstall     = $this->_capabilities[2];
 		parent::__construct();
-		add_filter( 'gform_noconflict_scripts', array( $this, 'register_noconflict_assets' ), 12 );
-		add_filter( 'gform_noconflict_styles', array( $this, 'register_noconflict_assets' ), 12 );
+		add_filter( 'gform_noconflict_scripts', [ $this, 'register_noconflict_assets' ], 12 );
+		add_filter( 'gform_noconflict_styles', [ $this, 'register_noconflict_assets' ], 12 );
 	}
 
 	/**
@@ -152,10 +152,10 @@ class AddOn extends \GFAddOn {
 	 * @return void
 	 */
 	private function define_constants() {
-		define( 'GFGEO_GOOGLE_MAPS_BROWSER_API_KEY', $this->sanitize_string_setting( $this->get_plugin_setting( 'gfgeo_google_maps_api_key' ) ) );
-		define( 'GFGEO_GOOGLE_MAPS_COUNTRY', $this->sanitize_string_setting( $this->get_plugin_setting( 'gfgeo_google_maps_country' ) ) );
-		define( 'GFGEO_GOOGLE_MAPS_LANGUAGE', $this->sanitize_string_setting( $this->get_plugin_setting( 'gfgeo_google_maps_language' ) ) );
-		define( 'GFGEO_DISABLE_GOOGLE_MAPS_API', (bool) apply_filters( 'gfgeo_disable_google_maps_api', ! empty( $this->get_plugin_setting( 'gfgeo_disable_google_maps_api' ) ) ) );
+		define( 'GFGEOAC_GOOGLE_MAPS_BROWSER_API_KEY', $this->sanitize_string_setting( $this->get_plugin_setting( 'gfgeo_google_maps_api_key' ) ) );
+		define( 'GFGEOAC_GOOGLE_MAPS_COUNTRY', $this->sanitize_string_setting( $this->get_plugin_setting( 'gfgeo_google_maps_country' ) ) );
+		define( 'GFGEOAC_GOOGLE_MAPS_LANGUAGE', $this->sanitize_string_setting( $this->get_plugin_setting( 'gfgeo_google_maps_language' ) ) );
+		define( 'GFGEOAC_DISABLE_GOOGLE_MAPS_API', (bool) apply_filters( 'gfgeo_disable_google_maps_api', ! empty( $this->get_plugin_setting( 'gfgeo_disable_google_maps_api' ) ) ) );
 	}
 
 	/**
@@ -203,7 +203,7 @@ class AddOn extends \GFAddOn {
 	public function load_text_domain() {
 		// Bundled translations need their custom path before directory language packs exist.
 		// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- Retain bundled translations on supported WordPress versions.
-		load_plugin_textdomain( 'address-autocomplete-for-gravity-forms', false, dirname( GFGEO_BASENAME ) . '/languages/' );
+		load_plugin_textdomain( 'address-autocomplete-for-gravity-forms', false, dirname( GFGEOAC_BASENAME ) . '/languages/' );
 	}
 
 	/**
@@ -215,7 +215,7 @@ class AddOn extends \GFAddOn {
 	 * @return string[] Unique handles allowed by the host.
 	 */
 	public function register_noconflict_assets( $assets ) {
-		return array_values( array_unique( array_merge( $assets, array( 'gfgeoac-autocomplete', 'gfgeoac-choices', 'gfgeo-form-editor', 'gfgeo-admin', 'gfgeo-search-unavailable', 'jquery-ui-dialog', 'wp-jquery-ui-dialog', 'gfgeo-product-dashboard' ) ) ) );
+		return array_values( array_unique( array_merge( $assets, [ 'gfgeoac-autocomplete', 'gfgeoac-choices', 'gfgeo-form-editor', 'gfgeo-admin', 'gfgeo-search-unavailable', 'jquery-ui-dialog', 'wp-jquery-ui-dialog', 'gfgeo-product-dashboard' ] ) ) );
 	}
 
 	/**
@@ -226,17 +226,17 @@ class AddOn extends \GFAddOn {
 	 * @return array[] Native Add-On script definitions.
 	 */
 	public function scripts() {
-		return array(
-			array(
+		return [
+			[
 				'handle'    => 'gfgeo-form-editor',
-				'src'       => GFGEO_URL . 'build/js/admin/gfgeo-form-editor.min.js',
+				'src'       => GFGEOAC_URL . 'build/js/admin/gfgeo-form-editor.min.js',
 				'version'   => $this->_version,
-				'deps'      => array( 'jquery' ),
+				'deps'      => [ 'jquery' ],
 				'in_footer' => true,
-				'callback'  => array( $this, 'localize_form_editor_script' ),
-				'enqueue'   => array( array( 'admin_page' => array( 'form_editor' ) ) ),
-			),
-		);
+				'callback'  => [ $this, 'localize_form_editor_script' ],
+				'enqueue'   => [ [ 'admin_page' => [ 'form_editor' ] ] ],
+			],
+		];
 	}
 
 	/**
@@ -250,20 +250,20 @@ class AddOn extends \GFAddOn {
 		wp_localize_script(
 			'gfgeo-form-editor',
 			'gfgeoFormEditorStrings',
-			array(
-				'autocomplete'     => array(
+			[
+				'autocomplete'     => [
 					'allCountries' => __( 'All countries', 'address-autocomplete-for-gravity-forms' ),
 					'allTypes'     => __( 'All place types', 'address-autocomplete-for-gravity-forms' ),
-				),
-				'unavailableField' => array(
+				],
+				'unavailableField' => [
 					/* translators: %s: Premium field title. */
 					'title'          => __( 'The %s field is not available.', 'address-autocomplete-for-gravity-forms' ),
 					/* translators: %s: Premium field title. */
 					'message'        => __( 'The %s field is available with Gravity Geolocation.', 'address-autocomplete-for-gravity-forms' ),
 					'upgradeNow'     => __( 'View packages', 'address-autocomplete-for-gravity-forms' ),
 					'unlockFeatures' => __( 'to explore additional location tools.', 'address-autocomplete-for-gravity-forms' ),
-				),
-			)
+				],
+			]
 		);
 	}
 
@@ -275,20 +275,20 @@ class AddOn extends \GFAddOn {
 	 * @return array[] Native Add-On stylesheet definitions.
 	 */
 	public function styles() {
-		return array(
-			array(
+		return [
+			[
 				'handle'  => 'gfgeoac-choices',
-				'src'     => GFGEO_URL . 'assets/css/choices.css',
+				'src'     => GFGEOAC_URL . 'assets/css/choices.css',
 				'version' => $this->_version,
-				'enqueue' => array( array( 'admin_page' => array( 'form_editor' ) ) ),
-			),
-			array(
+				'enqueue' => [ [ 'admin_page' => [ 'form_editor' ] ] ],
+			],
+			[
 				'handle'  => 'gfgeo-admin',
-				'src'     => GFGEO_URL . 'build/css/admin/gfgeo-admin.min.css',
+				'src'     => GFGEOAC_URL . 'build/css/admin/gfgeo-admin.min.css',
 				'version' => $this->_version,
-				'enqueue' => array( array( 'admin_page' => array( 'form_editor' ) ) ),
-			),
-		);
+				'enqueue' => [ [ 'admin_page' => [ 'form_editor' ] ] ],
+			],
+		];
 	}
 
 	/**

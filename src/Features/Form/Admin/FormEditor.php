@@ -2,14 +2,14 @@
 /**
  * Address-only settings tab in the native Gravity Forms builder.
  *
- * @package GravityGeolocation\Features\Form\Admin
+ * @package GravityGeolocationAutocomplete\Features\Form\Admin
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Features\Form\Admin;
+namespace GravityGeolocationAutocomplete\Features\Form\Admin;
 
-use GravityGeolocation\Features\Form\Admin\FormEditor\Helpers\FieldText;
-use GravityGeolocation\Features\Form\Fields\Address\Settings;
+use GravityGeolocationAutocomplete\Features\Form\Admin\FormEditor\Helpers\FieldText;
+use GravityGeolocationAutocomplete\Features\Form\Fields\Address\Settings;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -31,14 +31,14 @@ class FormEditor {
 		if ( ! \GFCommon::is_form_editor() || apply_filters( 'gfgeo_disable_form_editor', false ) ) {
 			return;
 		}
-		add_filter( 'gform_field_settings_tabs', array( $this, 'geolocation_settings_tab' ), 10, 2 );
-		add_action( 'gform_field_settings_tab_content', array( $this, 'geolocation_settings_tab_content' ), 50, 2 );
-		add_filter( 'gform_tooltips', array( $this, 'tooltips' ) );
-		add_action( 'gform_editor_js_set_default_values', array( $this, 'default_values' ) );
+		add_filter( 'gform_field_settings_tabs', [ $this, 'geolocation_settings_tab' ], 10, 2 );
+		add_action( 'gform_field_settings_tab_content', [ $this, 'geolocation_settings_tab_content' ], 50, 2 );
+		add_filter( 'gform_tooltips', [ $this, 'tooltips' ] );
+		add_action( 'gform_editor_js_set_default_values', [ $this, 'default_values' ] );
 	}
 
 	/**
-	 * Add the Autocomplete tab while preserving its saved internal identity.
+	 * Add the Address Autocomplete tab while preserving its saved internal identity.
 	 *
 	 * @since 1.0.0
 	 *
@@ -47,10 +47,10 @@ class FormEditor {
 	 * @return array Tabs including the autocomplete panel.
 	 */
 	public function geolocation_settings_tab( $tabs, $form ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter -- Required Gravity Forms callback signature.
-		$tabs[] = array(
+		$tabs[] = [
 			'id'    => 'gfgeo_geolocation',
-			'title' => esc_html__( 'Autocomplete', 'address-autocomplete-for-gravity-forms' ),
-		);
+			'title' => esc_html__( 'Address Autocomplete', 'address-autocomplete-for-gravity-forms' ),
+		];
 		return $tabs;
 	}
 
@@ -77,7 +77,7 @@ class FormEditor {
 	 * @return string[] Supported settings feature names.
 	 */
 	public static function get_field_settings_features() {
-		return array( 'Address' );
+		return [ 'Address' ];
 	}
 
 	/**

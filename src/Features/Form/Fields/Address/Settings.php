@@ -5,14 +5,14 @@
  * Renders Address field settings in the Gravity Forms editor, including
  * Google Places Autocomplete configuration and restriction options.
  *
- * @package GravityGeolocation\Features\Form\Fields\Address
+ * @package GravityGeolocationAutocomplete\Features\Form\Fields\Address
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Features\Form\Fields\Address;
+namespace GravityGeolocationAutocomplete\Features\Form\Fields\Address;
 
-use GravityGeolocation\Features\Form\Admin\FormEditor\Helpers\FieldText;
-use GravityGeolocation\Helpers\ReferenceData;
+use GravityGeolocationAutocomplete\Features\Form\Admin\FormEditor\Helpers\FieldText;
+use GravityGeolocationAutocomplete\Helpers\ReferenceData;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -128,7 +128,7 @@ class Settings {
 								class="gfgeo-address-autocomplete-language fieldwidth-3"
 								onchange="SetFieldProperty( 'gfgeo_address_autocomplete_language', jQuery(this).val() );"
 							>
-								<option value=""><?php esc_html_e( 'Default (Browser Language)', 'address-autocomplete-for-gravity-forms' ); ?></option>
+								<option value=""><?php esc_html_e( 'Default (global language)', 'address-autocomplete-for-gravity-forms' ); ?></option>
 								<?php
 								foreach ( ReferenceData::get_languages() as $code => $label ) {
 									echo '<option value="' . esc_attr( $code ) . '">' . esc_html( $label ) . '</option>';
@@ -260,7 +260,7 @@ class Settings {
 				],
 				[
 					'value' => 'area_bounds',
-					'label' => __( 'Area Bounds', 'address-autocomplete-for-gravity-forms' ),
+					'label' => __( 'Area bounds', 'address-autocomplete-for-gravity-forms' ),
 				],
 			]
 		);

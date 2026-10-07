@@ -43,7 +43,7 @@ Set your browser API key, default result language and region code in the plugin 
 
 = Require a selection, not just typed text =
 
-Enable **Require Address Selection from Suggestions** when visitors should choose a Google suggestion. Newly typed, unselected text is cleared when the visitor leaves the input, and your custom alert explains what to do. Submission checks also prevent unselected text from slipping through a configured autocomplete field.
+Enable **Require address selection from suggestions** when visitors should choose a Google suggestion. Newly typed, unselected text is cleared when the visitor leaves the input, and your custom alert explains what to do. Submission checks also prevent unselected text from slipping through a configured autocomplete field.
 
 This is a suggestion-selection requirement, not postal address validation or a deliverability guarantee.
 
@@ -81,7 +81,7 @@ The plugin overview and More Plugins information are bundled locally. They do no
 1. Install and activate Gravity Forms 2.10.3 or newer.
 2. Install and activate this plugin. Deactivate any other Gravity Geolocation package first.
 3. Enable Maps JavaScript API and Places API (New) in your Google Cloud project. Open Forms > Settings > Address Autocomplete and configure your browser API key.
-4. Add a custom Address field, or enable autocomplete on a native Address field in its Autocomplete tab.
+4. Add a custom Address field, or enable autocomplete on a native Address field in its Address Autocomplete tab.
 5. Save the form and test selecting a suggestion on the front end.
 
 The overview is available under Forms > Address Autocomplete. If Gravity Forms is unavailable, the overview appears under Settings instead.
@@ -110,7 +110,7 @@ Yes. Field settings include countries, place types, proximity bias and rectangul
 
 = Can I use this alongside Gravity Geolocation or Gravity Search? =
 
-Do not activate these packages together. They share PHP identities: the first loaded package runs, and the other displays a notice. Deactivate the free plugin before activating a paid package. Deactivation does not delete your Gravity Forms forms or their saved settings.
+Deactivate the free plugin when switching to Gravity Geolocation or Gravity Search. If both are active, the free plugin pauses its field, settings and dashboard integration and displays an administrator notice, regardless of plugin load order. Deactivation does not delete your Gravity Forms forms or their saved settings.
 
 = Is an account or license required? =
 
@@ -120,7 +120,7 @@ No. This plugin has no account connection, license activation, paid updater or r
 
 1. Google Places suggestions in the dedicated single-line Address field.
 2. Automatically fill the native Address field's street, city, state/region, postal code and country after selecting a suggestion.
-3. Configure required suggestion selection, a custom alert, result types, countries, language and location bias in the Autocomplete tab.
+3. Configure required suggestion selection, a custom alert, result types, countries, language and location bias in the Address Autocomplete tab.
 4. Set your Google browser API key, default region and result language in the global settings.
 5. View saved addresses in entry details and open their locations in Google Maps. The single-line field adds an Open Map link; the native Address field retains its Map It link.
 6. Explore included autocomplete features and other Gravity Geolocation packages from the locally bundled overview.
@@ -128,6 +128,7 @@ No. This plugin has no account connection, license activation, paid updater or r
 == Changelog ==
 
 = 1.0.0 =
+* Added a one-time administrator setup notice with permanent dismissal and no activation redirect.
 * Initial standalone release with custom and native Address autocomplete.
 * Included Google Places API (New) support with a temporary legacy compatibility fallback.
 * Added per-field country, place-type, language and location bias controls, plus global language and region settings.

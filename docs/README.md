@@ -1,5 +1,32 @@
 # Address Autocomplete for Gravity Forms
 
+## Standalone bootstrap convention
+
+Use this convention for these three plugins and future standalone autocomplete plugins:
+
+- Give free its own constant prefix and PHP namespace: GFGEOAC / GravityGeolocationAutocomplete,
+  NFGEOAC / NinjaGeolocationAutocomplete, or FRMGEOAC / FormidableGeolocationAutocomplete.
+  Never define aliases using premium's constants or classes.
+- Register the guard on plugins_loaded, after all active plugin files have loaded.
+  Check the corresponding premium version constant before registering any dashboard,
+  field, settings or runtime integration. Premium wins regardless of file load order.
+- Gravity runs the guard at priority 5, then registers its Add-On on gform_loaded at
+  priority 8; Gravity Forms initializes Add-Ons during plugins_loaded at priority 10.
+  Ninja/Formidable check at priority 20. Ninja constructs translated fields on init
+  at priority 1, before its host's priority-5 field list. Match host lifecycle, not
+  arbitrary identical hook numbers.
+- On conflict, free registers only capability-gated site/network admin notices.
+  Do not auto-deactivate plugins, redirect, delete data or change saved preferences.
+  Premium being active but unable to run does not permit free to claim its field types.
+- Preserve saved field types, field option names, global setting keys, native settings
+  slugs, capabilities and existing integration hooks. These are data/API contracts;
+  PHP bootstrap identities are not shared storage. Third-party PHP integrations must
+  use the intended plugin's namespace/constants explicitly.
+- Use short arrays in first-party production PHP. Tool/test formatting is independent.
+- Test free alone and both premium/free load orders in separate processes; test
+  notices with and without administrator capability. Run installed acceptance too.
+
+
 This standalone free plugin adds Google Places suggestions to its single-line Address field and Gravity Forms' native Address field. It uses its own autocomplete adapter and local admin pages, without WPGeo Framework, account connections, licensing, migrations, or premium location services.
 
 ## Source organization
@@ -8,7 +35,7 @@ This standalone free plugin adds Google Places suggestions to its single-line Ad
 
 `src/Features/Form/Fields/Address/` contains the Address renderer and editor settings. The four classes in `Fields/Placeholders/` expose promotional editor buttons only; they do not create functioning premium fields or save their submitted values.
 
-`src/Features/Form/Admin/FormEditor.php` owns the Autocomplete tab, tooltips, and new-field defaults. `src/Features/Form/Runtime/FormGeoProcessor.php` collects supported Address options and enqueues the standalone assets without modifying saved form data.
+`src/Features/Form/Admin/FormEditor.php` owns the Address Autocomplete tab, tooltips, and new-field defaults. `src/Features/Form/Runtime/FormGeoProcessor.php` collects supported Address options and enqueues the standalone assets without modifying saved form data.
 
 `src/Admin/` contains global settings, the product overview, feature comparisons, and unavailable Search entry points. Reference countries and languages are bundled in `src/Helpers/ReferenceData.php`.
 
@@ -16,9 +43,20 @@ This standalone free plugin adds Google Places suggestions to its single-line Ad
 
 ## Compatibility boundaries
 
-Keep `gfgeo_address`, saved `gfgeo_*` properties, the native Add-On settings slug `gravityforms_geolocation`, and existing PHP namespaces unchanged. Settings saves preserve hidden premium values instead of erasing them. Unsupported locator, IP, Geocoder, and Dynamic options are not sent to the frontend.
+Keep `gfgeo_address`, saved `gfgeo_*` properties and the native Add-On settings slug `gravityforms_geolocation` unchanged. Free uses isolated GFGEOAC constants and the GravityGeolocationAutocomplete namespace. Settings saves preserve hidden premium values instead of erasing them. Unsupported locator, IP, Geocoder, and Dynamic options are not sent to the frontend.
 
-The early conflict guard retains the first loaded Gravity Geolocation package. Do not activate the free plugin alongside Gravity Geolocation or Gravity Search. Deactivate one before activating the other; existing Gravity Forms forms and settings remain stored.
+The deferred guard yields to Gravity Geolocation or Gravity Search in either file load order. Free does not register overlapping fields, settings or product pages while premium is active. Deactivate free after switching to premium; existing Gravity Forms forms and settings remain stored. No automatic deactivation or migration is performed.
+
+## Activation setup notice
+
+First site activation records a setup notice in the plugin's own option. It appears
+across site admin pages for administrators until permanently dismissed or a browser
+API key is configured. It never redirects on activation. Reactivation does not reset
+dismissed or completed guidance, and existing active installs are not enrolled by
+an update alone. Network activation, missing/outdated hosts and premium conflicts
+do not display setup guidance. The explicit Dismiss action is a capability-checked,
+nonce-protected POST that returns to the same admin page. Shared host settings and
+premium options are not changed. Plugin-row Settings and Overview links remain.
 
 ## Local development
 

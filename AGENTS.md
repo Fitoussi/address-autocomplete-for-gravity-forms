@@ -1,5 +1,9 @@
 # Codex Project Guidance
 
+Use the Standalone bootstrap convention in docs/README.md for this and future
+autocomplete plugins: isolated PHP identities, deferred premium-wins guard,
+unchanged saved data/API keys, and short arrays in production PHP.
+
 ## Standalone free plugin
 
 Read `docs/README.md` before changing this repository. Inspect the current branch,
@@ -7,8 +11,9 @@ HEAD, remote and complete working tree; preserve all local changes.
 
 - Work only in this repository unless the owner explicitly authorizes changes
   to the premium plugin, framework, another consumer or a WordPress site.
-- Preserve `gfgeo_address`, saved `gfgeo_*` properties, the native Add-On settings
-  slug, existing PHP namespaces and the early distribution-conflict guard.
+- Preserve `gfgeo_address`, saved `gfgeo_*` properties and the native Add-On settings
+  slug. Use the isolated GravityGeolocationAutocomplete namespace, GFGEOAC constants
+  and deferred premium-wins guard; do not restore shared bootstrap aliases.
 - Keep this plugin focused on custom/native Address autocomplete. Do not add
   WPGeo runtime, account connections, licensing, migrations or premium services.
 - Retain the four non-functional field promotions and local product overview.

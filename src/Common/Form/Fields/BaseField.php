@@ -4,11 +4,11 @@
  *
  * Defines shared behavior for geolocation-related Gravity Forms fields.
  *
- * @package GravityGeolocation\Common\Form\Fields
+ * @package GravityGeolocationAutocomplete\Common\Form\Fields
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Common\Form\Fields;
+namespace GravityGeolocationAutocomplete\Common\Form\Fields;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Abstract base class for Gravity Geolocation Gravity Forms fields.
  *
- * @package GravityGeolocation\Common\Form\Fields
+ * @package GravityGeolocationAutocomplete\Common\Form\Fields
  * @since 1.0.0
  */
 abstract class BaseField extends \GF_Field {
@@ -93,9 +93,9 @@ abstract class BaseField extends \GF_Field {
 	 * @return array Modified form editor button configuration array.
 	 */
 	public function get_form_editor_button() {
-		return array(
+		return [
 			'group' => (string) $this->gfgeo_editor_button_group,
 			'text'  => $this->get_form_editor_field_title(),
-		);
+		];
 	}
 }

@@ -5,11 +5,11 @@
  * No framework Form instance, location flow or geocoder data is created here.
  * The gfgeo property names remain unchanged for a later premium upgrade.
  *
- * @package GravityGeolocation\Features\Form\Runtime
+ * @package GravityGeolocationAutocomplete\Features\Form\Runtime
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Features\Form\Runtime;
+namespace GravityGeolocationAutocomplete\Features\Form\Runtime;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -128,8 +128,8 @@ class FormGeoProcessor {
 			'config' => $this->get_form_config(),
 		];
 
-		wp_register_script( 'gfgeoac-autocomplete', GFGEO_URL . 'build/js/frontend/address-autocomplete.min.js', [ 'jquery' ], GFGEO_VERSION, true );
-		wp_register_style( 'gfgeoac-autocomplete', GFGEO_URL . 'assets/css/address-autocomplete.css', [], GFGEO_VERSION );
+		wp_register_script( 'gfgeoac-autocomplete', GFGEOAC_URL . 'build/js/frontend/address-autocomplete.min.js', [ 'jquery' ], GFGEOAC_VERSION, true );
+		wp_register_style( 'gfgeoac-autocomplete', GFGEOAC_URL . 'assets/css/address-autocomplete.css', [], GFGEOAC_VERSION );
 		wp_enqueue_script( 'gfgeoac-autocomplete' );
 		wp_enqueue_style( 'gfgeoac-autocomplete' );
 		wp_add_inline_script(
@@ -193,10 +193,10 @@ class FormGeoProcessor {
 	 */
 	public function get_form_config() {
 		return [
-			'googleMapsBrowserApiKey' => GFGEO_GOOGLE_MAPS_BROWSER_API_KEY,
-			'regionCode'              => GFGEO_GOOGLE_MAPS_COUNTRY,
-			'languageCode'            => GFGEO_GOOGLE_MAPS_LANGUAGE,
-			'disableGoogleApi'        => (bool) GFGEO_DISABLE_GOOGLE_MAPS_API,
+			'googleMapsBrowserApiKey' => GFGEOAC_GOOGLE_MAPS_BROWSER_API_KEY,
+			'regionCode'              => GFGEOAC_GOOGLE_MAPS_COUNTRY,
+			'languageCode'            => GFGEOAC_GOOGLE_MAPS_LANGUAGE,
+			'disableGoogleApi'        => (bool) GFGEOAC_DISABLE_GOOGLE_MAPS_API,
 			'isAdmin'                 => \GFCommon::is_entry_detail_edit(),
 		];
 	}

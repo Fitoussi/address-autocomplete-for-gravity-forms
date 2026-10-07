@@ -26,51 +26,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Distributions share PHP identities. Keep the first copy; do not load a second.
-if ( \defined( 'GFGEO_PACKAGE_TYPE' ) ) {
-	$gfgeo_conflict_notice = static function () {
-		if ( ! current_user_can( 'activate_plugins' ) ) {
-			return;
-		}
+// Isolated bootstrap; saved gfgeo field/settings identities remain compatible.
+define( 'GFGEOAC_VERSION', '1.0.0' );
+define( 'GFGEOAC_PLUGIN_FILE', __FILE__ );
+define( 'GFGEOAC_BASENAME', plugin_basename( __FILE__ ) );
+define( 'GFGEOAC_PREFIX', 'gfgeo' );
+define( 'GFGEOAC_PLUGIN_NAME', 'Address Autocomplete for Gravity Forms' );
+define( 'GFGEOAC_PATH', plugin_dir_path( __FILE__ ) );
+define( 'GFGEOAC_URL', plugin_dir_url( __FILE__ ) );
+define( 'GFGEOAC_PACKAGE_TYPE', 'free' );
+define( 'GFGEOAC_PACKAGE_LABEL', 'Address Autocomplete' );
+define( 'GFGEOAC_SITE_URL', 'https://gravitygeolocation.com' );
 
-		$message = 'free' === GFGEO_PACKAGE_TYPE
-			? __( 'Please deactivate Address Autocomplete for Gravity Forms so Gravity Geolocation or Gravity Search can run.', 'address-autocomplete-for-gravity-forms' )
-			: __( 'Address Autocomplete for Gravity Forms is not running because Gravity Geolocation or Gravity Search is already loaded. You can deactivate and remove the free plugin.', 'address-autocomplete-for-gravity-forms' );
-
-		echo '<div class="notice notice-warning"><p>' . esc_html( $message ) . '</p></div>';
-	};
-
-	add_action( 'admin_notices', $gfgeo_conflict_notice );
-	add_action( 'network_admin_notices', $gfgeo_conflict_notice );
-
-	return;
-}
-
-// Define plugin constants early so they are available for class constants.
-define( 'GFGEO_VERSION', '1.0.0' );
-define( 'GFGEO_PLUGIN_FILE', __FILE__ );
-define( 'GFGEO_BASENAME', plugin_basename( __FILE__ ) );
-define( 'GFGEO_PREFIX', 'gfgeo' );
-define( 'GFGEO_SLUG', 'gravity_geolocation' );
-define( 'GFGEO_PLUGIN_NAME', 'Address Autocomplete for Gravity Forms' );
-define( 'GFGEO_PATH', plugin_dir_path( __FILE__ ) );
-define( 'GFGEO_URL', plugin_dir_url( __FILE__ ) );
-define( 'GFGEO_PACKAGE_TYPE', 'free' );
-define( 'GFGEO_PACKAGE_LABEL', 'Address Autocomplete' );
-define( 'GFGEO_ITEM_ID', '0' );
-define( 'GFGEO_ITEM_NAME', 'Address Autocomplete for Gravity Forms' );
-define( 'GFGEO_SITE_URL', 'https://gravitygeolocation.com' );
-
-$gfgeo_dependencies = [
-	'gravityforms' => '2.10.3',
-];
-define( 'GFGEO_DEPENDENCIES', $gfgeo_dependencies );
+define( 'GFGEOAC_MIN_HOST_VERSION', '2.10.3' );
 
 // Own classes only. Runtime does not require Composer, framework or account SDK.
 // The autoloader keeps its conventional class-name parameter.
 // phpcs:ignore Universal.NamingConventions.NoReservedKeywordParameterNames.classFound
 spl_autoload_register( static function ( $class ) {
-	$prefix = 'GravityGeolocation\\';
+	$prefix = 'GravityGeolocationAutocomplete\\';
 	if ( 0 !== strpos( $class, $prefix ) ) {
 		return;
 	}
@@ -80,8 +54,8 @@ spl_autoload_register( static function ( $class ) {
 	}
 } );
 
-// Register the local product page independently of the Gravity Forms host.
-\GravityGeolocation\Loader::register_admin();
+// Record first activation only; do not redirect or alter host settings.
+register_activation_hook( __FILE__, [ \GravityGeolocationAutocomplete\Admin\SetupNotice::class, 'activate' ] );
 
-// Defer host-specific add-on initialization until Gravity Forms has loaded.
-add_action( 'gform_loaded', [ \GravityGeolocation\Loader::class, 'load' ], 8 );
+// Inspect every active plugin bootstrap before Gravity Forms initializes add-ons.
+add_action( 'plugins_loaded', [ \GravityGeolocationAutocomplete\Loader::class, 'load' ], 5 );

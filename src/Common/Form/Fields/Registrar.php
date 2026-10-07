@@ -4,17 +4,17 @@
  *
  * Registers the Address field, four promotional placeholders and their editor group.
  *
- * @package GravityGeolocation\Common\Form\Fields
+ * @package GravityGeolocationAutocomplete\Common\Form\Fields
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Common\Form\Fields;
+namespace GravityGeolocationAutocomplete\Common\Form\Fields;
 
-use GravityGeolocation\Features\Form\Fields\Address\Field as Address;
-use GravityGeolocation\Features\Form\Fields\Placeholders\AddressValidation\Field as AddressValidation;
-use GravityGeolocation\Features\Form\Fields\Placeholders\Directions\Field as Directions;
-use GravityGeolocation\Features\Form\Fields\Placeholders\Distance\Field as Distance;
-use GravityGeolocation\Features\Form\Fields\Placeholders\Map\Field as Map;
+use GravityGeolocationAutocomplete\Features\Form\Fields\Address\Field as Address;
+use GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\AddressValidation\Field as AddressValidation;
+use GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\Directions\Field as Directions;
+use GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\Distance\Field as Distance;
+use GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\Map\Field as Map;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.

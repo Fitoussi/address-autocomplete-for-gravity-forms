@@ -5,13 +5,13 @@
  * Supplies a promotional editor identity without a premium implementation.
  * It intentionally renders no input and does not save or display entry values.
  *
- * @package GravityGeolocation\Features\Form\Fields\Placeholders\Map
+ * @package GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\Map
  * @since 1.0.0
  */
 
-namespace GravityGeolocation\Features\Form\Fields\Placeholders\Map;
+namespace GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\Map;
 
-use GravityGeolocation\Common\Form\Fields\BaseField;
+use GravityGeolocationAutocomplete\Common\Form\Fields\BaseField;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -34,7 +34,7 @@ class Field extends BaseField {
 	 *
 	 * @var string
 	 */
-	protected $prefix = GFGEO_PREFIX;
+	protected $prefix = GFGEOAC_PREFIX;
 
 	/**
 	 * Retain the premium field identity without providing its implementation.

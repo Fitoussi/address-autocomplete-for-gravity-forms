@@ -5,7 +5,7 @@
  * This checks archive contents, not installed WordPress acceptance.
  * Temporary artifacts remain available for inspection after the test.
  *
- * @package GravityGeolocation\Tests
+ * @package GravityGeolocationAutocomplete\Tests
  */
 
 $root = dirname( __DIR__, 2 );
@@ -53,7 +53,7 @@ for ( $number = 1; $number <= 6; ++$number ) {
 }
 preg_match( '/== Screenshots ==\s*(.*?)\s*== Changelog ==/s', $readme, $screenshot_section );
 $checks['six numbered screenshot captions'] = isset( $screenshot_section[1] ) && 6 === preg_match_all( '/^[1-6]\. .+$/m', $screenshot_section[1] );
-$checks['free identity retained'] = false !== strpos( $main, "define( 'GFGEO_PACKAGE_TYPE', 'free' );" );
+$checks['free identity retained'] = false !== strpos( $main, "define( 'GFGEOAC_PACKAGE_TYPE', 'free' );" );
 $checks['standalone readme has no account SDK claims'] = false === strpos( $readme, 'Connect Account' ) && false === strpos( $readme, '@VERSION@' );
 $map = json_decode( $zip->getFromName( $prefix . 'build/js/frontend/address-autocomplete.min.js.map' ), true );
 $checks['frontend sources only belong to this plugin'] = ! empty( $map['sources'] ) && ! array_filter( $map['sources'], static function ( $source ) { return 0 !== strpos( $source, '../../../assets/js/autocomplete/' ); } );

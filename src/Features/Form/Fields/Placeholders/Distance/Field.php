@@ -6,12 +6,12 @@
  * behavior in form rendering flows. This field does not save entry values.
  *
  * @since 1.0.0
- * @package GravityGeolocation\Features\Form\Fields\Distance
+ * @package GravityGeolocationAutocomplete\Features\Form\Fields\Distance
  */
 
-namespace GravityGeolocation\Features\Form\Fields\Placeholders\Distance;
+namespace GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\Distance;
 
-use GravityGeolocation\Features\Form\Fields\Placeholders\Directions\Field as Directions;
+use GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\Directions\Field as Directions;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -34,7 +34,7 @@ class Field extends Directions {
 	 *
 	 * @var string
 	 */
-	protected $prefix = GFGEO_PREFIX;
+	protected $prefix = GFGEOAC_PREFIX;
 
 	/**
 	 * Field type slug registered with Gravity Forms.

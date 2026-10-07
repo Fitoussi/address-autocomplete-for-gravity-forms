@@ -15,18 +15,18 @@ namespace {
 
 	define( 'ABSPATH', $root . '/' );
 	foreach ( [
-		'GFGEO_PATH' => $root . '/', 'GFGEO_URL' => 'https://example.invalid/plugin/',
-		'GFGEO_PREFIX' => 'gfgeo', 'GFGEO_VERSION' => '1.0.0',
-		'GFGEO_PLUGIN_NAME' => 'Address Autocomplete for Gravity Forms',
-		'GFGEO_PLUGIN_FILE' => $root . '/address-autocomplete-for-gravity-forms.php',
-		'GFGEO_BASENAME' => 'address-autocomplete-for-gravity-forms/address-autocomplete-for-gravity-forms.php',
-		'GFGEO_SITE_URL' => 'https://gravitygeolocation.com', 'GFGEO_PACKAGE_TYPE' => 'free',
-		'GFGEO_PACKAGE_LABEL' => 'Address Autocomplete', 'GFGEO_ITEM_NAME' => 'Address Autocomplete for Gravity Forms',
-		'GFGEO_GOOGLE_MAPS_COUNTRY' => 'US', 'GFGEO_GOOGLE_MAPS_LANGUAGE' => 'en',
-		'GFGEO_GOOGLE_MAPS_BROWSER_API_KEY' => '',
+		'GFGEOAC_PATH' => $root . '/', 'GFGEOAC_URL' => 'https://example.invalid/plugin/',
+		'GFGEOAC_PREFIX' => 'gfgeo', 'GFGEOAC_VERSION' => '1.0.0',
+		'GFGEOAC_PLUGIN_NAME' => 'Address Autocomplete for Gravity Forms',
+		'GFGEOAC_PLUGIN_FILE' => $root . '/address-autocomplete-for-gravity-forms.php',
+		'GFGEOAC_BASENAME' => 'address-autocomplete-for-gravity-forms/address-autocomplete-for-gravity-forms.php',
+		'GFGEOAC_SITE_URL' => 'https://gravitygeolocation.com', 'GFGEOAC_PACKAGE_TYPE' => 'free',
+		'GFGEOAC_PACKAGE_LABEL' => 'Address Autocomplete',
+		'GFGEOAC_GOOGLE_MAPS_COUNTRY' => 'US', 'GFGEOAC_GOOGLE_MAPS_LANGUAGE' => 'en',
+		'GFGEOAC_GOOGLE_MAPS_BROWSER_API_KEY' => '',
 	] as $key => $value ) { define( $key, $value ); }
-	define( 'GFGEO_DEPENDENCIES', [ 'gravityforms' => '2.10.3' ] );
-	define( 'GFGEO_DISABLE_GOOGLE_MAPS_API', false );
+	define( 'GFGEOAC_MIN_HOST_VERSION', '2.10.3' );
+	define( 'GFGEOAC_DISABLE_GOOGLE_MAPS_API', false );
 
 	function add_filter( $name, $callback, $priority = 10, $arguments = 1 ) {
 		$GLOBALS['hooks'][ $name ][ $priority ][] = [ $callback, $arguments ];
@@ -102,7 +102,7 @@ namespace {
 	}
 
 	spl_autoload_register( static function ( $class ) use ( $root ) {
-		$prefix = 'GravityGeolocation\\';
+		$prefix = 'GravityGeolocationAutocomplete\\';
 		if ( 0 === strpos( $class, $prefix ) ) {
 			$file = $root . '/src/' . str_replace( '\\', '/', substr( $class, strlen( $prefix ) ) ) . '.php';
 			if ( is_file( $file ) ) { require_once $file; }
@@ -110,22 +110,22 @@ namespace {
 	} );
 
 	// Loader works with licensing/migration classes physically absent.
-	\GravityGeolocation\Loader::load();
-	$checks['add-on registers without licensing/migrations'] = GFAddOn::$registered === [ \GravityGeolocation\Core\AddOn::class ];
-	$checks['licensing classes absent'] = ! class_exists( '\GravityGeolocation\Licensing\LicenseManager' );
-	$checks['migration classes absent'] = ! class_exists( '\GravityGeolocation\Migrations\Manager' );
-	\GravityGeolocation\Loader::register_admin();
+	\GravityGeolocationAutocomplete\Loader::load();
+	\GravityGeolocationAutocomplete\Loader::register_addon();
+	$checks['add-on registers without licensing/migrations'] = GFAddOn::$registered === [ \GravityGeolocationAutocomplete\Core\AddOn::class ];
+	$checks['licensing classes absent'] = ! class_exists( '\GravityGeolocationAutocomplete\Licensing\LicenseManager' );
+	$checks['migration classes absent'] = ! class_exists( '\GravityGeolocationAutocomplete\Migrations\Manager' );
 	$checks['local admin menu registered'] = isset( $hooks['admin_menu'] );
-	\GravityGeolocation\Admin\Dashboard::register_page();
+	\GravityGeolocationAutocomplete\Admin\Dashboard::register_page();
 	$checks['Address Autocomplete belongs to Forms'] = 'gf_edit_forms' === $dashboard_menu['parent'] && 'Address Autocomplete' === $dashboard_menu['menu_title'];
-	$links = apply_filters( 'plugin_action_links_' . GFGEO_BASENAME, [ 'deactivate' => '<a>Deactivate</a>' ] );
+	$links = apply_filters( 'plugin_action_links_' . GFGEOAC_BASENAME, [ 'deactivate' => '<a>Deactivate</a>' ] );
 	$checks['plugin row retains overview/settings/docs'] = array_keys( $links ) === [ 'overview', 'settings', 'docs', 'deactivate' ];
-	$checks['distribution loader removed'] = ! class_exists( '\\GravityGeolocation\\Core\\Distribution' );
+	$checks['distribution loader removed'] = ! class_exists( '\\GravityGeolocationAutocomplete\\Core\\Distribution' );
 	$checks['distribution folder removed'] = ! file_exists( $root . '/src/Distribution' );
 	$checks['no framework loader or registry'] = ! class_exists( '\WPGeoFW\Admin\PluginManager\Registry' ) && ! defined( 'WPGEOFW_LOADED' );
 
 	// Exercise the actual add-on boot methods without a live Gravity Forms host.
-	$reflection = new \ReflectionClass( \GravityGeolocation\Core\AddOn::class );
+	$reflection = new \ReflectionClass( \GravityGeolocationAutocomplete\Core\AddOn::class );
 	$addon = $reflection->newInstanceWithoutConstructor();
 	foreach ( [ 'include_files', 'register_providers' ] as $method_name ) {
 		$method = $reflection->getMethod( $method_name );
@@ -136,10 +136,10 @@ namespace {
 	}
 	$method->invoke( $addon );
 	$checks['form integration boots only once'] = 1 === count( $hooks['gform_pre_render'][10] );
-	$checks['dynamic feature provider removed'] = ! class_exists( '\\GravityGeolocation\\Features\\Form\\Provider' );
-	$checks['one-call admin wrapper removed'] = ! class_exists( '\\GravityGeolocation\\Features\\Form\\Admin\\Admin' );
-	$checks['generic group registry removed'] = ! class_exists( '\\GravityGeolocation\\Common\\Form\\Admin\\FormEditor\\FieldGroup' );
-	$checks['one-use editor traits removed'] = ! trait_exists( '\\GravityGeolocation\\Features\\Form\\Admin\\FormEditor\\Tooltips' ) && ! trait_exists( '\\GravityGeolocation\\Features\\Form\\Admin\\FormEditor\\DefaultValues' );
+	$checks['dynamic feature provider removed'] = ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Provider' );
+	$checks['one-call admin wrapper removed'] = ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Admin\\Admin' );
+	$checks['generic group registry removed'] = ! class_exists( '\\GravityGeolocationAutocomplete\\Common\\Form\\Admin\\FormEditor\\FieldGroup' );
+	$checks['one-use editor traits removed'] = ! trait_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Admin\\FormEditor\\Tooltips' ) && ! trait_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Admin\\FormEditor\\DefaultValues' );
 	$groups = [ [ 'name' => 'standard_fields' ], [ 'name' => 'advanced_fields' ], [ 'name' => 'post_fields' ] ];
 	$registered_groups = apply_filters( 'gform_field_groups_form_editor', $groups );
 	$checks['single group follows advanced fields'] = array_column( $registered_groups, 'name' ) === [ 'standard_fields', 'advanced_fields', 'gfgeo_geolocation_fields', 'post_fields' ];
@@ -164,14 +164,17 @@ namespace {
 			$checks[ $field->type . ' no entry output' ] = '' === $field->get_value_save_entry( 'do not save', [], '', 0, [] );
 		}
 	}
-	$checks['only Address settings renderer'] = \GravityGeolocation\Features\Form\Admin\FormEditor::get_field_settings_features() === [ 'Address' ];
+	$checks['only Address settings renderer'] = \GravityGeolocationAutocomplete\Features\Form\Admin\FormEditor::get_field_settings_features() === [ 'Address' ];
 	$GLOBALS['is_form_editor'] = true;
-	$editor = new \GravityGeolocation\Features\Form\Admin\FormEditor();
+	$editor = new \GravityGeolocationAutocomplete\Features\Form\Admin\FormEditor();
 	$tabs = apply_filters( 'gform_field_settings_tabs', [ [ 'id' => 'general', 'title' => 'General' ] ], [] );
-	$checks['Autocomplete tab retains its existing identity'] = $tabs[1] === [ 'id' => 'gfgeo_geolocation', 'title' => 'Autocomplete' ];
+	$checks['Address Autocomplete tab retains its existing identity'] = $tabs[1] === [ 'id' => 'gfgeo_geolocation', 'title' => 'Address Autocomplete' ];
 	$tooltips = apply_filters( 'gform_tooltips', [ 'native_tooltip' => 'Preserved native text' ] );
 	$checks['merged tooltip callback preserves native tooltips'] = 'Preserved native text' === $tooltips['native_tooltip'];
 	$checks['all Address tooltips have text'] = 13 === count( $tooltips ) && ! in_array( '', $tooltips, true );
+	$address_labels = \GravityGeolocationAutocomplete\Features\Form\Admin\FormEditor\Helpers\FieldText::get_parts( 'address', 'autocomplete' );
+	$checks['clear autocomplete option labels'] = 'Autocomplete result types' === $address_labels['types'] && 'Restrict to countries' === $address_labels['countries'];
+	$checks['language tooltip describes the global fallback'] = false !== strpos( $tooltips['gfgeo_address_autocomplete_language_tt'], 'global language setting' );
 	ob_start();
 	$editor->default_values();
 	$defaults = ob_get_clean();
@@ -190,15 +193,28 @@ namespace {
 		return 0 === strpos( $hook, 'wp_ajax_' ) || 0 === strpos( $hook, 'rest_api_' ) || false !== strpos( $hook, 'after_submission' );
 	} );
 
-	$sections = \GravityGeolocation\Admin\Settings::get_settings();
+	$sections = \GravityGeolocationAutocomplete\Admin\Settings::get_settings();
 	$names = [];
 	foreach ( $sections as $section ) { foreach ( $section['fields'] as $field ) { if ( 'html' !== ( $field['type'] ?? '' ) ) { $names[] = $field['name']; } } }
 	$checks['only autocomplete global inputs'] = $names === [ 'gfgeo_google_maps_api_key', 'gfgeo_google_maps_country', 'gfgeo_google_maps_language' ];
+	$api_sections = \GravityGeolocationAutocomplete\Admin\Settings::get_settings();
+	$help = '';
+	foreach ( $api_sections as $api_section ) {
+		foreach ( $api_section['fields'] as $api_field ) {
+			if ( 'gfgeo_google_maps_api_key' === ( $api_field['name'] ?? '' ) ) {
+				$help = $api_section['description'] ?? '';
+				$checks['browser-key input retains its accessible label'] = 'Browser API Key' === ( $api_field['label'] ?? '' );
+				$checks['browser-key guidance is not duplicated below the input'] = empty( $api_field['after_input'] );
+			}
+		}
+	}
+	$checks['browser-key setup guide is in the section above the input'] = false !== strpos( $help, 'https://gravitygeolocation.com/docs/google-maps-api-keys-gravity-geolocation/' ) && false !== strpos( $help, 'target="_blank" rel="noopener noreferrer"' );
+	$checks['setup help clarifies free browser-only requirements'] = false !== strpos( $help, 'Places API (New)' ) && false !== strpos( $help, 'No server key is required.' );
 	$checks['API loading remains filterable'] = false !== strpos( file_get_contents( $root . '/src/Core/AddOn.php' ), "apply_filters( 'gfgeo_disable_google_maps_api'" );
 
 	$current = [ 'gfgeo_google_maps_server_api_key' => 'private-test-value', 'gfgeo_enable_ip_locator' => '', 'gfgeo_token_old' => null, 'gfgeo_enable_high_accuracy_mode' => true, 'gfgeo_disable_google_maps_api' => true ];
 	$submitted = [ 'gfgeo_google_maps_api_key' => 'new-browser-value', 'gfgeo_google_maps_server_api_key' => 'forged', 'gfgeo_token_new' => 'forged', 'gfgeo_enable_ip_locator' => 'forged', 'gfgeo_disable_google_maps_api' => false ];
-	$saved = \GravityGeolocation\Admin\Settings::preserve_hidden_plugin_settings( $submitted, $current );
+	$saved = \GravityGeolocationAutocomplete\Admin\Settings::preserve_hidden_plugin_settings( $submitted, $current );
 	foreach ( $current as $key => $value ) { $checks[ 'preserve hidden ' . $key ] = array_key_exists( $key, $saved ) && $saved[ $key ] === $value; }
 	$checks['reject forged hidden setting'] = ! isset( $saved['gfgeo_token_new'] );
 	$checks['allow browser-key change'] = 'new-browser-value' === $saved['gfgeo_google_maps_api_key'];
@@ -216,10 +232,10 @@ namespace {
 		new GF_Field( [ 'id' => 5, 'type' => 'gfgeo_directions' ] ),
 		new GF_Field( [ 'id' => 6, 'type' => 'text', 'gfgeo_dynamic_field_usage' => 'latitude' ] ),
 	];
-	$processor = new \GravityGeolocation\Features\Form\Runtime\FormGeoProcessor();
+	$processor = new \GravityGeolocationAutocomplete\Features\Form\Runtime\FormGeoProcessor();
 	$form = [ 'id' => 23, 'fields' => $fields, 'gravityforms_geolocation' => [ 'geocoderIds' => [4], 'ipLocatorStatus' => 'enabled' ] ];
 	$checks['render does not clone or rewrite saved fields'] = $processor->render_form( $form ) === $form;
-	$data = \GravityGeolocation\Features\Form\Runtime\FormGeoProcessor::$forms[23];
+	$data = \GravityGeolocationAutocomplete\Features\Form\Runtime\FormGeoProcessor::$forms[23];
 	$checks['collect only custom and opted-in native Address'] = array_column( $data['fields'], 'id' ) === [1, 2];
 	$checks['no framework Form created'] = ! class_exists( '\WPGeoFW\Components\Geo\Form\Form' );
 	$checks['no locator in frontend payload'] = ! isset( $data['fields'][0]['gfgeo_infield_locator_button'] );
@@ -232,7 +248,7 @@ namespace {
 	$checks['no framework script dependencies'] = $registered_scripts['gfgeoac-autocomplete']['deps'] === [ 'jquery' ];
 	$checks['framework asset definitions empty'] = ! $reflection->hasMethod( 'get_framework_related_assets' );
 	$processor->render_form( [ 'id' => 24, 'fields' => array_slice( $fields, 2 ) ] );
-	$checks['premium-only forms do not initialize runtime'] = 1 === count( \GravityGeolocation\Features\Form\Runtime\FormGeoProcessor::$forms );
+	$checks['premium-only forms do not initialize runtime'] = 1 === count( \GravityGeolocationAutocomplete\Features\Form\Runtime\FormGeoProcessor::$forms );
 	$checks['framework Form subclass removed'] = ! file_exists( $root . '/src/Features/Form/Runtime/Form.php' );
 
 	$manifest = json_decode( file_get_contents( $root . '/composer.json' ), true );
