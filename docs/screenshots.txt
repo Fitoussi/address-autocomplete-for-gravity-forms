@@ -1,22 +1,27 @@
 Address Autocomplete for Gravity Forms — selected screenshots
-2026-10-06
+2026-10-06 / updated 2026-10-07
 
 Real interfaces captured from the standalone plugin on local test sites.
 Owner-selected images are copied unchanged; their original PNG bytes are retained.
 No remote image loads, screenshot compositing, credentials, or personal data.
 
-Stable filename -> source in standalone-screenshots-20261006.Rx9dYW
+Stable filename -> source in standalone-screenshots-20261006.Rx9dYW,
+unless an absolute source path is specified.
 1. screenshot-1.png -> Screenshot 2026-10-06 at 22.32.17.png
    Dedicated single-line Address suggestions; Google attribution retained.
 2. screenshot-2.png -> Screenshot 2026-10-06 at 22.27.22.png
    Native Address components filled with the selected Brooklyn address.
-3. screenshot-3.png -> gfgeoac-field-options-20261006.png
-   Autocomplete field settings with optional selection requirement.
-4. screenshot-4.png -> Screenshot 2026-10-06 at 22.26.38.png
+3. screenshot-3.png -> /Users/Fitoussi/screenshots/Screenshot 2026-10-07 at 17.46.58.png
+   Dedicated single-line Address options with required suggestion selection.
+   Owner-captured and selected in chat; dimensions 1291 x 1069 pixels.
+4. screenshot-4.png -> /Users/Fitoussi/screenshots/Screenshot 2026-10-07 at 17.47.31.png
+   Native multipart Address options with autocomplete and required selection enabled.
+   Owner-captured and selected in chat; dimensions 1293 x 1138 pixels.
+5. screenshot-5.png -> Screenshot 2026-10-06 at 22.26.38.png
    Global settings; browser API key replaced with YOUR_GOOGLE_API_KEY.
-5. screenshot-5.png -> Screenshot 2026-10-06 at 22.40.37.png
+6. screenshot-6.png -> Screenshot 2026-10-06 at 22.40.37.png
    Entry detail: custom Open Map link and native Gravity Forms Map It link.
-6. screenshot-6.png -> gfgeoac-overview-20261006.png
+7. screenshot-7.png -> gfgeoac-overview-20261006.png
    Overview hero for the installed Address Autocomplete package.
 
 Captions are maintained in readme.txt, in the same numbered order.

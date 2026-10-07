@@ -78,7 +78,7 @@ Maintain the public description, setup instructions and release notes in the roo
 
 Use locally bundled screenshots from our own demos for feature cards. Prioritize autocomplete, interactive maps, dynamic fields, directions, nearby locations, validation, drawing tools, entry maps, and search. Crop to the relevant interface, use representative data, and omit credentials and personal information.
 
-Six approved real captures are bundled in `assets/screenshots/screenshot-1.png` through `screenshot-6.png`, with corresponding captions in `readme.txt`. Capture provenance is recorded in `docs/screenshots.txt`. Preserve the originals without stretching, compositing, or exposing credentials.
+Seven approved real captures are bundled in `assets/screenshots/screenshot-1.png` through `screenshot-7.png`, with corresponding captions in `readme.txt`. Separate editor captures show the dedicated single-line and native multipart Address options. Capture provenance is recorded in `docs/screenshots.txt`. Preserve the originals without stretching, compositing, or exposing credentials.
 
 Overview screenshot placeholders are hidden until real feature-card images are wired in. The existing SVG template illustrations can support diagrams and decorative previews, but should not be presented as actual product screenshots. WordPress.org listing assets must later be copied into the separate top-level SVN `assets/` directory; nothing is uploaded by this repository's builder.
 

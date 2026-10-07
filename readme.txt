@@ -120,10 +120,11 @@ No. This plugin has no account connection, license activation, paid updater or r
 
 1. Google Places suggestions in the dedicated single-line Address field.
 2. Automatically fill the native Address field's street, city, state/region, postal code and country after selecting a suggestion.
-3. Configure required suggestion selection, a custom alert, result types, countries, language and location bias in the Address Autocomplete tab.
-4. Set your Google browser API key, default region and result language in the global settings.
-5. View saved addresses in entry details and open their locations in Google Maps. The single-line field adds an Open Map link; the native Address field retains its Map It link.
-6. Explore included autocomplete features and other Gravity Geolocation packages from the locally bundled overview.
+3. Configure required suggestion selection, a custom alert, result types, countries, language and location bias for the dedicated single-line Address field.
+4. Enable and configure autocomplete for Gravity Forms' native multipart Address field in its Address Autocomplete tab.
+5. Set your Google browser API key, default region and result language in the global settings.
+6. View saved addresses in entry details and open their locations in Google Maps. The single-line field adds an Open Map link; the native Address field retains its Map It link.
+7. Explore included autocomplete features and other Gravity Geolocation packages from the locally bundled overview.
 
 == Changelog ==
 

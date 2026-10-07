@@ -47,12 +47,12 @@ $checks['no removed premium/runtime scaffolding'] = ! array_filter( $files, stat
 } );
 $main = $zip->getFromName( $prefix . 'address-autocomplete-for-gravity-forms.php' );
 $readme = $zip->getFromName( $prefix . 'readme.txt' );
-for ( $number = 1; $number <= 6; ++$number ) {
+for ( $number = 1; $number <= 7; ++$number ) {
 	$file = 'assets/screenshots/screenshot-' . $number . '.png';
 	$checks[ 'includes ' . $file ] = in_array( $prefix . $file, $files, true );
 }
 preg_match( '/== Screenshots ==\s*(.*?)\s*== Changelog ==/s', $readme, $screenshot_section );
-$checks['six numbered screenshot captions'] = isset( $screenshot_section[1] ) && 6 === preg_match_all( '/^[1-6]\. .+$/m', $screenshot_section[1] );
+$checks['seven numbered screenshot captions'] = isset( $screenshot_section[1] ) && 7 === preg_match_all( '/^[0-9]+\. .+$/m', $screenshot_section[1] );
 $checks['free identity retained'] = false !== strpos( $main, "define( 'GFGEOAC_PACKAGE_TYPE', 'free' );" );
 $checks['standalone readme has no account SDK claims'] = false === strpos( $readme, 'Connect Account' ) && false === strpos( $readme, '@VERSION@' );
 $map = json_decode( $zip->getFromName( $prefix . 'build/js/frontend/address-autocomplete.min.js.map' ), true );
