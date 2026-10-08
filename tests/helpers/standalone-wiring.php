@@ -17,7 +17,7 @@ namespace {
 	foreach ( [
 		'GFGEOAC_PATH' => $root . '/', 'GFGEOAC_URL' => 'https://example.invalid/plugin/',
 		'GFGEOAC_PREFIX' => 'gfgeo', 'GFGEOAC_VERSION' => '1.0.0',
-		'GFGEOAC_PLUGIN_NAME' => 'Address Autocomplete for Gravity Forms',
+		'GFGEOAC_PLUGIN_NAME' => 'Advanced Address Autocomplete for Gravity Forms',
 		'GFGEOAC_PLUGIN_FILE' => $root . '/address-autocomplete-for-gravity-forms.php',
 		'GFGEOAC_BASENAME' => 'address-autocomplete-for-gravity-forms/address-autocomplete-for-gravity-forms.php',
 		'GFGEOAC_SITE_URL' => 'https://gravitygeolocation.com', 'GFGEOAC_PACKAGE_TYPE' => 'free',

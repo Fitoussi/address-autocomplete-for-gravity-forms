@@ -102,7 +102,7 @@ class Field extends Directions {
 	 * @return string The label for the Distance & Duration field.
 	 */
 	public function get_form_editor_field_title() {
-		return __( 'Distance & Travel Time', 'address-autocomplete-for-gravity-forms' );
+		return __( 'Distance & Travel Time', 'advanced-address-autocomplete-for-gravity-forms' );
 	}
 
 	/**
@@ -113,7 +113,7 @@ class Field extends Directions {
 	 * @return string
 	 */
 	public function get_form_editor_field_description() {
-		return __( 'Displays calculated travel distance and duration between geolocation points.', 'address-autocomplete-for-gravity-forms' );
+		return __( 'Displays calculated travel distance and duration between geolocation points.', 'advanced-address-autocomplete-for-gravity-forms' );
 	}
 
 	/**

@@ -1,0 +1,2168 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Advanced Address Autocomplete for Gravity Forms 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/advanced-address-"
+"autocomplete-for-gravity-forms\n"
+"POT-Creation-Date: 2026-10-07T20:42:41+00:00\n"
+"PO-Revision-Date: 2026-08-06 22:49-1000\n"
+"Last-Translator: Eyal Fitoussi <fitoussi_eyal@hotmail.com>\n"
+"Language-Team: none\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: advanced-address-autocomplete-for-gravity-forms\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: address-autocomplete-for-gravity-forms.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
+
+#. Plugin Name of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid "Advanced Address Autocomplete for Gravity Forms"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid "https://gravitygeolocation.com"
+msgstr ""
+
+#. Description of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid ""
+"Modern Google Places address autocomplete for Gravity Forms. Includes a "
+"single-line Address field, native Address autofill, country and language "
+"controls, location bias, required suggestion selection, and entry map links. "
+"Requires Gravity Forms and your own Google API key."
+msgstr ""
+
+#. Author of the plugin
+#: address-autocomplete-for-gravity-forms.php
+#, fuzzy
+msgid "Eyal Fitoussi"
+msgstr "אייל פיטוסי"
+
+#. Author URI of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid "https://www.wpgeo.com"
+msgstr ""
+
+#: src/Admin/Dashboard.php:68 src/Features/Form/Admin/FormEditor.php:52
+msgid "Address Autocomplete"
+msgstr ""
+
+#: src/Admin/Dashboard.php:86 src/Admin/Dashboard.php:214
+msgid "Overview"
+msgstr ""
+
+#: src/Admin/Dashboard.php:87
+msgid "Settings"
+msgstr ""
+
+#: src/Admin/Dashboard.php:88
+msgid "Docs"
+msgstr ""
+
+#: src/Admin/Dashboard.php:155
+msgid "Need more than address autocomplete?"
+msgstr ""
+
+#: src/Admin/Dashboard.php:183
+msgid ""
+"Explore maps, current-location detection, dynamic fields, directions, nearby "
+"locations, and more with Gravity Geolocation."
+msgstr ""
+
+#: src/Admin/Dashboard.php:187
+msgid "Explore features"
+msgstr ""
+
+#: src/Admin/Dashboard.php:189 src/Core/AddOn.php:263
+msgid "View packages"
+msgstr ""
+
+#: src/Admin/Dashboard.php:215
+msgid "Compare Packages"
+msgstr ""
+
+#: src/Admin/Dashboard.php:216
+msgid "Help"
+msgstr ""
+
+#: src/Admin/Dashboard.php:217
+msgid "More Plugins"
+msgstr ""
+
+#: src/Admin/Dashboard.php:244
+msgid "Less typing. Better addresses."
+msgstr ""
+
+#: src/Admin/Dashboard.php:245
+msgid ""
+"Add a custom Address field or enable autocomplete on a native Address field."
+msgstr ""
+
+#: src/Admin/Dashboard.php:266
+msgid ""
+"Maps, geocoding, dynamic fields, directions, nearby locations and more for "
+"Gravity Forms."
+msgstr ""
+
+#: src/Admin/Dashboard.php:271
+msgid ""
+"Turn Gravity Forms entries into searchable directories, listings and "
+"customer portals—with field filters, proximity search, maps and flexible "
+"result layouts."
+msgstr ""
+
+#: src/Admin/Dashboard.php:276
+msgid "Build location-based searches and directories for your WordPress site."
+msgstr ""
+
+#: src/Admin/Dashboard.php:281
+msgid ""
+"Add geolocation tools and connected location fields to Formidable Forms."
+msgstr ""
+
+#: src/Admin/Dashboard.php:286
+msgid "Bring address, map and location workflows to Ninja Forms."
+msgstr ""
+
+#: src/Admin/Dashboard.php:291
+msgid "Add address autocomplete, maps, coordinates and directions to WPForms."
+msgstr ""
+
+#: src/Admin/Dashboard.php:296
+msgid ""
+"Add proximity searches and interactive maps to your WP Job Manager job board."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:76 src/Admin/DashboardFeatures.php:79
+#: src/Admin/DashboardFeatures.php:82 src/Admin/DashboardFeatures.php:85
+#: src/Admin/DashboardFeatures.php:88 src/Admin/DashboardFeatures.php:91
+#: src/Admin/DashboardFeatures.php:94 src/Admin/DashboardFeatures.php:97
+#: src/Admin/DashboardFeatures.php:104 src/Admin/DashboardFeatures.php:107
+#: src/Admin/DashboardFeatures.php:110 src/Admin/DashboardFeatures.php:113
+msgid "View demo"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:100
+msgid "View single-entry demo"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:101
+msgid "View mashup demo"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:128
+msgid "Free"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:129
+msgid "Location"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:130
+msgid "Directions"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:131
+msgid "Toolkit"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:132
+msgid "Search"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:133
+msgid "All Access"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:187
+msgid "Address autocomplete"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:188
+msgid ""
+"Google Places API (New), included free. Choose a dedicated single-line "
+"Address field with an entry map link, or autofill native Gravity Forms "
+"Address fields."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:189
+msgid ""
+"Per-field countries, place types, language and location bias; global "
+"language and region defaults; required suggestion selection with your own "
+"alert."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:196
+msgid "Interactive form maps"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:197
+msgid ""
+"Show connected locations on a map and let visitors refine a location with a "
+"draggable marker."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:198
+msgid "Configure map appearance, zoom, default location and marker behavior."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:205
+msgid "Geocoder & complete location data"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:206
+msgid ""
+"Store shared geocoding results behind the form: coordinates, formatted "
+"address and individual location components."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:207
+msgid ""
+"Connect address and map inputs; use stored data in entries, merge tags and "
+"exports."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:214
+msgid "Dynamic location fields"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:215
+msgid ""
+"Populate connected form fields with city, region, postal code, coordinates "
+"and other geocoded values."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:216
+msgid ""
+"Use ordinary form fields for location data, conditional logic and your own "
+"workflows."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:223
+msgid "Quick Setups & connection helpers"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:224
+msgid ""
+"Start with connected field combinations, or create and connect supporting "
+"fields from a field’s options."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:225
+msgid ""
+"Recipes depend on your included fields. Review, add and save ordinary "
+"editable Gravity Forms fields."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:232
+msgid "Ready-to-use form templates"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:233
+msgid ""
+"Create a Location & Map starter form from the native template library, then "
+"customize it for your project."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:234
+msgid ""
+"Distance & Travel Time and Directions & Route templates appear when their "
+"fields are included."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:241
+msgid "Directions & route displays"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:242
+msgid ""
+"Connect an origin, destination and waypoints. Display a route map, summary "
+"and turn-by-turn directions."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:243
+msgid ""
+"Choose inline details or a separate Directions Panel; use automatic or "
+"manual calculation."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:250
+msgid "Distance & travel time"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:251
+msgid ""
+"Calculate travel distance and duration between connected locations, or "
+"measure straight-line distance."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:252
+msgid ""
+"Use readable results or raw numeric distance and duration values in your "
+"form."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:259
+msgid "Distance-based pricing & calculations"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:260
+msgid ""
+"Build delivery fees, mileage quotes and travel-time estimates using numeric "
+"location outputs."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:261
+msgid ""
+"Quick Setups can add ordinary calculated fields; your formula controls the "
+"estimate."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:268
+msgid "Nearby locations & result panels"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:269
+msgid ""
+"Find destinations near a visitor location and display selectable results "
+"with an optional results map."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:270
+msgid ""
+"Configure destination sources and show inline details or a separate Nearest "
+"Locations Panel."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:277
+msgid "Address validation"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:278
+msgid ""
+"Compare an entered address with Google Address Validation recommendations "
+"before continuing."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:279
+msgid ""
+"Review suggested corrections and retain validation status for conditional "
+"logic. Requires the Address Validation API."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:286
+msgid "Drawing Tools & Drawing Shape"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:287
+msgid ""
+"Let visitors draw markers, lines, polygons, rectangles, circles and freehand "
+"shapes on a connected map."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:288
+msgid ""
+"Collect shape collections or predefined shapes, with geometry, labels, area, "
+"length and perimeter outputs."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:295
+msgid "Single Entry & Mashup maps"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:296
+msgid ""
+"Display saved entry locations outside the form: one entry on its own map, or "
+"multiple entries together."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:297
+msgid ""
+"Use map shortcodes, markers and information windows for location-based "
+"content."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:304
+msgid "Gravity Search: directories & entry search"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:305
+msgid ""
+"Turn saved Gravity Forms entries into front-end searches, directories and "
+"location-aware listings."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:306
+msgid ""
+"Field filters, proximity search, result layouts, maps, sorting and "
+"pagination. Search maps are part of Search, not the standalone map "
+"shortcodes."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:313
+msgid "Search entry details & custom output"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:314
+msgid ""
+"Link search results to individual entry-detail pages and customize how entry "
+"data is presented."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:315
+msgid ""
+"Use supported structured output, page content or custom HTML within the "
+"Search configuration."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:322
+msgid "Current-location detection"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:323
+msgid ""
+"Offer an in-field locator button or detect a visitor location automatically "
+"when the form loads."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:324
+msgid ""
+"Browser location requires visitor permission; optional IP location requires "
+"a configured provider."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:331
+msgid "Coordinate inputs"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:332
+msgid ""
+"Collect latitude and longitude directly and connect them to your shared "
+"location data."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:333
+msgid ""
+"A dedicated Coordinates field for workflows where an address is not the "
+"starting point."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:340
+msgid "Standalone Locator & Reset fields"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:341
+msgid ""
+"Place dedicated current-location and reset buttons wherever they fit your "
+"form."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:342
+msgid ""
+"These separate fields complement the in-field locator available in Address "
+"settings."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:349
+msgid "GEO my WP feed integration"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:350
+msgid ""
+"Pass form location data to post and user locations through supported "
+"creation and registration feeds."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:351
+msgid ""
+"Requires GEO my WP and the relevant Gravity Forms add-on; those integrations "
+"are separate products."
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:60
+msgid "Create Search"
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:113 src/Admin/SearchUnavailable.php:194
+msgid "Gravity Search is not available."
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:114
+msgid "View upgrade options"
+msgstr ""
+
+#. translators: %s: Pricing page URL.
+#: src/Admin/SearchUnavailable.php:198
+#, php-format
+msgid ""
+"Gravity Search is not available with your current Gravity Geolocation plan. "
+"<a href=\"%s\" target=\"_blank\" rel=\"noopener noreferrer\">Upgrade now</a> "
+"to unlock advanced mapping features."
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:210
+msgid "Cancel"
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:211
+msgid "View pricing"
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:212
+msgid ""
+"Gravity Search is not available with your current Gravity Geolocation plan. "
+"Open pricing page now?"
+msgstr ""
+
+#: src/Admin/SearchUnavailable.php:217
+msgid "Add New Search"
+msgstr ""
+
+#: src/Admin/Settings.php:37
+msgid "Google API Key"
+msgstr ""
+
+#: src/Admin/Settings.php:38
+msgid ""
+"Enable Maps JavaScript API and Places API (New) for your browser key. No "
+"server key is required."
+msgstr ""
+
+#: src/Admin/Settings.php:38
+msgid "Need help?"
+msgstr ""
+
+#: src/Admin/Settings.php:38
+msgid "View the Google API setup guide"
+msgstr ""
+
+#: src/Admin/Settings.php:43
+msgid "Browser API Key"
+msgstr ""
+
+#: src/Admin/Settings.php:50
+msgid "Region Code"
+msgstr ""
+
+#: src/Admin/Settings.php:51
+msgid ""
+"Enter a two-letter region code, such as US. This influences regional "
+"results; use the field settings to restrict suggestions to specific "
+"countries."
+msgstr ""
+
+#: src/Admin/Settings.php:63
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:57
+msgid "Language"
+msgstr ""
+
+#: src/Admin/Settings.php:64
+msgid "Enter a language code, such as en, for Google Places results."
+msgstr ""
+
+#. translators: %s: Plugin name.
+#: src/Admin/SetupNotice.php:92
+#, php-format
+msgid "%s is ready to configure."
+msgstr ""
+
+#: src/Admin/SetupNotice.php:97
+msgid ""
+"Add your Google API key, then enable autocomplete in your form's field "
+"options."
+msgstr ""
+
+#: src/Admin/SetupNotice.php:100
+msgid "Set up autocomplete"
+msgstr ""
+
+#: src/Admin/SetupNotice.php:101
+msgid "View plugin overview"
+msgstr ""
+
+#: src/Admin/SetupNotice.php:105
+msgid "Dismiss"
+msgstr ""
+
+#: src/Admin/SetupNotice.php:131
+msgid "You do not have permission to dismiss this notice."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:23
+msgid "For Gravity Forms"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:29
+msgid "Explore Plugins"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:31 src/Admin/views/dashboard.php:256
+msgid "Open Settings"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:33
+msgid "View Live Demos"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:38
+msgid "Product overview sections"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:50
+msgid "Your installed package"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:52
+msgid ""
+"Modern Google Places autocomplete, included free. Collect addresses with a "
+"dedicated single-line field or native Address autofill, tailor suggestions "
+"to your audience, and require a selection when it matters."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:56
+msgid "Explore my features"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:61
+msgid "See what else is available"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:64
+msgid ""
+"Location tools require your own Google API configuration. Google service "
+"usage and billing are separate."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:69
+msgid "Installed package"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:71
+msgid ""
+"Green badges identify included tools. Follow their setup guides to put them "
+"to work."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:74
+msgid "Configuration & settings"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:88 src/Admin/views/dashboard.php:102
+msgid "Included in your package"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:88
+msgid "Take your forms further"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:90
+msgid "Your available building blocks. Choose a tool and open its guide."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:90
+msgid ""
+"Other Gravity Geolocation packages add these capabilities. Explore the demos "
+"or compare packages to find the right fit."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:102
+msgid "Available in other packages"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:113
+msgid "Screenshot placeholder"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:120
+msgid "Setup & documentation"
+msgstr ""
+
+#. translators: %s: Comma-separated package names that include this feature.
+#: src/Admin/views/dashboard.php:126
+#, php-format
+msgid "Included in: %s"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:148
+msgid "Choose the tools your next project needs"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:150
+msgid ""
+"Location and Directions are focused alternatives. Toolkit combines the "
+"geolocation tools. All Access adds Gravity Search."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:153 src/Admin/views/dashboard.php:223
+msgid "View packages & pricing"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:158
+msgid "Find the right package for your project"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:160
+msgid ""
+"Your installed package is highlighted. Packages are alternative builds, not "
+"add-ons to stack together; site allowances and license status are separate "
+"from the feature list."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:163
+msgid ""
+"On narrow screens, scroll the comparison horizontally to see every package."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:166
+msgid "Feature comparison — scroll to see all columns"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:169
+msgid "Gravity package feature comparison"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:174
+msgid "Feature"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:180
+msgid "Installed"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:194
+msgid "Included"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:194
+msgid "Not included"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:220
+msgid ""
+"Google API usage and any required form-builder editions or add-ons are "
+"separate. Optional integrations may require other plugins. Feature checks "
+"show package contents, not setup or license status."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:227
+msgid "More tools for your WordPress site"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:229
+msgid ""
+"Explore our other plugins. These descriptions are bundled locally; nothing "
+"is downloaded or installed from this page."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:238
+msgid "Learn more"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:245
+msgid "From installed to working"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:247
+msgid "Activate Gravity Forms and open this plugin’s native Settings screen."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:249
+msgid ""
+"Enter your Google browser API key. Enable Maps JavaScript API and Places API "
+"(New), configure billing, and restrict the key to your website."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:252
+msgid "Save your form before previewing. Test the complete visitor flow."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:260
+msgid "Google API setup guide"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:263
+msgid "Something not working?"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:264
+msgid ""
+"Check that autocomplete is enabled, then verify the browser API key, "
+"required Google services, billing and key restrictions."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:266
+msgid ""
+"Autocomplete fills an address after a visitor selects a suggestion. This "
+"free plugin does not provide current-location detection, manual geocoding or "
+"connected dynamic location fields."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:268
+msgid ""
+"Include the plugin version, field type and steps to reproduce when asking "
+"for help. Never share API keys or other credentials in a public post."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:272
+msgid "Browse documentation"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:274
+msgid "View support options"
+msgstr ""
+
+#: src/Common/Form/Fields/Registrar.php:105
+#, fuzzy
+msgid "Geolocation Fields"
+msgstr "שדות מיקום גיאוגרפי"
+
+#: src/Core/AddOn.php:255
+msgid "All countries"
+msgstr ""
+
+#: src/Core/AddOn.php:256
+msgid "All place types"
+msgstr ""
+
+#. translators: %s: Premium field title.
+#: src/Core/AddOn.php:260
+#, php-format
+msgid "The %s field is not available."
+msgstr ""
+
+#. translators: %s: Premium field title.
+#: src/Core/AddOn.php:262
+#, php-format
+msgid "The %s field is available with Gravity Geolocation."
+msgstr ""
+
+#: src/Core/AddOn.php:264
+msgid "to explore additional location tools."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:37
+msgid "Enable autocomplete"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:38
+msgid "Show address suggestions powered by Google Places."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:41
+msgid "Require address selection from suggestions"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:42
+msgid ""
+"If the visitor leaves a newly typed address without selecting a suggestion, "
+"clear the input and show your configured alert."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:45
+msgid "Selection alert message"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:46
+msgid ""
+"Show this alert when the visitor leaves a newly typed address without "
+"selecting an autocomplete suggestion."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:49
+msgid "Autocomplete result types"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:50
+msgid ""
+"Choose the types of places to include in autocomplete suggestions. <a "
+"href=\"https://developers.google.com/maps/documentation/places/web-service/"
+"place-types\" target=\"_blank\">Learn more about result types.</a>"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:53
+msgid "Restrict to countries"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:54
+msgid ""
+"Select one or more countries (up to 5) to limit address suggestions within "
+"those regions."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:58
+msgid ""
+"Choose a language for suggestions and place details. Leave the default "
+"selected to use the global language setting."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:61
+msgid "Location bias"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:62
+msgid ""
+"Favor suggestions near a configured point or within a rectangular area. This "
+"does not detect the visitor’s location."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:67
+msgid "Latitude"
+msgstr "קו רוחב"
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:68
+msgid "Latitude of the center point used to favor nearby suggestions."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:71
+msgid "Longitude"
+msgstr "קו אורך"
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:72
+msgid "Longitude of the center point used to favor nearby suggestions."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:75
+msgid "Radius (in meters)"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:76
+msgid "Radius around the center point, in meters (up to 50,000)."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:81
+msgid "Southwest Point"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:82
+msgid ""
+"Enter the southwest corner as latitude, longitude, for example: 26.423277, "
+"-82.1371324."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:85
+msgid "Northeast Point"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:86
+msgid ""
+"Enter the northeast corner as latitude, longitude, for example: 26.4724595, "
+"-82.0217760."
+msgstr ""
+
+#: src/Features/Form/Fields/Address/Field.php:152
+msgid "Address"
+msgstr "כתובת"
+
+#: src/Features/Form/Fields/Address/Field.php:163
+msgid "A single-line address field with Google Places autocomplete."
+msgstr ""
+
+#: src/Features/Form/Fields/Address/Field.php:370
+msgid "Open Map"
+msgstr ""
+
+#: src/Features/Form/Fields/Address/Settings.php:131
+msgid "Default (global language)"
+msgstr ""
+
+#: src/Features/Form/Fields/Address/Settings.php:255
+msgid "None"
+msgstr "ללא"
+
+#: src/Features/Form/Fields/Address/Settings.php:259
+msgid "Proximity"
+msgstr "מרחק"
+
+#: src/Features/Form/Fields/Address/Settings.php:263
+msgid "Area bounds"
+msgstr ""
+
+#: src/Features/Form/Fields/Placeholders/AddressValidation/Field.php:102
+msgid "Address Validation"
+msgstr ""
+
+#: src/Features/Form/Fields/Placeholders/AddressValidation/Field.php:113
+msgid ""
+"Verifies and standardizes addresses for delivery workflows. Available in "
+"Gravity Geolocation Toolkit and All Access."
+msgstr ""
+
+#: src/Features/Form/Fields/Placeholders/Directions/Field.php:105
+#, fuzzy
+msgid "Directions & Travel Routes"
+msgstr "הוראות הגעה ומסלולי נסיעה"
+
+#: src/Features/Form/Fields/Placeholders/Directions/Field.php:116
+msgid ""
+"Displays calculated travel routes, distance, duration, and step-by-step "
+"directions between geolocation points."
+msgstr ""
+
+#: src/Features/Form/Fields/Placeholders/Distance/Field.php:105
+msgid "Distance & Travel Time"
+msgstr ""
+
+#: src/Features/Form/Fields/Placeholders/Distance/Field.php:116
+#, fuzzy
+msgid ""
+"Displays calculated travel distance and duration between geolocation points."
+msgstr "מציג מרחק נסיעה מחושב ומשך זמן בין נקודות מיקום גיאוגרפי."
+
+#: src/Features/Form/Fields/Placeholders/Map/Field.php:103
+msgid "Map"
+msgstr "מפה"
+
+#: src/Features/Form/Fields/Placeholders/Map/Field.php:114
+#, fuzzy
+msgid "Displays an interactive map linked to address or coordinate fields."
+msgstr "מציג מפה אינטראקטיבית המקושרת לשדות כתובת או קואורדינטות."
+
+#: src/Loader.php:67
+msgid ""
+"Advanced Address Autocomplete for Gravity Forms is not running because "
+"Gravity Geolocation or Gravity Search is active. Deactivate the free plugin; "
+"your existing Address fields and settings remain available in premium."
+msgstr ""
+
+#. translators: %s: Minimum Gravity Forms version.
+#: src/Loader.php:100
+#, php-format
+msgid ""
+"Address Autocomplete requires an active Gravity Forms installation, version "
+"%s or newer."
+msgstr ""
+
+#~ msgid "Disable"
+#~ msgstr "כיבוי"
+
+#, fuzzy
+#~ msgid "Ipapi.co"
+#~ msgstr "Ipapi.co"
+
+#, fuzzy
+#~ msgid "ipinfo.io"
+#~ msgstr "ipinfo.io"
+
+#, fuzzy
+#~ msgid "Ipregistry"
+#~ msgstr "אי-רישום"
+
+#, fuzzy
+#~ msgid "MaxMind"
+#~ msgstr "מקס מיינד"
+
+#, fuzzy
+#~ msgid "Enable High Accuracy Mode"
+#~ msgstr "הפעל מצב דיוק גבוה"
+
+#~ msgid "Disable Google Maps API"
+#~ msgstr "לנטרל את ה-API של מפות גוגל"
+
+#, fuzzy
+#~ msgid "Disable Advanced Markers"
+#~ msgstr "השבת סמנים מתקדמים"
+
+#~ msgid "Geolocation"
+#~ msgstr "מיקום גיאוגרפי"
+
+#, fuzzy
+#~ msgid "Locator Button"
+#~ msgstr "כפתור איתור"
+
+#, fuzzy
+#~ msgid "Reset location to default when clicked"
+#~ msgstr "איפוס מיקום לברירת מחדל בעת לחיצה"
+
+#, fuzzy
+#~ msgid "Post Meta ( custom field )"
+#~ msgstr "מטא פוסט (שדה מותאם אישית)"
+
+#~ msgid "User Meta"
+#~ msgstr "מטה משתמשת"
+
+#~ msgid "Disabled"
+#~ msgstr "מושבת"
+
+#~ msgid "Default"
+#~ msgstr "ברירת מחדל"
+
+#~ msgid "Fallback"
+#~ msgstr "איחזור"
+
+#~ msgid "Button Text"
+#~ msgstr "טקסט כפתור"
+
+#, fuzzy
+#~ msgid "User Meta Field Name"
+#~ msgstr "שם שדה מטא של משתמש"
+
+#, fuzzy
+#~ msgid "View Additional Meta Field Options"
+#~ msgstr "הצג אפשרויות שדה מטא נוספות"
+
+#, fuzzy
+#~ msgid ""
+#~ "This feature requires <a href=\"https://wordpress.org/plugins/geo-my-wp/"
+#~ "\" target=\"_blank\">GEO my WP</a> plugin"
+#~ msgstr ""
+#~ "תכונה זו דורשת את התוסף <a href=\"https://wordpress.org/plugins/geo-my-wp/"
+#~ "\" target=\"_blank\">GEO my WP</a>"
+
+#, fuzzy
+#~ msgid "GEO my WP Integration"
+#~ msgstr "אינטגרציה של GEO my WP"
+
+#, fuzzy
+#~ msgid "Integrate Posts Locator"
+#~ msgstr "שילוב מאתר פוסטים"
+
+#~ msgid "Phone Field"
+#~ msgstr "השדה “טלפון”"
+
+#, fuzzy
+#~ msgid "Fax Field"
+#~ msgstr "שדה פקס"
+
+#~ msgid "Email Field"
+#~ msgstr "השדה “אימייל”"
+
+#, fuzzy
+#~ msgid "Website Field"
+#~ msgstr "שדה אתר אינטרנט"
+
+#, fuzzy
+#~ msgid "Integrate GMW Users Locator"
+#~ msgstr "שילוב מאתר משתמשי GMW"
+
+#, fuzzy
+#~ msgid "Trigger Method"
+#~ msgstr "שיטת טריגר"
+
+#, fuzzy
+#~ msgid "Manually (Using a Button)"
+#~ msgstr "ידנית (באמצעות כפתור)"
+
+#, fuzzy
+#~ msgid "Automatically (When Fields Change)"
+#~ msgstr "באופן אוטומטי (כאשר שדות משתנים)"
+
+#, fuzzy
+#~ msgid "Directions Source & Destination"
+#~ msgstr "הוראות הגעה מקור ויעד"
+
+#~ msgid "Select a field"
+#~ msgstr "בחרי שדה"
+
+#, fuzzy
+#~ msgid "Travel Preferences"
+#~ msgstr "העדפות נסיעות"
+
+#, fuzzy
+#~ msgid "Imperial (Miles)"
+#~ msgstr "אימפריאל (מיילים)"
+
+#, fuzzy
+#~ msgid "Metric (Kilometers)"
+#~ msgstr "מטרי (קילומטרים)"
+
+#~ msgid "Driving"
+#~ msgstr "נהיגה"
+
+#~ msgid "Walking"
+#~ msgstr "הליכה"
+
+#~ msgid "Bicycling"
+#~ msgstr "אופניים"
+
+#, fuzzy
+#~ msgid "Public Transit"
+#~ msgstr "תחבורה ציבורית"
+
+#, fuzzy
+#~ msgid "Travel Date & Time Settings"
+#~ msgstr "הגדרות תאריך ושעת נסיעה"
+
+#, fuzzy
+#~ msgid "Leave Now (default)"
+#~ msgstr "עזוב עכשיו (ברירת מחדל)"
+
+#, fuzzy
+#~ msgid "Leave At Specific Time"
+#~ msgstr "עזוב בזמן ספציפי"
+
+#, fuzzy
+#~ msgid "Arrive By Specific Time"
+#~ msgstr "הגעה בזמן ספציפי"
+
+#~ msgid "Undo"
+#~ msgstr "ביטול"
+
+#, fuzzy
+#~ msgid ""
+#~ "Optionally set default coordinates for the geocoder. These coordinates "
+#~ "will be geocoded and used to populate attached location fields when the "
+#~ "form initially loads."
+#~ msgstr ""
+#~ "ניתן להגדיר קואורדינטות ברירת מחדל עבור המקודד הגיאוגרפי. קואורדינטות אלו "
+#~ "יקודדו גיאוגרפית וישמשו למילוי שדות מיקום מצורפים כאשר הטופס ייטען "
+#~ "לראשונה."
+
+#, fuzzy
+#~ msgid ""
+#~ "Enable syncing with the GEO my WP Posts Locator. The location from this "
+#~ "geocoder will be saved in GEO my WP’s database and linked to the post "
+#~ "created by this form submission."
+#~ msgstr ""
+#~ "הפעל סנכרון עם מאתר הפוסטים של GEO my WP. המיקום מגיאוגרפיקדיטור זה יישמר "
+#~ "במסד הנתונים של GEO my WP ויקושר לפוסט שנוצר על ידי שליחת טופס זה."
+
+#, fuzzy
+#~ msgid "Select a field to be saved as the Phone value in GEO my WP."
+#~ msgstr "בחר שדה שיישמר כערך הטלפון ב-GEO my WP."
+
+#, fuzzy
+#~ msgid "Select a field to be saved as the Fax value in GEO my WP."
+#~ msgstr "בחר שדה שיישמר כערך הפקס ב-GEO my WP."
+
+#, fuzzy
+#~ msgid "Select a field to be saved as the Email value in GEO my WP."
+#~ msgstr "בחר שדה שיישמר כערך הדוא\"ל ב-GEO my WP."
+
+#, fuzzy
+#~ msgid "Select a field to be saved as the Website value in GEO my WP."
+#~ msgstr "בחר שדה שיישמר כערך אתר אינטרנט ב-GEO my WP."
+
+#, fuzzy
+#~ msgid ""
+#~ "Enable syncing with GEO my WP’s Users Locator. The location from this "
+#~ "geocoder will be saved to the user’s profile and searchable via GEO my WP "
+#~ "forms."
+#~ msgstr ""
+#~ "הפעל סנכרון עם מאתר המשתמשים של GEO my WP. המיקום מגיאוגרפיקדיטור זה "
+#~ "יישמר בפרופיל המשתמש וניתן לחפש אותו באמצעות טפסי GEO my WP."
+
+#, fuzzy
+#~ msgid ""
+#~ "Enter a user meta key to store the geocoded location data as a serialized "
+#~ "array. Leave blank to disable."
+#~ msgstr ""
+#~ "הזן מפתח מטא של משתמש כדי לאחסן את נתוני המיקום המקודדים גיאוגרפית כמערך "
+#~ "סידורי. השאר ריק כדי להשבית."
+
+#, fuzzy
+#~ msgid ""
+#~ "Click “Show Fields” to display available geolocation data fields. These "
+#~ "fields can be saved as post meta, user meta, or BuddyPress xProfile "
+#~ "fields (BuddyPress plugin required)."
+#~ msgstr ""
+#~ "לחצו על \"הצג שדות\" כדי להציג את שדות נתוני המיקום הגיאוגרפי הזמינים. "
+#~ "ניתן לשמור שדות אלה כמטא של פוסט, מטא של משתמש או שדות xProfile של "
+#~ "BuddyPress (נדרש תוסף BuddyPress)."
+
+#, fuzzy
+#~ msgid ""
+#~ "Set the default center point of the map using latitude and longitude. "
+#~ "This location will be used when the form loads if no user location is "
+#~ "available."
+#~ msgstr ""
+#~ "הגדר את נקודת המרכז המוגדרת כברירת מחדל של המפה באמצעות קווי רוחב ואורך. "
+#~ "מיקום זה ישמש בעת טעינת הטופס אם אין מיקום משתמש זמין."
+
+#, fuzzy
+#~ msgid ""
+#~ "Restrict the map view to a specific rectangular area by setting southwest "
+#~ "and northeast coordinates. This prevents users from panning outside the "
+#~ "defined region."
+#~ msgstr ""
+#~ "הגבל את תצוגת המפה לאזור מלבני ספציפי על ידי הגדרת קואורדינטות דרום-"
+#~ "מערביות וצפון-מזרחיות. פעולה זו מונעת ממשתמשים לנוע מחוץ לאזור המוגדר."
+
+#, fuzzy
+#~ msgid ""
+#~ "Select the Geocoder fields to be used as the origin and destination "
+#~ "points. You may also choose additional Geocoder fields to act as "
+#~ "waypoints."
+#~ msgstr ""
+#~ "בחר את שדות הגיאוקודר שישמשו כנקודות מוצא ויעד. ניתן גם לבחור שדות "
+#~ "גיאוקודר נוספים שישמשו כנקודות ציון."
+
+#, fuzzy
+#~ msgid ""
+#~ "Customize the label for the reset button that clears the location data."
+#~ msgstr "התאם אישית את התווית עבור כפתור האיפוס שמנקה את נתוני המיקום."
+
+#, fuzzy
+#~ msgid ""
+#~ "When checked, the reset button will restore the default location (as "
+#~ "defined in the field’s settings) instead of simply clearing the "
+#~ "geolocation values."
+#~ msgstr ""
+#~ "כאשר מסומן, כפתור האיפוס ישחזר את מיקום ברירת המחדל (כפי שמוגדר בהגדרות "
+#~ "השדה) במקום פשוט לנקות את ערכי המיקום הגיאוגרפי."
+
+#, fuzzy
+#~ msgid ""
+#~ "Customize the label for the locator button that retrieves the user's "
+#~ "current location."
+#~ msgstr ""
+#~ "התאם אישית את התווית עבור כפתור האיתור שמאחזר את המיקום הנוכחי של המשתמש."
+
+#~ msgid "Geocoder"
+#~ msgstr "גאוקודר"
+
+#, fuzzy
+#~ msgid "Gravity Geolocation Auto Locator"
+#~ msgstr "איתור גיאוגרפי אוטומטי של כוח משיכה"
+
+#, fuzzy
+#~ msgid "Select Geocoder Fields"
+#~ msgstr "בחר שדות גיאוקודר"
+
+#, fuzzy
+#~ msgid "IP Address Locator"
+#~ msgstr "מאתר כתובות IP"
+
+#, fuzzy
+#~ msgid "Location Found Message"
+#~ msgstr "הודעה על מיקום שנמצא"
+
+#, fuzzy
+#~ msgid "Hide Location Failed Message"
+#~ msgstr "הסתר מיקום הודעה נכשלה"
+
+#~ msgid "Select an Option"
+#~ msgstr "בחר אפשרות..."
+
+#~ msgid "Field"
+#~ msgstr "שדה"
+
+#, fuzzy
+#~ msgid ""
+#~ "Sync the selected Geocoder field with GEO my WP when this feed is "
+#~ "processed."
+#~ msgstr ""
+#~ "בחר שדה Geocoder שמיקומו צריך להיות מסונכרן עם GEO my WP כאשר עיבוד הזנה "
+#~ "זה מתבצע."
+
+#, fuzzy
+#~ msgid ""
+#~ "Syncing with GEO my WP allows the generated post to be geotagged and "
+#~ "managed through GEO my WP features such as proximity search and maps."
+#~ msgstr ""
+#~ "סנכרון עם GEO my WP מאפשר תיוג גיאוגרפי של הפוסט וניהולו באמצעות תכונות "
+#~ "המיקום של GEO my WP, כגון חיפוש ומפות."
+
+#, fuzzy
+#~ msgid ""
+#~ "Syncing with GEO my WP allows the registered user to be geotagged and "
+#~ "searchable through GEO my WP features such as proximity search and maps."
+#~ msgstr ""
+#~ "סנכרון עם GEO my WP מאפשר תיוג גיאוגרפי של הפוסט וניהולו באמצעות תכונות "
+#~ "המיקום של GEO my WP, כגון חיפוש ומפות."
+
+#, fuzzy
+#~ msgid "Geocoder Field to Sync"
+#~ msgstr "שדה גיאוקודר לסנכרון"
+
+#, fuzzy
+#~ msgid "GEO my WP Location Sync"
+#~ msgstr "סנכרון מיקום GEO שלי ב-WP"
+
+#, fuzzy
+#~ msgid ""
+#~ "Choose a Geocoder field whose location should be synced to GEO my WP when "
+#~ "this feed is processed."
+#~ msgstr ""
+#~ "בחר שדה Geocoder שמיקומו צריך להיות מסונכרן עם GEO my WP כאשר עיבוד הזנה "
+#~ "זה מתבצע."
+
+#~ msgid "Phone"
+#~ msgstr "טלפון"
+
+#, fuzzy
+#~ msgid ""
+#~ "Select a field that contains the phone number to associate with this "
+#~ "location."
+#~ msgstr "בחר שדה המכיל את מספר הטלפון שיש לשייך למיקום זה."
+
+#~ msgid "Fax"
+#~ msgstr "פקס"
+
+#, fuzzy
+#~ msgid ""
+#~ "Select a field that contains the fax number for this location, if "
+#~ "applicable."
+#~ msgstr "בחר שדה המכיל את מספר הפקס עבור מיקום זה, אם רלוונטי."
+
+#~ msgid "Email"
+#~ msgstr "אימייל"
+
+#, fuzzy
+#~ msgid ""
+#~ "Select a field that contains the email address to associate with this "
+#~ "location."
+#~ msgstr "בחר שדה המכיל את כתובת הדוא\"ל שיש לשייך למיקום זה."
+
+#~ msgid "Website"
+#~ msgstr "אתר"
+
+#, fuzzy
+#~ msgid ""
+#~ "Select a field that contains the website URL to associate with this "
+#~ "location."
+#~ msgstr "בחר שדה המכיל את כתובת האתר שיש לשייך למיקום זה."
+
+#, fuzzy
+#~ msgid "Default Location"
+#~ msgstr "איפוס מיקום"
+
+#, fuzzy
+#~ msgid "Location Type"
+#~ msgstr "אתר אותי"
+
+#, fuzzy
+#~ msgid "GEO my WP Location Type"
+#~ msgstr "סנכרון מיקום GEO שלי ב-WP"
+
+#, fuzzy
+#~ msgid "A full address field with geolocation and locator capabilities."
+#~ msgstr "שדה כתובת מלא עם יכולות מיקום גיאוגרפי ואיתור."
+
+#, fuzzy
+#~ msgid "Google Places Autocomplete"
+#~ msgstr "השלמה אוטומטית של גוגל מקומות"
+
+#, fuzzy
+#~ msgid "Default (Browser Language)"
+#~ msgstr "ברירת מחדל (שפת דפדפן)"
+
+#, fuzzy
+#~ msgid "Area Bounds"
+#~ msgstr "גבולות האזור"
+
+#, fuzzy
+#~ msgid "User's Location (IP)"
+#~ msgstr "מיקום המשתמש (IP)"
+
+#~ msgid "Coordinates"
+#~ msgstr "קואורדינטות"
+
+#, fuzzy
+#~ msgid ""
+#~ "Lets users enter or populate latitude and longitude values manually or "
+#~ "automatically."
+#~ msgstr ""
+#~ "מאפשר למשתמשים להזין או למלא ערכי קו רוחב ואורך באופן ידני או אוטומטי."
+
+#, fuzzy
+#~ msgid "Pipe Separated"
+#~ msgstr "צינור מופרד"
+
+#, fuzzy
+#~ msgid "Serialized"
+#~ msgstr "סידור"
+
+#, fuzzy
+#~ msgid "Comma Separated"
+#~ msgstr "מופרדים בפסיקים"
+
+#, fuzzy
+#~ msgid ""
+#~ "This field is hidden in the form when the \"Directions Trigger Method\" "
+#~ "is set to \"Automatically\"."
+#~ msgstr "שדה זה מוסתר בטופס כאשר \"שיטת הפעלת הכוונה\" מוגדרת כ\"אוטומטית\"."
+
+#, fuzzy
+#~ msgid "View data in entry page"
+#~ msgstr "הצגת נתונים בדף הכניסה"
+
+#, fuzzy
+#~ msgid "Directions Panel"
+#~ msgstr "לוח הוראות הגעה"
+
+#, fuzzy
+#~ msgid ""
+#~ "This field is hidden on the front end and will be dynamically filled with "
+#~ "directions when available."
+#~ msgstr ""
+#~ "שדה זה מוסתר בקצה הקדמי וימולא באופן דינמי בהוראות כאשר יהיו זמינים."
+
+#~ msgid "Display Settings"
+#~ msgstr "הגדרות תצוגה"
+
+#, fuzzy
+#~ msgid "Drawing Shape"
+#~ msgstr "ציור צורה"
+
+#, fuzzy
+#~ msgid "A Drawing Shape field integrated with map drawing tools."
+#~ msgstr "שדה צורת ציור המשולב עם כלי ציור מפות."
+
+#, fuzzy
+#~ msgid "This field displays a Drawing Shape in a Drawing Shape field."
+#~ msgstr "שדה זה מציג צורת ציור בשדה צורת ציור."
+
+#, fuzzy
+#~ msgid "Shape Settings"
+#~ msgstr "הגדרות צורה"
+
+#~ msgid "Point"
+#~ msgstr "נקודה"
+
+#, fuzzy
+#~ msgid "Polyline"
+#~ msgstr "פוליליין"
+
+#, fuzzy
+#~ msgid "Polygon"
+#~ msgstr "מְצוּלָע"
+
+#~ msgid "Rectangle"
+#~ msgstr "מלבני"
+
+#~ msgid "Circle"
+#~ msgstr "עיגול"
+
+#, fuzzy
+#~ msgid ""
+#~ "Optional: Paste a GeoJSON Feature to override the center/size settings "
+#~ "for full control of the shape."
+#~ msgstr ""
+#~ "אופציונלי: הדבק תכונה GeoJSON כדי לעקוף את הגדרות המרכז/גודל לשליטה מלאה "
+#~ "על הצורה."
+
+#~ msgid "Appearance"
+#~ msgstr "מראה"
+
+#~ msgid "Permissions"
+#~ msgstr "הרשאות"
+
+#, fuzzy
+#~ msgid "Drawing Tools"
+#~ msgstr "כלי ציור"
+
+#, fuzzy
+#~ msgid "Add Marker"
+#~ msgstr "הוסף סימון"
+
+#, fuzzy
+#~ msgid "Draw Polyline"
+#~ msgstr "צייר פוליליין"
+
+#, fuzzy
+#~ msgid "Draw Polygon"
+#~ msgstr "צייר מצולע"
+
+#, fuzzy
+#~ msgid "Draw Rectangle"
+#~ msgstr "צייר מלבן"
+
+#, fuzzy
+#~ msgid "Draw Circle"
+#~ msgstr "צייר מעגל"
+
+#, fuzzy
+#~ msgid "Draw Freehand"
+#~ msgstr "צייר ביד חופשית"
+
+#, fuzzy
+#~ msgid "Clear Shapes"
+#~ msgstr "צורות ברורות"
+
+#~ msgid "Redo"
+#~ msgstr "ביצוע מחדש"
+
+#~ msgid "Export"
+#~ msgstr "ייצוא"
+
+#~ msgid "Import"
+#~ msgstr "ייבוא"
+
+#~ msgid "Buttons"
+#~ msgstr "כפתורים"
+
+#, fuzzy
+#~ msgid "Icons Bar"
+#~ msgstr "סרגל סמלים"
+
+#, fuzzy
+#~ msgid "Inside Form"
+#~ msgstr "טופס פנימי"
+
+#, fuzzy
+#~ msgid "Inside Map"
+#~ msgstr "מפה פנימית"
+
+#~ msgid "Marker"
+#~ msgstr "סמן"
+
+#, fuzzy
+#~ msgid "Freehand"
+#~ msgstr "בלי עזרה"
+
+#, fuzzy
+#~ msgid "e.g. Add Marker"
+#~ msgstr "לדוגמה הוסף סמן"
+
+#, fuzzy
+#~ msgid "e.g. Draw Polyline"
+#~ msgstr "לדוגמה, צייר פוליליין"
+
+#, fuzzy
+#~ msgid "e.g. Draw Polygon"
+#~ msgstr "לדוגמה, צייר מצולע"
+
+#, fuzzy
+#~ msgid "e.g. Draw Rectangle"
+#~ msgstr "לדוגמה, צייר מלבן"
+
+#, fuzzy
+#~ msgid "e.g. Draw Circle"
+#~ msgstr "לדוגמה, צייר עיגול"
+
+#, fuzzy
+#~ msgid "e.g. Draw Freehand"
+#~ msgstr "למשל, צייר ביד חופשית"
+
+#, fuzzy
+#~ msgid "e.g. Clear Shapes"
+#~ msgstr "לדוגמה, צורות שקופות"
+
+#, fuzzy
+#~ msgid "e.g. Undo"
+#~ msgstr "למשל, ביטול"
+
+#, fuzzy
+#~ msgid "e.g. Redo"
+#~ msgstr "למשל, Redo"
+
+#, fuzzy
+#~ msgid "e.g. Export"
+#~ msgstr "למשל, ייצוא"
+
+#, fuzzy
+#~ msgid "e.g. Import"
+#~ msgstr "למשל, ייבוא"
+
+#, fuzzy
+#~ msgid "e.g. Delete Shape"
+#~ msgstr "לדוגמה, מחיקת צורה"
+
+#, fuzzy
+#~ msgid ""
+#~ "Stores structured geolocation data like address and coordinates for "
+#~ "syncing with other fields."
+#~ msgstr ""
+#~ "מאחסן נתוני מיקום גיאוגרפיים מובנים כמו כתובת וקואורדינטות לצורך סנכרון "
+#~ "עם שדות אחרים."
+
+#, fuzzy
+#~ msgid "This field is hidden when viewing the form."
+#~ msgstr "שדה זה מוסתר בעת צפייה בטופס."
+
+#, fuzzy
+#~ msgid "Default Coordinates"
+#~ msgstr "קואורדינטות ברירת מחדל"
+
+#~ msgid "Map Marker"
+#~ msgstr "מפה סימון"
+
+#, fuzzy
+#~ msgid ""
+#~ "A clickable button that detects and uses the visitor's current location."
+#~ msgstr "כפתור לחיץ המזהה ומשתמש במיקום הנוכחי של המבקר."
+
+#, fuzzy
+#~ msgid "Locate Me"
+#~ msgstr "אתר אותי"
+
+#, fuzzy
+#~ msgid "View map in entry details"
+#~ msgstr "הצג מפה בפרטי הכניסה"
+
+#, fuzzy
+#~ msgid "Map Options"
+#~ msgstr "אפשרויות מפה"
+
+#~ msgid "Roadmap"
+#~ msgstr "מפת הדרכים"
+
+#~ msgid "Satellite"
+#~ msgstr "לוויין"
+
+#~ msgid "Hybrid"
+#~ msgstr "היברידי"
+
+#~ msgid "Terrain"
+#~ msgstr "תוואי שטח"
+
+#, fuzzy
+#~ msgid "Select Zoom Level"
+#~ msgstr "בחר רמת זום"
+
+#, fuzzy
+#~ msgid "Map Bounds Restriction"
+#~ msgstr "הגבלת גבולות המפה"
+
+#, fuzzy
+#~ msgid "Gravity Forms is unavailable."
+#~ msgstr "הנתונים אינם זמינים"
+
+#, fuzzy
+#~ msgid "A shape field integrated with map drawing tools."
+#~ msgstr "שדה צורה המשולב עם כלי ציור מפות."
+
+#, fuzzy
+#~ msgid "Reset Location"
+#~ msgstr "איפוס מיקום"
+
+#, fuzzy
+#~ msgid ""
+#~ "A button that resets geolocation fields to their initial state or clears "
+#~ "them."
+#~ msgstr "כפתור שמאפס שדות מיקום גיאוגרפי למצבם ההתחלתי או מנקה אותם."
+
+#, fuzzy
+#~ msgid "BuddyPress Profile Field"
+#~ msgstr "שדה פרופיל של באדיפרס"
+
+#, fuzzy
+#~ msgid "Gravity Search Settings"
+#~ msgstr "הגדרות סמן"
+
+#, fuzzy
+#~ msgid "Extend Gravity Forms with advanced geolocation tools."
+#~ msgstr "הרחב את Gravity Forms עם כלים מתקדמים למיקום גיאוגרפי."
+
+#~ msgid "Placement"
+#~ msgstr "השמה"
+
+#~ msgid "Advanced"
+#~ msgstr "מתקדם"
+
+#~ msgctxt "link to Google Maps API documentation"
+#~ msgid "Click here"
+#~ msgstr "לחץ כאן"
+
+#, fuzzy
+#~ msgid "this tutorial"
+#~ msgstr "המדריך הזה"
+
+#, fuzzy
+#~ msgid "Gravity Geolocation License Key (* Required)"
+#~ msgstr "מפתח רישיון של Gravity Geolocation (* חובה)"
+
+#, fuzzy
+#~ msgid "Google Maps API Keys (Browser & Server)"
+#~ msgstr "מפתחות API של מפות גוגל (דפדפן ושרת)"
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "Enter your Google Maps API keys below. The Browser API key is used for "
+#~ "client-side features such as the address autocomplete and maps rendering, "
+#~ "while the Server API key is used for server-side tasks such as geocoding "
+#~ "and fetching directions before the form loads. <a href=\"%1$s\" "
+#~ "target=\"_blank\">%2$s</a> to create your API keys. You can also follow "
+#~ "<a href=\"%3$s\" target=\"_blank\">%4$s</a> to learn how to generate your "
+#~ "Google Maps API keys."
+#~ msgstr ""
+#~ "הזן את מפתחות ה-API של מפות גוגל שלך למטה. מפתח ה-API של הדפדפן משמש "
+#~ "לתכונות בצד הלקוח כגון השלמה אוטומטית של כתובות ועיבוד מפות, בעוד שמפתח "
+#~ "ה-API של השרת משמש למשימות בצד השרת כגון קידוד גיאוגרפי ואחזור הוראות "
+#~ "לפני טעינת הטופס. <a href=\"%1$s\" target=\"_blank\">%2$s</a> כדי ליצור "
+#~ "את מפתחות ה-API שלך. תוכל גם לעקוב אחר <a href=\"%3$s\" "
+#~ "target=\"_blank\">%4$s</a> כדי ללמוד כיצד ליצור את מפתחות ה-API של מפות "
+#~ "גוגל שלך."
+
+#, fuzzy
+#~ msgid "Browser API Key (* Required)"
+#~ msgstr "מפתח API של דפדפן (* נדרש)"
+
+#, fuzzy
+#~ msgid "Server API Key (* Required)"
+#~ msgstr "מפתח API של שרת (* נדרש)"
+
+#, fuzzy
+#~ msgid "Google Maps Country Code"
+#~ msgstr "קוד מדינה של גוגל מפות"
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "Enter the country code of the default country that will be used with "
+#~ "Google Maps Geocoding services. See <a href=\"%1$s\" "
+#~ "target=\"_blank\">%2$s</a> for the list of country codes."
+#~ msgstr ""
+#~ "הזן את קידומת המדינה של המדינה המוגדרת כברירת מחדל שתשמש עם שירותי קידוד "
+#~ "גיאוגרפי של מפות גוגל. ראה <a href=\"%1$s\" target=\"_blank\">%2$s</a> "
+#~ "לרשימת קודי המדינה."
+
+#~ msgid "this page"
+#~ msgstr "עמוד זה"
+
+#, fuzzy
+#~ msgid "Google Maps Language"
+#~ msgstr "שפת מפות גוגל"
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "Enter the language code of the default language that will be used with "
+#~ "Google Maps API. This will affect the language of the map and the address "
+#~ "autocomplete suggested results. See <a href=\"%1$s\" "
+#~ "target=\"_blank\">%2$s</a> for the list of language codes."
+#~ msgstr ""
+#~ "הזן את קוד השפה של שפת ברירת המחדל שתשמש עם ממשק ה-API של מפות גוגל. "
+#~ "פעולה זו תשפיע על שפת המפה ועל תוצאות השלמה האוטומטית של כתובת המוצעת. "
+#~ "ראה <a href=\"%1$s\" target=\"_blank\">%2$s</a> לרשימת קודי השפה."
+
+#, fuzzy
+#~ msgid "High Accuracy Location Mode"
+#~ msgstr "מצב מיקום דיוק גבוה"
+
+#, fuzzy
+#~ msgid ""
+#~ "By enabling this, the auto-locator (when using the locator button and the "
+#~ "page locator) might retrieve a more accurate user current location. "
+#~ "However, it might also result in slower performance of the auto-locator. "
+#~ "Note that this feature only affects the browser's HTML5 geolocation "
+#~ "feature, not the IP address locator."
+#~ msgstr ""
+#~ "על ידי הפעלת אפשרות זו, האיתור האוטומטי (בעת שימוש בכפתור האיתור ובמאתר "
+#~ "הדפים) עשוי לאחזר מיקום נוכחי מדויק יותר של המשתמש. עם זאת, הדבר עלול גם "
+#~ "לגרום לביצועים איטיים יותר של האיתור האוטומטי. שים לב שתכונה זו משפיעה רק "
+#~ "על תכונת המיקום הגיאוגרפי HTML5 של הדפדפן, ולא על מאתר כתובות ה-IP."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use this option to enable the IP address locator services. You can do so "
+#~ "by selecting the IP address service provider that you would like to use. "
+#~ "Once this feature is enabled, you will be able to use it with the Locator "
+#~ "Button field and the auto-locator form option in the form builder. You "
+#~ "can use it instead of the HTML5 geolocation feature or as a fallback "
+#~ "option for when the HTML5 geolocation fails. Please note that the "
+#~ "accuracy level of the location returned by the IP address might vary and "
+#~ "it depends solely on the IP address service provider. Also note that some "
+#~ "IP address service providers might require registration and/or a token/"
+#~ "API key."
+#~ msgstr ""
+#~ "השתמש באפשרות זו כדי להפעיל את שירותי איתור כתובות ה-IP. ניתן לעשות זאת "
+#~ "על ידי בחירת ספק שירות כתובות ה-IP שברצונך להשתמש בו. לאחר הפעלת תכונה "
+#~ "זו, תוכל להשתמש בה באמצעות השדה כפתור איתור ואפשרות טופס איתור אוטומטי "
+#~ "בבונה הטפסים. ניתן להשתמש בה במקום תכונת המיקום הגיאוגרפי ב-HTML5 או "
+#~ "כאפשרות גיבוי למקרים בהם מיקום הגיאוגרפי ב-HTML5 נכשל. שימו לב שרמת הדיוק "
+#~ "של המיקום המוחזר על ידי כתובת ה-IP עשויה להשתנות והיא תלויה אך ורק בספק "
+#~ "שירות כתובת ה-IP. כמו כן, שימו לב שחלק מספקי שירותי כתובות ה-IP עשויים "
+#~ "לדרוש רישום ו/או מפתח אסימון/API."
+
+#, fuzzy
+#~ msgid "IP Address Provider"
+#~ msgstr "ספק כתובת IP"
+
+#, fuzzy
+#~ msgid "ipinfo.io Token"
+#~ msgstr "אסימון ipinfo.io"
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "<a href=\"%1$s\" target=\"_blank\">%2$s</a> to register and get your "
+#~ "token."
+#~ msgstr ""
+#~ "<a href=\"%1$s\" target=\"_blank\">%2$s</a> כדי להירשם ולקבל את האסימון "
+#~ "שלך."
+
+#, fuzzy
+#~ msgid "Ipregistry API Key"
+#~ msgstr "מפתח API של Iregistry"
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "<a href=\"%1$s\" target=\"_blank\">%2$s</a> to register and get your API "
+#~ "key."
+#~ msgstr ""
+#~ "<a href=\"%1$s\" target=\"_blank\">%2$s</a> כדי להירשם ולקבל את מפתח "
+#~ "ה-API שלך."
+
+#, fuzzy, php-format
+#~ msgid ""
+#~ "Ipapi.co does not require an API key nor registration for its free plan. "
+#~ "<a href=\"%1$s\" target=\"_blank\">%2$s</a> for more info on plans and "
+#~ "usage."
+#~ msgstr ""
+#~ "Ipapi.co אינו דורש מפתח API או רישום עבור התוכנית החינמית שלו. <a "
+#~ "href=\"%1$s\" target=\"_blank\">%2$s</a> למידע נוסף על תוכניות ושימוש."
+
+#, fuzzy
+#~ msgid ""
+#~ "Check this checkbox if you'd like to prevent the Gravity Geolocation "
+#~ "plugin from loading the Google Maps API. This feature can be useful when "
+#~ "there is another plugin or theme that is also loading the Google Maps API "
+#~ "on your site. This way, you can prevent conflicts that usually caused "
+#~ "when loading the Google Maps API multiple times."
+#~ msgstr ""
+#~ "סמן תיבת סימון זו אם ברצונך למנוע מתוסף Gravity Geolocation לטעון את ממשק "
+#~ "ה-API של מפות גוגל. תכונה זו יכולה להיות שימושית כאשר יש תוסף או ערכת "
+#~ "נושא אחרת שטוענת גם את ממשק ה-API של מפות גוגל באתר שלך. בדרך זו תוכל "
+#~ "למנוע התנגשויות שנגרמות בדרך כלל בעת טעינה מספר פעמים של ממשק ה-API של "
+#~ "מפות גוגל."
+
+#, fuzzy
+#~ msgid ""
+#~ "Check this box if you would like to disable Google Maps Advanced Markers. "
+#~ "Advanced Markers are enabled by default and provide enhanced marker "
+#~ "rendering in Google Maps. Disabling this option will fallback to standard "
+#~ "markers."
+#~ msgstr ""
+#~ "סמן תיבה זו אם ברצונך להשבית את הסמנים המתקדמים של Google Maps. הסמנים "
+#~ "המתקדמים מופעלים כברירת מחדל ומספקים עיבוד משופר של הסמנים ב-Google Maps. "
+#~ "השבתת אפשרות זו תביא לחזרה לסמנים הסטנדרטיים."
+
+#, fuzzy
+#~ msgid ""
+#~ "Note: when this checkbox is checked, the locator button and address "
+#~ "autocomplete features below will be ignored."
+#~ msgstr ""
+#~ "הערה: כאשר תיבת סימון זו מסומנת, כפתור האיתור ותכונות ההשלמה האוטומטית של "
+#~ "הכתובת שלהלן יתעלמו."
+
+#, fuzzy
+#~ msgid "Auto Locator"
+#~ msgstr "איתור אוטומטי"
+
+#, fuzzy
+#~ msgid "Geolocation options are not available for this field."
+#~ msgstr "אפשרויות מיקום גיאוגרפי אינן זמינות עבור שדה זה."
+
+#, fuzzy
+#~ msgid ""
+#~ "To enable this feature, navigate to the Gravity Forms Settings page and "
+#~ "select an IP Address provider under the Geolocation tab."
+#~ msgstr ""
+#~ "כדי להפעיל תכונה זו, נווטו לדף ההגדרות של Gravity Forms ובחרו ספק כתובת "
+#~ "IP תחת הכרטיסייה מיקום גיאוגרפי."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use this field to display location or directions values—such as "
+#~ "coordinates, address, distance, or travel duration—based on a selected "
+#~ "geocoder or directions field."
+#~ msgstr ""
+#~ "השתמש בשדה זה כדי להציג ערכי מיקום או הוראות הגעה - כגון קואורדינטות, "
+#~ "כתובת, מרחק או משך נסיעה - בהתבסס על קודר גיאוגרפי או שדה הוראות הגעה "
+#~ "שנבחרו."
+
+#, fuzzy
+#~ msgid "Directions & Travel Distance"
+#~ msgstr "הוראות הגעה ומרחק נסיעה"
+
+#, fuzzy
+#~ msgid ""
+#~ "Displays the step-by-step directions output between two or more locations."
+#~ msgstr "מציג הוראות מפורטות בין שני מיקומים או יותר."
+
+#, fuzzy
+#~ msgid ""
+#~ "Allows users to draw shapes on a linked map field, including polygons, "
+#~ "circles, markers, and more. This field provides the drawing interface but "
+#~ "does not display its own map."
+#~ msgstr ""
+#~ "מאפשר למשתמשים לצייר צורות על שדה מפה מקושר, כולל מצולעים, עיגולים, סמנים "
+#~ "ועוד. שדה זה מספק את ממשק הציור אך אינו מציג מפה משלו."
+
+#, fuzzy
+#~ msgid "Dynamic Field Options"
+#~ msgstr "אפשרויות שדה דינמיות"
+
+#, fuzzy
+#~ msgid "Dynamic Location Field"
+#~ msgstr "שדה מיקום דינמי"
+
+#, fuzzy
+#~ msgid "Dynamic Directions Field"
+#~ msgstr "שדה כיוונים דינמיים"
+
+#, fuzzy
+#~ msgid "Dynamic Drawing Shape Field"
+#~ msgstr "שדה צורה של ציור דינמי"
+
+#, fuzzy
+#~ msgid "Dynamic Drawing Tools Field"
+#~ msgstr "שדה כלי ציור דינמיים"
+
+#, fuzzy
+#~ msgid "No data is available"
+#~ msgstr "אין נתונים זמינים"
+
+#, fuzzy
+#~ msgid "View Directions"
+#~ msgstr "הצג הוראות הגעה"
+
+#, fuzzy
+#~ msgid "Directions are not available"
+#~ msgstr "הוראות הגעה אינן זמינות"
+
+#, fuzzy
+#~ msgid "Driving Directions, Distance & Routes"
+#~ msgstr "הוראות נסיעה, מרחק ומסלולים"
+
+#, fuzzy
+#~ msgid "Straight-Line Distance Only"
+#~ msgstr "מרחק בקו ישר בלבד"
+
+#, fuzzy
+#~ msgid "Displays the directions output between two or more locations."
+#~ msgstr "מציג את פלט ההוראות בין שני מיקומים או יותר."
+
+#, fuzzy
+#~ msgid "Size (meters/km)"
+#~ msgstr "גודל (מטרים/ק\"מ)"
+
+#, fuzzy
+#~ msgid "Drawing Tools Settings"
+#~ msgstr "הגדרות כלי ציור"
+
+#, fuzzy
+#~ msgid "Target Map Field"
+#~ msgstr "שדה מפת יעד"
+
+#, fuzzy
+#~ msgid "Drawing Tools UI Type"
+#~ msgstr "סוג ממשק משתמש של כלי ציור"
+
+#, fuzzy
+#~ msgid "Drawing Tools UI Position"
+#~ msgstr "מיקום ממשק המשתמש של כלי הציור"
+
+#, fuzzy
+#~ msgid "Enable Drawing Tools For"
+#~ msgstr "הפעל כלי ציור עבור"
+
+#, fuzzy
+#~ msgid "Marker Button Text"
+#~ msgstr "טקסט כפתור הסמן"
+
+#, fuzzy
+#~ msgid "Marker Default Color"
+#~ msgstr "צבע ברירת מחדל של הסמן"
+
+#, fuzzy
+#~ msgid "Polyline Settings"
+#~ msgstr "הגדרות קו רב-קווי"
+
+#, fuzzy
+#~ msgid "Polyline Button Text"
+#~ msgstr "טקסט כפתור פוליליין"
+
+#, fuzzy
+#~ msgid "Polyline Default Color"
+#~ msgstr "צבע ברירת מחדל של קו שבור"
+
+#, fuzzy
+#~ msgid "Polygon Settings"
+#~ msgstr "הגדרות מצולעים"
+
+#, fuzzy
+#~ msgid "Polygon Button Text"
+#~ msgstr "טקסט כפתור מצולע"
+
+#, fuzzy
+#~ msgid "Polygon Default Color"
+#~ msgstr "צבע ברירת מחדל של מצולע"
+
+#, fuzzy
+#~ msgid "Rectangle Settings"
+#~ msgstr "הגדרות מלבן"
+
+#, fuzzy
+#~ msgid "Rectangle Button Text"
+#~ msgstr "טקסט כפתור מלבני"
+
+#, fuzzy
+#~ msgid "Rectangle Default Color"
+#~ msgstr "צבע ברירת מחדל של מלבן"
+
+#, fuzzy
+#~ msgid "Circle Settings"
+#~ msgstr "הגדרות מעגל"
+
+#, fuzzy
+#~ msgid "Circle Button Text"
+#~ msgstr "טקסט כפתור מעגלי"
+
+#, fuzzy
+#~ msgid "Circle Default Color"
+#~ msgstr "צבע ברירת מחדל של מעגל"
+
+#, fuzzy
+#~ msgid "Freehand Settings"
+#~ msgstr "הגדרות יד חופשית"
+
+#, fuzzy
+#~ msgid "Freehand Button Text"
+#~ msgstr "טקסט כפתור ידני"
+
+#, fuzzy
+#~ msgid "Freehand Default Color"
+#~ msgstr "צבע ברירת מחדל ביד חופשית"
+
+#, fuzzy
+#~ msgid "Action Buttons Settings"
+#~ msgstr "הגדרות כפתורי פעולה"
+
+#, fuzzy
+#~ msgid "Enable Action Buttons For"
+#~ msgstr "הפעל כפתורי פעולה עבור"
+
+#, fuzzy
+#~ msgid "Clear Shapes Button Text"
+#~ msgstr "נקה טקסט כפתור צורות"
+
+#, fuzzy
+#~ msgid "Undo Button Text"
+#~ msgstr "טקסט כפתור ביטול"
+
+#, fuzzy
+#~ msgid "Redo Button Text"
+#~ msgstr "טקסט כפתור \"בצע שוב\""
+
+#, fuzzy
+#~ msgid "Export Button Text"
+#~ msgstr "טקסט כפתור ייצוא"
+
+#, fuzzy
+#~ msgid "Import Button Text"
+#~ msgstr "טקסט כפתור ייבוא"
+
+#, fuzzy
+#~ msgid "Shape Panel Settings"
+#~ msgstr "הגדרות לוח הצורות"
+
+#, fuzzy
+#~ msgid "Enable Labels for Shapes"
+#~ msgstr "הפעל תוויות עבור צורות"
+
+#, fuzzy
+#~ msgid "Enable Shape Color Picker"
+#~ msgstr "הפעל את בורר צבעי הצורה"
+
+#, fuzzy
+#~ msgid "Delete Shape Button Text"
+#~ msgstr "מחיקת טקסט של כפתור הצורה"
+
+#, fuzzy
+#~ msgid "Gravity Forms Geolocation Add-On"
+#~ msgstr "תוסף מיקום גיאוגרפי של Gravity Forms"
+
+#, fuzzy
+#~ msgid "https://www.geomywp.com"
+#~ msgstr "https://www.geomywp.com"

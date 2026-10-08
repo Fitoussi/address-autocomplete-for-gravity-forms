@@ -64,7 +64,7 @@ final class Loader {
 	 */
 	public static function conflict_notice() {
 		if ( current_user_can( 'activate_plugins' ) ) {
-			echo '<div class="notice notice-warning"><p>' . esc_html__( 'Address Autocomplete for Gravity Forms is not running because Gravity Geolocation or Gravity Search is active. Deactivate the free plugin; your existing Address fields and settings remain available in premium.', 'address-autocomplete-for-gravity-forms' ) . '</p></div>';
+			echo '<div class="notice notice-warning"><p>' . esc_html__( 'Advanced Address Autocomplete for Gravity Forms is not running because Gravity Geolocation or Gravity Search is active. Deactivate the free plugin; your existing Address fields and settings remain available in premium.', 'advanced-address-autocomplete-for-gravity-forms' ) . '</p></div>';
 		}
 	}
 
@@ -97,7 +97,7 @@ final class Loader {
 		echo '<div class="notice notice-warning"><p>' . esc_html(
 			sprintf(
 			/* translators: %s: Minimum Gravity Forms version. */
-				__( 'Address Autocomplete requires an active Gravity Forms installation, version %s or newer.', 'address-autocomplete-for-gravity-forms' ),
+				__( 'Address Autocomplete requires an active Gravity Forms installation, version %s or newer.', 'advanced-address-autocomplete-for-gravity-forms' ),
 				GFGEOAC_MIN_HOST_VERSION
 			)
 		) . '</p></div>';

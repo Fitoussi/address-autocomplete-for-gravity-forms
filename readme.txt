@@ -1,4 +1,4 @@
-=== Address Autocomplete for Gravity Forms ===
+=== Advanced Address Autocomplete for Gravity Forms ===
 Contributors: eyalfitoussi
 Tags: gravity forms, address autocomplete, google places, address autofill, address field
 Requires at least: 6.5
@@ -14,7 +14,7 @@ Modern Google Places autocomplete for Gravity Forms, with country and language c
 
 **Less typing. More control over address entry.**
 
-Address Autocomplete for Gravity Forms brings **Google Places API (New) to your forms for free**. Help visitors find and select an address, automatically fill native address components, and tailor suggestions to your audience with country, place-type, language and location preferences.
+Advanced Address Autocomplete for Gravity Forms brings **Google Places API (New) to your forms for free**. Help visitors find and select an address, automatically fill native address components, and tailor suggestions to your audience with country, place-type, language and location preferences.
 
 Choose a dedicated single-line Address field or add autocomplete to Gravity Forms' existing multi-part Address field. Require visitors to select a suggestion when your workflow needs it, and open a submitted single-line address in Google Maps directly from its entry detail page.
 

@@ -57,7 +57,7 @@ final class SearchUnavailable {
 		}
 
 		$items['gfgeo_create_search_form'] = [
-			'label'      => esc_html__( 'Create Search', 'address-autocomplete-for-gravity-forms' ),
+			'label'      => esc_html__( 'Create Search', 'advanced-address-autocomplete-for-gravity-forms' ),
 			'url'        => '#',
 			'menu_class' => 'gfgeo-create-search-form',
 		];
@@ -110,8 +110,8 @@ final class SearchUnavailable {
 		?>
 		<div class="notice notice-info">
 			<p>
-				<strong><?php esc_html_e( 'Gravity Search is not available.', 'address-autocomplete-for-gravity-forms' ); ?></strong>
-				<a href="<?php echo esc_url( $link ); ?>"><?php esc_html_e( 'View upgrade options', 'address-autocomplete-for-gravity-forms' ); ?></a>
+				<strong><?php esc_html_e( 'Gravity Search is not available.', 'advanced-address-autocomplete-for-gravity-forms' ); ?></strong>
+				<a href="<?php echo esc_url( $link ); ?>"><?php esc_html_e( 'View upgrade options', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
 			</p>
 		</div>
 		<?php
@@ -191,11 +191,11 @@ final class SearchUnavailable {
 			[
 				'modal'           => [
 					'selectors'        => '.gfgeo-create-search-form a, a.gfgeo-create-search-form',
-					'title'            => esc_html__( 'Gravity Search is not available.', 'address-autocomplete-for-gravity-forms' ),
+					'title'            => esc_html__( 'Gravity Search is not available.', 'advanced-address-autocomplete-for-gravity-forms' ),
 					'message'          => \sprintf(
 						wp_kses(
 							/* translators: %s: Pricing page URL. */
-							__( 'Gravity Search is not available with your current Gravity Geolocation plan. <a href="%s" target="_blank" rel="noopener noreferrer">Upgrade now</a> to unlock advanced mapping features.', 'address-autocomplete-for-gravity-forms' ),
+							__( 'Gravity Search is not available with your current Gravity Geolocation plan. <a href="%s" target="_blank" rel="noopener noreferrer">Upgrade now</a> to unlock advanced mapping features.', 'advanced-address-autocomplete-for-gravity-forms' ),
 							[
 								'a' => [
 									'href'   => [],
@@ -207,14 +207,14 @@ final class SearchUnavailable {
 						esc_url( $this->get_pricing_url() )
 					),
 					'pricingUrl'       => esc_url( $this->get_pricing_url() ),
-					'cancelLabel'      => esc_html__( 'Cancel', 'address-autocomplete-for-gravity-forms' ),
-					'viewPricingLabel' => esc_html__( 'View pricing', 'address-autocomplete-for-gravity-forms' ),
-					'confirmText'      => esc_html__( 'Gravity Search is not available with your current Gravity Geolocation plan. Open pricing page now?', 'address-autocomplete-for-gravity-forms' ),
+					'cancelLabel'      => esc_html__( 'Cancel', 'advanced-address-autocomplete-for-gravity-forms' ),
+					'viewPricingLabel' => esc_html__( 'View pricing', 'advanced-address-autocomplete-for-gravity-forms' ),
+					'confirmText'      => esc_html__( 'Gravity Search is not available with your current Gravity Geolocation plan. Open pricing page now?', 'advanced-address-autocomplete-for-gravity-forms' ),
 				],
 				'formsListButton' => [
 					'enabled' => 'gf_edit_forms' === $page && \GFCommon::current_user_can_any( 'gravityforms_create_form' ),
 					'url'     => esc_url( $this->get_unavailable_url( 'forms_list_button' ) ),
-					'label'   => esc_html__( 'Add New Search', 'address-autocomplete-for-gravity-forms' ),
+					'label'   => esc_html__( 'Add New Search', 'advanced-address-autocomplete-for-gravity-forms' ),
 				],
 			]
 		);

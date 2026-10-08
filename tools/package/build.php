@@ -13,17 +13,24 @@ if ( 'cli' !== PHP_SAPI ) {
 }
 
 $root = dirname( __DIR__, 2 );
-$slug = 'address-autocomplete-for-gravity-forms';
+$slug = 'advanced-address-autocomplete-for-gravity-forms';
+$entry_file = 'address-autocomplete-for-gravity-forms.php';
 
 try {
 	if ( ! class_exists( 'ZipArchive' ) ) {
 		throw new RuntimeException( 'Packaging requires the PHP zip extension.' );
 	}
-	$main = file_get_contents( $root . '/' . $slug . '.php' );
+	$main = file_get_contents( $root . '/' . $entry_file );
+	if ( preg_match( '/^ \* Tested up to:/mi', $main ) ) {
+		throw new RuntimeException( 'Tested up to belongs only in readme.txt, not the PHP plugin header.' );
+	}
 	if ( ! preg_match( '/^ \* Version:\s*([0-9]+\.[0-9]+\.[0-9]+(?:[-.][A-Za-z0-9.-]+)?)\s*$/m', $main, $match ) ) {
 		throw new RuntimeException( 'Cannot read the plugin header version.' );
 	}
 	$version = $match[1];
+	if ( ! preg_match( '/^ \* Text Domain:\s*' . preg_quote( $slug, '/' ) . '\s*$/m', $main ) ) {
+		throw new RuntimeException( 'The text domain must match the WordPress.org release slug.' );
+	}
 	if ( false === strpos( $main, "define( 'GFGEOAC_VERSION', '{$version}' );" ) || false === strpos( $main, "define( 'GFGEOAC_PACKAGE_TYPE', 'free' );" ) ) {
 		throw new RuntimeException( 'Plugin constants do not match the standalone header.' );
 	}
@@ -49,7 +56,7 @@ try {
 		}
 	}
 
-	$paths = [ $slug . '.php', 'readme.txt', 'change_log.txt', 'src', 'assets', 'build', 'languages', 'build.js', 'package.json', 'package-lock.json' ];
+	$paths = [ $entry_file, 'readme.txt', 'change_log.txt', 'src', 'assets', 'build', 'languages', 'build.js', 'package.json', 'package-lock.json' ];
 	$files = [];
 	$extensions = [ 'php', 'js', 'css', 'scss', 'svg', 'png', 'jpg', 'jpeg', 'webp', 'gif', 'json', 'map', 'txt', 'po', 'mo', 'pot' ];
 	foreach ( $paths as $path ) {

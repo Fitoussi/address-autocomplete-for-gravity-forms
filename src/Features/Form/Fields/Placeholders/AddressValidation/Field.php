@@ -99,7 +99,7 @@ class Field extends BaseField {
 	 * @return string
 	 */
 	public function get_form_editor_field_title() {
-		return __( 'Address Validation', 'address-autocomplete-for-gravity-forms' );
+		return __( 'Address Validation', 'advanced-address-autocomplete-for-gravity-forms' );
 	}
 
 	/**
@@ -110,7 +110,7 @@ class Field extends BaseField {
 	 * @return string
 	 */
 	public function get_form_editor_field_description() {
-		return __( 'Verifies and standardizes addresses for delivery workflows. Available in Gravity Geolocation Toolkit and All Access.', 'address-autocomplete-for-gravity-forms' );
+		return __( 'Verifies and standardizes addresses for delivery workflows. Available in Gravity Geolocation Toolkit and All Access.', 'advanced-address-autocomplete-for-gravity-forms' );
 	}
 
 	/**

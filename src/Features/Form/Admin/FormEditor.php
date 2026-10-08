@@ -49,7 +49,7 @@ class FormEditor {
 	public function geolocation_settings_tab( $tabs, $form ) { // phpcs:ignore Generic.CodeAnalysis.UnusedFunctionParameter -- Required Gravity Forms callback signature.
 		$tabs[] = [
 			'id'    => 'gfgeo_geolocation',
-			'title' => esc_html__( 'Address Autocomplete', 'address-autocomplete-for-gravity-forms' ),
+			'title' => esc_html__( 'Address Autocomplete', 'advanced-address-autocomplete-for-gravity-forms' ),
 		];
 		return $tabs;
 	}

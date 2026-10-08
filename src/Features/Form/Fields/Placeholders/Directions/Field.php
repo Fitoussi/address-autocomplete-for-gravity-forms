@@ -102,7 +102,7 @@ class Field extends BaseField {
 	 * @return string The label for the Directions field.
 	 */
 	public function get_form_editor_field_title() {
-		return __( 'Directions & Travel Routes', 'address-autocomplete-for-gravity-forms' );
+		return __( 'Directions & Travel Routes', 'advanced-address-autocomplete-for-gravity-forms' );
 	}
 
 	/**
@@ -113,7 +113,7 @@ class Field extends BaseField {
 	 * @return string
 	 */
 	public function get_form_editor_field_description() {
-		return __( 'Displays calculated travel routes, distance, duration, and step-by-step directions between geolocation points.', 'address-autocomplete-for-gravity-forms' );
+		return __( 'Displays calculated travel routes, distance, duration, and step-by-step directions between geolocation points.', 'advanced-address-autocomplete-for-gravity-forms' );
 	}
 
 	/**

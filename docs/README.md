@@ -72,7 +72,19 @@ Run `npm run package` to build assets and create a versioned ZIP in `dist/`. To 
 
 The builder uses an explicit allowlist, preserves the source identity, refuses to overwrite an existing artifact, and prints a checksum. It excludes tests, private docs, editor configuration, Composer tooling, and dependencies. It does not upload, install, activate, or publish the package.
 
+WordPress.org assigned `advanced-address-autocomplete-for-gravity-forms` after
+submission under the public name Advanced Address Autocomplete for Gravity Forms.
+Use that slug for the release ZIP root, translation domain and bundled catalogs.
+The local checkout/GitHub name and main PHP filename remain unchanged, as do the
+native settings slug and saved field identities. GFGEOAC_PLUGIN_NAME uses the full
+public name; compact menu and field labels remain Address Autocomplete.
+Run Plugin Check on the extracted assigned-slug folder, explicitly supplying the
+same `--slug` value; checking only the old local folder can hide domain mismatches.
+
 Maintain the public description, setup instructions and release notes in the root `readme.txt`; keep the plain-text history in `change_log.txt`. Match the readme stable tag to the plugin version before packaging.
+
+Keep `Tested up to` only in `readme.txt`. The WordPress.org upload checker rejects
+it in the main PHP header; the package builder and fixture enforce that separation.
 
 ## Dashboard screenshots
 

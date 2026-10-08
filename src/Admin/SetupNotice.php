@@ -89,20 +89,20 @@ final class SetupNotice {
 					echo esc_html(
 						sprintf(
 							/* translators: %s: Plugin name. */
-							__( '%s is ready to configure.', 'address-autocomplete-for-gravity-forms' ),
+							__( '%s is ready to configure.', 'advanced-address-autocomplete-for-gravity-forms' ),
 							GFGEOAC_PLUGIN_NAME
 						)
 					);
 				?></strong><br>
-				<?php esc_html_e( 'Add your Google API key, then enable autocomplete in your form\'s field options.', 'address-autocomplete-for-gravity-forms' ); ?>
+				<?php esc_html_e( 'Add your Google API key, then enable autocomplete in your form\'s field options.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
 			</p>
 			<div style="margin-bottom: 12px;">
-				<a class="button button-primary" href="<?php echo esc_url( admin_url( 'admin.php?page=gf_settings&subview=gravityforms_geolocation' ) ); ?>"><?php esc_html_e( 'Set up autocomplete', 'address-autocomplete-for-gravity-forms' ); ?></a>
-				<a class="button button-secondary" href="<?php echo esc_url( Dashboard::get_url() ); ?>"><?php esc_html_e( 'View plugin overview', 'address-autocomplete-for-gravity-forms' ); ?></a>
+				<a class="button button-primary" href="<?php echo esc_url( admin_url( 'admin.php?page=gf_settings&subview=gravityforms_geolocation' ) ); ?>"><?php esc_html_e( 'Set up autocomplete', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+				<a class="button button-secondary" href="<?php echo esc_url( Dashboard::get_url() ); ?>"><?php esc_html_e( 'View plugin overview', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
 				<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" style="display: inline-block; margin-left: 12px;">
 					<input type="hidden" name="action" value="<?php echo esc_attr( self::DISMISS_ACTION ); ?>">
 					<?php wp_nonce_field( self::DISMISS_ACTION ); ?>
-					<button class="button-link" type="submit"><?php esc_html_e( 'Dismiss', 'address-autocomplete-for-gravity-forms' ); ?></button>
+					<button class="button-link" type="submit"><?php esc_html_e( 'Dismiss', 'advanced-address-autocomplete-for-gravity-forms' ); ?></button>
 				</form>
 			</div>
 		</div>
@@ -128,7 +128,7 @@ final class SetupNotice {
 	 */
 	public static function dismiss() {
 		if ( ! current_user_can( 'manage_options' ) ) {
-			wp_die( esc_html__( 'You do not have permission to dismiss this notice.', 'address-autocomplete-for-gravity-forms' ), '', [ 'response' => 403 ] );
+			wp_die( esc_html__( 'You do not have permission to dismiss this notice.', 'advanced-address-autocomplete-for-gravity-forms' ), '', [ 'response' => 403 ] );
 		}
 		check_admin_referer( self::DISMISS_ACTION );
 		update_option( self::OPTION, 'dismissed', false );

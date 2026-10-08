@@ -102,7 +102,7 @@ final class Registrar {
 
 		$group     = [
 			'name'   => 'gfgeo_geolocation_fields',
-			'label'  => esc_html__( 'Geolocation Fields', 'address-autocomplete-for-gravity-forms' ),
+			'label'  => esc_html__( 'Geolocation Fields', 'advanced-address-autocomplete-for-gravity-forms' ),
 			'fields' => [],
 		];
 		$remaining = [];

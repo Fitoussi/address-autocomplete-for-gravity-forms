@@ -203,7 +203,7 @@ class AddOn extends \GFAddOn {
 	public function load_text_domain() {
 		// Bundled translations need their custom path before directory language packs exist.
 		// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- Retain bundled translations on supported WordPress versions.
-		load_plugin_textdomain( 'address-autocomplete-for-gravity-forms', false, dirname( GFGEOAC_BASENAME ) . '/languages/' );
+		load_plugin_textdomain( 'advanced-address-autocomplete-for-gravity-forms', false, dirname( GFGEOAC_BASENAME ) . '/languages/' );
 	}
 
 	/**
@@ -252,16 +252,16 @@ class AddOn extends \GFAddOn {
 			'gfgeoFormEditorStrings',
 			[
 				'autocomplete'     => [
-					'allCountries' => __( 'All countries', 'address-autocomplete-for-gravity-forms' ),
-					'allTypes'     => __( 'All place types', 'address-autocomplete-for-gravity-forms' ),
+					'allCountries' => __( 'All countries', 'advanced-address-autocomplete-for-gravity-forms' ),
+					'allTypes'     => __( 'All place types', 'advanced-address-autocomplete-for-gravity-forms' ),
 				],
 				'unavailableField' => [
 					/* translators: %s: Premium field title. */
-					'title'          => __( 'The %s field is not available.', 'address-autocomplete-for-gravity-forms' ),
+					'title'          => __( 'The %s field is not available.', 'advanced-address-autocomplete-for-gravity-forms' ),
 					/* translators: %s: Premium field title. */
-					'message'        => __( 'The %s field is available with Gravity Geolocation.', 'address-autocomplete-for-gravity-forms' ),
-					'upgradeNow'     => __( 'View packages', 'address-autocomplete-for-gravity-forms' ),
-					'unlockFeatures' => __( 'to explore additional location tools.', 'address-autocomplete-for-gravity-forms' ),
+					'message'        => __( 'The %s field is available with Gravity Geolocation.', 'advanced-address-autocomplete-for-gravity-forms' ),
+					'upgradeNow'     => __( 'View packages', 'advanced-address-autocomplete-for-gravity-forms' ),
+					'unlockFeatures' => __( 'to explore additional location tools.', 'advanced-address-autocomplete-for-gravity-forms' ),
 				],
 			]
 		);

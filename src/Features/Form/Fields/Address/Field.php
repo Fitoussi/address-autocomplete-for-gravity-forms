@@ -149,7 +149,7 @@ class Field extends BaseField {
 	 * @return string
 	 */
 	public function get_form_editor_field_title() {
-		return __( 'Address', 'address-autocomplete-for-gravity-forms' );
+		return __( 'Address', 'advanced-address-autocomplete-for-gravity-forms' );
 	}
 
 	/**
@@ -160,7 +160,7 @@ class Field extends BaseField {
 	 * @return string
 	 */
 	public function get_form_editor_field_description() {
-		return __( 'A single-line address field with Google Places autocomplete.', 'address-autocomplete-for-gravity-forms' );
+		return __( 'A single-line address field with Google Places autocomplete.', 'advanced-address-autocomplete-for-gravity-forms' );
 	}
 
 	/**
@@ -367,7 +367,7 @@ class Field extends BaseField {
 
 		if ( ! empty( $settings[ $context ] ) ) {
 			$sep      = ( 'entry_list' === $context ) ? '<br /> ' : ' - ';
-			$address .= $sep . '<a href="' . esc_url( 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( $address ) ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Open Map', 'address-autocomplete-for-gravity-forms' ) . '</a>';
+			$address .= $sep . '<a href="' . esc_url( 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( $address ) ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Open Map', 'advanced-address-autocomplete-for-gravity-forms' ) . '</a>';
 		}
 
 		return $address;

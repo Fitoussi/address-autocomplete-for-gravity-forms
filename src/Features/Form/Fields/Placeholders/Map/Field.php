@@ -100,7 +100,7 @@ class Field extends BaseField {
 	 * @return string
 	 */
 	public function get_form_editor_field_title() {
-		return __( 'Map', 'address-autocomplete-for-gravity-forms' );
+		return __( 'Map', 'advanced-address-autocomplete-for-gravity-forms' );
 	}
 
 	/**
@@ -111,7 +111,7 @@ class Field extends BaseField {
 	 * @return string
 	 */
 	public function get_form_editor_field_description() {
-		return __( 'Displays an interactive map linked to address or coordinate fields.', 'address-autocomplete-for-gravity-forms' );
+		return __( 'Displays an interactive map linked to address or coordinate fields.', 'advanced-address-autocomplete-for-gravity-forms' );
 	}
 
 	/**
