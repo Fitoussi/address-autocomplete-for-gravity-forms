@@ -16,9 +16,9 @@ $addon  = file_get_contents( $root . '/src/Core/AddOn.php' );
 $checks = [];
 
 foreach ( [
-	'Plugin Name' => 'Advanced Address Autocomplete for Gravity Forms',
+	'Plugin Name' => 'WPGeo Address Autocomplete for Gravity Forms',
 	'Version'     => '1.0.0',
-	'Text Domain' => 'advanced-address-autocomplete-for-gravity-forms',
+	'Text Domain' => 'wpgeo-address-autocomplete-for-gravity-forms',
 	'License'     => 'GPL-3.0-or-later',
 ] as $header => $expected ) {
 	$checks[ $header ] = 1 === preg_match( '/^ \* ' . preg_quote( $header, '/' ) . ':\s*' . preg_quote( $expected, '/' ) . '\s*$/m', $main );
@@ -26,7 +26,7 @@ foreach ( [
 
 foreach ( [
 	'GFGEOAC_VERSION'      => '1.0.0',
-	'GFGEOAC_PLUGIN_NAME'  => 'Advanced Address Autocomplete for Gravity Forms',
+	'GFGEOAC_PLUGIN_NAME'  => 'WPGeo Address Autocomplete for Gravity Forms',
 	'GFGEOAC_PACKAGE_TYPE' => 'free',
 	'GFGEOAC_PREFIX'       => 'gfgeo',
 	'GFGEOAC_MIN_HOST_VERSION' => '2.10.3',
@@ -47,7 +47,7 @@ $checks['WordPress update identity']      = false === strpos( $main, 'Update URI
 
 $checks['single native host requirement'] = false !== strpos( $main, "define( 'GFGEOAC_MIN_HOST_VERSION', '2.10.3' );" )
 	&& false === strpos( $main, '$dependencies = [' );
-$checks['bundled translation path retained'] = false !== strpos( $addon, "load_plugin_textdomain( 'advanced-address-autocomplete-for-gravity-forms', false, dirname( GFGEOAC_BASENAME ) . '/languages/' );" );
+$checks['bundled translation path retained'] = false !== strpos( $addon, "load_plugin_textdomain( 'wpgeo-address-autocomplete-for-gravity-forms', false, dirname( GFGEOAC_BASENAME ) . '/languages/' );" );
 
 // Keep direct-access guards recognizable to Plugin Check as well as PHP.
 $source_files = new RecursiveIteratorIterator( new RecursiveDirectoryIterator( $root . '/src', FilesystemIterator::SKIP_DOTS ) );
@@ -75,7 +75,7 @@ foreach ( [ 'free', 'location', 'directions', 'toolkit', 'search', 'allaccess' ]
 }
 
 foreach ( [ 'es_ES', 'he_IL', 'pl_PL' ] as $locale ) {
-	$checks[ 'translation identity: ' . $locale ] = is_file( $root . '/languages/advanced-address-autocomplete-for-gravity-forms-' . $locale . '.mo' );
+	$checks[ 'translation identity: ' . $locale ] = is_file( $root . '/languages/wpgeo-address-autocomplete-for-gravity-forms-' . $locale . '.mo' );
 }
 
 echo json_encode( $checks, JSON_PRETTY_PRINT ) . PHP_EOL;

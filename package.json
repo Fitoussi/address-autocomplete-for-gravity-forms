@@ -11,10 +11,10 @@
 		"test:autocomplete": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tests/js/standalone-autocomplete.test.mjs",
 		"test:editor": "node --disable-warning=MODULE_TYPELESS_PACKAGE_JSON --test tests/js/standalone-editor.test.mjs tests/js/geolocation-panel-state.test.mjs",
 		"test:php": "php tests/helpers/standalone-identity.php && php tests/helpers/standalone-wiring.php && php tests/helpers/standalone-package.php && php tests/activation-notice.php && php tests/overview.php && php tests/bootstrap-conflict.php",
-		"css": "sass assets/scss/admin/gfgeo-admin.scss:build/css/admin/gfgeo-admin.css assets/scss/admin/gfgeo-product-dashboard.scss:build/css/admin/gfgeo-product-dashboard.css assets/scss/search-unavailable.scss:build/css/search-unavailable.css --style=expanded --no-source-map",
-		"css:min": "sass assets/scss/admin/gfgeo-admin.scss:build/css/admin/gfgeo-admin.min.css assets/scss/admin/gfgeo-product-dashboard.scss:build/css/admin/gfgeo-product-dashboard.min.css assets/scss/search-unavailable.scss:build/css/search-unavailable.min.css --style=compressed --no-source-map",
+		"css": "sass assets/scss/admin/gfgeo-admin.scss:build/css/admin/gfgeo-admin.css assets/scss/admin/gfgeo-product-dashboard.scss:build/css/admin/gfgeo-product-dashboard.css --style=expanded --no-source-map",
+		"css:min": "sass assets/scss/admin/gfgeo-admin.scss:build/css/admin/gfgeo-admin.min.css assets/scss/admin/gfgeo-product-dashboard.scss:build/css/admin/gfgeo-product-dashboard.min.css --style=compressed --no-source-map",
 		"watch": "chokidar 'assets/js/**/*.js' -c 'node build.js'",
-		"watch:css": "sass --watch assets/scss/admin/gfgeo-admin.scss:build/css/admin/gfgeo-admin.css assets/scss/admin/gfgeo-product-dashboard.scss:build/css/admin/gfgeo-product-dashboard.css assets/scss/search-unavailable.scss:build/css/search-unavailable.css --style=expanded",
+		"watch:css": "sass --watch assets/scss/admin/gfgeo-admin.scss:build/css/admin/gfgeo-admin.css assets/scss/admin/gfgeo-product-dashboard.scss:build/css/admin/gfgeo-product-dashboard.css --style=expanded",
 		"watch:all": "run-p watch watch:css"
 	},
 	"devDependencies": {

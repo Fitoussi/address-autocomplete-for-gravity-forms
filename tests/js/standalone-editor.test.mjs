@@ -28,7 +28,7 @@ function fixture({advanced = true} = {}) {
 				<div class="restriction-option-area_bounds"><input id="gfgeo-autocomplete-bounds-sw-point"></div>
 			</div>
 		</div>
-		<div class="add-buttons"><button data-type="gfgeo_map" data-icon="gfgeo-pro-disabled" value="Map">Map</button></div>
+		<div class="add-buttons"><button data-type="gfgeo_address" value="Address">Address</button><button data-type="text" value="Text">Text</button></div>
 	`, {runScripts: 'outside-only', pretendToBeVisual: true, url: 'https://example.test/'});
 	const {window} = dom;
 	window.matchMedia = () => ({matches: false, addListener() {}, removeListener() {}});
@@ -41,10 +41,7 @@ function fixture({advanced = true} = {}) {
 		addFilter: (name, callback) => {state.filters[name] = callback;},
 		instances: {dialogAlert: (...args) => state.dialogs.push(args)},
 	};
-	window.gfgeoFormEditorStrings = {unavailableField: {
-		title: 'The %s field is not available.', message: 'The %s field is available with Gravity Geolocation.',
-		upgradeNow: 'View packages', unlockFeatures: 'to explore additional location tools.',
-	}};
+	window.gfgeoFormEditorStrings = {autocomplete: {allCountries: 'All countries', allTypes: 'All place types'}};
 	window.eval(bundle);
 	window.GFGEO_FormEditor.initializeEditor();
 	return {dom, window, state};
@@ -55,6 +52,7 @@ test('editor bundle has no framework, connection or premium-feature imports', ()
 	assert.ok(map.sources.every(source => source.startsWith('../../../assets/js/')));
 	assert.ok(!map.sources.some(source => /wpgeo-framework|quick-setups|relationship|\/fields\//.test(source)));
 	assert.ok(map.sources.some(source => source.endsWith('vendor/choices.js')));
+	assert.ok(!map.sources.some(source => source.endsWith('unavailable-fields.js')));
 });
 
 test('Autocomplete heading and panel precede Advanced without changing state or saved fields', () => {
@@ -127,14 +125,16 @@ test('switching fields retains later custom multiselect choices, user changes sa
 	} finally {dom.window.close();}
 });
 
-test('premium discovery buttons show a dialog and cannot add a working field', () => {
+test('editor adds no disabled field buttons, upgrade dialog or insertion guard', () => {
 	const {dom, window, state} = fixture();
 	try {
-		window.document.querySelector('[data-type="gfgeo_map"]').click();
-		assert.equal(state.dialogs.length, 1);
-		const canAdd = state.filters.gform_form_editor_can_field_be_added;
-		assert.equal(canAdd(true, 'gfgeo_map'), false);
-		assert.equal(canAdd(true, 'gfgeo_address'), true);
+		assert.deepEqual(Array.from(window.document.querySelectorAll('.add-buttons button'), button => button.dataset.type), ['gfgeo_address', 'text']);
+		assert.equal(window.document.querySelectorAll('[data-icon*="gfgeo-pro-disabled"]').length, 0);
+		window.document.querySelector('[data-type="gfgeo_address"]').click();
+		assert.equal(state.dialogs.length, 0);
+		assert.equal(state.filters.gform_form_editor_can_field_be_added, undefined);
+		assert.equal(bundle.includes('gfgeo-pro-disabled'), false);
+		assert.equal(bundle.includes('unavailableField'), false);
 		window.GFGEO_FormEditor.loadFieldSettings({type: 'text'});
 		assert.equal(window.document.querySelector('#gfgeo_geolocation_tab_toggle').style.display, 'none');
 	} finally {dom.window.close();}

@@ -20,22 +20,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<header class="gfgeo-product-dashboard__header">
 		<div>
 			<p class="gfgeo-product-dashboard__eyebrow">
-				<?php esc_html_e( 'For Gravity Forms', 'advanced-address-autocomplete-for-gravity-forms' ); ?></p>
+				<?php esc_html_e( 'For Gravity Forms', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></p>
 			<h1><?php echo esc_html( $product_name ); ?></h1>
 		</div>
 		<div class="gfgeo-product-dashboard__actions">
 			<span class="gfgeo-product-dashboard__version"><?php echo esc_html( 'v' . $version ); ?></span>
 			<a class="button"
-				href="<?php echo esc_url( Dashboard::get_url( 'products' ) ); ?>"><?php esc_html_e( 'Explore Plugins', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+				href="<?php echo esc_url( Dashboard::get_url( 'products' ) ); ?>"><?php esc_html_e( 'Explore Plugins', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 			<a class="button"
-				href="<?php echo esc_url( $settings_url ); ?>"><?php esc_html_e( 'Open Settings', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+				href="<?php echo esc_url( $settings_url ); ?>"><?php esc_html_e( 'Open Settings', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 			<a class="button button-primary" href="<?php echo esc_url( $demo_url ); ?>" target="_blank"
-				rel="noopener noreferrer"><?php esc_html_e( 'View Live Demos', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+				rel="noopener noreferrer"><?php esc_html_e( 'View Live Demos', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 		</div>
 	</header>
 	<hr class="wp-header-end">
 	<nav class="gfgeo-product-dashboard__nav"
-		aria-label="<?php esc_attr_e( 'Product overview sections', 'advanced-address-autocomplete-for-gravity-forms' ); ?>">
+		aria-label="<?php esc_attr_e( 'Product overview sections', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>">
 		<?php foreach ( $tabs as $gfgeoac_key => $gfgeoac_label ) : ?>
 			<a href="<?php echo esc_url( Dashboard::get_url( $gfgeoac_key ) ); ?>"
 				aria-current="<?php echo $section === $gfgeoac_key ? 'page' : 'false'; ?>"><?php echo esc_html( $gfgeoac_label ); ?></a>
@@ -47,31 +47,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<section class="gfgeo-product-dashboard__card gfgeo-product-dashboard__hero">
 					<div>
 						<p class="gfgeo-product-dashboard__eyebrow">
-							<?php esc_html_e( 'Your installed package', 'advanced-address-autocomplete-for-gravity-forms' ); ?></p>
+							<?php esc_html_e( 'Your installed package', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></p>
 						<h2><?php echo esc_html( $hero_title ); ?></h2>
-						<p><?php esc_html_e( 'Modern Google Places autocomplete, included free. Collect addresses with a dedicated single-line field or native Address autofill, tailor suggestions to your audience, and require a selection when it matters.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+						<p><?php esc_html_e( 'Modern Google Places autocomplete, included free. Collect addresses with a dedicated single-line field or native Address autofill, tailor suggestions to your audience, and require a selection when it matters.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 						</p>
 						<div class="gfgeo-product-dashboard__actions">
 							<a class="button button-primary"
-								href="#included-features"><?php esc_html_e( 'Explore my features', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+								href="#included-features"><?php esc_html_e( 'Explore my features', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 							<?php
 							if ( $available ) :
 								?>
 								<a class="button"
-									href="#available-features"><?php esc_html_e( 'See what else is available', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a><?php endif; ?>
+									href="#available-features"><?php esc_html_e( 'See what else is available', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a><?php endif; ?>
 						</div>
 						<p class="gfgeo-product-dashboard__note">
-							<?php esc_html_e( 'Location tools require your own Google API configuration. Google service usage and billing are separate.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+							<?php esc_html_e( 'Location tools require your own Google API configuration. Google service usage and billing are separate.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 						</p>
 					</div>
 					<div class="gfgeo-product-dashboard__package-summary">
 						<span
-							class="gfgeo-product-dashboard__badge"><?php esc_html_e( 'Installed package', 'advanced-address-autocomplete-for-gravity-forms' ); ?></span>
+							class="gfgeo-product-dashboard__badge"><?php esc_html_e( 'Installed package', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></span>
 						<h3><?php echo esc_html( $package_name ); ?></h3>
-						<p><?php esc_html_e( 'Green badges identify included tools. Follow their setup guides to put them to work.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+						<p><?php esc_html_e( 'Green badges identify included tools. Follow their setup guides to put them to work.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 						</p>
 						<a
-							href="<?php echo esc_url( $settings_url ); ?>"><?php esc_html_e( 'Configuration & settings', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+							href="<?php echo esc_url( $settings_url ); ?>"><?php esc_html_e( 'Configuration & settings', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 					</div>
 				</section>
 				<?php
@@ -85,9 +85,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 						aria-labelledby="<?php echo esc_attr( $gfgeoac_group . '-heading' ); ?>">
 						<div class="gfgeo-product-dashboard__group-heading">
 							<h2 id="<?php echo esc_attr( $gfgeoac_group . '-heading' ); ?>">
-								<?php echo esc_html( 'included' === $gfgeoac_group ? __( 'Included in your package', 'advanced-address-autocomplete-for-gravity-forms' ) : __( 'Take your forms further', 'advanced-address-autocomplete-for-gravity-forms' ) ); ?>
+								<?php echo esc_html( 'included' === $gfgeoac_group ? __( 'Included in your package', 'wpgeo-address-autocomplete-for-gravity-forms' ) : __( 'Take your forms further', 'wpgeo-address-autocomplete-for-gravity-forms' ) ); ?>
 							</h2>
-							<p><?php echo esc_html( 'included' === $gfgeoac_group ? __( 'Your available building blocks. Choose a tool and open its guide.', 'advanced-address-autocomplete-for-gravity-forms' ) : __( 'Other Gravity Geolocation packages add these capabilities. Explore the demos or compare packages to find the right fit.', 'advanced-address-autocomplete-for-gravity-forms' ) ); ?>
+							<p><?php echo esc_html( 'included' === $gfgeoac_group ? __( 'Your available building blocks. Choose a tool and open its guide.', 'wpgeo-address-autocomplete-for-gravity-forms' ) : __( 'Other Gravity Geolocation packages add these capabilities. Explore the demos or compare packages to find the right fit.', 'wpgeo-address-autocomplete-for-gravity-forms' ) ); ?>
 							</p>
 						</div>
 						<div class="gfgeo-product-dashboard__feature-grid">
@@ -99,7 +99,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 										<span class="dashicons dashicons-<?php echo esc_attr( $gfgeoac_feature['icon'] ); ?>"
 											aria-hidden="true"></span>
 										<span
-											class="gfgeo-product-dashboard__badge <?php echo $gfgeoac_feature['included'] ? '' : 'gfgeo-product-dashboard__badge--available'; ?>"><?php echo esc_html( $gfgeoac_feature['included'] ? __( 'Included in your package', 'advanced-address-autocomplete-for-gravity-forms' ) : __( 'Available in other packages', 'advanced-address-autocomplete-for-gravity-forms' ) ); ?></span>
+											class="gfgeo-product-dashboard__badge <?php echo $gfgeoac_feature['included'] ? '' : 'gfgeo-product-dashboard__badge--available'; ?>"><?php echo esc_html( $gfgeoac_feature['included'] ? __( 'Included in your package', 'wpgeo-address-autocomplete-for-gravity-forms' ) : __( 'Available in other packages', 'wpgeo-address-autocomplete-for-gravity-forms' ) ); ?></span>
 									</div>
 									<h3><?php echo esc_html( $gfgeoac_feature['title'] ); ?></h3>
 									<p><?php echo esc_html( $gfgeoac_feature['description'] ); ?></p>
@@ -110,20 +110,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 											data-screenshot="<?php echo esc_attr( $gfgeoac_item_id ); ?>">
 											<?php // Editorial replacement target: our own local screenshot of this feature. ?>
 											<figcaption>
-												<?php echo esc_html( $gfgeoac_feature['title'] ); ?><small><?php esc_html_e( 'Screenshot placeholder', 'advanced-address-autocomplete-for-gravity-forms' ); ?></small>
+												<?php echo esc_html( $gfgeoac_feature['title'] ); ?><small><?php esc_html_e( 'Screenshot placeholder', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></small>
 											</figcaption>
 										</figure>
 									<?php endif; ?>
 									<div class="gfgeo-product-dashboard__feature-footer">
 										<?php if ( $gfgeoac_feature['included'] ) : ?>
 											<a href="<?php echo esc_url( $docs_url . $gfgeoac_feature['doc'] ); ?>" target="_blank"
-												rel="noopener noreferrer"><?php esc_html_e( 'Setup & documentation', 'advanced-address-autocomplete-for-gravity-forms' ); ?><span
+												rel="noopener noreferrer"><?php esc_html_e( 'Setup & documentation', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?><span
 													class="screen-reader-text"> —
 													<?php echo esc_html( $gfgeoac_feature['title'] ); ?></span></a>
 										<?php else : ?>
 											<p><span class="dashicons dashicons-category" aria-hidden="true"></span><span><?php
 											/* translators: %s: Comma-separated package names that include this feature. */
-											echo esc_html( sprintf( __( 'Included in: %s', 'advanced-address-autocomplete-for-gravity-forms' ), implode( ', ', array_intersect_key( $packages, array_flip( $gfgeoac_feature['packages'] ) ) ) ) );
+											echo esc_html( sprintf( __( 'Included in: %s', 'wpgeo-address-autocomplete-for-gravity-forms' ), implode( ', ', array_intersect_key( $packages, array_flip( $gfgeoac_feature['packages'] ) ) ) ) );
 											?></span></p>
 											<?php $gfgeoac_feature_demos = \GravityGeolocationAutocomplete\Admin\DashboardFeatures::get_demo_links( $gfgeoac_item_id ); ?>
 											<?php if ( $gfgeoac_feature_demos ) : ?>
@@ -145,39 +145,39 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php endforeach; ?>
 				<?php if ( $available ) : ?>
 					<section class="gfgeo-product-dashboard__upgrade">
-						<h2><?php esc_html_e( 'Choose the tools your next project needs', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+						<h2><?php esc_html_e( 'Choose the tools your next project needs', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 						</h2>
-						<p><?php esc_html_e( 'Location and Directions are focused alternatives. Toolkit combines the geolocation tools. All Access adds Gravity Search.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+						<p><?php esc_html_e( 'Location and Directions are focused alternatives. Toolkit combines the geolocation tools. All Access adds Gravity Search.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 						</p>
 						<a class="button button-primary" href="<?php echo esc_url( $pricing_url ); ?>" target="_blank"
-							rel="noopener noreferrer"><?php esc_html_e( 'View packages & pricing', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+							rel="noopener noreferrer"><?php esc_html_e( 'View packages & pricing', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 					</section>
 				<?php endif; ?>
 			<?php elseif ( 'comparison' === $section ) : ?>
 				<section class="gfgeo-product-dashboard__card">
-					<h2><?php esc_html_e( 'Find the right package for your project', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+					<h2><?php esc_html_e( 'Find the right package for your project', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 					</h2>
-					<p><?php esc_html_e( 'Your installed package is highlighted. Packages are alternative builds, not add-ons to stack together; site allowances and license status are separate from the feature list.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+					<p><?php esc_html_e( 'Your installed package is highlighted. Packages are alternative builds, not add-ons to stack together; site allowances and license status are separate from the feature list.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 					</p>
 					<p class="gfgeo-product-dashboard__note">
-						<?php esc_html_e( 'On narrow screens, scroll the comparison horizontally to see every package.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+						<?php esc_html_e( 'On narrow screens, scroll the comparison horizontally to see every package.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 					</p>
 					<div class="gfgeo-product-dashboard__table-wrap" tabindex="0" role="region"
-						aria-label="<?php esc_attr_e( 'Feature comparison — scroll to see all columns', 'advanced-address-autocomplete-for-gravity-forms' ); ?>">
+						aria-label="<?php esc_attr_e( 'Feature comparison — scroll to see all columns', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>">
 						<table>
 							<caption class="screen-reader-text">
-								<?php esc_html_e( 'Gravity package feature comparison', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+								<?php esc_html_e( 'Gravity package feature comparison', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 							</caption>
 							<thead>
 								<tr>
 									<th scope="col">
-										<?php esc_html_e( 'Feature', 'advanced-address-autocomplete-for-gravity-forms' ); ?></th>
+										<?php esc_html_e( 'Feature', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></th>
 									<?php foreach ( $packages as $gfgeoac_package_id => $gfgeoac_label ) : ?>
 										<th scope="col"
 											class="<?php echo GFGEOAC_PACKAGE_TYPE === $gfgeoac_package_id ? 'is-current' : ''; ?>">
 											<?php echo esc_html( $gfgeoac_label ); ?>
 											<?php if ( GFGEOAC_PACKAGE_TYPE === $gfgeoac_package_id ) : ?>
-												<small><?php esc_html_e( 'Installed', 'advanced-address-autocomplete-for-gravity-forms' ); ?></small>
+												<small><?php esc_html_e( 'Installed', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></small>
 											<?php endif; ?>
 										</th>
 									<?php endforeach; ?>
@@ -191,7 +191,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 										foreach ( $packages as $gfgeoac_package_id => $gfgeoac_label ) :
 											// The installed column uses files; others describe standard composition.
 											$gfgeoac_has_feature  = GFGEOAC_PACKAGE_TYPE === $gfgeoac_package_id ? $gfgeoac_feature['included'] : \in_array( $gfgeoac_package_id, $gfgeoac_feature['packages'], true );
-											$gfgeoac_status_label = $gfgeoac_has_feature ? __( 'Included', 'advanced-address-autocomplete-for-gravity-forms' ) : __( 'Not included', 'advanced-address-autocomplete-for-gravity-forms' );
+											$gfgeoac_status_label = $gfgeoac_has_feature ? __( 'Included', 'wpgeo-address-autocomplete-for-gravity-forms' ) : __( 'Not included', 'wpgeo-address-autocomplete-for-gravity-forms' );
 											?>
 											<td
 												class="<?php echo GFGEOAC_PACKAGE_TYPE === $gfgeoac_package_id ? 'is-current' : ''; ?>">
@@ -217,16 +217,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</tbody>
 						</table>
 					</div>
-					<p><?php esc_html_e( 'Google API usage and any required form-builder editions or add-ons are separate. Optional integrations may require other plugins. Feature checks show package contents, not setup or license status.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+					<p><?php esc_html_e( 'Google API usage and any required form-builder editions or add-ons are separate. Optional integrations may require other plugins. Feature checks show package contents, not setup or license status.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 					</p>
 					<a class="button button-primary" href="<?php echo esc_url( $pricing_url ); ?>" target="_blank"
-						rel="noopener noreferrer"><?php esc_html_e( 'View packages & pricing', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+						rel="noopener noreferrer"><?php esc_html_e( 'View packages & pricing', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 				</section>
 			<?php elseif ( 'products' === $section ) : ?>
 				<section class="gfgeo-product-dashboard__card">
-					<h2><?php esc_html_e( 'More tools for your WordPress site', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+					<h2><?php esc_html_e( 'More tools for your WordPress site', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 					</h2>
-					<p><?php esc_html_e( 'Explore our other plugins. These descriptions are bundled locally; nothing is downloaded or installed from this page.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+					<p><?php esc_html_e( 'Explore our other plugins. These descriptions are bundled locally; nothing is downloaded or installed from this page.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 					</p>
 				</section>
 				<div class="gfgeo-product-dashboard__feature-grid">
@@ -235,43 +235,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 							<h2><?php echo esc_html( $gfgeoac_product['name'] ); ?></h2>
 							<p><?php echo esc_html( $gfgeoac_product['description'] ); ?></p>
 							<a class="button" href="<?php echo esc_url( $gfgeoac_product['url'] ); ?>" target="_blank"
-								rel="noopener noreferrer"><?php esc_html_e( 'Learn more', 'advanced-address-autocomplete-for-gravity-forms' ); ?><span
+								rel="noopener noreferrer"><?php esc_html_e( 'Learn more', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?><span
 									class="screen-reader-text"> — <?php echo esc_html( $gfgeoac_product['name'] ); ?></span></a>
 						</article>
 					<?php endforeach; ?>
 				</div>
 			<?php else : ?>
 				<section class="gfgeo-product-dashboard__card">
-					<h2><?php esc_html_e( 'From installed to working', 'advanced-address-autocomplete-for-gravity-forms' ); ?></h2>
+					<h2><?php esc_html_e( 'From installed to working', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></h2>
 					<ol>
-						<li><?php esc_html_e( 'Activate Gravity Forms and open this plugin’s native Settings screen.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+						<li><?php esc_html_e( 'Activate Gravity Forms and open this plugin’s native Settings screen.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 						</li>
-						<li><?php esc_html_e( 'Enter your Google browser API key. Enable Maps JavaScript API and Places API (New), configure billing, and restrict the key to your website.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+						<li><?php esc_html_e( 'Enter your Google browser API key. Enable Maps JavaScript API and Places API (New), configure billing, and restrict the key to your website.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 						</li>
 						<li><?php echo esc_html( $help_step ); ?></li>
-						<li><?php esc_html_e( 'Save your form before previewing. Test the complete visitor flow.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+						<li><?php esc_html_e( 'Save your form before previewing. Test the complete visitor flow.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 						</li>
 					</ol>
 					<a class="button button-primary"
-						href="<?php echo esc_url( $settings_url ); ?>"><?php esc_html_e( 'Open Settings', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+						href="<?php echo esc_url( $settings_url ); ?>"><?php esc_html_e( 'Open Settings', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 					<a class="button"
 						href="<?php echo esc_url( $docs_url . 'google-maps-api-keys-gravity-geolocation/' ); ?>"
 						target="_blank"
-						rel="noopener noreferrer"><?php esc_html_e( 'Google API setup guide', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+						rel="noopener noreferrer"><?php esc_html_e( 'Google API setup guide', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 				</section>
 				<section class="gfgeo-product-dashboard__card">
-					<h2><?php esc_html_e( 'Something not working?', 'advanced-address-autocomplete-for-gravity-forms' ); ?></h2>
-					<p><?php esc_html_e( 'Check that autocomplete is enabled, then verify the browser API key, required Google services, billing and key restrictions.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+					<h2><?php esc_html_e( 'Something not working?', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></h2>
+					<p><?php esc_html_e( 'Check that autocomplete is enabled, then verify the browser API key, required Google services, billing and key restrictions.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 					</p>
-					<p><?php esc_html_e( 'Autocomplete fills an address after a visitor selects a suggestion. This free plugin does not provide current-location detection, manual geocoding or connected dynamic location fields.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+					<p><?php esc_html_e( 'Autocomplete fills an address after a visitor selects a suggestion. This free plugin does not provide current-location detection, manual geocoding or connected dynamic location fields.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 					</p>
-					<p><?php esc_html_e( 'Include the plugin version, field type and steps to reproduce when asking for help. Never share API keys or other credentials in a public post.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+					<p><?php esc_html_e( 'Include the plugin version, field type and steps to reproduce when asking for help. Never share API keys or other credentials in a public post.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 					</p>
 					<div class="gfgeo-product-dashboard__actions">
 						<a class="button" href="<?php echo esc_url( $docs_url ); ?>" target="_blank"
-							rel="noopener noreferrer"><?php esc_html_e( 'Browse documentation', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+							rel="noopener noreferrer"><?php esc_html_e( 'Browse documentation', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 						<a class="button" href="https://geomywp.com/support/" target="_blank"
-							rel="noopener noreferrer"><?php esc_html_e( 'View support options', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+							rel="noopener noreferrer"><?php esc_html_e( 'View support options', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 					</div>
 				</section>
 			<?php endif; ?>

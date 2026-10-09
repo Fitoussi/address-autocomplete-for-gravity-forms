@@ -1,4 +1,4 @@
-# Address Autocomplete for Gravity Forms
+# WPGeo Address Autocomplete for Gravity Forms
 
 ## Standalone bootstrap convention
 
@@ -33,13 +33,13 @@ This standalone free plugin adds Google Places suggestions to its single-line Ad
 
 `src/Core/AddOn.php` connects the plugin to Gravity Forms. It registers the explicit field list through `src/Common/Form/Fields/Registrar.php`, starts the editor directly, and starts the frontend processor. The registrar also positions the single plugin field group.
 
-`src/Features/Form/Fields/Address/` contains the Address renderer and editor settings. The four classes in `Fields/Placeholders/` expose promotional editor buttons only; they do not create functioning premium fields or save their submitted values.
+`src/Features/Form/Fields/Address/` contains the functional Address renderer and editor settings. Only this custom field is registered; native Address autocomplete remains supported. The four disabled premium field buttons, placeholder classes and upgrade-dialog code were permanently removed by the owner on October 9. Keep product discovery on the local overview instead.
 
 `src/Features/Form/Admin/FormEditor.php` owns the Address Autocomplete tab, tooltips, and new-field defaults. `src/Features/Form/Runtime/FormGeoProcessor.php` collects supported Address options and enqueues the standalone assets without modifying saved form data.
 
-`src/Admin/` contains global settings, the product overview, feature comparisons, and unavailable Search entry points. Reference countries and languages are bundled in `src/Helpers/ReferenceData.php`.
+`src/Admin/` contains global settings, the product overview, feature comparisons and dismissible setup guidance. Unrelated Search toolbar/buttons/notices and their source/generated assets were removed in response to the October 9 review. Reference countries and languages are bundled in `src/Helpers/ReferenceData.php`.
 
-`assets/js/autocomplete/` separates Google loading, autocomplete requests, saved options, and native Address population. `assets/js/editor/` contains builder controls and unavailable-field dialogs. Readable JavaScript and SCSS are included in installable packages alongside generated assets.
+`assets/js/autocomplete/` separates Google loading, autocomplete requests, saved options, and native Address population. `assets/js/editor/` contains functional autocomplete builder controls, without disabled-field promotions or upgrade dialogs. Readable JavaScript and SCSS are included in installable packages alongside generated assets.
 
 ## Compatibility boundaries
 
@@ -72,14 +72,29 @@ Run `npm run package` to build assets and create a versioned ZIP in `dist/`. To 
 
 The builder uses an explicit allowlist, preserves the source identity, refuses to overwrite an existing artifact, and prints a checksum. It excludes tests, private docs, editor configuration, Composer tooling, and dependencies. It does not upload, install, activate, or publish the package.
 
-WordPress.org assigned `advanced-address-autocomplete-for-gravity-forms` after
-submission under the public name Advanced Address Autocomplete for Gravity Forms.
-Use that slug for the release ZIP root, translation domain and bundled catalogs.
+The October 9 review requested a distinctive name. The owner chose
+WPGeo Address Autocomplete for Gravity Forms and the requested new slug is
+`wpgeo-address-autocomplete-for-gravity-forms`. This slug is prepared locally,
+NOT yet reserved/confirmed by the reviewer. Use it for the corrected ZIP root,
+translation domain and bundled catalogs, and explicitly request it in the reply
+to the existing review email. Upload through the existing submission; do not
+create a duplicate. A domain warning against the old reserved slug can remain
+until WordPress.org changes the reservation.
 The local checkout/GitHub name and main PHP filename remain unchanged, as do the
 native settings slug and saved field identities. GFGEOAC_PLUGIN_NAME uses the full
 public name; compact menu and field labels remain Address Autocomplete.
 Run Plugin Check on the extracted assigned-slug folder, explicitly supplying the
 same `--slug` value; checking only the old local folder can hide domain mismatches.
+
+The GitHub repository remains public at
+https://github.com/Fitoussi/address-autocomplete-for-gravity-forms and its name is
+unchanged. The readme documents bundle/source mappings, locked npm build steps
+and Choices.js version/source/license. Sources/build inputs also ship in the ZIP.
+Contributors uses the submitting account `ninjew`; the PHP author remains Eyal
+Fitoussi. Keep the local overview, but do not restore disabled premium field
+buttons, their upgrade dialogs or unrelated Search advertising on normal Gravity
+Forms pages. No review reply,
+submission upload or repository visibility change is performed by the builder.
 
 Maintain the public description, setup instructions and release notes in the root `readme.txt`; keep the plain-text history in `change_log.txt`. Match the readme stable tag to the plugin version before packaging.
 

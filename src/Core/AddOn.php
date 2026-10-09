@@ -9,7 +9,6 @@
 namespace GravityGeolocationAutocomplete\Core;
 
 use GravityGeolocationAutocomplete\Admin\Settings;
-use GravityGeolocationAutocomplete\Admin\SearchUnavailable;
 use GravityGeolocationAutocomplete\Common\Form\Fields\Registrar;
 use GravityGeolocationAutocomplete\Features\Form\Admin\FormEditor;
 use GravityGeolocationAutocomplete\Features\Form\Runtime\FormGeoProcessor;
@@ -140,7 +139,6 @@ class AddOn extends \GFAddOn {
 	public function pre_init() {
 		parent::pre_init();
 		$this->define_constants();
-		$this->include_files();
 		$this->register_providers();
 	}
 
@@ -159,20 +157,7 @@ class AddOn extends \GFAddOn {
 	}
 
 	/**
-	 * Register non-functional Search discovery entry points in the admin.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	protected function include_files() {
-		if ( is_admin() ) {
-			( new SearchUnavailable() )->register();
-		}
-	}
-
-	/**
-	 * Register Address integration and four promotional field buttons once.
+	 * Register functional Address integration once.
 	 *
 	 * @since 1.0.0
 	 *
@@ -203,7 +188,7 @@ class AddOn extends \GFAddOn {
 	public function load_text_domain() {
 		// Bundled translations need their custom path before directory language packs exist.
 		// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- Retain bundled translations on supported WordPress versions.
-		load_plugin_textdomain( 'advanced-address-autocomplete-for-gravity-forms', false, dirname( GFGEOAC_BASENAME ) . '/languages/' );
+		load_plugin_textdomain( 'wpgeo-address-autocomplete-for-gravity-forms', false, dirname( GFGEOAC_BASENAME ) . '/languages/' );
 	}
 
 	/**
@@ -215,11 +200,11 @@ class AddOn extends \GFAddOn {
 	 * @return string[] Unique handles allowed by the host.
 	 */
 	public function register_noconflict_assets( $assets ) {
-		return array_values( array_unique( array_merge( $assets, [ 'gfgeoac-autocomplete', 'gfgeoac-choices', 'gfgeo-form-editor', 'gfgeo-admin', 'gfgeo-search-unavailable', 'jquery-ui-dialog', 'wp-jquery-ui-dialog', 'gfgeo-product-dashboard' ] ) ) );
+		return array_values( array_unique( array_merge( $assets, [ 'gfgeoac-autocomplete', 'gfgeoac-choices', 'gfgeo-form-editor', 'gfgeo-admin', 'gfgeo-product-dashboard' ] ) ) );
 	}
 
 	/**
-	 * Define the builder-only autocomplete controls and unavailable-field dialog.
+	 * Define the builder-only autocomplete controls.
 	 *
 	 * @since 1.0.0
 	 *
@@ -240,7 +225,7 @@ class AddOn extends \GFAddOn {
 	}
 
 	/**
-	 * Provide translated builder labels and unavailable-field dialog copy.
+	 * Provide translated autocomplete builder labels.
 	 *
 	 * @since 1.0.0
 	 *
@@ -251,17 +236,9 @@ class AddOn extends \GFAddOn {
 			'gfgeo-form-editor',
 			'gfgeoFormEditorStrings',
 			[
-				'autocomplete'     => [
-					'allCountries' => __( 'All countries', 'advanced-address-autocomplete-for-gravity-forms' ),
-					'allTypes'     => __( 'All place types', 'advanced-address-autocomplete-for-gravity-forms' ),
-				],
-				'unavailableField' => [
-					/* translators: %s: Premium field title. */
-					'title'          => __( 'The %s field is not available.', 'advanced-address-autocomplete-for-gravity-forms' ),
-					/* translators: %s: Premium field title. */
-					'message'        => __( 'The %s field is available with Gravity Geolocation.', 'advanced-address-autocomplete-for-gravity-forms' ),
-					'upgradeNow'     => __( 'View packages', 'advanced-address-autocomplete-for-gravity-forms' ),
-					'unlockFeatures' => __( 'to explore additional location tools.', 'advanced-address-autocomplete-for-gravity-forms' ),
+				'autocomplete' => [
+					'allCountries' => __( 'All countries', 'wpgeo-address-autocomplete-for-gravity-forms' ),
+					'allTypes'     => __( 'All place types', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 				],
 			]
 		);

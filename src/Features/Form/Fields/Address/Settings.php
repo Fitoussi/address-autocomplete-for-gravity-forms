@@ -128,7 +128,7 @@ class Settings {
 								class="gfgeo-address-autocomplete-language fieldwidth-3"
 								onchange="SetFieldProperty( 'gfgeo_address_autocomplete_language', jQuery(this).val() );"
 							>
-								<option value=""><?php esc_html_e( 'Default (global language)', 'advanced-address-autocomplete-for-gravity-forms' ); ?></option>
+								<option value=""><?php esc_html_e( 'Default (global language)', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></option>
 								<?php
 								foreach ( ReferenceData::get_languages() as $code => $label ) {
 									echo '<option value="' . esc_attr( $code ) . '">' . esc_html( $label ) . '</option>';
@@ -252,15 +252,15 @@ class Settings {
 			[
 				[
 					'value' => '',
-					'label' => __( 'None', 'advanced-address-autocomplete-for-gravity-forms' ),
+					'label' => __( 'None', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 				],
 				[
 					'value' => 'proximity',
-					'label' => __( 'Proximity', 'advanced-address-autocomplete-for-gravity-forms' ),
+					'label' => __( 'Proximity', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 				],
 				[
 					'value' => 'area_bounds',
-					'label' => __( 'Area bounds', 'advanced-address-autocomplete-for-gravity-forms' ),
+					'label' => __( 'Area bounds', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 				],
 			]
 		);

@@ -65,7 +65,7 @@ final class Dashboard {
 	 * @return void
 	 */
 	public static function register_page() {
-		$title = __( 'Address Autocomplete', 'advanced-address-autocomplete-for-gravity-forms' );
+		$title = __( 'Address Autocomplete', 'wpgeo-address-autocomplete-for-gravity-forms' );
 		if ( class_exists( '\GFForms' ) ) {
 			self::$page_hook = add_submenu_page( 'gf_edit_forms', GFGEOAC_PLUGIN_NAME, $title, 'manage_options', self::PAGE_SLUG, [ self::class, 'render' ] );
 		} else {
@@ -83,9 +83,9 @@ final class Dashboard {
 	 */
 	public static function add_action_link( $links ) {
 		return [
-			'overview' => '<a href="' . esc_url( self::get_url() ) . '">' . esc_html__( 'Overview', 'advanced-address-autocomplete-for-gravity-forms' ) . '</a>',
-			'settings' => '<a href="' . esc_url( admin_url( 'admin.php?page=gf_settings&subview=gravityforms_geolocation' ) ) . '">' . esc_html__( 'Settings', 'advanced-address-autocomplete-for-gravity-forms' ) . '</a>',
-			'docs'     => '<a href="' . esc_url( GFGEOAC_SITE_URL . '/docs/' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Docs', 'advanced-address-autocomplete-for-gravity-forms' ) . '</a>',
+			'overview' => '<a href="' . esc_url( self::get_url() ) . '">' . esc_html__( 'Overview', 'wpgeo-address-autocomplete-for-gravity-forms' ) . '</a>',
+			'settings' => '<a href="' . esc_url( admin_url( 'admin.php?page=gf_settings&subview=gravityforms_geolocation' ) ) . '">' . esc_html__( 'Settings', 'wpgeo-address-autocomplete-for-gravity-forms' ) . '</a>',
+			'docs'     => '<a href="' . esc_url( GFGEOAC_SITE_URL . '/docs/' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Docs', 'wpgeo-address-autocomplete-for-gravity-forms' ) . '</a>',
 		] + $links;
 	}
 
@@ -152,7 +152,7 @@ final class Dashboard {
 			[
 				[
 					'id'     => 'section_gfgeo_product_overview',
-					'title'  => __( 'Need more than address autocomplete?', 'advanced-address-autocomplete-for-gravity-forms' ),
+					'title'  => __( 'Need more than address autocomplete?', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 					'class'  => 'gform-settings-panel--full gfgeo-product-settings gfgeo-product-settings--free',
 					'fields' => [
 						[
@@ -180,13 +180,13 @@ final class Dashboard {
 		?>
 		<div class="gfgeo-product-settings__content">
 			<p>
-				<?php esc_html_e( 'Explore maps, current-location detection, dynamic fields, directions, nearby locations, and more with Gravity Geolocation.', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+				<?php esc_html_e( 'Explore maps, current-location detection, dynamic fields, directions, nearby locations, and more with Gravity Geolocation.', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 			</p>
 			<div class="gfgeo-product-settings__actions">
 				<a class="button button-primary" href="<?php echo esc_url( self::get_url() ); ?>">
-					<?php esc_html_e( 'Explore features', 'advanced-address-autocomplete-for-gravity-forms' ); ?>
+					<?php esc_html_e( 'Explore features', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>
 				</a>
-				<a class="button button-secondary" href="<?php echo esc_url( GFGEOAC_SITE_URL . '/pricing/' ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'View packages', 'advanced-address-autocomplete-for-gravity-forms' ); ?></a>
+				<a class="button button-secondary" href="<?php echo esc_url( GFGEOAC_SITE_URL . '/pricing/' ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'View packages', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 			</div>
 		</div>
 		<?php
@@ -211,10 +211,10 @@ final class Dashboard {
 		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		$requested = isset( $_GET['section'] ) && \is_string( $_GET['section'] ) ? sanitize_key( wp_unslash( $_GET['section'] ) ) : '';
 		$tabs      = [
-			'overview'   => __( 'Overview', 'advanced-address-autocomplete-for-gravity-forms' ),
-			'comparison' => __( 'Compare Packages', 'advanced-address-autocomplete-for-gravity-forms' ),
-			'help'       => __( 'Help', 'advanced-address-autocomplete-for-gravity-forms' ),
-			'products'   => __( 'More Plugins', 'advanced-address-autocomplete-for-gravity-forms' ),
+			'overview'   => __( 'Overview', 'wpgeo-address-autocomplete-for-gravity-forms' ),
+			'comparison' => __( 'Compare Packages', 'wpgeo-address-autocomplete-for-gravity-forms' ),
+			'help'       => __( 'Help', 'wpgeo-address-autocomplete-for-gravity-forms' ),
+			'products'   => __( 'More Plugins', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 		];
 
 		$version      = GFGEOAC_VERSION;
@@ -241,8 +241,8 @@ final class Dashboard {
 		);
 		$packages     = DashboardFeatures::get_packages();
 
-		$hero_title     = __( 'Less typing. Better addresses.', 'advanced-address-autocomplete-for-gravity-forms' );
-		$help_step      = __( 'Add a custom Address field or enable autocomplete on a native Address field.', 'advanced-address-autocomplete-for-gravity-forms' );
+		$hero_title     = __( 'Less typing. Better addresses.', 'wpgeo-address-autocomplete-for-gravity-forms' );
+		$help_step      = __( 'Add a custom Address field or enable autocomplete on a native Address field.', 'wpgeo-address-autocomplete-for-gravity-forms' );
 		$feature_groups = [
 			'included'  => $included,
 			'available' => $available,
@@ -263,37 +263,37 @@ final class Dashboard {
 			[
 				'name'        => 'Gravity Geolocation',
 				'url'         => 'https://gravitygeolocation.com/',
-				'description' => __( 'Maps, geocoding, dynamic fields, directions, nearby locations and more for Gravity Forms.', 'advanced-address-autocomplete-for-gravity-forms' ),
+				'description' => __( 'Maps, geocoding, dynamic fields, directions, nearby locations and more for Gravity Forms.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 			],
 			[
 				'name'        => 'Gravity Search',
 				'url'         => 'https://gravitygeolocation.com/solutions/gravity-search/',
-				'description' => __( 'Turn Gravity Forms entries into searchable directories, listings and customer portals—with field filters, proximity search, maps and flexible result layouts.', 'advanced-address-autocomplete-for-gravity-forms' ),
+				'description' => __( 'Turn Gravity Forms entries into searchable directories, listings and customer portals—with field filters, proximity search, maps and flexible result layouts.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 			],
 			[
 				'name'        => 'GEO my WP',
 				'url'         => 'https://geomywp.com/',
-				'description' => __( 'Build location-based searches and directories for your WordPress site.', 'advanced-address-autocomplete-for-gravity-forms' ),
+				'description' => __( 'Build location-based searches and directories for your WordPress site.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 			],
 			[
 				'name'        => 'Formidable Geolocation',
 				'url'         => 'https://formidablegeolocation.com/',
-				'description' => __( 'Add geolocation tools and connected location fields to Formidable Forms.', 'advanced-address-autocomplete-for-gravity-forms' ),
+				'description' => __( 'Add geolocation tools and connected location fields to Formidable Forms.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 			],
 			[
 				'name'        => 'Geolocation for Ninja Forms',
 				'url'         => 'https://ninjageolocation.com/',
-				'description' => __( 'Bring address, map and location workflows to Ninja Forms.', 'advanced-address-autocomplete-for-gravity-forms' ),
+				'description' => __( 'Bring address, map and location workflows to Ninja Forms.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 			],
 			[
 				'name'        => 'WPForms Geolocation',
 				'url'         => 'https://wpgeoforms.com/',
-				'description' => __( 'Add address autocomplete, maps, coordinates and directions to WPForms.', 'advanced-address-autocomplete-for-gravity-forms' ),
+				'description' => __( 'Add address autocomplete, maps, coordinates and directions to WPForms.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 			],
 			[
 				'name'        => 'WP Job Manager Geolocation',
 				'url'         => 'https://jobmanagergeolocation.com/',
-				'description' => __( 'Add proximity searches and interactive maps to your WP Job Manager job board.', 'advanced-address-autocomplete-for-gravity-forms' ),
+				'description' => __( 'Add proximity searches and interactive maps to your WP Job Manager job board.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 			],
 		];
 	}

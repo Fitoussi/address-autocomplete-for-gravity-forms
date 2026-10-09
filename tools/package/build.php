@@ -13,7 +13,7 @@ if ( 'cli' !== PHP_SAPI ) {
 }
 
 $root = dirname( __DIR__, 2 );
-$slug = 'advanced-address-autocomplete-for-gravity-forms';
+$slug = 'wpgeo-address-autocomplete-for-gravity-forms';
 $entry_file = 'address-autocomplete-for-gravity-forms.php';
 
 try {
@@ -42,10 +42,8 @@ try {
 	$required = [
 		'build/js/frontend/address-autocomplete.min.js',
 		'build/js/admin/gfgeo-form-editor.min.js',
-		'build/js/admin/gfgeo-search-unavailable.min.js',
 		'build/css/admin/gfgeo-admin.min.css',
 		'build/css/admin/gfgeo-product-dashboard.min.css',
-		'build/css/search-unavailable.min.css',
 		'assets/css/address-autocomplete.css',
 		'assets/css/choices.css',
 		'assets/licenses/choices.txt',

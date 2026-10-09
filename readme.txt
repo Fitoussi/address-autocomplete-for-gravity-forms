@@ -1,5 +1,5 @@
-=== Advanced Address Autocomplete for Gravity Forms ===
-Contributors: eyalfitoussi
+=== WPGeo Address Autocomplete for Gravity Forms ===
+Contributors: ninjew
 Tags: gravity forms, address autocomplete, google places, address autofill, address field
 Requires at least: 6.5
 Tested up to: 7.1
@@ -14,7 +14,7 @@ Modern Google Places autocomplete for Gravity Forms, with country and language c
 
 **Less typing. More control over address entry.**
 
-Advanced Address Autocomplete for Gravity Forms brings **Google Places API (New) to your forms for free**. Help visitors find and select an address, automatically fill native address components, and tailor suggestions to your audience with country, place-type, language and location preferences.
+WPGeo Address Autocomplete for Gravity Forms brings **Google Places API (New) to your forms for free**. Help visitors find and select an address, automatically fill native address components, and tailor suggestions to your audience with country, place-type, language and location preferences.
 
 Choose a dedicated single-line Address field or add autocomplete to Gravity Forms' existing multi-part Address field. Require visitors to select a suggestion when your workflow needs it, and open a submitted single-line address in Google Maps directly from its entry detail page.
 
@@ -116,6 +116,20 @@ Deactivate the free plugin when switching to Gravity Geolocation or Gravity Sear
 
 No. This plugin has no account connection, license activation, paid updater or remote product installation flow.
 
+== Source code and build instructions ==
+
+Public development repository: https://github.com/Fitoussi/address-autocomplete-for-gravity-forms
+
+Readable JavaScript and SCSS sources, build.js, package.json and package-lock.json are also included in this plugin ZIP. Every shipped JavaScript bundle is generated from the readable sources listed below.
+
+* build/js/frontend/address-autocomplete.min.js is built from assets/js/autocomplete/gravity-address-autocomplete.js and its imports in assets/js/autocomplete/.
+* build/js/admin/gfgeo-form-editor.min.js is built from assets/js/editor/form-editor.js and its imports in assets/js/editor/.
+* Admin CSS in build/css/admin/ is built from the matching files in assets/scss/admin/ using Sass.
+
+To reproduce the generated files, install Node.js and npm, run `npm ci` in the plugin directory, then run `npm run build`. The locked development dependencies include esbuild for JavaScript bundling and Sass for CSS. The plugin runtime does not require Node.js, npm or Composer.
+
+Third-party library: Choices.js 11.1.0, MIT licensed. Its readable bundled distribution is assets/js/editor/vendor/choices.js; its styles are assets/css/choices.css, and its license is assets/licenses/choices.txt. Upstream source and build instructions: https://github.com/Choices-js/Choices/tree/v11.1.0
+
 == Screenshots ==
 
 1. Google Places suggestions in the dedicated single-line Address field.
@@ -129,6 +143,10 @@ No. This plugin has no account connection, license activation, paid updater or r
 == Changelog ==
 
 = 1.0.0 =
+* Updated the public name to WPGeo Address Autocomplete for Gravity Forms.
+* Documented the public repository, bundled readable sources, build steps and third-party library.
+* Removed unrelated Search promotional entry points and notices from Gravity Forms pages.
+* Removed disabled premium field buttons and their upgrade dialogs; the local overview remains available.
 * Added a one-time administrator setup notice with permanent dismissal and no activation redirect.
 * Initial standalone release with custom and native Address autocomplete.
 * Included Google Places API (New) support with a temporary legacy compatibility fallback.

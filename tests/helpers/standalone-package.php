@@ -22,7 +22,7 @@ if ( true !== $zip->open( $messages[0] ) ) {
 	fwrite( STDERR, 'Cannot inspect the generated ZIP.' . PHP_EOL );
 	exit( 1 );
 }
-$prefix = 'advanced-address-autocomplete-for-gravity-forms/';
+$prefix = 'wpgeo-address-autocomplete-for-gravity-forms/';
 $files = [];
 for ( $index = 0; $index < $zip->numFiles; ++$index ) {
 	$files[] = $zip->getNameIndex( $index );
@@ -47,14 +47,27 @@ $checks['no removed premium/runtime scaffolding'] = ! array_filter( $files, stat
 } );
 $main = $zip->getFromName( $prefix . 'address-autocomplete-for-gravity-forms.php' );
 $readme = $zip->getFromName( $prefix . 'readme.txt' );
+$checks['owner contributor username'] = 1 === preg_match( '/^Contributors: ninjew\s*$/m', $readme );
+$checks['public source and build instructions'] = false !== strpos( $readme, 'https://github.com/Fitoussi/address-autocomplete-for-gravity-forms' )
+	&& false !== strpos( $readme, 'npm ci' ) && false !== strpos( $readme, 'npm run build' );
+$checks['no Search upsell integration or assets'] = ! array_filter( $files, static function ( $file ) {
+	return false !== strpos( $file, 'SearchUnavailable' ) || false !== strpos( $file, 'search-unavailable' );
+} );
+$checks['no disabled field classes or upsell dialog source'] = ! array_filter( $files, static function ( $file ) {
+	return false !== strpos( $file, '/Fields/Placeholders/' ) || false !== strpos( $file, '/unavailable-fields.js' );
+} );
+$editor_map = json_decode( $zip->getFromName( $prefix . 'build/js/admin/gfgeo-form-editor.min.js.map' ), true );
+$checks['editor bundle excludes disabled-field dialog'] = ! empty( $editor_map['sources'] ) && ! array_filter( $editor_map['sources'], static function ( $source ) {
+	return false !== strpos( $source, 'unavailable-fields.js' );
+} );
 $checks['tested up to only in readme'] = ! preg_match( '/^ \* Tested up to:/mi', $main )
 	&& 1 === preg_match( '/^Tested up to:\s*7\.1\s*$/m', $readme );
-$checks['assigned release text domain'] = false !== strpos( $main, 'Text Domain:            advanced-address-autocomplete-for-gravity-forms' );
+$checks['assigned release text domain'] = false !== strpos( $main, 'Text Domain:            wpgeo-address-autocomplete-for-gravity-forms' );
 foreach ( [ 'es_ES', 'he_IL', 'pl_PL' ] as $locale ) {
-	$checks[ 'assigned translation catalog: ' . $locale ] = in_array( $prefix . 'languages/advanced-address-autocomplete-for-gravity-forms-' . $locale . '.mo', $files, true );
+	$checks[ 'assigned translation catalog: ' . $locale ] = in_array( $prefix . 'languages/wpgeo-address-autocomplete-for-gravity-forms-' . $locale . '.mo', $files, true );
 }
 $checks['no old translation filenames'] = ! array_filter( $files, static function ( $file ) use ( $prefix ) {
-	return 0 === strpos( $file, $prefix . 'languages/address-autocomplete-for-gravity-forms' );
+	return 1 === preg_match( '#/languages/(?:advanced-address-autocomplete-for-gravity-forms|address-autocomplete-for-gravity-forms)[.-]#', $file );
 } );
 for ( $number = 1; $number <= 7; ++$number ) {
 	$file = 'assets/screenshots/screenshot-' . $number . '.png';

@@ -34,21 +34,21 @@ class Settings {
 		$sections = [
 			[
 				'id'          => 'section_gfgeo_google_maps_api_keys',
-				'title'       => __( 'Google API Key', 'advanced-address-autocomplete-for-gravity-forms' ),
-				'description' => esc_html__( 'Enable Maps JavaScript API and Places API (New) for your browser key. No server key is required.', 'advanced-address-autocomplete-for-gravity-forms' ) . '<br>' . esc_html__( 'Need help?', 'advanced-address-autocomplete-for-gravity-forms' ) . ' <a href="' . esc_url( GFGEOAC_SITE_URL . '/docs/google-maps-api-keys-gravity-geolocation/' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'View the Google API setup guide', 'advanced-address-autocomplete-for-gravity-forms' ) . '</a>',
+				'title'       => __( 'Google API Key', 'wpgeo-address-autocomplete-for-gravity-forms' ),
+				'description' => esc_html__( 'Enable Maps JavaScript API and Places API (New) for your browser key. No server key is required.', 'wpgeo-address-autocomplete-for-gravity-forms' ) . '<br>' . esc_html__( 'Need help?', 'wpgeo-address-autocomplete-for-gravity-forms' ) . ' <a href="' . esc_url( GFGEOAC_SITE_URL . '/docs/google-maps-api-keys-gravity-geolocation/' ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'View the Google API setup guide', 'wpgeo-address-autocomplete-for-gravity-forms' ) . '</a>',
 				'class'       => 'gform-settings-panel--full',
 				'fields'      => [
 					[
 						'name'  => 'gfgeo_google_maps_api_key',
-						'label' => __( 'Browser API Key', 'advanced-address-autocomplete-for-gravity-forms' ),
+						'label' => __( 'Browser API Key', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 						'type'  => 'text',
 					],
 				],
 			],
 			[
 				'id'          => 'section_gfgeo_google_maps_country',
-				'title'       => __( 'Region Code', 'advanced-address-autocomplete-for-gravity-forms' ),
-				'description' => __( 'Enter a two-letter region code, such as US. This influences regional results; use the field settings to restrict suggestions to specific countries.', 'advanced-address-autocomplete-for-gravity-forms' ),
+				'title'       => __( 'Region Code', 'wpgeo-address-autocomplete-for-gravity-forms' ),
+				'description' => __( 'Enter a two-letter region code, such as US. This influences regional results; use the field settings to restrict suggestions to specific countries.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 				'class'       => 'gform-settings-panel--half',
 				'fields'      => [
 					[
@@ -60,8 +60,8 @@ class Settings {
 			],
 			[
 				'id'          => 'section_gfgeo_google_maps_language',
-				'title'       => __( 'Language', 'advanced-address-autocomplete-for-gravity-forms' ),
-				'description' => __( 'Enter a language code, such as en, for Google Places results.', 'advanced-address-autocomplete-for-gravity-forms' ),
+				'title'       => __( 'Language', 'wpgeo-address-autocomplete-for-gravity-forms' ),
+				'description' => __( 'Enter a language code, such as en, for Google Places results.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 				'class'       => 'gform-settings-panel--half',
 				'fields'      => [
 					[

@@ -2,7 +2,7 @@
 /**
  * Field registration for the standalone Address Autocomplete plugin.
  *
- * Registers the Address field, four promotional placeholders and their editor group.
+ * Registers the functional Address field and its editor group.
  *
  * @package GravityGeolocationAutocomplete\Common\Form\Fields
  * @since 1.0.0
@@ -11,10 +11,6 @@
 namespace GravityGeolocationAutocomplete\Common\Form\Fields;
 
 use GravityGeolocationAutocomplete\Features\Form\Fields\Address\Field as Address;
-use GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\AddressValidation\Field as AddressValidation;
-use GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\Directions\Field as Directions;
-use GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\Distance\Field as Distance;
-use GravityGeolocationAutocomplete\Features\Form\Fields\Placeholders\Map\Field as Map;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -66,7 +62,7 @@ final class Registrar {
 		 *
 		 * @param string[] $classes Fully qualified Gravity Forms field class names.
 		 */
-		$classes = apply_filters( 'gfgeo_form_field_classes', [ Address::class, Map::class, Directions::class, Distance::class, AddressValidation::class ] );
+		$classes = apply_filters( 'gfgeo_form_field_classes', [ Address::class ] );
 		if ( ! \is_array( $classes ) || [] === $classes ) {
 			return;
 		}
@@ -102,7 +98,7 @@ final class Registrar {
 
 		$group     = [
 			'name'   => 'gfgeo_geolocation_fields',
-			'label'  => esc_html__( 'Geolocation Fields', 'advanced-address-autocomplete-for-gravity-forms' ),
+			'label'  => esc_html__( 'Geolocation Fields', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 			'fields' => [],
 		];
 		$remaining = [];

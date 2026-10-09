@@ -1,0 +1,947 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WPGeo Address Autocomplete for Gravity Forms 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpgeo-address-"
+"autocomplete-for-gravity-forms/\n"
+"POT-Creation-Date: 2026-10-09T08:59:00+00:00\n"
+"PO-Revision-Date: 2026-08-06 22:49-1000\n"
+"Last-Translator: Eyal Fitoussi <fitoussi_eyal@hotmail.com>\n"
+"Language-Team: Eyal Fitoussi <fitoussi_eyal@hotmail.com>\n"
+"Language: pl_PL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: wpgeo-address-autocomplete-for-gravity-forms\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.3.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: address-autocomplete-for-gravity-forms.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#. Plugin Name of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid "WPGeo Address Autocomplete for Gravity Forms"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid "https://gravitygeolocation.com"
+msgstr ""
+
+#. Description of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid ""
+"Modern Google Places address autocomplete for Gravity Forms. Includes a "
+"single-line Address field, native Address autofill, country and language "
+"controls, location bias, required suggestion selection, and entry map links. "
+"Requires Gravity Forms and your own Google API key."
+msgstr ""
+
+#. Author of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid "Eyal Fitoussi"
+msgstr "Eyal Fitoussi"
+
+#. Author URI of the plugin
+#: address-autocomplete-for-gravity-forms.php
+msgid "https://www.wpgeo.com"
+msgstr ""
+
+#: src/Admin/Dashboard.php:68 src/Features/Form/Admin/FormEditor.php:52
+msgid "Address Autocomplete"
+msgstr ""
+
+#: src/Admin/Dashboard.php:86 src/Admin/Dashboard.php:214
+msgid "Overview"
+msgstr ""
+
+#: src/Admin/Dashboard.php:87
+msgid "Settings"
+msgstr ""
+
+#: src/Admin/Dashboard.php:88
+msgid "Docs"
+msgstr ""
+
+#: src/Admin/Dashboard.php:155
+msgid "Need more than address autocomplete?"
+msgstr ""
+
+#: src/Admin/Dashboard.php:183
+msgid ""
+"Explore maps, current-location detection, dynamic fields, directions, nearby "
+"locations, and more with Gravity Geolocation."
+msgstr ""
+
+#: src/Admin/Dashboard.php:187
+msgid "Explore features"
+msgstr ""
+
+#: src/Admin/Dashboard.php:189
+msgid "View packages"
+msgstr ""
+
+#: src/Admin/Dashboard.php:215
+msgid "Compare Packages"
+msgstr ""
+
+#: src/Admin/Dashboard.php:216
+msgid "Help"
+msgstr ""
+
+#: src/Admin/Dashboard.php:217
+msgid "More Plugins"
+msgstr ""
+
+#: src/Admin/Dashboard.php:244
+msgid "Less typing. Better addresses."
+msgstr ""
+
+#: src/Admin/Dashboard.php:245
+msgid ""
+"Add a custom Address field or enable autocomplete on a native Address field."
+msgstr ""
+
+#: src/Admin/Dashboard.php:266
+msgid ""
+"Maps, geocoding, dynamic fields, directions, nearby locations and more for "
+"Gravity Forms."
+msgstr ""
+
+#: src/Admin/Dashboard.php:271
+msgid ""
+"Turn Gravity Forms entries into searchable directories, listings and "
+"customer portals—with field filters, proximity search, maps and flexible "
+"result layouts."
+msgstr ""
+
+#: src/Admin/Dashboard.php:276
+msgid "Build location-based searches and directories for your WordPress site."
+msgstr ""
+
+#: src/Admin/Dashboard.php:281
+msgid ""
+"Add geolocation tools and connected location fields to Formidable Forms."
+msgstr ""
+
+#: src/Admin/Dashboard.php:286
+msgid "Bring address, map and location workflows to Ninja Forms."
+msgstr ""
+
+#: src/Admin/Dashboard.php:291
+msgid "Add address autocomplete, maps, coordinates and directions to WPForms."
+msgstr ""
+
+#: src/Admin/Dashboard.php:296
+msgid ""
+"Add proximity searches and interactive maps to your WP Job Manager job board."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:76 src/Admin/DashboardFeatures.php:79
+#: src/Admin/DashboardFeatures.php:82 src/Admin/DashboardFeatures.php:85
+#: src/Admin/DashboardFeatures.php:88 src/Admin/DashboardFeatures.php:91
+#: src/Admin/DashboardFeatures.php:94 src/Admin/DashboardFeatures.php:97
+#: src/Admin/DashboardFeatures.php:104 src/Admin/DashboardFeatures.php:107
+#: src/Admin/DashboardFeatures.php:110 src/Admin/DashboardFeatures.php:113
+msgid "View demo"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:100
+msgid "View single-entry demo"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:101
+msgid "View mashup demo"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:128
+msgid "Free"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:129
+msgid "Location"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:130
+msgid "Directions"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:131
+msgid "Toolkit"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:132
+msgid "Search"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:133
+msgid "All Access"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:187
+msgid "Address autocomplete"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:188
+msgid ""
+"Google Places API (New), included free. Choose a dedicated single-line "
+"Address field with an entry map link, or autofill native Gravity Forms "
+"Address fields."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:189
+msgid ""
+"Per-field countries, place types, language and location bias; global "
+"language and region defaults; required suggestion selection with your own "
+"alert."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:196
+msgid "Interactive form maps"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:197
+msgid ""
+"Show connected locations on a map and let visitors refine a location with a "
+"draggable marker."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:198
+msgid "Configure map appearance, zoom, default location and marker behavior."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:205
+msgid "Geocoder & complete location data"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:206
+msgid ""
+"Store shared geocoding results behind the form: coordinates, formatted "
+"address and individual location components."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:207
+msgid ""
+"Connect address and map inputs; use stored data in entries, merge tags and "
+"exports."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:214
+msgid "Dynamic location fields"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:215
+msgid ""
+"Populate connected form fields with city, region, postal code, coordinates "
+"and other geocoded values."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:216
+msgid ""
+"Use ordinary form fields for location data, conditional logic and your own "
+"workflows."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:223
+msgid "Quick Setups & connection helpers"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:224
+msgid ""
+"Start with connected field combinations, or create and connect supporting "
+"fields from a field’s options."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:225
+msgid ""
+"Recipes depend on your included fields. Review, add and save ordinary "
+"editable Gravity Forms fields."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:232
+msgid "Ready-to-use form templates"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:233
+msgid ""
+"Create a Location & Map starter form from the native template library, then "
+"customize it for your project."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:234
+msgid ""
+"Distance & Travel Time and Directions & Route templates appear when their "
+"fields are included."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:241
+msgid "Directions & route displays"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:242
+msgid ""
+"Connect an origin, destination and waypoints. Display a route map, summary "
+"and turn-by-turn directions."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:243
+msgid ""
+"Choose inline details or a separate Directions Panel; use automatic or "
+"manual calculation."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:250
+msgid "Distance & travel time"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:251
+msgid ""
+"Calculate travel distance and duration between connected locations, or "
+"measure straight-line distance."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:252
+msgid ""
+"Use readable results or raw numeric distance and duration values in your "
+"form."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:259
+msgid "Distance-based pricing & calculations"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:260
+msgid ""
+"Build delivery fees, mileage quotes and travel-time estimates using numeric "
+"location outputs."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:261
+msgid ""
+"Quick Setups can add ordinary calculated fields; your formula controls the "
+"estimate."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:268
+msgid "Nearby locations & result panels"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:269
+msgid ""
+"Find destinations near a visitor location and display selectable results "
+"with an optional results map."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:270
+msgid ""
+"Configure destination sources and show inline details or a separate Nearest "
+"Locations Panel."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:277
+msgid "Address validation"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:278
+msgid ""
+"Compare an entered address with Google Address Validation recommendations "
+"before continuing."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:279
+msgid ""
+"Review suggested corrections and retain validation status for conditional "
+"logic. Requires the Address Validation API."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:286
+msgid "Drawing Tools & Drawing Shape"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:287
+msgid ""
+"Let visitors draw markers, lines, polygons, rectangles, circles and freehand "
+"shapes on a connected map."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:288
+msgid ""
+"Collect shape collections or predefined shapes, with geometry, labels, area, "
+"length and perimeter outputs."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:295
+msgid "Single Entry & Mashup maps"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:296
+msgid ""
+"Display saved entry locations outside the form: one entry on its own map, or "
+"multiple entries together."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:297
+msgid ""
+"Use map shortcodes, markers and information windows for location-based "
+"content."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:304
+msgid "Gravity Search: directories & entry search"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:305
+msgid ""
+"Turn saved Gravity Forms entries into front-end searches, directories and "
+"location-aware listings."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:306
+msgid ""
+"Field filters, proximity search, result layouts, maps, sorting and "
+"pagination. Search maps are part of Search, not the standalone map "
+"shortcodes."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:313
+msgid "Search entry details & custom output"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:314
+msgid ""
+"Link search results to individual entry-detail pages and customize how entry "
+"data is presented."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:315
+msgid ""
+"Use supported structured output, page content or custom HTML within the "
+"Search configuration."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:322
+msgid "Current-location detection"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:323
+msgid ""
+"Offer an in-field locator button or detect a visitor location automatically "
+"when the form loads."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:324
+msgid ""
+"Browser location requires visitor permission; optional IP location requires "
+"a configured provider."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:331
+msgid "Coordinate inputs"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:332
+msgid ""
+"Collect latitude and longitude directly and connect them to your shared "
+"location data."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:333
+msgid ""
+"A dedicated Coordinates field for workflows where an address is not the "
+"starting point."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:340
+msgid "Standalone Locator & Reset fields"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:341
+msgid ""
+"Place dedicated current-location and reset buttons wherever they fit your "
+"form."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:342
+msgid ""
+"These separate fields complement the in-field locator available in Address "
+"settings."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:349
+msgid "GEO my WP feed integration"
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:350
+msgid ""
+"Pass form location data to post and user locations through supported "
+"creation and registration feeds."
+msgstr ""
+
+#: src/Admin/DashboardFeatures.php:351
+msgid ""
+"Requires GEO my WP and the relevant Gravity Forms add-on; those integrations "
+"are separate products."
+msgstr ""
+
+#: src/Admin/Settings.php:37
+msgid "Google API Key"
+msgstr ""
+
+#: src/Admin/Settings.php:38
+msgid ""
+"Enable Maps JavaScript API and Places API (New) for your browser key. No "
+"server key is required."
+msgstr ""
+
+#: src/Admin/Settings.php:38
+msgid "Need help?"
+msgstr ""
+
+#: src/Admin/Settings.php:38
+msgid "View the Google API setup guide"
+msgstr ""
+
+#: src/Admin/Settings.php:43
+msgid "Browser API Key"
+msgstr ""
+
+#: src/Admin/Settings.php:50
+msgid "Region Code"
+msgstr ""
+
+#: src/Admin/Settings.php:51
+msgid ""
+"Enter a two-letter region code, such as US. This influences regional "
+"results; use the field settings to restrict suggestions to specific "
+"countries."
+msgstr ""
+
+#: src/Admin/Settings.php:63
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:57
+msgid "Language"
+msgstr ""
+
+#: src/Admin/Settings.php:64
+msgid "Enter a language code, such as en, for Google Places results."
+msgstr ""
+
+#. translators: %s: Plugin name.
+#: src/Admin/SetupNotice.php:92
+#, php-format
+msgid "%s is ready to configure."
+msgstr ""
+
+#: src/Admin/SetupNotice.php:97
+msgid ""
+"Add your Google API key, then enable autocomplete in your form's field "
+"options."
+msgstr ""
+
+#: src/Admin/SetupNotice.php:100
+msgid "Set up autocomplete"
+msgstr ""
+
+#: src/Admin/SetupNotice.php:101
+msgid "View plugin overview"
+msgstr ""
+
+#: src/Admin/SetupNotice.php:105
+msgid "Dismiss"
+msgstr ""
+
+#: src/Admin/SetupNotice.php:131
+msgid "You do not have permission to dismiss this notice."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:23
+msgid "For Gravity Forms"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:29
+msgid "Explore Plugins"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:31 src/Admin/views/dashboard.php:256
+msgid "Open Settings"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:33
+msgid "View Live Demos"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:38
+msgid "Product overview sections"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:50
+msgid "Your installed package"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:52
+msgid ""
+"Modern Google Places autocomplete, included free. Collect addresses with a "
+"dedicated single-line field or native Address autofill, tailor suggestions "
+"to your audience, and require a selection when it matters."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:56
+msgid "Explore my features"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:61
+msgid "See what else is available"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:64
+msgid ""
+"Location tools require your own Google API configuration. Google service "
+"usage and billing are separate."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:69
+msgid "Installed package"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:71
+msgid ""
+"Green badges identify included tools. Follow their setup guides to put them "
+"to work."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:74
+msgid "Configuration & settings"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:88 src/Admin/views/dashboard.php:102
+msgid "Included in your package"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:88
+msgid "Take your forms further"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:90
+msgid "Your available building blocks. Choose a tool and open its guide."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:90
+msgid ""
+"Other Gravity Geolocation packages add these capabilities. Explore the demos "
+"or compare packages to find the right fit."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:102
+msgid "Available in other packages"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:113
+msgid "Screenshot placeholder"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:120
+msgid "Setup & documentation"
+msgstr ""
+
+#. translators: %s: Comma-separated package names that include this feature.
+#: src/Admin/views/dashboard.php:126
+#, php-format
+msgid "Included in: %s"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:148
+msgid "Choose the tools your next project needs"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:150
+msgid ""
+"Location and Directions are focused alternatives. Toolkit combines the "
+"geolocation tools. All Access adds Gravity Search."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:153 src/Admin/views/dashboard.php:223
+msgid "View packages & pricing"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:158
+msgid "Find the right package for your project"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:160
+msgid ""
+"Your installed package is highlighted. Packages are alternative builds, not "
+"add-ons to stack together; site allowances and license status are separate "
+"from the feature list."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:163
+msgid ""
+"On narrow screens, scroll the comparison horizontally to see every package."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:166
+msgid "Feature comparison — scroll to see all columns"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:169
+msgid "Gravity package feature comparison"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:174
+msgid "Feature"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:180
+msgid "Installed"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:194
+msgid "Included"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:194
+msgid "Not included"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:220
+msgid ""
+"Google API usage and any required form-builder editions or add-ons are "
+"separate. Optional integrations may require other plugins. Feature checks "
+"show package contents, not setup or license status."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:227
+msgid "More tools for your WordPress site"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:229
+msgid ""
+"Explore our other plugins. These descriptions are bundled locally; nothing "
+"is downloaded or installed from this page."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:238
+msgid "Learn more"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:245
+msgid "From installed to working"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:247
+msgid "Activate Gravity Forms and open this plugin’s native Settings screen."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:249
+msgid ""
+"Enter your Google browser API key. Enable Maps JavaScript API and Places API "
+"(New), configure billing, and restrict the key to your website."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:252
+msgid "Save your form before previewing. Test the complete visitor flow."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:260
+msgid "Google API setup guide"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:263
+msgid "Something not working?"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:264
+msgid ""
+"Check that autocomplete is enabled, then verify the browser API key, "
+"required Google services, billing and key restrictions."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:266
+msgid ""
+"Autocomplete fills an address after a visitor selects a suggestion. This "
+"free plugin does not provide current-location detection, manual geocoding or "
+"connected dynamic location fields."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:268
+msgid ""
+"Include the plugin version, field type and steps to reproduce when asking "
+"for help. Never share API keys or other credentials in a public post."
+msgstr ""
+
+#: src/Admin/views/dashboard.php:272
+msgid "Browse documentation"
+msgstr ""
+
+#: src/Admin/views/dashboard.php:274
+msgid "View support options"
+msgstr ""
+
+#: src/Common/Form/Fields/Registrar.php:101
+msgid "Geolocation Fields"
+msgstr "Pola Geolokalizacji"
+
+#: src/Core/AddOn.php:240
+msgid "All countries"
+msgstr ""
+
+#: src/Core/AddOn.php:241
+msgid "All place types"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:37
+msgid "Enable autocomplete"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:38
+msgid "Show address suggestions powered by Google Places."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:41
+msgid "Require address selection from suggestions"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:42
+msgid ""
+"If the visitor leaves a newly typed address without selecting a suggestion, "
+"clear the input and show your configured alert."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:45
+msgid "Selection alert message"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:46
+msgid ""
+"Show this alert when the visitor leaves a newly typed address without "
+"selecting an autocomplete suggestion."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:49
+msgid "Autocomplete result types"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:50
+msgid ""
+"Choose the types of places to include in autocomplete suggestions. <a "
+"href=\"https://developers.google.com/maps/documentation/places/web-service/"
+"place-types\" target=\"_blank\">Learn more about result types.</a>"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:53
+msgid "Restrict to countries"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:54
+msgid ""
+"Select one or more countries (up to 5) to limit address suggestions within "
+"those regions."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:58
+msgid ""
+"Choose a language for suggestions and place details. Leave the default "
+"selected to use the global language setting."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:61
+msgid "Location bias"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:62
+msgid ""
+"Favor suggestions near a configured point or within a rectangular area. This "
+"does not detect the visitor’s location."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:67
+msgid "Latitude"
+msgstr "Szerokość geograficzna"
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:68
+msgid "Latitude of the center point used to favor nearby suggestions."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:71
+msgid "Longitude"
+msgstr "Długość geograficzna"
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:72
+msgid "Longitude of the center point used to favor nearby suggestions."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:75
+msgid "Radius (in meters)"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:76
+msgid "Radius around the center point, in meters (up to 50,000)."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:81
+msgid "Southwest Point"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:82
+msgid ""
+"Enter the southwest corner as latitude, longitude, for example: 26.423277, "
+"-82.1371324."
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:85
+msgid "Northeast Point"
+msgstr ""
+
+#: src/Features/Form/Admin/FormEditor/Helpers/FieldText.php:86
+msgid ""
+"Enter the northeast corner as latitude, longitude, for example: 26.4724595, "
+"-82.0217760."
+msgstr ""
+
+#: src/Features/Form/Fields/Address/Field.php:152
+msgid "Address"
+msgstr "Adres"
+
+#: src/Features/Form/Fields/Address/Field.php:163
+msgid "A single-line address field with Google Places autocomplete."
+msgstr ""
+
+#: src/Features/Form/Fields/Address/Field.php:370
+msgid "Open Map"
+msgstr ""
+
+#: src/Features/Form/Fields/Address/Settings.php:131
+msgid "Default (global language)"
+msgstr ""
+
+#: src/Features/Form/Fields/Address/Settings.php:255
+msgid "None"
+msgstr "Brak"
+
+#: src/Features/Form/Fields/Address/Settings.php:259
+msgid "Proximity"
+msgstr "Sąsiedztwo"
+
+#: src/Features/Form/Fields/Address/Settings.php:263
+msgid "Area bounds"
+msgstr ""
+
+#: src/Loader.php:67
+msgid ""
+"WPGeo Address Autocomplete for Gravity Forms is not running because Gravity "
+"Geolocation or Gravity Search is active. Deactivate the free plugin; your "
+"existing Address fields and settings remain available in premium."
+msgstr ""
+
+#. translators: %s: Minimum Gravity Forms version.
+#: src/Loader.php:100
+#, php-format
+msgid ""
+"Address Autocomplete requires an active Gravity Forms installation, version "
+"%s or newer."
+msgstr ""

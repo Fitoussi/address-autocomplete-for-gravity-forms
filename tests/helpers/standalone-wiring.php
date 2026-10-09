@@ -17,7 +17,7 @@ namespace {
 	foreach ( [
 		'GFGEOAC_PATH' => $root . '/', 'GFGEOAC_URL' => 'https://example.invalid/plugin/',
 		'GFGEOAC_PREFIX' => 'gfgeo', 'GFGEOAC_VERSION' => '1.0.0',
-		'GFGEOAC_PLUGIN_NAME' => 'Advanced Address Autocomplete for Gravity Forms',
+		'GFGEOAC_PLUGIN_NAME' => 'WPGeo Address Autocomplete for Gravity Forms',
 		'GFGEOAC_PLUGIN_FILE' => $root . '/address-autocomplete-for-gravity-forms.php',
 		'GFGEOAC_BASENAME' => 'address-autocomplete-for-gravity-forms/address-autocomplete-for-gravity-forms.php',
 		'GFGEOAC_SITE_URL' => 'https://gravitygeolocation.com', 'GFGEOAC_PACKAGE_TYPE' => 'free',
@@ -127,7 +127,7 @@ namespace {
 	// Exercise the actual add-on boot methods without a live Gravity Forms host.
 	$reflection = new \ReflectionClass( \GravityGeolocationAutocomplete\Core\AddOn::class );
 	$addon = $reflection->newInstanceWithoutConstructor();
-	foreach ( [ 'include_files', 'register_providers' ] as $method_name ) {
+	foreach ( [ 'register_providers' ] as $method_name ) {
 		$method = $reflection->getMethod( $method_name );
 		if ( PHP_VERSION_ID < 80100 ) {
 			$method->setAccessible( true );
@@ -135,6 +135,9 @@ namespace {
 		$method->invoke( $addon );
 	}
 	$method->invoke( $addon );
+	$checks['no unrelated Search toolbar or notices'] = ! isset( $hooks['gform_toolbar_menu'] )
+		&& ! isset( $hooks['admin_init'] )
+		&& ! class_exists( '\\GravityGeolocationAutocomplete\\Admin\\SearchUnavailable' );
 	$checks['form integration boots only once'] = 1 === count( $hooks['gform_pre_render'][10] );
 	$checks['dynamic feature provider removed'] = ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Provider' );
 	$checks['one-call admin wrapper removed'] = ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Admin\\Admin' );
@@ -148,21 +151,18 @@ namespace {
 	$checks['group appended when advanced group absent'] = array_column( apply_filters( 'gform_field_groups_form_editor', [ [ 'name' => 'standard_fields' ] ] ), 'name' ) === [ 'standard_fields', 'gfgeo_geolocation_fields' ];
 	$checks['invalid group input remains untouched'] = null === apply_filters( 'gform_field_groups_form_editor', null );
 	$types = array_map( static function ( $field ) { return $field->type; }, GF_Fields::$fields );
-	$checks['only Address plus four premium buttons'] = $types === [ 'gfgeo_address', 'gfgeo_map', 'gfgeo_directions', 'gfgeo_distance', 'gfgeo_address_validation' ];
+	$checks['only the functional Address field is registered'] = $types === [ 'gfgeo_address' ];
+	$checks['disabled premium field classes removed'] = ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Fields\\Placeholders\\Map\\Field' )
+		&& ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Fields\\Placeholders\\Directions\\Field' )
+		&& ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Fields\\Placeholders\\Distance\\Field' )
+		&& ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Fields\\Placeholders\\AddressValidation\\Field' );
 	foreach ( GF_Fields::$fields as $field ) {
 		$is_address = 'gfgeo_address' === $field->type;
 		if ( $is_address ) {
 			$checks['custom Address supports conditional logic'] = true === $field->is_conditional_logic_supported();
 			$checks['custom Address offers conditional settings'] = in_array( 'conditional_logic_field_setting', $field->get_form_editor_field_settings(), true );
 		}
-		$checks[ $field->type . ' implementation' ] = $is_address
-			? false === strpos( get_class( $field ), 'Placeholders' )
-			: false !== strpos( get_class( $field ), 'Placeholders' );
-		if ( ! $is_address ) {
-			$checks[ $field->type . ' unavailable marker' ] = false !== strpos( $field->get_form_editor_field_icon(), 'gfgeo-pro-disabled' );
-			$checks[ $field->type . ' no frontend input' ] = empty( $field->get_field_input( [] ) );
-			$checks[ $field->type . ' no entry output' ] = '' === $field->get_value_save_entry( 'do not save', [], '', 0, [] );
-		}
+		$checks[ $field->type . ' functional implementation' ] = $is_address && false === strpos( get_class( $field ), 'Placeholders' );
 	}
 	$checks['only Address settings renderer'] = \GravityGeolocationAutocomplete\Features\Form\Admin\FormEditor::get_field_settings_features() === [ 'Address' ];
 	$GLOBALS['is_form_editor'] = true;
@@ -188,7 +188,7 @@ namespace {
 	$editor->geolocation_settings_tab_content( [], 'general' );
 	$checks['unrelated tabs receive no Address markup'] = '' === ob_get_clean();
 	$GLOBALS['is_form_editor'] = false;
-	$checks['Search entry point remains promotional'] = isset( $hooks['gform_toolbar_menu'] );
+	$checks['Search promotional toolbar removed'] = ! isset( $hooks['gform_toolbar_menu'] );
 	$checks['no premium AJAX/services booted'] = ! array_filter( array_keys( $hooks ), static function ( $hook ) {
 		return 0 === strpos( $hook, 'wp_ajax_' ) || 0 === strpos( $hook, 'rest_api_' ) || false !== strpos( $hook, 'after_submission' );
 	} );

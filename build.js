@@ -1,5 +1,5 @@
 /**
-* Build the standalone frontend and two local admin bundles.
+* Build the standalone frontend and local field-editor bundle.
 *
 * @since 1.0.0
 *
@@ -19,14 +19,9 @@ const builds = [
 		outfile: './build/js/admin/gfgeo-form-editor.min.js',
 		globalName: 'GFGEO_FormEditor',
 	},
-	{
-		entryPoints: ['./assets/js/admin/search-unavailable.js'],
-		outfile: './build/js/admin/gfgeo-search-unavailable.min.js',
-		globalName: 'GFGEO_SearchUnavailable',
-	},
 ];
 
-// Select an explicitly requested local entry, or build all three entries.
+// Select an explicitly requested local entry, or build both entries.
 const requested = process.argv[2];
 const selectedBuilds = requested === 'autocomplete'
 	? builds.filter(config => config.standalone)
