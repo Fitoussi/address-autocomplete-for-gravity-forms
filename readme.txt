@@ -12,69 +12,50 @@ Modern Google Places autocomplete for Gravity Forms, with country and language c
 
 == Description ==
 
-**Less typing. More control over address entry.**
+Add Google-powered address suggestions to Gravity Forms. Use the included single-line Address field or enable autocomplete on Gravity Forms' native Address field to help visitors enter addresses with less typing.
 
-WPGeo Address Autocomplete for Gravity Forms brings **Google Places API (New) to your forms for free**. Help visitors find and select an address, automatically fill native address components, and tailor suggestions to your audience with country, place-type, language and location preferences.
+= Features =
 
-Choose a dedicated single-line Address field or add autocomplete to Gravity Forms' existing multi-part Address field. Require visitors to select a suggestion when your workflow needs it, and open a submitted single-line address in Google Maps directly from its entry detail page.
-
-Built by the creator of Gravity Geolocation and GEO my WP, this focused, standalone plugin includes the autocomplete controls below without a paid plugin upgrade or account connection.
-
-= Google Places API (New), included free =
-
-Autocomplete uses Google's modern Places API by default, including its current suggestion and place-details services. With Places API (New) enabled for your key, the normal autocomplete flow does not use the legacy autocomplete services that trigger Google's deprecation warnings.
+* Dedicated single-line Address field.
+* Autocomplete and autofill for the native Address field.
+* Country restrictions: up to five countries per field.
+* Result types: addresses, cities, establishments and more.
+* Per-field suggestion language.
+* Location bias by point and radius or rectangular bounds.
+* Global language and region preferences.
+* Required suggestion selection with a custom alert message.
+* Support for AJAX forms, conditional fields and entry editing.
+* Open saved single-line addresses in Google Maps from entry details.
 
 = Two ways to collect an address =
 
-* **Dedicated single-line Address field:** a purpose-built field for a complete address in one input, with an Open Map link on the saved entry's detail page.
-* **Native Address autofill:** enable autocomplete on Gravity Forms' multi-part Address field to populate available street, city, state/region, postal code and country components after a suggestion is selected.
-* **Existing forms and entry editing:** enable autocomplete on supported Address fields in your forms, including AJAX and conditionally displayed fields, and use suggestions when editing an entry.
+The dedicated Address field collects a complete address in one input. Prefer separate address components? Enable autocomplete on the native Address field to fill available street, city, state/region, postal code and country values after a visitor selects a suggestion.
 
-= Customize suggestions for each field =
+= Customize suggestions =
 
-* **Country restrictions:** allow suggestions from up to five selected countries per field.
-* **Result types:** choose the supported place types that suit your form, such as addresses, cities or establishments.
-* **Field language:** choose a suggestion language for an individual field, overriding the global language setting when needed.
-* **Location bias:** prioritize suggestions near a configured point and radius, or within rectangular map bounds.
+Choose countries, place types and language for each field. Prioritize suggestions near a point or within map bounds. Location bias and the global region preference influence results; country restrictions limit which countries can appear.
 
-= Set global language and region preferences =
+= Require a suggestion selection =
 
-Set your browser API key, default result language and region code in the plugin settings. The region preference influences regional results; per-field country restrictions control which countries can appear in suggestions.
+Optionally require visitors to choose an address suggestion. Manually typed, unselected text is cleared, and your custom alert prompts them to select a suggestion. This is not postal address validation or a deliverability guarantee.
 
-= Require a selection, not just typed text =
+= Google API requirements =
 
-Enable **Require address selection from suggestions** when visitors should choose a Google suggestion. Newly typed, unselected text is cleared when the visitor leaves the input, and your custom alert explains what to do. Submission checks also prevent unselected text from slipping through a configured autocomplete field.
+Requires Gravity Forms 2.10.3 or newer and your own Google browser API key with **Maps JavaScript API and Places API (New)** enabled. Configure Google Cloud billing and restrict the key to your website. Gravity Forms is sold separately. **Google API usage costs are not included with this plugin** and are billed through your Google Cloud account.
 
-This is a suggestion-selection requirement, not postal address validation or a deliverability guarantee.
-
-= Requirements =
-
-Gravity Forms 2.10.3 or newer and your own Google browser API key are required. Enable Maps JavaScript API and Places API (New) for your Google Cloud project, configure billing, and restrict the key to your website. Gravity Forms is a separate commercial plugin; Google API usage is billed separately through your Google Cloud account.
-
-This plugin does not require a Gravity Geolocation license, a WPGeo account, or WPGeo Framework.
-
-= Need more than autocomplete? =
-
-**Take your forms beyond address entry with Gravity Geolocation.** Its paid packages add tools for richer location workflows:
-
-* **Collect and connect location data:** interactive maps, Geocoder and Coordinates fields, current-location detection, and Dynamic Location Data in standard Gravity Forms fields.
-* **Calculate routes and travel:** directions, route displays, waypoints, distance and travel time, including values for pricing and calculations.
-* **Build advanced location workflows:** nearby-location results, address validation, drawing tools and saved map shapes, plus entry maps.
-* **Search and display entries:** Gravity Search turns Gravity Forms entries into searchable directories, listings and customer portals, with location filters and map displays.
-
-Feature availability depends on the paid package. These are separate installations, not features unlocked inside this free plugin by entering a license. The free plugin includes a local overview and package comparison so you can explore the right fit without connecting an account.
-
-[Explore packages and pricing](https://gravitygeolocation.com/pricing/) | [Try the live demos](https://demo.gravitygeolocation.com/) | [Read the documentation](https://gravitygeolocation.com/docs/)
-
-== External services ==
-
-= Google Maps Platform =
-
-Autocomplete loads Google Maps JavaScript resources and uses Google Places suggestions and place details. Address text, selected place identifiers and request options are sent to Google using the site owner's browser API key. Configure the required APIs, billing and website restrictions using the setup guide before enabling autocomplete.
+Address text entered into autocomplete is sent to Google to provide suggestions and details for the selected address.
 
 [Google Maps Platform terms](https://cloud.google.com/maps-platform/terms) | [Google privacy policy](https://policies.google.com/privacy)
 
-The plugin overview and More Plugins information are bundled locally. They do not fetch a remote catalog, connect an account, or download or install other plugins. Clicking an external documentation, demo or product link opens that website.
+= Need more than autocomplete? =
+
+**Gravity Geolocation** offers paid packages for interactive maps, geocoding, coordinates, current-location detection, directions, distance calculations, address validation and drawing tools. Feature availability depends on the package.
+
+**Gravity Search** turns Gravity Forms entries into searchable directories and listings, with filters, proximity search and map displays.
+
+These are separate plugins, not features unlocked inside this free plugin by entering a license.
+
+[Explore packages and pricing](https://gravitygeolocation.com/pricing/) | [Try the live demos](https://demo.gravitygeolocation.com/) | [Read the documentation](https://gravitygeolocation.com/docs/)
 
 == Installation ==
 
@@ -92,10 +73,6 @@ The overview is available under Forms > Address Autocomplete. If Gravity Forms i
 
 Use the custom single-line Address field or Gravity Forms' native multi-part Address field. This plugin does not add autocomplete to arbitrary Text fields.
 
-= Is Places API (New) a premium feature? =
-
-No. Places API (New) support is included free and used by default. Enable it for your Google API key to use the modern autocomplete flow. A temporary legacy compatibility fallback may run if the new API is unavailable, so the plugin cannot promise a warning-free console for every API configuration.
-
 = Can I open a submitted address on a map? =
 
 Yes. The dedicated single-line Address field includes an Open Map link on the entry detail page. It opens the saved address in Google Maps; it does not embed an interactive map or store a complete geocoding record.
@@ -103,6 +80,8 @@ Yes. The dedicated single-line Address field includes an Open Map link on the en
 = Does manual typing validate or geocode an address? =
 
 No. Autocomplete uses suggestions selected by the visitor. Manual geocoding, address validation and complete geocoding records are not included. Google may not return every address component for every suggestion.
+
+Need to verify and standardize addresses? See Gravity Geolocation's paid [Address Validation solution](https://gravitygeolocation.com/solutions/address-validation/).
 
 = Can I limit suggestions? =
 
@@ -112,23 +91,15 @@ Yes. Field settings include countries, place types, proximity bias and rectangul
 
 Deactivate the free plugin when switching to Gravity Geolocation or Gravity Search. If both are active, the free plugin pauses its field, settings and dashboard integration and displays an administrator notice, regardless of plugin load order. Deactivation does not delete your Gravity Forms forms or their saved settings.
 
-= Is an account or license required? =
+= Is a plugin account or license required? =
 
-No. This plugin has no account connection, license activation, paid updater or remote product installation flow.
+No WPGeo account or plugin license is required. You do need your own Google Cloud account and API key, as described above.
 
-== Source code and build instructions ==
+= Where can developers find the source code? =
 
-Public development repository: https://github.com/Fitoussi/address-autocomplete-for-gravity-forms
+Readable JavaScript/SCSS sources and build files are included in the plugin and available on [GitHub](https://github.com/Fitoussi/address-autocomplete-for-gravity-forms). To rebuild assets, install Node.js/npm and run `npm ci`, then `npm run build` (esbuild and Sass). These tools are not required to use the plugin.
 
-Readable JavaScript and SCSS sources, build.js, package.json and package-lock.json are also included in this plugin ZIP. Every shipped JavaScript bundle is generated from the readable sources listed below.
-
-* build/js/frontend/address-autocomplete.min.js is built from assets/js/autocomplete/gravity-address-autocomplete.js and its imports in assets/js/autocomplete/.
-* build/js/admin/gfgeo-form-editor.min.js is built from assets/js/editor/form-editor.js and its imports in assets/js/editor/.
-* Admin CSS in build/css/admin/ is built from the matching files in assets/scss/admin/ using Sass.
-
-To reproduce the generated files, install Node.js and npm, run `npm ci` in the plugin directory, then run `npm run build`. The locked development dependencies include esbuild for JavaScript bundling and Sass for CSS. The plugin runtime does not require Node.js, npm or Composer.
-
-Third-party library: Choices.js 11.1.0, MIT licensed. Its readable bundled distribution is assets/js/editor/vendor/choices.js; its styles are assets/css/choices.css, and its license is assets/licenses/choices.txt. Upstream source and build instructions: https://github.com/Choices-js/Choices/tree/v11.1.0
+Includes [Choices.js 11.1.0](https://github.com/Choices-js/Choices/tree/v11.1.0), MIT licensed; readable distribution: assets/js/editor/vendor/choices.js; license: assets/licenses/choices.txt.
 
 == Screenshots ==
 
