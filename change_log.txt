@@ -2,16 +2,4 @@ WPGeo Address Autocomplete for Gravity Forms
 
 1.0.0
 -----
-* Updated the public name and release slug to WPGeo Address Autocomplete for Gravity Forms.
-* Documented public/bundled sources, build steps and the Choices.js library.
-* Removed unrelated Search promotional entry points, notices and their assets.
-* Removed disabled premium field buttons and their upgrade dialogs, keeping the local overview.
-* One-time administrator setup notice with permanent dismissal and no activation redirect.
-* Initial standalone release.
-* Google Places API (New) autocomplete with a temporary legacy compatibility fallback.
-* Dedicated single-line Address field with an entry-detail Google Maps link.
-* Autocomplete and address-component autofill for native Gravity Forms Address fields.
-* Per-field country, place-type, language and location bias preferences, plus global language and region settings.
-* Optional required suggestion selection with a custom clear-and-alert message on blur and submission checks.
-* Autocomplete support for AJAX and conditionally displayed fields and entry editing.
-* Local product overview, package comparison, help and other plugin information.
+* Initial release.

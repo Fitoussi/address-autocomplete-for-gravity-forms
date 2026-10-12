@@ -114,14 +114,4 @@ Includes [Choices.js 11.1.0](https://github.com/Choices-js/Choices/tree/v11.1.0)
 == Changelog ==
 
 = 1.0.0 =
-* Updated the public name to WPGeo Address Autocomplete for Gravity Forms.
-* Documented the public repository, bundled readable sources, build steps and third-party library.
-* Removed unrelated Search promotional entry points and notices from Gravity Forms pages.
-* Removed disabled premium field buttons and their upgrade dialogs; the local overview remains available.
-* Added a one-time administrator setup notice with permanent dismissal and no activation redirect.
-* Initial standalone release with custom and native Address autocomplete.
-* Included Google Places API (New) support with a temporary legacy compatibility fallback.
-* Added per-field country, place-type, language and location bias controls, plus global language and region settings.
-* Added required suggestion selection with a custom clear-and-alert message and submission checks.
-* Included the single-line Address field's entry-detail map link and autocomplete during entry editing.
-* Included local overview, comparison, help and product information.
+* Initial release.
