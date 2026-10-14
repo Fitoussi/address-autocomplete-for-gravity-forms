@@ -41,9 +41,7 @@ Optionally require visitors to choose an address suggestion. Manually typed, uns
 
 = Google API requirements =
 
-Requires Gravity Forms 2.10.3 or newer and your own Google browser API key with **Maps JavaScript API and Places API (New)** enabled. Configure Google Cloud billing and restrict the key to your website. Gravity Forms is sold separately. **Google API usage costs are not included with this plugin** and are billed through your Google Cloud account.
-
-Address text entered into autocomplete is sent to Google to provide suggestions and details for the selected address.
+A Google Maps API key is required for address autocomplete to work. Follow [this tutorial](https://gravitygeolocation.com/docs/google-maps-api-keys-gravity-geolocation/) to create your Google Maps API key.
 
 [Google Maps Platform terms](https://cloud.google.com/maps-platform/terms) | [Google privacy policy](https://policies.google.com/privacy)
 
@@ -97,7 +95,7 @@ No WPGeo account or plugin license is required. You do need your own Google Clou
 
 = Where can developers find the source code? =
 
-Readable JavaScript/SCSS sources and build files are included in the plugin and available on [GitHub](https://github.com/Fitoussi/address-autocomplete-for-gravity-forms). To rebuild assets, install Node.js/npm and run `npm ci`, then `npm run build` (esbuild and Sass). These tools are not required to use the plugin.
+Readable JavaScript and SCSS sources are included in the plugin. The full development project, build configuration and dependency lockfile are available on [GitHub](https://github.com/Fitoussi/address-autocomplete-for-gravity-forms). To rebuild assets, download the repository, install Node.js/npm, then run `npm ci` and `npm run build` (esbuild and Sass). These tools are not required to use the plugin.
 
 Includes [Choices.js 11.1.0](https://github.com/Choices-js/Choices/tree/v11.1.0), MIT licensed; readable distribution: assets/js/editor/vendor/choices.js; license: assets/licenses/choices.txt.
 

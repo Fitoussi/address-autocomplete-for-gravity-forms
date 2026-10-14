@@ -89,7 +89,9 @@ same `--slug` value; checking only the old local folder can hide domain mismatch
 The GitHub repository remains public at
 https://github.com/Fitoussi/address-autocomplete-for-gravity-forms and its name is
 unchanged. The readme documents bundle/source mappings, locked npm build steps
-and Choices.js version/source/license. Sources/build inputs also ship in the ZIP.
+and Choices.js version/source/license. Readable JS/SCSS sources ship in the ZIP;
+build.js, package.json and package-lock.json stay in the public source repository
+and are excluded from installable ZIPs.
 Contributors uses the submitting account `ninjew`; the PHP author remains Eyal
 Fitoussi. Keep the local overview, but do not restore disabled premium field
 buttons, their upgrade dialogs or unrelated Search advertising on normal Gravity

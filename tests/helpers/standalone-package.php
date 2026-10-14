@@ -35,13 +35,17 @@ foreach ( [
 	'build/js/frontend/address-autocomplete.min.js', 'build/js/admin/gfgeo-form-editor.min.js',
 	'assets/js/autocomplete/services/address-autocomplete.js', 'assets/js/autocomplete/services/compat/places-autocomplete.js',
 	'assets/js/autocomplete/native-address.js', 'assets/js/editor/form-editor.js', 'assets/js/editor/vendor/choices.js',
-	'assets/licenses/choices.txt', 'assets/scss/admin/gfgeo-product-dashboard.scss', 'build.js', 'package.json', 'package-lock.json',
+	'assets/licenses/choices.txt', 'assets/scss/admin/gfgeo-product-dashboard.scss',
 ] as $file ) {
 	$checks[ 'includes ' . $file ] = in_array( $prefix . $file, $files, true );
 }
 $checks['no development or private directories'] = ! array_filter( $files, static function ( $file ) use ( $prefix ) {
 	return preg_match( '#^(?:\.git|\.agents|\.codex|\.vscode|docs|tests|tools|vendor|node_modules|dist)/#', substr( $file, strlen( $prefix ) ) );
 } );
+foreach ( [ 'build.js', 'package.json', 'package-lock.json' ] as $file ) {
+	$checks[ 'excludes build metadata: ' . $file ] = ! in_array( $prefix . $file, $files, true );
+	$checks[ 'retains source build metadata: ' . $file ] = is_file( $root . '/' . $file );
+}
 $checks['no removed premium/runtime scaffolding'] = ! array_filter( $files, static function ( $file ) {
 	return preg_match( '#/(?:Licensing|Migrations|Distribution|Services|Features/Search)/|/Features/Form/Provider\.php$|/Common/Form/Admin/#', $file );
 } );

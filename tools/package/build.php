@@ -54,7 +54,7 @@ try {
 		}
 	}
 
-	$paths = [ $entry_file, 'readme.txt', 'change_log.txt', 'src', 'assets', 'build', 'languages', 'build.js', 'package.json', 'package-lock.json' ];
+	$paths = [ $entry_file, 'readme.txt', 'change_log.txt', 'src', 'assets', 'build', 'languages' ];
 	$files = [];
 	$extensions = [ 'php', 'js', 'css', 'scss', 'svg', 'png', 'jpg', 'jpeg', 'webp', 'gif', 'json', 'map', 'txt', 'po', 'mo', 'pot' ];
 	foreach ( $paths as $path ) {
