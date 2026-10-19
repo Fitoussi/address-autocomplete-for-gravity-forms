@@ -225,7 +225,7 @@ class AddOn extends \GFAddOn {
 	}
 
 	/**
-	 * Provide translated autocomplete builder labels.
+	 * Provide translated autocomplete labels and disabled-field dialog copy.
 	 *
 	 * @since 1.0.0
 	 *
@@ -236,9 +236,17 @@ class AddOn extends \GFAddOn {
 			'gfgeo-form-editor',
 			'gfgeoFormEditorStrings',
 			[
-				'autocomplete' => [
+				'autocomplete'     => [
 					'allCountries' => __( 'All countries', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 					'allTypes'     => __( 'All place types', 'wpgeo-address-autocomplete-for-gravity-forms' ),
+				],
+				'unavailableField' => [
+					/* translators: %s: Premium field title. */
+					'title'          => __( 'The %s field is not available.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
+					/* translators: %s: Premium field title. */
+					'message'        => __( 'The %s field is available with Gravity Geolocation.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
+					'upgradeNow'     => __( 'View packages', 'wpgeo-address-autocomplete-for-gravity-forms' ),
+					'unlockFeatures' => __( 'to explore additional location tools.', 'wpgeo-address-autocomplete-for-gravity-forms' ),
 				],
 			]
 		);

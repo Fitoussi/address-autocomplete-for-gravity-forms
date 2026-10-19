@@ -30,7 +30,7 @@ require $argv[3] ?? dirname( __DIR__, 2 ) . '/address-autocomplete-for-gravity-f
 \GravityGeolocationAutocomplete\Loader::load();
 $checks = [
 	'premium identity retained' => $argv[1] === GFGEO_PACKAGE_TYPE && 'premium-fixture' === GFGEO_VERSION,
-	'free identity isolated' => 'free' === GFGEOAC_PACKAGE_TYPE && '1.0.0' === GFGEOAC_VERSION,
+	'free identity isolated' => 'free' === GFGEOAC_PACKAGE_TYPE && '1.0.1' === GFGEOAC_VERSION,
 	'no premium namespace loaded' => ! class_exists( 'GravityGeolocation\Loader', false ),
 	'no runtime or dashboard hooks' => ! isset( $hooks['gform_loaded'] ) && ! isset( $hooks['admin_menu'] ),
 	'both admin surfaces registered' => isset( $hooks['admin_notices'], $hooks['network_admin_notices'] ),

@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name:            WPGeo Address Autocomplete for Gravity Forms
+ * Plugin Name:            Logical Address Autocomplete for Gravity Forms
  * Plugin URI:             https://gravitygeolocation.com
  * Description:            Modern Google Places address autocomplete for Gravity Forms. Includes a single-line Address field, native Address autofill, country and language controls, location bias, required suggestion selection, and entry map links. Requires Gravity Forms and your own Google API key.
  * Author:                 Eyal Fitoussi
  * Author URI:             https://www.wpgeo.com
- * Version:                1.0.0
+ * Version:                1.0.1
  * Requires at least:      6.5
  * Requires PHP:           7.4
  * Requires Gravity Forms: 2.10.3+
@@ -26,11 +26,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Isolated bootstrap; saved gfgeo field/settings identities remain compatible.
-define( 'GFGEOAC_VERSION', '1.0.0' );
+define( 'GFGEOAC_VERSION', '1.0.1' );
 define( 'GFGEOAC_PLUGIN_FILE', __FILE__ );
 define( 'GFGEOAC_BASENAME', plugin_basename( __FILE__ ) );
 define( 'GFGEOAC_PREFIX', 'gfgeo' );
-define( 'GFGEOAC_PLUGIN_NAME', 'WPGeo Address Autocomplete for Gravity Forms' );
+define( 'GFGEOAC_PLUGIN_NAME', 'Address Autocomplete for Gravity Forms' );
 define( 'GFGEOAC_PATH', plugin_dir_path( __FILE__ ) );
 define( 'GFGEOAC_URL', plugin_dir_url( __FILE__ ) );
 define( 'GFGEOAC_PACKAGE_TYPE', 'free' );

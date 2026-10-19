@@ -16,8 +16,8 @@ $addon  = file_get_contents( $root . '/src/Core/AddOn.php' );
 $checks = [];
 
 foreach ( [
-	'Plugin Name' => 'WPGeo Address Autocomplete for Gravity Forms',
-	'Version'     => '1.0.0',
+	'Plugin Name' => 'Logical Address Autocomplete for Gravity Forms',
+	'Version'     => '1.0.1',
 	'Text Domain' => 'wpgeo-address-autocomplete-for-gravity-forms',
 	'License'     => 'GPL-3.0-or-later',
 ] as $header => $expected ) {
@@ -25,8 +25,8 @@ foreach ( [
 }
 
 foreach ( [
-	'GFGEOAC_VERSION'      => '1.0.0',
-	'GFGEOAC_PLUGIN_NAME'  => 'WPGeo Address Autocomplete for Gravity Forms',
+	'GFGEOAC_VERSION'      => '1.0.1',
+	'GFGEOAC_PLUGIN_NAME'  => 'Address Autocomplete for Gravity Forms',
 	'GFGEOAC_PACKAGE_TYPE' => 'free',
 	'GFGEOAC_PREFIX'       => 'gfgeo',
 	'GFGEOAC_MIN_HOST_VERSION' => '2.10.3',
@@ -64,6 +64,8 @@ $package = json_decode( file_get_contents( $root . '/package.json' ), true, 512,
 $lock    = json_decode( file_get_contents( $root . '/package-lock.json' ), true, 512, JSON_THROW_ON_ERROR );
 $checks['npm identity and lock agree'] = 'address-autocomplete-for-gravity-forms' === $package['name']
 	&& $package['name'] === $lock['name'] && $package['name'] === $lock['packages']['']['name'];
+$checks['release metadata versions agree'] = '1.0.1' === $package['version']
+	&& $package['version'] === $lock['version'] && $package['version'] === $lock['packages']['']['version'];
 
 foreach ( [ 'free', 'location', 'directions', 'toolkit', 'search', 'allaccess' ] as $package_type ) {
 	foreach ( [ 'allowed', 'denied' ] as $permission ) {

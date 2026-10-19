@@ -40,10 +40,15 @@ try {
 	}
 
 	$required = [
+		'src/Admin/Dashboard/Loader.php',
+		'src/Admin/Dashboard/Features.php',
+		'src/Admin/Dashboard/views/dashboard.php',
+		'src/Admin/Dashboard/assets/scss/dashboard.scss',
+		'src/Admin/Dashboard/assets/css/dashboard.css',
 		'build/js/frontend/address-autocomplete.min.js',
 		'build/js/admin/gfgeo-form-editor.min.js',
 		'build/css/admin/gfgeo-admin.min.css',
-		'build/css/admin/gfgeo-product-dashboard.min.css',
+		'src/Admin/Dashboard/assets/css/dashboard.min.css',
 		'assets/css/address-autocomplete.css',
 		'assets/css/choices.css',
 		'assets/licenses/choices.txt',

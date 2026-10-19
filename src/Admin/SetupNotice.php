@@ -8,6 +8,8 @@
 
 namespace GravityGeolocationAutocomplete\Admin;
 
+use GravityGeolocationAutocomplete\Admin\Dashboard\Loader as Dashboard;
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }

@@ -1,4 +1,11 @@
-WPGeo Address Autocomplete for Gravity Forms
+Logical Address Autocomplete for Gravity Forms
+
+1.0.1
+-----
+* Renamed the public plugin title to Logical Address Autocomplete for Gravity Forms; retained the existing slug and saved settings.
+* Refreshed the overview navigation and action buttons, aligned discovery-card buttons, and moved admin notices below navigation.
+* Restored four editor-only discovery buttons for the separate Gravity Geolocation plugin; they do not insert fields.
+* Contained the overview in its own dashboard folder without changing autocomplete behavior.
 
 1.0.0
 -----

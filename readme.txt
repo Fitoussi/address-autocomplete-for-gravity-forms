@@ -1,10 +1,10 @@
-=== WPGeo Address Autocomplete for Gravity Forms ===
+=== Logical Address Autocomplete for Gravity Forms ===
 Contributors: ninjew
 Tags: gravity forms, address autocomplete, google places, address autofill, address field
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPL-3.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -110,6 +110,12 @@ Includes [Choices.js 11.1.0](https://github.com/Choices-js/Choices/tree/v11.1.0)
 7. Explore included autocomplete features and other Gravity Geolocation packages from the locally bundled overview.
 
 == Changelog ==
+
+= 1.0.1 =
+* Renamed the plugin to Logical Address Autocomplete for Gravity Forms. The existing plugin slug and saved settings are unchanged.
+* Refreshed the overview navigation and action buttons, aligned discovery-card buttons, and placed admin notices below the navigation.
+* Restored four editor-only links to explore Map, Directions, Distance & Travel Time, and Address Validation in the separate Gravity Geolocation plugin. These buttons do not insert fields.
+* Organized the overview into a contained dashboard folder without changing autocomplete behavior.
 
 = 1.0.0 =
 * Initial release.

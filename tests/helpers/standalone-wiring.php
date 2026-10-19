@@ -16,8 +16,8 @@ namespace {
 	define( 'ABSPATH', $root . '/' );
 	foreach ( [
 		'GFGEOAC_PATH' => $root . '/', 'GFGEOAC_URL' => 'https://example.invalid/plugin/',
-		'GFGEOAC_PREFIX' => 'gfgeo', 'GFGEOAC_VERSION' => '1.0.0',
-		'GFGEOAC_PLUGIN_NAME' => 'WPGeo Address Autocomplete for Gravity Forms',
+		'GFGEOAC_PREFIX' => 'gfgeo', 'GFGEOAC_VERSION' => '1.0.1',
+		'GFGEOAC_PLUGIN_NAME' => 'Address Autocomplete for Gravity Forms',
 		'GFGEOAC_PLUGIN_FILE' => $root . '/address-autocomplete-for-gravity-forms.php',
 		'GFGEOAC_BASENAME' => 'address-autocomplete-for-gravity-forms/address-autocomplete-for-gravity-forms.php',
 		'GFGEOAC_SITE_URL' => 'https://gravitygeolocation.com', 'GFGEOAC_PACKAGE_TYPE' => 'free',
@@ -116,7 +116,7 @@ namespace {
 	$checks['licensing classes absent'] = ! class_exists( '\GravityGeolocationAutocomplete\Licensing\LicenseManager' );
 	$checks['migration classes absent'] = ! class_exists( '\GravityGeolocationAutocomplete\Migrations\Manager' );
 	$checks['local admin menu registered'] = isset( $hooks['admin_menu'] );
-	\GravityGeolocationAutocomplete\Admin\Dashboard::register_page();
+	\GravityGeolocationAutocomplete\Admin\Dashboard\Loader::register_page();
 	$checks['Address Autocomplete belongs to Forms'] = 'gf_edit_forms' === $dashboard_menu['parent'] && 'Address Autocomplete' === $dashboard_menu['menu_title'];
 	$links = apply_filters( 'plugin_action_links_' . GFGEOAC_BASENAME, [ 'deactivate' => '<a>Deactivate</a>' ] );
 	$checks['plugin row retains overview/settings/docs'] = array_keys( $links ) === [ 'overview', 'settings', 'docs', 'deactivate' ];
@@ -151,18 +151,23 @@ namespace {
 	$checks['group appended when advanced group absent'] = array_column( apply_filters( 'gform_field_groups_form_editor', [ [ 'name' => 'standard_fields' ] ] ), 'name' ) === [ 'standard_fields', 'gfgeo_geolocation_fields' ];
 	$checks['invalid group input remains untouched'] = null === apply_filters( 'gform_field_groups_form_editor', null );
 	$types = array_map( static function ( $field ) { return $field->type; }, GF_Fields::$fields );
-	$checks['only the functional Address field is registered'] = $types === [ 'gfgeo_address' ];
-	$checks['disabled premium field classes removed'] = ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Fields\\Placeholders\\Map\\Field' )
-		&& ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Fields\\Placeholders\\Directions\\Field' )
-		&& ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Fields\\Placeholders\\Distance\\Field' )
-		&& ! class_exists( '\\GravityGeolocationAutocomplete\\Features\\Form\\Fields\\Placeholders\\AddressValidation\\Field' );
+	$checks['only Address plus four premium buttons'] = $types === [ 'gfgeo_address', 'gfgeo_map', 'gfgeo_directions', 'gfgeo_distance', 'gfgeo_address_validation' ];
 	foreach ( GF_Fields::$fields as $field ) {
 		$is_address = 'gfgeo_address' === $field->type;
 		if ( $is_address ) {
 			$checks['custom Address supports conditional logic'] = true === $field->is_conditional_logic_supported();
 			$checks['custom Address offers conditional settings'] = in_array( 'conditional_logic_field_setting', $field->get_form_editor_field_settings(), true );
 		}
-		$checks[ $field->type . ' functional implementation' ] = $is_address && false === strpos( get_class( $field ), 'Placeholders' );
+		$checks[ $field->type . ' implementation' ] = $is_address
+			? false === strpos( get_class( $field ), 'Placeholders' )
+			: false !== strpos( get_class( $field ), 'Placeholders' );
+		if ( ! $is_address ) {
+			$checks[ $field->type . ' unavailable marker' ] = false !== strpos( $field->get_form_editor_field_icon(), 'gfgeo-pro-disabled' );
+			$checks[ $field->type . ' no frontend input' ] = empty( $field->get_field_input( [] ) );
+			$checks[ $field->type . ' no entry output' ] = '' === $field->get_value_save_entry( 'do not save', [], '', 0, [] );
+			$checks[ $field->type . ' no GF3 entry value' ] = '' === $field->get_value_save_input( 'do not save', [], '', 0, [] );
+			$checks[ $field->type . ' no settings or logic' ] = [] === $field->get_form_editor_field_settings() && ! $field->is_conditional_logic_supported();
+		}
 	}
 	$checks['only Address settings renderer'] = \GravityGeolocationAutocomplete\Features\Form\Admin\FormEditor::get_field_settings_features() === [ 'Address' ];
 	$GLOBALS['is_form_editor'] = true;

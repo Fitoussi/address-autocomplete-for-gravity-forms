@@ -7,6 +7,7 @@ import Choices from './vendor/choices.js';
 import {PlaceTypes} from './place-types.js';
 import {normalizeList, isEnabled} from '../autocomplete/address-options.js';
 import {restoreGeolocationPanelState} from './geolocation-panel-state.js';
+import {showUnavailableFieldDialog} from './unavailable-fields.js';
 
 const supportedTypes = ['gfgeo_address', 'address'];
 const checkboxes = {
@@ -136,6 +137,42 @@ export function loadFieldSettings(field) {
 }
 
 /**
+ * Show promotional field buttons while preventing actual field insertion.
+ *
+ * @since 1.0.0
+ *
+ * @returns {void}
+ */
+function blockPremiumButtons() {
+	const types = new Map();
+	globalThis.jQuery('.add-buttons button[data-icon*="gfgeo-pro-disabled"]').each(function () {
+		const button = globalThis.jQuery(this);
+		const type = button.data('type');
+		const name = button.val() || button.text().trim() || type;
+		types.set(type, name);
+		button.removeClass('ui-draggable').attr('draggable', 'false').css({cursor: 'not-allowed', opacity: 0.6});
+		button.off('mousedown');
+		this.onclick = null;
+		this.onkeypress = null;
+		button.on('click.gfgeoac keydown.gfgeoac', event => {
+			if (event.type === 'keydown' && !['Enter', ' '].includes(event.key)) {
+				return;
+			}
+			event.preventDefault();
+			event.stopImmediatePropagation();
+			showUnavailableFieldDialog(name);
+		});
+	});
+	globalThis.gform?.addFilter('gform_form_editor_can_field_be_added', (canAdd, type) => {
+		if (!types.has(type)) {
+			return canAdd;
+		}
+		showUnavailableFieldDialog(types.get(type));
+		return false;
+	});
+}
+
+/**
  * Place the existing Autocomplete heading and panel immediately before Advanced.
  *
  * Gravity Forms renders custom tabs after its built-in tabs. Move both existing
@@ -202,6 +239,7 @@ export function initializeEditor() {
 			}
 		});
 	}
+	blockPremiumButtons();
 }
 
 globalThis.jQuery?.(initializeEditor);

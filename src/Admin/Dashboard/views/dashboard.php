@@ -1,6 +1,6 @@
 <?php
 /**
- * Standalone product overview. Public variables come from Admin\Dashboard::render().
+ * Standalone product overview. Public variables come from Admin\Dashboard\Loader::render().
  *
  * Screenshot markers reserve our own local assets; no remote embeds or tracking.
  * Availability markers describe packaged implementations, not completed setup.
@@ -9,7 +9,7 @@
  * @since 1.0.0
  */
 
-use GravityGeolocationAutocomplete\Admin\Dashboard;
+use GravityGeolocationAutocomplete\Admin\Dashboard\Loader as Dashboard;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -25,15 +25,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 		<div class="gfgeo-product-dashboard__actions">
 			<span class="gfgeo-product-dashboard__version"><?php echo esc_html( 'v' . $version ); ?></span>
+			<a class="button button-primary"
+				href="<?php echo esc_url( $settings_url ); ?>"><?php esc_html_e( 'Open Settings', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
+			<a class="button" href="<?php echo esc_url( $demo_url ); ?>" target="_blank"
+				rel="noopener noreferrer"><?php esc_html_e( 'View Live Demos', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 			<a class="button"
 				href="<?php echo esc_url( Dashboard::get_url( 'products' ) ); ?>"><?php esc_html_e( 'Explore Plugins', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
-			<a class="button"
-				href="<?php echo esc_url( $settings_url ); ?>"><?php esc_html_e( 'Open Settings', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
-			<a class="button button-primary" href="<?php echo esc_url( $demo_url ); ?>" target="_blank"
-				rel="noopener noreferrer"><?php esc_html_e( 'View Live Demos', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?></a>
 		</div>
 	</header>
-	<hr class="wp-header-end">
 	<nav class="gfgeo-product-dashboard__nav"
 		aria-label="<?php esc_attr_e( 'Product overview sections', 'wpgeo-address-autocomplete-for-gravity-forms' ); ?>">
 		<?php foreach ( $tabs as $gfgeoac_key => $gfgeoac_label ) : ?>
@@ -41,6 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				aria-current="<?php echo $section === $gfgeoac_key ? 'page' : 'false'; ?>"><?php echo esc_html( $gfgeoac_label ); ?></a>
 		<?php endforeach; ?>
 	</nav>
+	<hr class="wp-header-end">
 	<div class="gfgeo-product-dashboard__layout">
 		<main class="gfgeo-product-dashboard__main">
 			<?php if ( 'overview' === $section ) : ?>
@@ -125,7 +125,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 											/* translators: %s: Comma-separated package names that include this feature. */
 											echo esc_html( sprintf( __( 'Included in: %s', 'wpgeo-address-autocomplete-for-gravity-forms' ), implode( ', ', array_intersect_key( $packages, array_flip( $gfgeoac_feature['packages'] ) ) ) ) );
 											?></span></p>
-											<?php $gfgeoac_feature_demos = \GravityGeolocationAutocomplete\Admin\DashboardFeatures::get_demo_links( $gfgeoac_item_id ); ?>
+											<?php $gfgeoac_feature_demos = \GravityGeolocationAutocomplete\Admin\Dashboard\Features::get_demo_links( $gfgeoac_item_id ); ?>
 											<?php if ( $gfgeoac_feature_demos ) : ?>
 												<div class="gfgeo-product-dashboard__demo-links">
 													<?php foreach ( $gfgeoac_feature_demos as $gfgeoac_feature_demo ) : ?>
@@ -231,7 +231,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</section>
 				<div class="gfgeo-product-dashboard__feature-grid">
 					<?php foreach ( Dashboard::get_products() as $gfgeoac_product ) : ?>
-						<article class="gfgeo-product-dashboard__card">
+						<article class="gfgeo-product-dashboard__card gfgeo-product-dashboard__product-card">
 							<h2><?php echo esc_html( $gfgeoac_product['name'] ); ?></h2>
 							<p><?php echo esc_html( $gfgeoac_product['description'] ); ?></p>
 							<a class="button" href="<?php echo esc_url( $gfgeoac_product['url'] ); ?>" target="_blank"

@@ -5,11 +5,12 @@
  * This describes packaged capabilities, not license validity or frontend gates.
  * Every availability probe names concrete source files, never upsell placeholders.
  *
- * @package GravityGeolocationAutocomplete\Admin
+ * @package GravityGeolocationAutocomplete\Admin\Dashboard
+ *
  * @since 1.0.0
  */
 
-namespace GravityGeolocationAutocomplete\Admin;
+namespace GravityGeolocationAutocomplete\Admin\Dashboard;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -20,12 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-final class DashboardFeatures {
+final class Features {
 
 	/**
 	 * Prioritize major capabilities without changing comparison-table order.
 	 *
 	 * @since 1.0.0
+	 *
 	 * @param array<string,array> $features Existing feature definitions.
 	 * @return array<string,array> Overview cards in feature-first order.
 	 */
@@ -67,6 +69,7 @@ final class DashboardFeatures {
 	 * a relevant demo. These are ordinary outbound links, never remote embeds.
 	 *
 	 * @since 1.0.0
+	 *
 	 * @param string $feature_id Public feature identifier.
 	 * @return array<array{label:string,url:string}> Feature-specific demo links.
 	 */
@@ -144,10 +147,11 @@ final class DashboardFeatures {
 	 * @since 1.0.0
 	 *
 	 * @param string|null $source_root Source directory; null uses this installation.
+	 *
 	 * @return array<string,array>
 	 */
 	public static function get_features( $source_root = null ) {
-		$source_root = null === $source_root ? dirname( __DIR__ ) : $source_root;
+		$source_root = null === $source_root ? dirname( __DIR__, 2 ) : $source_root;
 		$features    = self::get_definitions();
 
 		foreach ( $features as &$feature ) {

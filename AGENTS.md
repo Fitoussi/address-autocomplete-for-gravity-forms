@@ -16,12 +16,14 @@ HEAD, remote and complete working tree; preserve all local changes.
   and deferred premium-wins guard; do not restore shared bootstrap aliases.
 - Keep this plugin focused on custom/native Address autocomplete. Do not add
   WPGeo runtime, account connections, licensing, migrations or premium services.
-- Retain the local product overview, but do not restore disabled premium field
-  buttons or their upsell dialogs. The owner removed them permanently on October 9.
-  Register only the functional Address field; preserve existing paid settings.
-- Public name is WPGeo Address Autocomplete for Gravity Forms. The requested
-  review slug/domain is wpgeo-address-autocomplete-for-gravity-forms; reservation
-  is not confirmed until WordPress.org replies. Keep local/repo/PHP filenames and
+- Retain the local product overview and exactly four disabled premium discovery
+  buttons in the form editor: Map, Directions, Distance & Travel Time and Address
+  Validation. The owner explicitly restored these on October 17, superseding the
+  October 9 removal. They may show the original native dialog but must not insert
+  working fields, render inputs or save entry values. Preserve paid settings.
+- Public name is Logical Address Autocomplete for Gravity Forms as of the owner's
+  October 19 release preparation. The approved existing slug/domain remains
+  wpgeo-address-autocomplete-for-gravity-forms. Keep local/repo/PHP filenames and
   saved data identities unchanged. GitHub stays public. Do not restore unrelated
   Create Search buttons/notices or the removed SearchUnavailable integration.
 - Use `npm run build` and `npm test` for local assets and fixture coverage.

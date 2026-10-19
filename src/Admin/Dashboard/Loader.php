@@ -5,11 +5,14 @@
  * This presentation-only page never reads licenses, creates forms or writes
  * settings. Actual configuration remains on the native Gravity Forms screen.
  *
- * @package GravityGeolocationAutocomplete\Admin
+ * @package GravityGeolocationAutocomplete\Admin\Dashboard
+ *
  * @since 1.0.0
  */
 
-namespace GravityGeolocationAutocomplete\Admin;
+namespace GravityGeolocationAutocomplete\Admin\Dashboard;
+
+use GravityGeolocationAutocomplete\Admin\SetupNotice;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -20,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-final class Dashboard {
+final class Loader {
 
 	/**
 	 * Stable product-page identity independent of the installed folder name.
@@ -79,6 +82,7 @@ final class Dashboard {
 	 * @since 1.0.0
 	 *
 	 * @param array $links Existing WordPress plugin action links.
+	 *
 	 * @return array
 	 */
 	public static function add_action_link( $links ) {
@@ -95,6 +99,7 @@ final class Dashboard {
 	 * @since 1.0.0
 	 *
 	 * @param string $section Requested section.
+	 *
 	 * @return string
 	 */
 	public static function get_url( $section = 'overview' ) {
@@ -110,6 +115,7 @@ final class Dashboard {
 	 * @since 1.0.0
 	 *
 	 * @param string $hook_suffix WordPress screen hook.
+	 *
 	 * @return void
 	 */
 	public static function enqueue( $hook_suffix ) {
@@ -127,7 +133,7 @@ final class Dashboard {
 
 		wp_enqueue_style(
 			'gfgeo-product-dashboard',
-			GFGEOAC_URL . 'build/css/admin/gfgeo-product-dashboard.min.css',
+			GFGEOAC_URL . 'src/Admin/Dashboard/assets/css/dashboard.min.css',
 			[],
 			GFGEOAC_VERSION
 		);
@@ -142,6 +148,7 @@ final class Dashboard {
 	 * @since 1.0.0
 	 *
 	 * @param array $sections Native settings definitions.
+	 *
 	 * @return array
 	 */
 	public static function add_settings_link( $sections ) {
@@ -223,10 +230,10 @@ final class Dashboard {
 		$pricing_url  = GFGEOAC_SITE_URL . '/pricing/';
 		$docs_url     = GFGEOAC_SITE_URL . '/docs/';
 		$demo_url     = 'https://demo.gravitygeolocation.com/';
-		$product_name = GFGEOAC_PLUGIN_NAME;
+		$product_name = __( 'Address Autocomplete', 'wpgeo-address-autocomplete-for-gravity-forms' );
 		$package_name = GFGEOAC_PACKAGE_LABEL;
-		$features     = DashboardFeatures::get_features();
-		$overview_features = DashboardFeatures::order_for_overview( $features );
+		$features     = Features::get_features();
+		$overview_features = Features::order_for_overview( $features );
 		$included     = array_filter(
 			$overview_features,
 			static function ( $feature ) {
@@ -239,7 +246,7 @@ final class Dashboard {
 				return ! $feature['included'];
 			}
 		);
-		$packages     = DashboardFeatures::get_packages();
+		$packages     = Features::get_packages();
 
 		$hero_title     = __( 'Less typing. Better addresses.', 'wpgeo-address-autocomplete-for-gravity-forms' );
 		$help_step      = __( 'Add a custom Address field or enable autocomplete on a native Address field.', 'wpgeo-address-autocomplete-for-gravity-forms' );

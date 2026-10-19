@@ -1,4 +1,39 @@
-# WPGeo Address Autocomplete for Gravity Forms
+# Logical Address Autocomplete for Gravity Forms
+
+## October 19 version 1.0.1 release
+
+The owner authorized the Logical public title and the reviewed dashboard/editor
+changes for a local 1.0.1 candidate. The approved WordPress.org slug, ZIP folder,
+text domain and translation filenames remain wpgeo-address-autocomplete-for-gravity-forms.
+The main PHP filename, PHP namespace, saved gfgeo identities and native settings
+slug are unchanged. GFGEOAC_PLUGIN_NAME remains Address Autocomplete for Gravity
+Forms; the dashboard heading remains Address Autocomplete with For Gravity Forms
+above it. Prepare the unbranded banner separately from the installable ZIP.
+The owner reviewed the installed candidate and authorized GitHub and WordPress.org
+publication, including the unbranded banner. The exact tested installable ZIP has
+64 files and SHA-256 863c7f156f5859ab557169898abf6a7bef92c62e36a4f1dd8d490d617dadc42e.
+PHP fixtures passed on PHP 8.3 and 7.4.30, all 31 JavaScript tests passed, and actual
+Test Site 2 browser checks covered the dashboard, all four editor discovery buttons
+with mouse/Enter/Space, and custom/native Address autocomplete with an AJAX retry.
+Plugin Check reported zero errors and one existing-slug warning for the retained
+wpgeo prefix; the published 1.0.0 comparison has the same warning. Full minimum-host,
+entry-edit and conditional/multipage installed matrices were not newly certified.
+Keep Test Site 2 as reviewed: free autocomplete active, Directions/Search inactive.
+Approved WordPress.org banner exports live in docs/wordpress-org-assets/ and do not
+ship inside the plugin ZIP. The existing slug, screenshots and icon are unchanged.
+
+## October 17 local dashboard containment refactor
+
+The owner requested the same copyable dashboard module as Gravity Geolocation,
+with no behavior changes. Presentation now lives in src/Admin/Dashboard/:
+Loader.php, Features.php, views/dashboard.php and assets/scss + assets/css.
+Host callers, fixtures, build/watch paths and package checks use the new locations.
+Native settings, setup guards, menus/URLs, feature content and saved data remain
+host-owned and unchanged. No SDK, dependency, source version or published ZIP
+changes. This is unreleased source work, not authorization to publish or install.
+See src/Admin/Dashboard/README.md and the workspace audit at
+artifacts/dashboard-modules-20261017/RESULTS.txt for validation boundaries.
+
 
 ## Standalone bootstrap convention
 
@@ -33,13 +68,13 @@ This standalone free plugin adds Google Places suggestions to its single-line Ad
 
 `src/Core/AddOn.php` connects the plugin to Gravity Forms. It registers the explicit field list through `src/Common/Form/Fields/Registrar.php`, starts the editor directly, and starts the frontend processor. The registrar also positions the single plugin field group.
 
-`src/Features/Form/Fields/Address/` contains the functional Address renderer and editor settings. Only this custom field is registered; native Address autocomplete remains supported. The four disabled premium field buttons, placeholder classes and upgrade-dialog code were permanently removed by the owner on October 9. Keep product discovery on the local overview instead.
+`src/Features/Form/Fields/Address/` contains the functional Address renderer and editor settings. Address is the only functional custom field; native Address autocomplete remains supported. On October 17 the owner explicitly restored the original four disabled editor discovery buttons (Map, Directions & Travel Routes, Distance & Travel Time and Address Validation), superseding the October 9 removal. Their UI-only placeholder classes render no inputs or entry values; the original native dialog and insertion guard prevent adding these fields. No premium implementation is bundled.
 
 `src/Features/Form/Admin/FormEditor.php` owns the Address Autocomplete tab, tooltips, and new-field defaults. `src/Features/Form/Runtime/FormGeoProcessor.php` collects supported Address options and enqueues the standalone assets without modifying saved form data.
 
 `src/Admin/` contains global settings, the product overview, feature comparisons and dismissible setup guidance. Unrelated Search toolbar/buttons/notices and their source/generated assets were removed in response to the October 9 review. Reference countries and languages are bundled in `src/Helpers/ReferenceData.php`.
 
-`assets/js/autocomplete/` separates Google loading, autocomplete requests, saved options, and native Address population. `assets/js/editor/` contains functional autocomplete builder controls, without disabled-field promotions or upgrade dialogs. Readable JavaScript and SCSS are included in installable packages alongside generated assets.
+`assets/js/autocomplete/` separates Google loading, autocomplete requests, saved options, and native Address population. `assets/js/editor/` contains functional autocomplete controls and the restored local unavailable-field dialog for the four editor-only discovery buttons. Readable JavaScript and SCSS are included in installable packages alongside generated assets.
 
 ## Compatibility boundaries
 
@@ -72,17 +107,16 @@ Run `npm run package` to build assets and create a versioned ZIP in `dist/`. To 
 
 The builder uses an explicit allowlist, preserves the source identity, refuses to overwrite an existing artifact, and prints a checksum. It excludes tests, private docs, editor configuration, Composer tooling, and dependencies. It does not upload, install, activate, or publish the package.
 
-The October 9 review requested a distinctive name. The owner chose
-WPGeo Address Autocomplete for Gravity Forms and the requested new slug is
-`wpgeo-address-autocomplete-for-gravity-forms`. This slug is prepared locally,
-NOT yet reserved/confirmed by the reviewer. Use it for the corrected ZIP root,
-translation domain and bundled catalogs, and explicitly request it in the reply
-to the existing review email. Upload through the existing submission; do not
-create a duplicate. A domain warning against the old reserved slug can remain
-until WordPress.org changes the reservation.
+The October 9 review requested a distinctive name. The owner originally chose
+WPGeo Address Autocomplete for Gravity Forms, published as version 1.0.0 under
+the approved slug `wpgeo-address-autocomplete-for-gravity-forms`. The October 19
+candidate changes only the public brand prefix to Logical; retain that existing
+slug for updates, the ZIP root, translation domain and bundled catalogs.
 The local checkout/GitHub name and main PHP filename remain unchanged, as do the
-native settings slug and saved field identities. GFGEOAC_PLUGIN_NAME uses the full
-public name; compact menu and field labels remain Address Autocomplete.
+native settings slug and saved field identities. GFGEOAC_PLUGIN_NAME is Address
+Autocomplete for Gravity Forms, without either brand prefix. Use Logical in the
+public plugin header and readme title; retain wpgeo in the existing slug/domain.
+Compact menu and field labels remain Address Autocomplete.
 Run Plugin Check on the extracted assigned-slug folder, explicitly supplying the
 same `--slug` value; checking only the old local folder can hide domain mismatches.
 
@@ -93,9 +127,9 @@ and Choices.js version/source/license. Readable JS/SCSS sources ship in the ZIP;
 build.js, package.json and package-lock.json stay in the public source repository
 and are excluded from installable ZIPs.
 Contributors uses the submitting account `ninjew`; the PHP author remains Eyal
-Fitoussi. Keep the local overview, but do not restore disabled premium field
-buttons, their upgrade dialogs or unrelated Search advertising on normal Gravity
-Forms pages. No review reply,
+Fitoussi. Keep the local overview and the four explicitly approved disabled editor buttons
+with their original native dialogs. Do not restore unrelated Search toolbar
+buttons, notices, advertising or SearchUnavailable assets. No review reply,
 submission upload or repository visibility change is performed by the builder.
 
 Maintain the public description, setup instructions and release notes in the root `readme.txt`; keep the plain-text history in `change_log.txt`. Match the readme stable tag to the plugin version before packaging.

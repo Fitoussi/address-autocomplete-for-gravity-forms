@@ -35,7 +35,7 @@ foreach ( [
 	'build/js/frontend/address-autocomplete.min.js', 'build/js/admin/gfgeo-form-editor.min.js',
 	'assets/js/autocomplete/services/address-autocomplete.js', 'assets/js/autocomplete/services/compat/places-autocomplete.js',
 	'assets/js/autocomplete/native-address.js', 'assets/js/editor/form-editor.js', 'assets/js/editor/vendor/choices.js',
-	'assets/licenses/choices.txt', 'assets/scss/admin/gfgeo-product-dashboard.scss',
+	'assets/licenses/choices.txt', 'src/Admin/Dashboard/assets/scss/dashboard.scss',
 ] as $file ) {
 	$checks[ 'includes ' . $file ] = in_array( $prefix . $file, $files, true );
 }
@@ -57,11 +57,12 @@ $checks['public source and build instructions'] = false !== strpos( $readme, 'ht
 $checks['no Search upsell integration or assets'] = ! array_filter( $files, static function ( $file ) {
 	return false !== strpos( $file, 'SearchUnavailable' ) || false !== strpos( $file, 'search-unavailable' );
 } );
-$checks['no disabled field classes or upsell dialog source'] = ! array_filter( $files, static function ( $file ) {
-	return false !== strpos( $file, '/Fields/Placeholders/' ) || false !== strpos( $file, '/unavailable-fields.js' );
-} );
+foreach ( [ 'Map', 'Directions', 'Distance', 'AddressValidation' ] as $feature ) {
+	$checks[ 'includes disabled editor button: ' . $feature ] = in_array( $prefix . 'src/Features/Form/Fields/Placeholders/' . $feature . '/Field.php', $files, true );
+}
+$checks['includes local disabled-field dialog source'] = in_array( $prefix . 'assets/js/editor/unavailable-fields.js', $files, true );
 $editor_map = json_decode( $zip->getFromName( $prefix . 'build/js/admin/gfgeo-form-editor.min.js.map' ), true );
-$checks['editor bundle excludes disabled-field dialog'] = ! empty( $editor_map['sources'] ) && ! array_filter( $editor_map['sources'], static function ( $source ) {
+$checks['editor bundle includes disabled-field dialog'] = ! empty( $editor_map['sources'] ) && (bool) array_filter( $editor_map['sources'], static function ( $source ) {
 	return false !== strpos( $source, 'unavailable-fields.js' );
 } );
 $checks['tested up to only in readme'] = ! preg_match( '/^ \* Tested up to:/mi', $main )

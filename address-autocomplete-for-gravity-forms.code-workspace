@@ -63,6 +63,12 @@
 					"cmd": "npm run build",
 					"isAsync": false,
 					"autoShowOutputPanel": "error"
+				},
+				{
+				  "match": ".*/address-autocomplete-for-gravity-forms/src/Admin/Dashboard/assets/scss/.*\\.scss$",
+				  "cmd": "cd \"${workspaceFolder}\" && npm run css:dashboard",
+				  "isAsync": false,
+				  "autoShowOutputPanel": "always"
 				}
 			]
 		}

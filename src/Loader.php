@@ -76,7 +76,7 @@ final class Loader {
 	 * @return void
 	 */
 	public static function register_admin() {
-		\GravityGeolocationAutocomplete\Admin\Dashboard::register();
+		\GravityGeolocationAutocomplete\Admin\Dashboard\Loader::register();
 		add_action( 'admin_notices', [ self::class, 'dependency_notice' ] );
 	}
 

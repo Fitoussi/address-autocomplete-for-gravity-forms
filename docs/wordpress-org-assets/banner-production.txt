@@ -1,0 +1,20 @@
+GRAVITY AUTOCOMPLETE 1.0.1 — LOCAL LISTING BANNER CANDIDATE
+
+Owner requested removal of WPGeo, leaving only:
+Address Autocomplete
+for Gravity Forms
+
+Prepared files: banner-1544x500.png and banner-772x250.png.
+Both sizes were verified and visually inspected. Google Maps attribution remains.
+Existing SVN artwork and all seven real screenshot captures were not changed.
+The icon is unchanged. These listing assets are separate from the installable ZIP.
+Nothing in this folder has been uploaded or committed to SVN.
+
+Tool: built-in image_gen using the imagegen skill; native sips trimming and resizing.
+The generated master is preserved as banner-generated-master.png, with its trimmed
+intermediate in banner-trimmed.png. This is a regenerated listing-banner derivative,
+not a claim of pixel-identical preservation of the UI image. Real screenshots remain
+the original approved captures and are not replaced by this derivative.
+
+Prompt:
+Use case: text-localization. Edit target: the attached existing WordPress.org Gravity Forms address-autocomplete banner. Change ONLY the large white title on the LEFT blue gradient area: REMOVE the word "WPGeo" completely. The replacement exact title is two centered lines: "Address Autocomplete" then "for Gravity Forms". Keep the same clean bold white sans-serif lettering, balanced generous margins, centered vertically in the left area. Do NOT add "Logical" or any other brand, logo or words. Preserve the blue-to-navy background, split layout, proportions, and the entire address suggestions image on the right, including legible address text, borders and Google Maps attribution. Do not invent or restyle the UI. Keep the same very wide banner composition, 1544x500 pixels if possible, without blank margins or extra canvas. Output only the finished banner.
