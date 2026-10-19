@@ -114,7 +114,7 @@ Includes [Choices.js 11.1.0](https://github.com/Choices-js/Choices/tree/v11.1.0)
 = 1.0.1 =
 * Renamed the plugin to Logical Address Autocomplete for Gravity Forms. The existing plugin slug and saved settings are unchanged.
 * Refreshed the overview navigation and action buttons, aligned discovery-card buttons, and placed admin notices below the navigation.
-* Restored four editor-only links to explore Map, Directions, Distance & Travel Time, and Address Validation in the separate Gravity Geolocation plugin. These buttons do not insert fields.
+* Added four editor-only discovery buttons for Map, Directions, Distance & Travel Time, and Address Validation in the separate Gravity Geolocation plugin. These buttons do not insert fields.
 * Organized the overview into a contained dashboard folder without changing autocomplete behavior.
 
 = 1.0.0 =
